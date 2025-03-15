@@ -116,7 +116,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	bufferleadmonspeciesname STR_VAR_1
 	message LittlerootTown_ProfessorBirchsLab_Text_LikeYouToHavePokemon
 	waitmessage
-	clearflag FLAG_UNUSED_0x479
+	clearflag FLAG_HIDE_PETALBURG_BOY
 	setvar VAR_SCOTT_PETALBURG_ENCOUNTER, 1
 	setvar VAR_PETALBURG_GYM_STATE, 6
 	setflag FLAG_NUZLOCKE

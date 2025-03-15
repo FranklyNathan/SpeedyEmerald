@@ -1167,7 +1167,7 @@ EventScript_WarpHomeMauville::
 EventScript_WarpHomeLavaridge::
 	addvar VAR_BADGE_COUNT, 1
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
-	setflag FLAG_UNUSED_0x479 //Remove boy blocking Petalburg gym
+	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
 	warp MAP_LAVARIDGE_TOWN, 5, 15

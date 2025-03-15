@@ -36627,8 +36627,8 @@ F_TRAINER_FEMALE |
 #line 14701
                 MOVE_BRUTAL_SWING,
                 MOVE_AERIAL_ACE,
-                MOVE_BRICK_BREAK,
-                MOVE_LEAF_BLADE,
+                MOVE_ROCK_SMASH,
+                MOVE_IRON_DEFENSE,
             },
             },
             {
@@ -40631,7 +40631,7 @@ F_TRAINER_FEMALE |
 #line 16476
                 MOVE_BRUTAL_SWING,
                 MOVE_AERIAL_ACE,
-                MOVE_BRICK_BREAK,
+                MOVE_ROCK_SMASH,
                 MOVE_LEAF_BLADE,
             },
             },

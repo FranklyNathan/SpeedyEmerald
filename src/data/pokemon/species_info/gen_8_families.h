@@ -2427,8 +2427,8 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sApplinLevelUpLearnset,
         .teachableLearnset = sApplinTeachableLearnset,
         .eggMoveLearnset = sApplinEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL_ATK_LT_DEF, 30, SPECIES_DIPPLIN},
-                                {EVO_LEVEL_ATK_GT_DEF, 30, SPECIES_FLAPPLE},
+        .evolutions = EVOLUTION({EVO_LEVEL_MALE, 30, SPECIES_DIPPLIN},
+                                {EVO_LEVEL_FEMALE, 30, SPECIES_FLAPPLE},
                                 {EVO_SPECIFIC_MON_IN_PARTY, SPECIES_ROTOM_HEAT, SPECIES_APPLETUN}),
     },
 
