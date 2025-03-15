@@ -5676,7 +5676,7 @@ Level: 10
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 Marill @ Oran Berry
-Level: 31
+Level: 11
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 
 === TRAINER_ISABEL_1 ===
@@ -14893,7 +14893,7 @@ Ability: Static
 - Stun Spore
 - Self Destruct
 
-Magnezone
+Magneton
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
@@ -15682,13 +15682,14 @@ Ability: Gooey
 - Water Pulse
 - Mud Slap
 
-Feebas
+Barboach
 Level: 17
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Calm
+Nature: Hardy
 Ability: Oblivious
-- Splash
+- Mud Bomb
 - Water Pulse
+- Mud Slap
 - Flail
 
 Horsea @ Oran Berry
@@ -15721,16 +15722,17 @@ Items: Super Potion / Super Potion
 Double Battle: Yes
 AI: Basic Trainer
 
-Feebas
-Level: 20
+Wailmer @ Oran Berry
+Level: 22
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Calm
-Ability: Oblivious
-- Splash
+Nature: Modest
+Ability: Water Veil
+- Whirlpool
+- Defense Curl
+- Rollout
 - Water Pulse
-- Flail
 
-Wugtrio @ Damp Rock
+Wiglett @ Damp Rock
 Level: 23
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
@@ -15740,15 +15742,15 @@ Ability: Gooey
 - Water Pulse
 - Mud Slap
 
-Gyarados
-Level: 21
+Barboach
+Level: 20
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Intimidate
-- Flail
+Nature: Hardy
+Ability: Oblivious
+- Mud Bomb
 - Water Pulse
-- Bite
-- Twister
+- Mud Slap
+- Flail
 
 Seadra @ Sitrus Berry
 Level: 24
@@ -15760,16 +15762,6 @@ Ability: Sniper
 - Aurora Beam
 - Twister
 
-Wailmer @ Oran Berry
-Level: 22
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Water Veil
-- Whirlpool
-- Defense Curl
-- Rollout
-- Water Pulse
-
 === TRAINER_JUAN_4 ===
 Name: JUAN
 Class: Leader
@@ -15780,18 +15772,8 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
 
-Barboach
-Level: 24
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Hardy
-Ability: Oblivious
-- Mud Bomb
-- Water Pulse
-- Mud Slap
-- Rain Dance
-
 Wugtrio @ Damp Rock
-Level: 26
+Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Gooey
@@ -15800,17 +15782,7 @@ Ability: Gooey
 - Water Pulse
 - Mud Slap
 
-Seadra
-Level: 25
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Sniper
-- Water Pulse
-- Smokescreen
-- Aurora Beam
-- Twister
-
-Wailmer
+Wailmer @ Oran Berry
 Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
@@ -15819,6 +15791,16 @@ Ability: Water Veil
 - Defense Curl
 - Rollout
 - Water Pulse
+
+Seadra
+Level: 26
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Modest
+Ability: Sniper
+- Water Pulse
+- Smokescreen
+- Aurora Beam
+- Twister
 
 Milotic @ Sitrus Berry
 Level: 29
@@ -15829,16 +15811,6 @@ Ability: Oblivious
 - Water Pulse
 - Dragon Tail
 - Captivate
-
-Gyarados @ Sitrus Berry
-Level: 27
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Intimidate
-- Ice Fang
-- Water Pulse
-- Bite
-- Twister
 
 === TRAINER_JUAN_5 ===
 Name: JUAN
@@ -15858,10 +15830,10 @@ Ability: Oblivious
 - Mud Bomb
 - Water Pulse
 - Mud Slap
-- Rain Dance
+- Thrash
 
 Wugtrio @ Damp Rock
-Level: 30
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Gooey
@@ -15870,7 +15842,7 @@ Ability: Gooey
 - Water Pulse
 - Triple Dive
 
-Seadra
+Seadra @ Sitrus Berry
 Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
@@ -15878,27 +15850,7 @@ Ability: Sniper
 - Water Pulse
 - Smokescreen
 - Aurora Beam
-- Dragon Breath
-
-Wailmer
-Level: 28
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Water Veil
-- Water Spout
-- Defense Curl
-- Rollout
-- Water Pulse
-
-Gyarados @ Sitrus Berry
-Level: 31
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Intimidate
-- Ice Fang
-- Water Pulse
-- Bite
-- Aqua Tail
+- Twister
 
 Milotic @ Sitrus Berry
 Level: 32
@@ -16306,7 +16258,7 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Golem
+Graveler
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
@@ -16486,7 +16438,7 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machamp
+Machoke
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
@@ -16547,7 +16499,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Machamp
-Level: 41
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: No Guard
@@ -16557,7 +16509,7 @@ Ability: No Guard
 - Bulk Up
 
 Medicham
-Level: 40
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Pure Power
@@ -16607,7 +16559,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Machamp
-Level: 44
+Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: No Guard
@@ -16617,7 +16569,7 @@ Ability: No Guard
 - Bulk Up
 
 Medicham
-Level: 43
+Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Pure Power
@@ -16627,7 +16579,7 @@ Ability: Pure Power
 - Bulk Up
 
 Lilligant Hisui @ Miracle Seed
-Level: 44
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Hustle
@@ -16666,7 +16618,7 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Golem Alola @ Air Balloon
+Graveler Alola @ Air Balloon
 Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
@@ -16686,7 +16638,7 @@ Ability: Static
 - Energy Ball
 - Self Destruct
 
-Magnezone
+Magneton
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
@@ -16737,7 +16689,7 @@ Ability: Sturdy
 - Shock Wave
 
 Electrode Hisui @ Magnet
-Level: 41
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Static
@@ -16797,7 +16749,7 @@ Ability: Sturdy
 - Shock Wave
 
 Electrode Hisui @ Magnet
-Level: 43
+Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Static
@@ -16866,15 +16818,15 @@ Ability: Flame Body
 - Light Screen
 - Sunny Day
 
-Ninetales
-Level: 32
+Vulpix
+Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Flash Fire
 - Overheat
-- Flamethrower
+- Feint Attack
 - Hex
-- Attract
+- Quick Attack
 
 Camerupt
 Level: 33
@@ -16973,7 +16925,6 @@ Nature: Modest
 Ability: Forecast
 - Sunny Day
 - Weather Ball
-- Fire Blast
 
 Marowak Alola @ Thick Club
 Level: 44
@@ -17156,7 +17107,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Spinda
-Level: 43
+Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Own Tempo
@@ -17587,17 +17538,17 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Whiscash
-Level: 32
+Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Oblivious
 - Mud Bomb
 - Water Pulse
 - Muddy Water
-- Rain Dance
+- Thrash
 
 Wugtrio @ Damp Rock
-Level: 31
+Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Gooey
@@ -17607,7 +17558,7 @@ Ability: Gooey
 - Triple Dive
 
 Wailmer
-Level: 31
+Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Water Veil
@@ -17615,16 +17566,6 @@ Ability: Water Veil
 - Defense Curl
 - Rollout
 - Water Pulse
-
-Gyarados
-Level: 33
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Intimidate
-- Ice Fang
-- Water Pulse
-- Bite
-- Aqua Tail
 
 Milotic @ Sitrus Berry
 Level: 35
@@ -17637,7 +17578,7 @@ Ability: Oblivious
 - Ice Beam
 
 Kingdra @ Chesto Berry
-Level: 35
+Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Sniper
@@ -17694,7 +17635,7 @@ Ability: Intimidate
 - Ice Fang
 - Water Pulse
 - Crunch
-- Aqua Tail
+- Dragon Rage
 
 Milotic @ Sitrus Berry
 Level: 42
@@ -17761,10 +17702,10 @@ Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
-- Dragon Dance
 - Crunch
 - Ice Fang
 - Water Pulse
+- Dragon Dance
 
 Milotic @ Sitrus Berry
 Level: 46
