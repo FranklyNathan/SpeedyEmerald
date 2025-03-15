@@ -1,9 +1,13 @@
 <!-- title -->
 # Pokémon Emerald EX Speedchoice (Auction Edition)
-A Pokémon Emerald EX Speedchoice branch optimized for draft auction races
+A Pokémon Emerald Expansion fork incorporating custom features optimized for draft auction races
 
 <!-- CONTENT -->
 # Key Features
+
+## Roguelike Randomization
+- **Randomized Gyms:** Gyms are randomized; upon entering a gym, you'll be warped to any gym at random. Leader teams are adjusted to your current strength.
+- **Elite... Eight!?:** Battle Frontier Brains join the Elite Four for more diverse lineup of final bosses.
 
 ## Difficulty Boosts
 - **Buffed Battles:** All enemy trainers use perfect 31-IV Pokémon. All gym leaders and Elite Four members' Pokémon have optimal natures. 
@@ -14,7 +18,7 @@ A Pokémon Emerald EX Speedchoice branch optimized for draft auction races
 ## Quality of Life Improvements
 - **Level Cap Candy:** Instantly jumps your Pokémon to the level it next learns a move, evolves, or hits the current cap (whichever of the three comes first). The evolution animation is shortened. Asking to learn a move only asks once, not twice.
 - **Fully Stocked PC:** Your PC now comes stocked with every Pokémon and item in the auction pool. Simply withdraw what you need from your PC and start racing.
-- **Infinite Repel:** Repels now last forever.
+- **Permanent Repel:** The Cleanse Tag now functions as a permanent repel.
 - **Universal Fly:** All Pokémon can Fly in the overworld without knowing the move and without the Fortree Gym Badge.
 - **Visible IVs:** When paused to view your Pokémon’s stats, press A to display their IVs.
 
@@ -28,6 +32,5 @@ A Pokémon Emerald EX Speedchoice branch optimized for draft auction races
 ## Shop Inventories
 - **Evolution Items:** Evolution items like the Dawn Stone and Razor Fang are available at the Lavaridge Herb Shop and Lilycove Department store.
 - **Mega Stones:** Mega Stones are now available at the Slateport outdoor market and Ever Grande City.
-- **Gems:** Type-boosting Gems are also available at Ever Grande City.
 
 <!-- END CONTENT -->
