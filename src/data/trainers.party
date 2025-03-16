@@ -4842,7 +4842,7 @@ Geodude
 Level: 12
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Tackle
 - Defense Curl
 - Rock Throw
@@ -4921,7 +4921,7 @@ Voltorb Hisui @ Loaded Dice
 Level: 12
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Lax
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Bullet Seed
 - Stun Spore
@@ -4931,7 +4931,7 @@ Magnemite
 Level: 12
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Supersonic
 - Shock Wave
 - Thunder Wave
@@ -5119,7 +5119,7 @@ Horsea @ Oran Berry
 Level: 15
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Smokescreen
 - Leer
@@ -9502,7 +9502,7 @@ Magnezone
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Supersonic
 - Flash Cannon
 - Tri Attack
@@ -14328,7 +14328,7 @@ Geodude
 Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Magnitude
 - Defense Curl
 - Rock Throw
@@ -14338,7 +14338,7 @@ Relicanth
 Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Water Gun
 - Rock Tomb
 - Flail
@@ -14377,7 +14377,7 @@ Graveler
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Bulldoze
 - Stealth Rock
 - Defense Curl
@@ -14387,7 +14387,7 @@ Relicanth
 Level: 22
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Dive
 - Rock Tomb
 - Flail
@@ -14427,7 +14427,7 @@ Graveler
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Bulldoze
 - Stealth Rock
 - Defense Curl
@@ -14437,7 +14437,7 @@ Relicanth
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Dive
 - Rock Tomb
 - Flail
@@ -14477,7 +14477,7 @@ Graveler
 Level: 28
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Bulldoze
 - Stealth Rock
 - Self Destruct
@@ -14487,7 +14487,7 @@ Relicanth
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Dive
 - Rock Tomb
 - Flail
@@ -14527,7 +14527,7 @@ Machop
 Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Karate Chop
 - Low Kick
 - Bullet Punch
@@ -14557,7 +14557,7 @@ Makuhita @ Sitrus Berry
 Level: 19
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
+Ability: Guts
 - Strength
 - Vital Throw
 - Reversal
@@ -14577,9 +14577,9 @@ Machop
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Karate Chop
-- Knock Off
+- Low Kick
 - Bullet Punch
 - Bulk Up
 
@@ -14607,7 +14607,7 @@ Hariyama @ Sitrus Berry
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
+Ability: Guts
 - Strength
 - Vital Throw
 - Brine
@@ -14627,9 +14627,9 @@ Machoke
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Vital Throw
-- Knock Off
+- Low Kick
 - Bullet Punch
 - Bulk Up
 
@@ -14649,7 +14649,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
 - Brutal Swing
-- Aerial Ace
+- Fury Cutter
 - Rock Smash
 - Sand Attack
 
@@ -14657,8 +14657,8 @@ Hariyama @ Sitrus Berry
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
-- Strength
+Ability: Guts
+- Smelling Salts
 - Vital Throw
 - Knock Off
 - Bulk Up
@@ -14677,9 +14677,9 @@ Machoke
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Vital Throw
-- Knock Off
+- Low Kick
 - Bullet Punch
 - Bulk Up
 
@@ -14699,7 +14699,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
 - Brutal Swing
-- Aerial Ace
+- Fury Cutter
 - Rock Smash
 - Iron Defense
 
@@ -14707,7 +14707,7 @@ Hariyama @ Sitrus Berry
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
+Ability: Guts
 - Heavy Slam
 - Vital Throw
 - Knock Off
@@ -14737,7 +14737,7 @@ Voltorb Hisui @ Loaded Dice
 Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Lax
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Bullet Seed
 - Stun Spore
@@ -14747,7 +14747,7 @@ Magnemite
 Level: 17
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Supersonic
 - Shock Wave
 - Thunder Wave
@@ -14787,7 +14787,7 @@ Voltorb Hisui @ Loaded Dice
 Level: 23
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Lax
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Bullet Seed
 - Stun Spore
@@ -14797,7 +14797,7 @@ Magneton
 Level: 22
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Supersonic
 - Shock Wave
 - Thunder Wave
@@ -14837,7 +14837,7 @@ Electrode Hisui @ Loaded Dice
 Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Lax
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Bullet Seed
 - Stun Spore
@@ -14847,7 +14847,7 @@ Magneton
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Tri Attack
 - Shock Wave
 - Thunder Wave
@@ -14887,7 +14887,7 @@ Electrode Hisui @ Loaded Dice
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Lax
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Bullet Seed
 - Stun Spore
@@ -14897,7 +14897,7 @@ Magneton
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Tri Attack
 - Shock Wave
 - Thunder Wave
@@ -15027,7 +15027,7 @@ Camerupt
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
-Ability: Solid Rock
+Ability: Magma Armor
 - Overheat
 - Earth Power
 - Sunny Day
@@ -15037,7 +15037,7 @@ Torkoal @ White Herb
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
-Ability: Drought
+Ability: White Smoke
 - Overheat
 - Sunny Day
 - Body Slam
@@ -15077,7 +15077,7 @@ Camerupt
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
-Ability: Solid Rock
+Ability: Magma Armor
 - Overheat
 - Earth Power
 - Take Down
@@ -15087,7 +15087,7 @@ Torkoal @ White Herb
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
-Ability: Drought
+Ability: White Smoke
 - Overheat
 - Sunny Day
 - Body Slam
@@ -15346,7 +15346,7 @@ Swablu
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Cloud Nine
+Ability: Natural Cure
 - Disarming Voice
 - Sing
 - Round
@@ -15356,7 +15356,7 @@ Skarmory
 Level: 23
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sturdy
+Ability: Keen Eye
 - Swift
 - Sand Attack
 - Steel Wing
@@ -15366,7 +15366,7 @@ Pelipper
 Level: 23
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Drizzle
+Ability: Keen Eye
 - Water Pulse
 - Supersonic
 - Brine
@@ -15396,7 +15396,7 @@ Skarmory
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sturdy
+Ability: Keen Eye
 - Spikes
 - Sand Attack
 - Steel Wing
@@ -15406,7 +15406,7 @@ Swablu
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Cloud Nine
+Ability: Natural Cure
 - Disarming Voice
 - Sing
 - Round
@@ -15426,7 +15426,7 @@ Pelipper @ Deep Sea Tooth
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Drizzle
+Ability: Keen Eye
 - Water Pulse
 - Fling
 - Brine
@@ -15446,7 +15446,7 @@ Swablu
 Level: 28
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Cloud Nine
+Ability: Natural Cure
 - Disarming Voice
 - Perish Song
 - Round
@@ -15456,7 +15456,7 @@ Skarmory
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sturdy
+Ability: Keen Eye
 - Spikes
 - Sand Attack
 - Steel Wing
@@ -15476,7 +15476,7 @@ Pelipper @ Deep Sea Tooth
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Drizzle
+Ability: Keen Eye
 - Water Pulse
 - Fling
 - Brine
@@ -15526,7 +15526,7 @@ Natu
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Magic Bounce
+Ability: Synchronize
 - Stored Power
 - Ominous Wind
 - Calm Mind
@@ -15576,7 +15576,7 @@ Xatu
 Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Magic Bounce
+Ability: Synchronize
 - Stored Power
 - Ominous Wind
 - Calm Mind
@@ -15626,7 +15626,7 @@ Xatu
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Magic Bounce
+Ability: Synchronize
 - Stored Power
 - Ominous Wind
 - Calm Mind
@@ -15696,7 +15696,7 @@ Horsea @ Oran Berry
 Level: 19
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Smokescreen
 - Leer
@@ -15723,7 +15723,7 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Wailmer @ Oran Berry
-Level: 22
+Level: 23
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Water Veil
@@ -15733,7 +15733,7 @@ Ability: Water Veil
 - Water Pulse
 
 Wiglett @ Damp Rock
-Level: 23
+Level: 22
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Gooey
@@ -15756,7 +15756,7 @@ Seadra @ Sitrus Berry
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Smokescreen
 - Aurora Beam
@@ -15772,7 +15772,7 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
 
-Wugtrio @ Damp Rock
+Wiglett @ Damp Rock
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
@@ -15796,7 +15796,7 @@ Seadra
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Smokescreen
 - Aurora Beam
@@ -15806,7 +15806,7 @@ Milotic @ Sitrus Berry
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Calm
-Ability: Oblivious
+Ability: Marvel Scale
 - Disarming Voice
 - Water Pulse
 - Dragon Tail
@@ -15846,7 +15846,7 @@ Seadra @ Sitrus Berry
 Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Smokescreen
 - Aurora Beam
@@ -15916,7 +15916,7 @@ Nature: Adamant
 Ability: Sturdy
 - Night Slash
 - Fly
-- Stealth Rock
+- Spikes
 - Steel Wing
 
 Goodra Hisui @ Metal Coat
@@ -16262,7 +16262,7 @@ Graveler
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Bulldoze
 - Stealth Rock
 - Self Destruct
@@ -16272,7 +16272,7 @@ Relicanth
 Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Dive
 - Rock Tomb
 - Flail
@@ -16282,8 +16282,8 @@ Kleavor @ Scope Lens
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sharpness
-- Stone Axe
+Ability: Swarm
+- Double Hit
 - Fury Cutter
 - Slash
 - Rock Tomb
@@ -16322,7 +16322,7 @@ Golem
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Earthquake
 - Stealth Rock
 - Self Destruct
@@ -16332,7 +16332,7 @@ Relicanth
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Dive
 - Rock Tomb
 - Flail
@@ -16342,8 +16342,8 @@ Kleavor @ Scope Lens
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sharpness
-- Stone Axe
+Ability: Swarm
+- Swords Dance
 - Fury Cutter
 - Slash
 - Rock Tomb
@@ -16382,7 +16382,7 @@ Golem
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Earthquake
 - Stealth Rock
 - Explosion
@@ -16392,7 +16392,7 @@ Relicanth
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Hydro Pump
 - Rock Tomb
 - Flail
@@ -16402,9 +16402,9 @@ Kleavor @ Scope Lens
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sharpness
-- Stone Axe
-- Fury Cutter
+Ability: Swarm
+- Swords Dance
+- X Scissor
 - Slash
 - Rock Tomb
 
@@ -16413,7 +16413,7 @@ Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
-- Retaliate
+- Take Down
 - Rock Tomb
 - Play Rough
 - Fire Fang
@@ -16442,7 +16442,7 @@ Machoke
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Submission
 - Dual Chop
 - Bullet Punch
@@ -16474,7 +16474,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
 - Brutal Swing
-- Aerial Ace
+- Fury Cutter
 - Rock Smash
 - Leaf Blade
 
@@ -16482,7 +16482,7 @@ Hariyama @ Sitrus Berry
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
+Ability: Guts
 - Heavy Slam
 - Vital Throw
 - Knock Off
@@ -16502,7 +16502,7 @@ Machamp
 Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Cross Chop
 - Dual Chop
 - Bullet Punch
@@ -16515,7 +16515,7 @@ Nature: Adamant
 Ability: Pure Power
 - High Jump Kick
 - Zen Headbutt
-- Thunder Punch
+- Reflect
 - Bulk Up
 
 Lilligant Hisui @ Miracle Seed
@@ -16534,7 +16534,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
 - Brutal Swing
-- First Impression
+- Fury Cutter
 - Brick Break
 - Leaf Blade
 
@@ -16542,7 +16542,7 @@ Hariyama @ Sitrus Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
+Ability: Guts
 - Heavy Slam
 - Vital Throw
 - Knock Off
@@ -16562,7 +16562,7 @@ Machamp
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: No Guard
+Ability: Guts
 - Cross Chop
 - Dual Chop
 - Bullet Punch
@@ -16575,7 +16575,7 @@ Nature: Adamant
 Ability: Pure Power
 - High Jump Kick
 - Zen Headbutt
-- Thunder Punch
+- Reflect
 - Bulk Up
 
 Lilligant Hisui @ Miracle Seed
@@ -16594,7 +16594,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
 - Brutal Swing
-- First Impression
+- Fury Cutter
 - Brick Break
 - Leaf Blade
 
@@ -16602,7 +16602,7 @@ Hariyama @ Sitrus Berry
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Thick Fat
+Ability: Guts
 - Heavy Slam
 - Close Combat
 - Knock Off
@@ -16632,7 +16632,7 @@ Electrode Hisui @ Magnet
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Discharge
 - Energy Ball
@@ -16642,7 +16642,7 @@ Magneton
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Tri Attack
 - Shock Wave
 - Thunder Wave
@@ -16692,7 +16692,7 @@ Electrode Hisui @ Magnet
 Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Discharge
 - Energy Ball
@@ -16702,7 +16702,7 @@ Magnezone
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Zap Cannon
 - Shock Wave
 - Thunder Wave
@@ -16752,7 +16752,7 @@ Electrode Hisui @ Magnet
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Static
+Ability: Soundproof
 - Shock Wave
 - Discharge
 - Energy Ball
@@ -16762,7 +16762,7 @@ Magnezone
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sturdy
+Ability: Magnet Pull
 - Zap Cannon
 - Shock Wave
 - Thunder Wave
@@ -16832,7 +16832,7 @@ Camerupt
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
-Ability: Solid Rock
+Ability: Magma Armor
 - Overheat
 - Earth Power
 - Take Down
@@ -16842,7 +16842,7 @@ Torkoal @ White Herb
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
-Ability: Drought
+Ability: White Smoke
 - Overheat
 - Sunny Day
 - Body Slam
@@ -16892,7 +16892,7 @@ Camerupt
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
-Ability: Solid Rock
+Ability: Magma Armor
 - Overheat
 - Earthquake
 - Take Down
@@ -16902,7 +16902,7 @@ Torkoal @ White Herb
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
-Ability: Drought
+Ability: White Smoke
 - Overheat
 - Sunny Day
 - Body Slam
@@ -16960,7 +16960,7 @@ Camerupt
 Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
-Ability: Solid Rock
+Ability: Magma Armor
 - Overheat
 - Earthquake
 - Eruption
@@ -16970,7 +16970,7 @@ Torkoal @ White Herb
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
-Ability: Drought
+Ability: White Smoke
 - Overheat
 - Explosion
 - Heat Wave
@@ -17010,7 +17010,7 @@ Loudred
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quirky
-Ability: Scrappy
+Ability: Soundproof
 - Bite
 - Facade
 - Screech
@@ -17070,10 +17070,10 @@ Exploud
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quirky
-Ability: Scrappy
+Ability: Soundproof
 - Crunch
 - Facade
-- Boomburst
+- Hyper Voice
 - Thunder Fang
 
 Obstagoon @ Black Glasses
@@ -17107,7 +17107,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Spinda
-Level: 42
+Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Own Tempo
@@ -17130,7 +17130,7 @@ Exploud
 Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quirky
-Ability: Scrappy
+Ability: Soundproof
 - Crunch
 - Facade
 - Boomburst
@@ -17190,7 +17190,7 @@ Pelipper @ Deep Sea Tooth
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Drizzle
+Ability: Keen Eye
 - Surf
 - Fling
 - Protect
@@ -17200,7 +17200,7 @@ Skarmory
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sturdy
+Ability: Keen Eye
 - Sand Attack
 - Fly
 - Steel Wing
@@ -17210,12 +17210,11 @@ Altaria @ Sitrus Berry
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Cloud Nine
+Ability: Natural Cure
 - Earthquake
 - Dragon Breath
 - Dragon Dance
 - Aerial Ace
-
 
 === TRAINER_WINONA_7 ===
 Name: WINONA
@@ -17251,7 +17250,7 @@ Pelipper @ Deep Sea Tooth
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Drizzle
+Ability: Natural Cure
 - Surf
 - Fling
 - Tailwind
@@ -17261,7 +17260,7 @@ Skarmory
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sturdy
+Ability: Keen Eye
 - Night Slash
 - Fly
 - Steel Wing
@@ -17271,7 +17270,7 @@ Altaria @ Sitrus Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Cloud Nine
+Ability: Natural Cure
 - Earthquake
 - Dragon Pulse
 - Dragon Dance
@@ -17288,7 +17287,7 @@ Double Battle: No
 AI: Basic Trainer / Risky
 
 Tropius
-Level: 40
+Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
 Ability: Chlorophyll
@@ -17298,7 +17297,7 @@ Ability: Chlorophyll
 - Leaf Storm
 
 Braviary Hisui @ Sharp Beak
-Level: 40
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Sheer Force
@@ -17308,30 +17307,30 @@ Ability: Sheer Force
 - Aerial Ace
 
 Pelipper @ Deep Sea Tooth
-Level: 41
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Drizzle
+Ability: Keen Eye
 - Hydro Pump
 - Fling
-- Hurricane
+- Tailwind
 - Aerial Ace
 
 Skarmory
-Level: 41
+Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Sturdy
+Ability: Keen Eye
 - Night Slash
 - Fly
 - Steel Wing
 - Aerial Ace
 
 Altaria @ Sitrus Berry
-Level: 42
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Cloud Nine
+Ability: Natural Cure
 - Earthquake
 - Dragon Pulse
 - Moonblast
@@ -17351,7 +17350,7 @@ Xatu
 Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Magic Bounce
+Ability: Synchronize
 - Psychic
 - Ominous Wind
 - Calm Mind
@@ -17411,7 +17410,7 @@ Xatu
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Magic Bounce
+Ability: Synchronize
 - Psychic
 - Sunny Day
 - Air Slash
@@ -17481,7 +17480,7 @@ Xatu
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Magic Bounce
+Ability: Synchronize
 - Psychic
 - Tailwind
 - Air Slash
@@ -17571,7 +17570,7 @@ Milotic @ Sitrus Berry
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Calm
-Ability: Oblivious
+Ability: Marvel Scale
 - Disarming Voice
 - Water Pulse
 - Icy Wind
@@ -17581,7 +17580,7 @@ Kingdra @ Chesto Berry
 Level: 34
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Dragon Pulse
 - Double Team
@@ -17641,7 +17640,7 @@ Milotic @ Sitrus Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Calm
-Ability: Oblivious
+Ability: Marvel Scale
 - Disarming Voice
 - Water Pulse
 - Icy Wind
@@ -17651,7 +17650,7 @@ Kingdra @ Chesto Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Dragon Pulse
 - Double Team
@@ -17721,7 +17720,7 @@ Kingdra @ Chesto Berry
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Sniper
+Ability: Swift Swim
 - Water Pulse
 - Double Team
 - Dragon Pulse
@@ -17800,7 +17799,7 @@ Geodude
 Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
-Ability: Sturdy
+Ability: Rock Head
 - Magnitude
 - Defense Curl
 - Rock Throw
@@ -17810,7 +17809,7 @@ Relicanth
 Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
-Ability: Sturdy
+Ability: Rock Head
 - Water Gun
 - Rock Tomb
 - Flail

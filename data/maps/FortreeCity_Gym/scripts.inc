@@ -156,6 +156,7 @@ FortreeCity_Gym_EventScript_GymGuide::
     special HealPlayerParty
 	goto_if_set FLAG_DEFEATED_FORTREE_GYM, FortreeCity_Gym_EventScript_GymGuidePostVictory
 	msgbox FortreeCity_Gym_Text_GymGuideAdvice, MSGBOX_DEFAULT
+	warp MAP_FORTREE_CITY_GYM, 15, 24
 	release
 	end
 
@@ -196,7 +197,9 @@ FortreeCity_Gym_Text_GymGuideAdvice:
 	.string "She's waiting for new challengers\n"
 	.string "who are trying to take wing!\p"
 	.string "After this chat, your POKéMON should\n"
-	.string "be refreshed and ready to go!$"
+	.string "be refreshed and ready to go!\p"
+	.string "Oh, and before you go, let me reset\n"
+	.string "the gates for you…$"
 
 FortreeCity_Gym_Text_GymGuidePostVictory:
 	.string "You did it!\n"

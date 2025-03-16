@@ -1306,10 +1306,6 @@ PetalburgCity_Gym_Text_YouHaveGottenStronger:
 	.string "that you've earned.$"
 
 PetalburgCity_Gym_Text_NormanIntro:
-	.string "DAD: Hm…\n"
-	.string "So, you did get four GYM BADGES.\p"
-	.string "Fine, as I promised, we will have\n"
-	.string "a POKéMON battle.\p"
 	.string "{PLAYER}…\p"
 	.string "I'm so happy that I can have\n"
 	.string "a real battle with my own child.\p"
