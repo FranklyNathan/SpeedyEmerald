@@ -2427,7 +2427,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sApplinLevelUpLearnset,
         .teachableLearnset = sApplinTeachableLearnset,
         .eggMoveLearnset = sApplinEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_DIPPLIN},
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_HONEY, SPECIES_DIPPLIN},
                                 {EVO_MAPSEC, MAPSEC_FORTREE_CITY, SPECIES_FLAPPLE},
                                 {EVO_SPECIFIC_MON_IN_PARTY, SPECIES_ROTOM_HEAT, SPECIES_APPLETUN}),
     },
@@ -2735,7 +2735,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         )
         .levelUpLearnset = sDipplinLevelUpLearnset,
         .teachableLearnset = sDipplinTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 46, SPECIES_HYDRAPPLE}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 42, SPECIES_HYDRAPPLE}),
     },
 
     [SPECIES_HYDRAPPLE] =

@@ -1109,13 +1109,15 @@ EventScript_NoBackingOut::
 	end
 
 EventScript_WarpHomeRustboro::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	setvar VAR_RUSTBORO_CITY_STATE, 7
+	giveitem ITEM_LETTER
+	giveitem ITEM_MEGA_RING
 	setflag FLAG_RETURNED_DEVON_GOODS
 	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
 	setvar VAR_RUSTBORO_CITY_STATE, 9
 	setflag 2050 @ get rid of first roxanne rematch
-	setflag FLAG_RECEIVED_POKENAV
 	clearflag FLAG_DEVON_GOODS_STOLEN
 	setflag FLAG_RECOVERED_DEVON_GOODS
 	setvar VAR_BRINEY_HOUSE_STATE, 1
@@ -1129,18 +1131,22 @@ EventScript_WarpHomeRustboro::
 	setvar VAR_DEVON_CORP_3F_STATE, 1
     setvar VAR_RUSTBORO_LOCKED, 1
 	warp MAP_RUSTBORO_CITY, 27, 20
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomeDewford::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
     setvar VAR_DEWFORD_LOCKED, 1
     setvar VAR_DEWFORD_TOWN_STATE, 2
 	warp MAP_DEWFORD_TOWN, 8, 17
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomeMauville::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
@@ -1161,20 +1167,24 @@ EventScript_WarpHomeMauville::
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS
     setvar VAR_MAUVILLE_LOCKED, 1
 	warp MAP_MAUVILLE_CITY, 8, 6
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomeLavaridge::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
 	warp MAP_LAVARIDGE_TOWN, 5, 15
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomePetalburg::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call EventScript_HideMrBriney
@@ -1183,18 +1193,22 @@ EventScript_WarpHomePetalburg::
 	setvar VAR_PETALBURG_CITY_STATE, 7
 	setvar VAR_STEP_DOWN, 1
 	warp MAP_PETALBURG_CITY, 15, 8
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomeFortree::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	setvar VAR_FORTREE_CITY_STATE, 2
     setvar VAR_FORTREE_LOCKED, 1
 	warp MAP_FORTREE_CITY, 22, 11
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomeMossdeep::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	setflag FLAG_HIDE_AQUA_HIDEOUT_GRUNTS
 	clearflag FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY
@@ -1210,10 +1224,12 @@ EventScript_WarpHomeMossdeep::
     setvar VAR_MOSSDEEP_LOCKED, 1
 	setflag FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA
 	warp MAP_MOSSDEEP_CITY, 38, 9
-	release
+	waitstate
+	releaseall
 	end
 
 EventScript_WarpHomeSootopolis::
+	lockall
 	addvar VAR_BADGE_COUNT, 1
 	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 7
@@ -1222,7 +1238,8 @@ EventScript_WarpHomeSootopolis::
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
     setvar VAR_SOOTOPOLIS_LOCKED, 1
 	warp MAP_SOOTOPOLIS_CITY, 31, 32
-	release
+	waitstate
+	releaseall
 	end
 
 	.include "data/scripts/pc_transfer.inc"

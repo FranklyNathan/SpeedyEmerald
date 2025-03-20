@@ -300,6 +300,7 @@ enum EvolutionMethods {
     EVO_ITEM_COUNT_999,                  // Pokémon levels up after trainer has collected 999 of a specific item
     EVO_DEFEAT_THREE_WITH_ITEM,          // Pokémon levels up after having defeat 3 Pokémon of the same species holding the specified item
     EVO_OVERWORLD_STEPS,                 // Pokémon levels up after having taken a specific amount of steps in the overworld
+    EVO_COIN_COUNT_999,                  // Pokémon levels up after trainer has collected 999 coins in the Coin Case
 };
 
 enum EvolutionMode {

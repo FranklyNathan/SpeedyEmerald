@@ -9,8 +9,8 @@ MauvilleCity_GameCorner_MapScripts::
 	.set TM_ICE_BEAM_COINS, 1500
 	.set DOLL_COINS, 1000
 
-	.set COINS_PRICE_50,  1000
-	.set COINS_PRICE_500, 10000
+	.set COINS_PRICE_50,  10000
+	.set COINS_PRICE_500, 30000
 
 MauvilleCity_GameCorner_EventScript_CoinsClerk::
 	lock
@@ -43,10 +43,10 @@ MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault500::
 
 MauvilleCity_GameCorner_EventScript_Buy50Coins::
 	checkcoins VAR_TEMP_1
-	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 50), MauvilleCity_GameCorner_EventScript_NoRoomForCoins
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 500), MauvilleCity_GameCorner_EventScript_NoRoomForCoins
 	checkmoney COINS_PRICE_50
 	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NotEnoughMoney
-	addcoins 50
+	addcoins 500
 	removemoney COINS_PRICE_50
 	updatemoneybox
 	updatecoinsbox 1, 6
@@ -59,10 +59,10 @@ MauvilleCity_GameCorner_EventScript_Buy50Coins::
 
 MauvilleCity_GameCorner_EventScript_Buy500Coins::
 	checkcoins VAR_TEMP_1
-	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 500), MauvilleCity_GameCorner_EventScript_NoRoomForCoins
+	goto_if_ge VAR_TEMP_1, (MAX_COINS + 1 - 1500), MauvilleCity_GameCorner_EventScript_NoRoomForCoins
 	checkmoney COINS_PRICE_500
 	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NotEnoughMoney
-	addcoins 500
+	addcoins 1500
 	removemoney COINS_PRICE_500
 	updatemoneybox
 	updatecoinsbox 1, 6

@@ -11,6 +11,7 @@
 #include "battle_setup.h"
 #include "battle_tower.h"
 #include "battle_z_move.h"
+#include "coins.h"
 #include "data.h"
 #include "dexnav.h"
 #include "event_data.h"
@@ -4650,6 +4651,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
                         }
                     }
                 }
+                break;
+            case EVO_COIN_COUNT_999:
+                if (GetCoins() >= 999)
+                {
+                    targetSpecies = evolutions[i].targetSpecies;
+                }                 
                 break;
             case EVO_LEVEL_RAIN:
                 j = GetCurrentWeather();

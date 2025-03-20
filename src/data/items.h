@@ -2830,11 +2830,12 @@ const struct Item gItemsInfo[] =
         .price = (I_PRICE < GEN_5) ? 100 : ((I_PRICE < GEN_8) ? 300 : 900),
         .description = COMPOUND_STRING(
             "Sweet honey that\n"
-            "attracts wild\n"
-            "Pokémon when used."),
+            "evolves certain \n"
+            "Pokémon."),
         .pocket = POCKET_ITEMS,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_Honey,
+        .type = EVO_HELD_ITEM_TYPE,
+        .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
+        .effect = gItemEffect_EvoItem,
         .flingPower = 30,
         .iconPic = gItemIcon_Honey,
         .iconPalette = gItemIconPalette_Honey,
@@ -11963,7 +11964,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ROTOM_CATALOG] =
     {
         .name = _("Rotom Catalog"),
-        .price = 0,
+        .price = 5000,
         .importance = 1,
         .description = COMPOUND_STRING(
             "A catalog full of\n"
@@ -13557,7 +13558,7 @@ const struct Item gItemsInfo[] =
     [ITEM_LINKING_CORD] =
     {
         .name = _("Linking Cord"),
-        .price = 8000,
+        .price = 3000,
         .description = COMPOUND_STRING(
             "A mysterious string\n"
             "that makes some\n"
