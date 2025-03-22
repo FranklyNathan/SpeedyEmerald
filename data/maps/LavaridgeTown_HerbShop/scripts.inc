@@ -22,7 +22,6 @@ LavaridgeTown_HerbShop_Pokemart:
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_TOXIC_ORB
-	.2byte ITEM_ROTOM_CATALOG
 	pokemartlistend
 
 LavaridgeTown_HerbShop_EventScript_ExpertM::

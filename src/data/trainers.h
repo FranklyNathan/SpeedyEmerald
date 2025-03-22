@@ -38984,12 +38984,12 @@ F_TRAINER_FEMALE |
         {
             {
 #line 15790
-            .species = SPECIES_WINGULL,
+            .species = SPECIES_SWABLU,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15792
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15794
-            .ability = ABILITY_HYDRATION,
+            .ability = ABILITY_CLOUD_NINE,
 #line 15791
             .lvl = 12,
 #line 15793
@@ -38997,20 +38997,20 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15795
-                MOVE_WATER_GUN,
-                MOVE_SUPERSONIC,
-                MOVE_QUICK_ATTACK,
+                MOVE_DISARMING_VOICE,
+                MOVE_SING,
+                MOVE_FURY_ATTACK,
                 MOVE_AERIAL_ACE,
             },
             },
             {
 #line 15800
-            .species = SPECIES_SWABLU,
+            .species = SPECIES_WINGULL,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15802
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15804
-            .ability = ABILITY_CLOUD_NINE,
+            .ability = ABILITY_HYDRATION,
 #line 15801
             .lvl = 12,
 #line 15803
@@ -39018,9 +39018,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15805
-                MOVE_DISARMING_VOICE,
-                MOVE_SING,
-                MOVE_FURY_ATTACK,
+                MOVE_WATER_GUN,
+                MOVE_SUPERSONIC,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -39074,12 +39074,12 @@ F_TRAINER_FEMALE |
         {
             {
 #line 15830
-            .species = SPECIES_WINGULL,
+            .species = SPECIES_SWABLU,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15832
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15834
-            .ability = ABILITY_HYDRATION,
+            .ability = ABILITY_CLOUD_NINE,
 #line 15831
             .lvl = 18,
 #line 15833
@@ -39087,20 +39087,20 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15835
-                MOVE_WATER_PULSE,
-                MOVE_SUPERSONIC,
-                MOVE_QUICK_ATTACK,
+                MOVE_DISARMING_VOICE,
+                MOVE_SING,
+                MOVE_ROUND,
                 MOVE_AERIAL_ACE,
             },
             },
             {
 #line 15840
-            .species = SPECIES_SWABLU,
+            .species = SPECIES_WINGULL,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15842
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15844
-            .ability = ABILITY_CLOUD_NINE,
+            .ability = ABILITY_HYDRATION,
 #line 15841
             .lvl = 18,
 #line 15843
@@ -39108,9 +39108,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15845
-                MOVE_DISARMING_VOICE,
-                MOVE_SING,
-                MOVE_ROUND,
+                MOVE_WATER_PULSE,
+                MOVE_SUPERSONIC,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -39275,43 +39275,43 @@ F_TRAINER_FEMALE |
         {
             {
 #line 15920
-            .species = SPECIES_SKARMORY,
+            .species = SPECIES_SWABLU,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15922
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15924
-            .ability = ABILITY_KEEN_EYE,
+            .ability = ABILITY_NATURAL_CURE,
 #line 15921
-            .lvl = 26,
+            .lvl = 24,
 #line 15923
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15925
-                MOVE_SPIKES,
-                MOVE_SAND_ATTACK,
-                MOVE_STEEL_WING,
+                MOVE_DISARMING_VOICE,
+                MOVE_SING,
+                MOVE_ROUND,
                 MOVE_AERIAL_ACE,
             },
             },
             {
 #line 15930
-            .species = SPECIES_SWABLU,
+            .species = SPECIES_SKARMORY,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15932
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15934
-            .ability = ABILITY_NATURAL_CURE,
+            .ability = ABILITY_KEEN_EYE,
 #line 15931
-            .lvl = 24,
+            .lvl = 26,
 #line 15933
-            .nature = NATURE_HARDY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15935
-                MOVE_DISARMING_VOICE,
-                MOVE_SING,
-                MOVE_ROUND,
+                MOVE_SPIKES,
+                MOVE_SAND_ATTACK,
+                MOVE_STEEL_WING,
                 MOVE_AERIAL_ACE,
             },
             },
