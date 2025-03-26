@@ -94,6 +94,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceiveCastform::
 	//goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route119_WeatherInstitute_2F_EventScript_ReceiveCastformPC
 	//goto Common_EventScript_NoMoreRoomForPokemon
 	giveitem ITEM_MYSTIC_WATER
+	release
 	end
 
 Route119_WeatherInstitute_2F_EventScript_ReceiveCastformParty::

@@ -2,7 +2,17 @@ FortreeCity_DecorationShop_MapScripts::
 	.byte 0
 
 FortreeCity_DecorationShop_EventScript_PokefanM::
+	goto_if_unset FLAG_RECEIVED_ROTOM_CATALOG, FortreeCity_DecorationShop_EventScript_Rotom
 	msgbox FortreeCity_DecorationShop_Text_MerchandiseSentToPC, MSGBOX_NPC
+	end
+
+FortreeCity_DecorationShop_EventScript_Rotom::
+	lock
+	faceplayer
+	setflag FLAG_RECEIVED_ROTOM_CATALOG
+	msgbox FortreeCity_DecorationShop_Text_Rotom, MSGBOX_NPC
+	giveitem ITEM_ROTOM_CATALOG, 4
+	release
 	end
 
 FortreeCity_DecorationShop_EventScript_Girl::
@@ -66,3 +76,8 @@ FortreeCity_DecorationShop_Text_BuyingDeskForDolls:
 	.string "SECRET BASE, my DOLLS will get\l"
 	.string "dirty or poked with splinters.$"
 
+FortreeCity_DecorationShop_Text_Rotom:
+	.string "Ah, so many choices, I just can't\n"
+	.string "decide what to buy!\p"
+	.string "Here, take these catalogs, they're\n"
+	.string "far too stressful for me.$"

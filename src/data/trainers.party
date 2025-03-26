@@ -14046,7 +14046,7 @@ Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
-- Take Down
+- Crunch
 - Rock Tomb
 - Play Rough
 - Fire Fang
@@ -14106,10 +14106,10 @@ Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
-- Take Down
+- Crunch
 - Rock Tomb
 - Play Rough
-- Fire Fang
+- Flare Blitz
 
 Probopass @ Sitrus Berry
 Level: 46
@@ -14971,6 +14971,16 @@ Items: Potion / Potion
 Double Battle: No
 AI: Basic Trainer
 
+Slugma
+Level: 12
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Sassy
+Ability: Solid Rock
+- Yawn
+- Smog
+- Ember
+- Rock Throw
+
 Numel
 Level: 12
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -15006,9 +15016,9 @@ Level: 16
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
 Ability: Flame Body
-- Overheat
-- Smog
 - Yawn
+- Smog
+- Incinerate
 - Rock Throw
 
 Numel
@@ -15046,7 +15056,7 @@ Level: 22
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
 Ability: Flame Body
-- Overheat
+- Incinerate
 - Smog
 - Yawn
 - Sunny Day
@@ -15061,7 +15071,7 @@ Ability: Solid Rock
 - Magnitude
 - Attract
 
-Torkoal @ White Herb
+Torkoal @ Sitrus Berry
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
@@ -15300,14 +15310,6 @@ Music: Female
 Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
-
-Castform
-Level: 40
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Forecast
-- Sunny Day
-- Weather Ball
 
 Marowak-Alola @ Thick Club
 Level: 44
@@ -16730,7 +16732,7 @@ Seadra @ Sitrus Berry
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Swift Swim
+Ability: Poison Point
 - Water Pulse
 - Smokescreen
 - Aurora Beam
@@ -16770,7 +16772,7 @@ Seadra
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Swift Swim
+Ability: Poison Point
 - Water Pulse
 - Smokescreen
 - Aurora Beam
@@ -16820,7 +16822,7 @@ Seadra @ Sitrus Berry
 Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Swift Swim
+Ability: Poison Point
 - Water Pulse
 - Smokescreen
 - Aurora Beam
@@ -17111,7 +17113,7 @@ Cacturne
 Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Water Absorb
+Ability: Sand Veil
 - Leech Seed
 - Feint Attack
 - Needle Arm
@@ -17131,7 +17133,7 @@ Shiftry
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Early Bird
+Ability: Chlorophyll
 - Leaf Tornado
 - Double Team
 - Swagger
@@ -17305,8 +17307,8 @@ Nature: Adamant
 Ability: Poison Point
 - Barb Barrage
 - Pin Missile
-- Aqua Tail
-- Self Destruct
+- Crunch
+- Brine
 
 Sneasler
 Level: 50
@@ -17333,10 +17335,10 @@ Level: 51
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
-- Brave Bird
 - Cross Poison
-- U Turn
+- Aerial Ace
 - Leech Life
+- Haze
 
 === TRAINER_GLACIA ===
 Name: GLACIA
@@ -17427,17 +17429,17 @@ Ability: Huge Power
 - Play Rough
 - Aqua Tail
 - Brick Break
-- Knock Off
+- Double Edge
 
 Rapidash-Galar
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Pastel Veil
-- High Horsepower
-- Play Rough
 - Psycho Cut
-- Morning Sun
+- Stomp
+- Megahorn
+- Dazzling Gleam
 
 Mawile
 Level: 52
@@ -17446,14 +17448,14 @@ Nature: Adamant
 Ability: Intimidate
 - Play Rough
 - Crunch
-- Fire Fang
 - Iron Head
+- Attract
 
 Gardevoir @ Sitrus Berry
 Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Trace
+Ability: Synchronize
 - Moonblast
 - Psychic
 - Draining Kiss
@@ -17574,7 +17576,7 @@ Regirock
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Careful
-Ability: Sturdy
+Ability: Clear Body
 - Stone Edge
 - Hammer Arm
 - Ancientpower
