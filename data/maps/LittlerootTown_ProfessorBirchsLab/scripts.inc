@@ -133,7 +133,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
     setflag FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD
     @ make old man disappear for sootopolis
     setflag FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE @ also hides the expert as a hack
-	goto LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
+    giveitem ITEM_ACRO_BIKE
+    setflag FLAG_RECEIVED_BIKE
+    goto LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex
+	//goto LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_NicknameStarter::
@@ -535,13 +538,15 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	setflag FLAG_HAS_MATCH_CALL
 	setflag FLAG_ADDED_MATCH_CALL_TO_POKENAV
 	setflag FLAG_HIDE_RUSTBORO_CITY_SCIENTIST
-	applymovement LOCALID_RIVAL, LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls
-	call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls
+	setflag FLAG_DEFEATED_RIVAL_ROUTE103
+	setflag FLAG_HIDE_ROUTE_103_RIVAL
+	//applymovement LOCALID_RIVAL, LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer
+	//waitmovement 0
+	//applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	//waitmovement 0
+	//checkplayergender
+	//call_if_eq VAR_RESULT, MALE, LittlerootTown_ProfessorBirchsLab_EventScript_MayGivePokeBalls
+	//call_if_eq VAR_RESULT, FEMALE, LittlerootTown_ProfessorBirchsLab_EventScript_BrendanGivePokeBalls
 	setvar VAR_BIRCH_LAB_STATE, 5
 	setflag FLAG_ADVENTURE_STARTED
 	setvar VAR_OLDALE_TOWN_STATE, 1
@@ -749,13 +754,6 @@ LittlerootTown_ProfessorBirchsLab_Text_BirchRivalGoneHome:
 	.string "you should get some rest at home.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex:
-	.string "PROF. BIRCH: Oh, hi, {PLAYER}{KUN}!\p"
-	.string "I heard you beat {RIVAL} on\n"
-	.string "your first try. That's excellent!\p"
-	.string "{RIVAL}'s been helping with my research\n"
-	.string "for a long time.\p"
-	.string "{RIVAL} has an extensive history as\n"
-	.string "a TRAINER already.\p"
 	.string "Here, {PLAYER}{KUN}, I ordered this for my\n"
 	.string "research, but I think you should have\l"
 	.string "this POKéDEX.$"

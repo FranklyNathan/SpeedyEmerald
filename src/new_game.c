@@ -234,10 +234,8 @@ void NewGameInitData(void)
     ResetTrainerHillResults();
     ResetContestLinkResults();
 
-        AddBagItem(ITEM_ACRO_BIKE, 1);
         AddBagItem(ITEM_RARE_CANDY, 1);
         AddBagItem(ITEM_CLEANSE_TAG, 1);
-        FlagSet(FLAG_RECEIVED_BIKE); // put the flag here for making sure you got the bicycle
         FlagSet(FLAG_SYS_B_DASH);
         FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE);
         VarSet(VAR_LITTLEROOT_INTRO_STATE, 5);

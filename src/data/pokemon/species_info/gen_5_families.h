@@ -6091,7 +6091,8 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sArchenLevelUpLearnset,
         .teachableLearnset = sArchenTeachableLearnset,
         .eggMoveLearnset = sArchenEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 37, SPECIES_ARCHEOPS}),
+        .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_RAZOR_CLAW, SPECIES_ARCHEOPS},
+                                {EVO_ITEM, ITEM_RAZOR_CLAW, SPECIES_ARCHEOPS}),
     },
 
     [SPECIES_ARCHEOPS] =

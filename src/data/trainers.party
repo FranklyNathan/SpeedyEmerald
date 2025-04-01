@@ -11697,8 +11697,8 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Night Slash
-- Aerial Ace
+- Pursuit
+- Detect
 
 === TRAINER_BRENDAN_LILYCOVE_TREECKO ===
 Name: BRENDAN
@@ -11746,8 +11746,8 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Night Slash
-- Aerial Ace
+- Pursuit
+- Detect
 
 === TRAINER_BRENDAN_LILYCOVE_TORCHIC ===
 Name: BRENDAN
@@ -11795,8 +11795,8 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Night Slash
-- Aerial Ace
+- Pursuit
+- Detect
 
 === TRAINER_MAY_LILYCOVE_MUDKIP ===
 Name: MAY
@@ -11844,8 +11844,8 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Night Slash
-- Aerial Ace
+- Pursuit
+- Detect
 
 === TRAINER_MAY_LILYCOVE_TREECKO ===
 Name: MAY
@@ -11893,8 +11893,8 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Night Slash
-- Aerial Ace
+- Pursuit
+- Detect
 
 === TRAINER_MAY_LILYCOVE_TORCHIC ===
 Name: MAY
@@ -11942,8 +11942,8 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Night Slash
-- Aerial Ace
+- Pursuit
+- Detect
 
 === TRAINER_JONAH ===
 Name: JONAH
@@ -14356,7 +14356,7 @@ Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
-- Heavy Slam
+- Smelling Salts
 - Vital Throw
 - Knock Off
 - Bulk Up
@@ -14416,7 +14416,7 @@ Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
-- Heavy Slam
+- Smelling Salts
 - Vital Throw
 - Knock Off
 - Bulk Up
@@ -14829,7 +14829,7 @@ Ability: Surge Surfer
 - Psychic
 - Shock Wave
 - Surf
-- Nuzzle
+- Quick Attack
 
 Manectric @ Sitrus Berry
 Level: 35
@@ -14889,7 +14889,7 @@ Ability: Surge Surfer
 - Psychic
 - Shock Wave
 - Surf
-- Nuzzle
+- Quick Attack
 
 Manectric @ Sitrus Berry
 Level: 42
@@ -15396,7 +15396,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Truant
 - Slack Off
-- Yawn
+- Scratch
 - Facade
 - Feint Attack
 
@@ -15418,7 +15418,6 @@ Ability: Own Tempo
 - Teeter Dance
 - Psybeam
 - Facade
-- Hypnosis
 
 Zorua-Hisui
 Level: 17
@@ -15445,7 +15444,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Vital Spirit
 - Slack Off
-- Yawn
+- Scratch
 - Facade
 - Feint Attack
 
@@ -16207,7 +16206,7 @@ Ability: Levitate
 - Confusion
 - Rock Throw
 - Calm Mind
-- Hypnosis
+- Safeguard
 
 Solrock @ Oran Berry
 Level: 15
@@ -16237,7 +16236,7 @@ Ability: Levitate
 - Confusion
 - Rock Slide
 - Calm Mind
-- Hypnosis
+- Safeguard
 
 Solrock @ Oran Berry
 Level: 19
@@ -16618,16 +16617,6 @@ Ability: Oblivious
 - Water Pulse
 - Flail
 
-Horsea @ Oran Berry
-Level: 15
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Swift Swim
-- Water Pulse
-- Smokescreen
-- Leer
-- Twister
-
 Wailmer @ Oran Berry
 Level: 15
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -16637,6 +16626,16 @@ Ability: Water Veil
 - Growl
 - Rollout
 - Water Pulse
+
+Horsea @ Oran Berry
+Level: 15
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Modest
+Ability: Swift Swim
+- Water Pulse
+- Smokescreen
+- Leer
+- Twister
 
 === TRAINER_JUAN_2 ===
 Name: JUAN
@@ -16668,16 +16667,6 @@ Ability: Oblivious
 - Mud Slap
 - Flail
 
-Horsea @ Oran Berry
-Level: 19
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Swift Swim
-- Water Pulse
-- Smokescreen
-- Leer
-- Twister
-
 Wailmer @ Oran Berry
 Level: 19
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -16687,6 +16676,16 @@ Ability: Water Veil
 - Defense Curl
 - Rollout
 - Water Pulse
+
+Horsea @ Oran Berry
+Level: 19
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Modest
+Ability: Swift Swim
+- Water Pulse
+- Smokescreen
+- Leer
+- Twister
 
 === TRAINER_JUAN_3 ===
 Name: JUAN
@@ -17049,14 +17048,14 @@ Double Battle: No
 AI: Basic Trainer
 
 Altaria
-Level: 45
+Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
 Ability: Natural Cure
 - Aerial Ace
 - Perish Song
 - Dragon Pulse
-- Moonblast
+- Safeguard
 
 Delcatty
 Level: 46
@@ -17071,15 +17070,15 @@ Ability: Cute Charm
 Roserade
 Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
+Nature: Adamant
 Ability: Poison Point
 - Petal Blizzard
 - Leech Seed
-- Sludge Bomb
+- Synthesis
 - Toxic
 
 Magnezone
-Level: 47
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Magnet Pull
@@ -17096,7 +17095,7 @@ Ability: Steadfast
 - Close Combat
 - Aerial Ace
 - Psycho Cut
-- Bulk Up
+- Swords Dance
 
 === TRAINER_SIDNEY ===
 Name: SIDNEY
@@ -17120,7 +17119,7 @@ Ability: Sand Veil
 - Spiky Shield
 
 Samurott-Hisui
-Level: 47
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Torrent
@@ -17130,7 +17129,7 @@ Ability: Torrent
 - Aerial Ace
 
 Shiftry
-Level: 48
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Chlorophyll
@@ -17170,7 +17169,7 @@ AI: Basic Trainer
 Mugshot: Green
 
 Vileplume @ Durin Berry
-Level: 47
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Effect Spore
@@ -17362,7 +17361,7 @@ Ability: Snow Cloak
 - Icy Wind
 
 Ninetales-Alola
-Level: 51
+Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Snow Warning
@@ -17442,7 +17441,7 @@ Ability: Pastel Veil
 - Dazzling Gleam
 
 Mawile
-Level: 52
+Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
@@ -17598,7 +17597,7 @@ Level: 57
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Sturdy
-- Night Slash
+- Toxic
 - Fly
 - Spikes
 - Steel Wing

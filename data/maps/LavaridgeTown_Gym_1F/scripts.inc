@@ -243,7 +243,7 @@ LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "and hotter than a volcano.\p"
 	.string "Don't get too close to her--you'll burn!\n"
 	.string "Hose her down with water and then\l"
-	.string "go for it!/p"
+	.string "go for it!\p"
 	.string "After this chat, your POKéMON should\n"
 	.string "be refreshed and ready to go!$"
 

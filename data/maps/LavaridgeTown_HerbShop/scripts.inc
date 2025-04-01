@@ -19,6 +19,7 @@ LavaridgeTown_HerbShop_Pokemart:
 	.2byte ITEM_DRAGON_SCALE
 	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_METAL_COAT
+	.2byte ITEM_RAZOR_CLAW
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_TOXIC_ORB

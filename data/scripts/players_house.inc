@@ -75,6 +75,7 @@ msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	givemon SPECIES_EEVEE, 15, ITEM_NONE
 	givemon SPECIES_ABRA, 15, ITEM_NONE
 	givemon SPECIES_APPLIN, 15, ITEM_NONE
+	givemon SPECIES_ARCHEN, 15, ITEM_NONE
 	givemon SPECIES_ARON, 15, ITEM_NONE
 	givemon SPECIES_AZURILL, 15, ITEM_NONE
 	givemon SPECIES_BAGON, 15, ITEM_NONE
@@ -125,7 +126,7 @@ msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	givemon SPECIES_MAWILE, 15, ITEM_NONE
 	givemon SPECIES_MIME_JR, 15, ITEM_NONE
 	givemon SPECIES_MINCCINO, 15, ITEM_NONE
-	givemon SPECIES_MINIOR_CORE_RED, 15, ITEM_NONE
+	givemon SPECIES_MINIOR_METEOR_RED, 15, ITEM_NONE
 	givemon SPECIES_MORELULL, 15, ITEM_NONE
 	givemon SPECIES_MUDBRAY, 15, ITEM_NONE
 	givemon SPECIES_MUDKIP, 15, ITEM_NONE
@@ -134,10 +135,10 @@ msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	givemon SPECIES_NOIBAT, 15, ITEM_NONE
 	givemon SPECIES_NUMEL, 15, ITEM_NONE
 	givemon SPECIES_PANCHAM, 15, ITEM_NONE
-	givemon SPECIES_PAWNIARD, 15, ITEM_NONE
 	givemon SPECIES_PICHU, 15, ITEM_NONE
 	givemon SPECIES_PIKIPEK, 15, ITEM_NONE
 	givemon SPECIES_POLIWAG, 15, ITEM_NONE
+	givemon SPECIES_POOCHYENA, 15, ITEM_NONE
 	givemon SPECIES_POPPLIO, 15, ITEM_NONE
 	givemon SPECIES_PORYGON, 15, ITEM_NONE
 	givemon SPECIES_RALTS, 15, ITEM_NONE
@@ -284,9 +285,15 @@ PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
-	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
+	//msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_1, 1
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setflag FLAG_MET_RIVAL_MOM
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
 	waitmovement 0
 	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
@@ -309,9 +316,15 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
-	msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
+	//msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_TEMP_1, 1
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setflag FLAG_MET_RIVAL_MOM
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
 	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
 	waitmovement 0
 	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast

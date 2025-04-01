@@ -15478,11 +15478,8 @@ static void Cmd_pickup(void)
                 && species != SPECIES_EGG
                 && heldItem == ITEM_NONE)
             {
-                if ((lvlDivBy10 + 1 ) * 5 > 1) //Make Honey Gather always gather honey
-                {
                     heldItem = ITEM_HONEY;
                     SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &heldItem);
-                }
             }
             else if (P_SHUCKLE_BERRY_JUICE == GEN_2
                 && species == SPECIES_SHUCKLE

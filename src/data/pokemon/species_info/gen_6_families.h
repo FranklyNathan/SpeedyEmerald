@@ -2190,7 +2190,7 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .levelUpLearnset = sPanchamLevelUpLearnset,
         .teachableLearnset = sPanchamTeachableLearnset,
         .eggMoveLearnset = sPanchamEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL_DARK_TYPE_MON_IN_PARTY, 32, SPECIES_PANGORO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 32, SPECIES_PANGORO}),
     },
 
     [SPECIES_PANGORO] =

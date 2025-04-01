@@ -11372,8 +11372,8 @@ static const struct LevelUpMove sHippowdonLevelUpLearnset[] = {
 #if P_FAMILY_SKORUPI
 static const struct LevelUpMove sSkorupiLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_BITE),
-    LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE( 5, MOVE_KNOCK_OFF),
     LEVEL_UP_MOVE( 9, MOVE_PIN_MISSILE),
     LEVEL_UP_MOVE(13, MOVE_ACUPRESSURE),

@@ -10444,8 +10444,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sMagnetonLevelUpLearnset,
         .teachableLearnset = sMagnetonTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_NEW_MAUVILLE, SPECIES_MAGNEZONE},
-                                {EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_MAGNEZONE}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_THUNDER_STONE, SPECIES_MAGNEZONE}),
     },
 
 #if P_GEN_4_CROSS_EVOS
@@ -17348,9 +17347,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
                                 {EVO_ITEM, ITEM_FIRE_STONE, SPECIES_FLAREON},
                                 {EVO_ITEM, ITEM_SUN_STONE, SPECIES_ESPEON},
                                 {EVO_ITEM, ITEM_MOON_STONE, SPECIES_UMBREON},
-                                {EVO_SPECIFIC_MAP, MAP_PETALBURG_WOODS, SPECIES_LEAFEON},
                                 {EVO_ITEM, ITEM_LEAF_STONE, SPECIES_LEAFEON},
-                                {EVO_SPECIFIC_MAP, MAP_SHOAL_CAVE_LOW_TIDE_ICE_ROOM, SPECIES_GLACEON},
                                 {EVO_ITEM, ITEM_ICE_STONE, SPECIES_GLACEON},
                                 {EVO_ITEM, ITEM_SHINY_STONE, SPECIES_SYLVEON}),
     },
@@ -18168,7 +18165,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sPorygon2LevelUpLearnset,
         .teachableLearnset = sPorygon2TeachableLearnset,
         .evolutions = EVOLUTION({EVO_TRADE_ITEM, ITEM_DUBIOUS_DISC, SPECIES_PORYGON_Z},
-                                {EVO_LEVEL, 40, SPECIES_PORYGON_Z}),
+                                {EVO_ITEM, ITEM_LINKING_CORD, SPECIES_PORYGON_Z}),
     },
 
 #if P_GEN_4_CROSS_EVOS
