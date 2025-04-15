@@ -1179,6 +1179,7 @@ EventScript_WarpHomeLavaridge::
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
 	warp MAP_LAVARIDGE_TOWN, 5, 15
+	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS //Access evolution stones after gym 4
 	waitstate
 	releaseall
 	end

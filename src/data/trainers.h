@@ -34890,9 +34890,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13929
-                MOVE_TAKE_DOWN,
+                MOVE_BITE,
                 MOVE_ROCK_TOMB,
-                MOVE_PLAY_ROUGH,
+                MOVE_HOWL,
                 MOVE_FIRE_FANG,
             },
             },
@@ -35022,9 +35022,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13989
-                MOVE_TAKE_DOWN,
+                MOVE_CRUNCH,
                 MOVE_ROCK_TOMB,
-                MOVE_PLAY_ROUGH,
+                MOVE_HOWL,
                 MOVE_FIRE_FANG,
             },
             },
@@ -35156,7 +35156,7 @@ F_TRAINER_FEMALE |
 #line 14049
                 MOVE_CRUNCH,
                 MOVE_ROCK_TOMB,
-                MOVE_PLAY_ROUGH,
+                MOVE_TAKE_DOWN,
                 MOVE_FIRE_FANG,
             },
             },
@@ -35288,7 +35288,7 @@ F_TRAINER_FEMALE |
 #line 14109
                 MOVE_CRUNCH,
                 MOVE_ROCK_TOMB,
-                MOVE_PLAY_ROUGH,
+                MOVE_EXTREME_SPEED,
                 MOVE_FLARE_BLITZ,
             },
             },
@@ -35880,8 +35880,8 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 14379
                 MOVE_SUBMISSION,
+                MOVE_LOW_KICK,
                 MOVE_DUAL_CHOP,
-                MOVE_BULLET_PUNCH,
                 MOVE_BULK_UP,
             },
             },
@@ -35947,7 +35947,7 @@ F_TRAINER_FEMALE |
                 MOVE_BRUTAL_SWING,
                 MOVE_FURY_CUTTER,
                 MOVE_ROCK_SMASH,
-                MOVE_LEAF_BLADE,
+                MOVE_IRON_DEFENSE,
             },
             },
             {
@@ -36011,9 +36011,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14439
+                MOVE_SUBMISSION,
                 MOVE_CROSS_CHOP,
                 MOVE_DUAL_CHOP,
-                MOVE_BULLET_PUNCH,
                 MOVE_BULK_UP,
             },
             },
@@ -36143,9 +36143,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14499
+                MOVE_SUBMISSION,
                 MOVE_CROSS_CHOP,
                 MOVE_DUAL_CHOP,
-                MOVE_BULLET_PUNCH,
                 MOVE_BULK_UP,
             },
             },
@@ -39027,25 +39027,25 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15811
-            .species = SPECIES_TROPIUS,
+            .species = SPECIES_TAILLOW,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15811
             .heldItem = ITEM_ORAN_BERRY,
 #line 15813
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15815
-            .ability = ABILITY_CHLOROPHYLL,
+            .ability = ABILITY_GUTS,
 #line 15812
             .lvl = 15,
 #line 15814
-            .nature = NATURE_SASSY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15816
-                MOVE_GROWTH,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
-                MOVE_RAZOR_LEAF,
-                MOVE_GUST,
+                MOVE_FOCUS_ENERGY,
+                MOVE_GROWL,
             },
             },
         },
@@ -39117,25 +39117,25 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15851
-            .species = SPECIES_TROPIUS,
+            .species = SPECIES_TAILLOW,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15851
             .heldItem = ITEM_ORAN_BERRY,
 #line 15853
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15855
-            .ability = ABILITY_CHLOROPHYLL,
+            .ability = ABILITY_GUTS,
 #line 15852
             .lvl = 19,
 #line 15854
-            .nature = NATURE_SASSY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15856
-                MOVE_GROWTH,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
-                MOVE_RAZOR_LEAF,
-                MOVE_STOMP,
+                MOVE_FOCUS_ENERGY,
+                MOVE_DOUBLE_TEAM,
             },
             },
         },
@@ -39228,25 +39228,25 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15901
-            .species = SPECIES_TROPIUS,
+            .species = SPECIES_SWELLOW,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15901
             .heldItem = ITEM_SITRUS_BERRY,
 #line 15903
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15905
-            .ability = ABILITY_CHLOROPHYLL,
+            .ability = ABILITY_GUTS,
 #line 15902
             .lvl = 24,
 #line 15904
-            .nature = NATURE_SASSY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15906
-                MOVE_GROWTH,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
-                MOVE_LEAF_TORNADO,
-                MOVE_STOMP,
+                MOVE_PLUCK,
+                MOVE_DOUBLE_TEAM,
             },
             },
         },
@@ -39318,23 +39318,23 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15941
-            .species = SPECIES_TROPIUS,
+            .species = SPECIES_SWELLOW,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15943
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15945
-            .ability = ABILITY_CHLOROPHYLL,
+            .ability = ABILITY_GUTS,
 #line 15942
             .lvl = 26,
 #line 15944
-            .nature = NATURE_SASSY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15946
-                MOVE_GROWTH,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
-                MOVE_LEAF_TORNADO,
-                MOVE_STOMP,
+                MOVE_PLUCK,
+                MOVE_DOUBLE_TEAM,
             },
             },
             {
@@ -39429,23 +39429,23 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15991
-            .species = SPECIES_TROPIUS,
+            .species = SPECIES_SWELLOW,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15993
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15995
-            .ability = ABILITY_CHLOROPHYLL,
+            .ability = ABILITY_GUTS,
 #line 15992
             .lvl = 30,
 #line 15994
-            .nature = NATURE_SASSY,
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15996
-                MOVE_SUNNY_DAY,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
-                MOVE_SOLAR_BEAM,
-                MOVE_STOMP,
+                MOVE_PLUCK,
+                MOVE_DOUBLE_TEAM,
             },
             },
             {
@@ -42077,8 +42077,8 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 17186
                 MOVE_LEAF_BLADE,
-                MOVE_BRAVE_BIRD,
-                MOVE_U_TURN,
+                MOVE_PLUCK,
+                MOVE_FEATHER_DANCE,
                 MOVE_TRIPLE_ARROWS,
             },
             },

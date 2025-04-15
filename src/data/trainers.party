@@ -13926,9 +13926,9 @@ Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
-- Take Down
+- Bite
 - Rock Tomb
-- Play Rough
+- Howl
 - Fire Fang
 
 Probopass @ Sitrus Berry
@@ -13986,9 +13986,9 @@ Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
-- Take Down
+- Crunch
 - Rock Tomb
-- Play Rough
+- Howl
 - Fire Fang
 
 Probopass @ Sitrus Berry
@@ -14048,7 +14048,7 @@ Nature: Adamant
 Ability: Intimidate
 - Crunch
 - Rock Tomb
-- Play Rough
+- Take Down
 - Fire Fang
 
 Probopass @ Sitrus Berry
@@ -14108,7 +14108,7 @@ Nature: Adamant
 Ability: Intimidate
 - Crunch
 - Rock Tomb
-- Play Rough
+- Extreme Speed
 - Flare Blitz
 
 Probopass @ Sitrus Berry
@@ -14377,8 +14377,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
 - Submission
+- Low Kick
 - Dual Chop
-- Bullet Punch
 - Bulk Up
 
 Meditite
@@ -14409,7 +14409,7 @@ Ability: Inner Focus
 - Brutal Swing
 - Fury Cutter
 - Rock Smash
-- Leaf Blade
+- Iron Defense
 
 Hariyama @ Sitrus Berry
 Level: 35
@@ -14436,9 +14436,9 @@ Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
+- Submission
 - Cross Chop
 - Dual Chop
-- Bullet Punch
 - Bulk Up
 
 Medicham
@@ -14496,9 +14496,9 @@ Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
+- Submission
 - Cross Chop
 - Dual Chop
-- Bullet Punch
 - Bulk Up
 
 Medicham
@@ -15808,15 +15808,15 @@ Ability: Hydration
 - Quick Attack
 - Aerial Ace
 
-Tropius @ Oran Berry
+Taillow @ Oran Berry
 Level: 15
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Sassy
-Ability: Chlorophyll
-- Growth
+Nature: Adamant
+Ability: Guts
+- Quick Attack
 - Aerial Ace
-- Razor Leaf
-- Gust
+- Focus Energy
+- Growl
 
 === TRAINER_WINONA_2 ===
 Name: WINONA
@@ -15848,15 +15848,15 @@ Ability: Hydration
 - Quick Attack
 - Aerial Ace
 
-Tropius @ Oran Berry
+Taillow @ Oran Berry
 Level: 19
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Sassy
-Ability: Chlorophyll
-- Growth
+Nature: Adamant
+Ability: Guts
+- Quick Attack
 - Aerial Ace
-- Razor Leaf
-- Stomp
+- Focus Energy
+- Double Team
 
 === TRAINER_WINONA_3 ===
 Name: WINONA
@@ -15898,15 +15898,15 @@ Ability: Keen Eye
 - Brine
 - Aerial Ace
 
-Tropius @ Sitrus Berry
+Swellow @ Sitrus Berry
 Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Sassy
-Ability: Chlorophyll
-- Growth
+Nature: Adamant
+Ability: Guts
+- Quick Attack
 - Aerial Ace
-- Leaf Tornado
-- Stomp
+- Pluck
+- Double Team
 
 === TRAINER_WINONA_4 ===
 Name: WINONA
@@ -15938,15 +15938,15 @@ Ability: Keen Eye
 - Steel Wing
 - Aerial Ace
 
-Tropius
+Swellow
 Level: 26
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Sassy
-Ability: Chlorophyll
-- Growth
+Nature: Adamant
+Ability: Guts
+- Quick Attack
 - Aerial Ace
-- Leaf Tornado
-- Stomp
+- Pluck
+- Double Team
 
 Pelipper @ Deep Sea Tooth
 Level: 29
@@ -15988,15 +15988,15 @@ Ability: Keen Eye
 - Steel Wing
 - Aerial Ace
 
-Tropius
+Swellow
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Sassy
-Ability: Chlorophyll
-- Sunny Day
+Nature: Adamant
+Ability: Guts
+- Quick Attack
 - Aerial Ace
-- Solar Beam
-- Stomp
+- Pluck
+- Double Team
 
 Pelipper @ Deep Sea Tooth
 Level: 32
@@ -17184,8 +17184,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Overgrow
 - Leaf Blade
-- Brave Bird
-- U Turn
+- Pluck
+- Feather Dance
 - Triple Arrows
 
 Toedscruel

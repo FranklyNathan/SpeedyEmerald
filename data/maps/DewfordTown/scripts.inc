@@ -45,7 +45,7 @@ DewfordTown_EventScript_RandGymDewford::
 	call_if_set FLAG_DEFEATED_DEWFORD_GYM, DewfordTown_EventScript_AlreadyBeaten
 	setvar VAR_RETURN_MAP, 1
 	setdynamicwarp MAP_DEWFORD_TOWN_GYM, 5, 27
-	return
+	end
 
 DewfordTown_EventScript_RandGymMauville::
 	call_if_set FLAG_DEFEATED_MAUVILLE_GYM, DewfordTown_EventScript_AlreadyBeaten

@@ -119,6 +119,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	clearflag FLAG_HIDE_PETALBURG_BOY
 	setvar VAR_SCOTT_PETALBURG_ENCOUNTER, 1
 	setvar VAR_PETALBURG_GYM_STATE, 6
+	clearflag FLAG_HIDE_PETALBURG_GYM_GREETER
 	setflag FLAG_NUZLOCKE
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setvar VAR_BADGE_COUNT, 0
