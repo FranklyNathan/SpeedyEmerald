@@ -726,7 +726,7 @@
       "x": 35,
       "y": 39,
       "elevation": 3,
-      "item": "ITEM_REVIVE",
+      "item": "ITEM_HYPER_POTION",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_110_REVIVE"
     },
     {

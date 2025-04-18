@@ -29404,7 +29404,7 @@ F_TRAINER_FEMALE |
 #line 11698
                 MOVE_DUAL_CHOP,
                 MOVE_LEAF_BLADE,
-                MOVE_PURSUIT,
+                MOVE_SLAM,
                 MOVE_DETECT,
             },
             },
@@ -29509,7 +29509,7 @@ F_TRAINER_FEMALE |
 #line 11747
                 MOVE_DUAL_CHOP,
                 MOVE_LEAF_BLADE,
-                MOVE_PURSUIT,
+                MOVE_SLAM,
                 MOVE_DETECT,
             },
             },
@@ -29614,7 +29614,7 @@ F_TRAINER_FEMALE |
 #line 11796
                 MOVE_DUAL_CHOP,
                 MOVE_LEAF_BLADE,
-                MOVE_PURSUIT,
+                MOVE_SLAM,
                 MOVE_DETECT,
             },
             },
@@ -29721,7 +29721,7 @@ F_TRAINER_FEMALE |
 #line 11845
                 MOVE_DUAL_CHOP,
                 MOVE_LEAF_BLADE,
-                MOVE_PURSUIT,
+                MOVE_SLAM,
                 MOVE_DETECT,
             },
             },
@@ -29828,7 +29828,7 @@ F_TRAINER_FEMALE |
 #line 11894
                 MOVE_DUAL_CHOP,
                 MOVE_LEAF_BLADE,
-                MOVE_PURSUIT,
+                MOVE_SLAM,
                 MOVE_DETECT,
             },
             },
@@ -29935,7 +29935,7 @@ F_TRAINER_FEMALE |
 #line 11943
                 MOVE_DUAL_CHOP,
                 MOVE_LEAF_BLADE,
-                MOVE_PURSUIT,
+                MOVE_SLAM,
                 MOVE_DETECT,
             },
             },
@@ -40204,7 +40204,7 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16336
-                MOVE_PSYCHIC,
+                MOVE_COSMIC_POWER,
                 MOVE_POWER_GEM,
                 MOVE_CALM_MIND,
                 MOVE_HYPNOSIS,
@@ -40227,7 +40227,7 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16346
-                MOVE_PSYCHIC,
+                MOVE_COSMIC_POWER,
                 MOVE_ROCK_SLIDE,
                 MOVE_CALM_MIND,
                 MOVE_FIRE_SPIN,
@@ -40250,7 +40250,7 @@ F_TRAINER_FEMALE |
 #line 16357
         .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16358
-        .doubleBattle = FALSE,
+        .doubleBattle = TRUE,
 #line 16359
         .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 4,
@@ -40315,10 +40315,10 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16386
-                MOVE_PSYCHIC,
+                MOVE_COSMIC_POWER,
                 MOVE_POWER_GEM,
                 MOVE_CALM_MIND,
-                MOVE_MOONBLAST,
+                MOVE_HYPNOSIS,
             },
             },
             {
@@ -40338,7 +40338,7 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16396
-                MOVE_PSYCHIC,
+                MOVE_COSMIC_POWER,
                 MOVE_ROCK_SLIDE,
                 MOVE_CALM_MIND,
                 MOVE_FIRE_SPIN,
@@ -42357,7 +42357,7 @@ F_TRAINER_FEMALE |
 #line 17314
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17316
-            .ability = ABILITY_POISON_TOUCH,
+            .ability = ABILITY_PRESSURE,
 #line 17313
             .lvl = 50,
 #line 17315
@@ -42479,7 +42479,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 17368
                 MOVE_ICE_BEAM,
-                MOVE_CALM_MIND,
+                MOVE_SAFEGUARD,
                 MOVE_DAZZLING_GLEAM,
                 MOVE_ICE_SHARD,
             },
@@ -42520,7 +42520,7 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17388
-                MOVE_SHADOW_BALL,
+                MOVE_CRUNCH,
                 MOVE_EXPLOSION,
                 MOVE_HAIL,
                 MOVE_FREEZE_DRY,

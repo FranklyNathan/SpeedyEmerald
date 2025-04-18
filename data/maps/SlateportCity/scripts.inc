@@ -795,8 +795,8 @@ SlateportCity_EventScript_HealPowder::
 	end
 
 SlateportCity_EventScript_RevivalHerb::
-	bufferitemname STR_VAR_1, ITEM_REVIVAL_HERB
-	setvar VAR_0x8008, ITEM_REVIVAL_HERB
+	bufferitemname STR_VAR_1, ITEM_QUICK_POWDER
+	setvar VAR_0x8008, ITEM_QUICK_POWDER
 	setvar VAR_0x8009, 300
 	goto SlateportCity_EventScript_TryBuyBerryPowderItem
 	end

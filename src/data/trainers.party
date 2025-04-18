@@ -11697,7 +11697,7 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Pursuit
+- Slam
 - Detect
 
 === TRAINER_BRENDAN_LILYCOVE_TREECKO ===
@@ -11746,7 +11746,7 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Pursuit
+- Slam
 - Detect
 
 === TRAINER_BRENDAN_LILYCOVE_TORCHIC ===
@@ -11795,7 +11795,7 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Pursuit
+- Slam
 - Detect
 
 === TRAINER_MAY_LILYCOVE_MUDKIP ===
@@ -11844,7 +11844,7 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Pursuit
+- Slam
 - Detect
 
 === TRAINER_MAY_LILYCOVE_TREECKO ===
@@ -11893,7 +11893,7 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Pursuit
+- Slam
 - Detect
 
 === TRAINER_MAY_LILYCOVE_TORCHIC ===
@@ -11942,7 +11942,7 @@ Nature: Adamant
 Ability: Overgrow
 - Dual Chop
 - Leaf Blade
-- Pursuit
+- Slam
 - Detect
 
 === TRAINER_JONAH ===
@@ -16333,7 +16333,7 @@ Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
-- Psychic
+- Cosmic Power
 - Power Gem
 - Calm Mind
 - Hypnosis
@@ -16343,7 +16343,7 @@ Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
-- Psychic
+- Cosmic Power
 - Rock Slide
 - Calm Mind
 - Fire Spin
@@ -16355,7 +16355,7 @@ Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
 Items: Hyper Potion / Hyper Potion
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer
 
 Xatu
@@ -16383,17 +16383,17 @@ Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
-- Psychic
+- Cosmic Power
 - Power Gem
 - Calm Mind
-- Moonblast
+- Hypnosis
 
 Solrock @ Sitrus Berry
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
-- Psychic
+- Cosmic Power
 - Rock Slide
 - Calm Mind
 - Fire Spin
@@ -17313,7 +17313,7 @@ Sneasler
 Level: 50
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Poison Touch
+Ability: Pressure
 - Dire Claw
 - Brick Break
 - Slash
@@ -17366,7 +17366,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Snow Warning
 - Ice Beam
-- Calm Mind
+- Safeguard
 - Dazzling Gleam
 - Ice Shard
 
@@ -17385,7 +17385,7 @@ Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Inner Focus
-- Shadow Ball
+- Crunch
 - Explosion
 - Hail
 - Freeze Dry

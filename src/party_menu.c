@@ -2863,8 +2863,10 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     }
 
         if (sPartyMenuInternal->numActions < 5) // If action list consists of < 4 moves, add FLY to action list. All Pokemon can fly.
+            if ((gPlayerParty[gPartyMenu.slotId].hp) != 0)
+        {
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
-
+        }
 
     if (!InBattlePike())
     {

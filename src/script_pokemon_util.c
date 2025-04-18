@@ -36,13 +36,19 @@ void HealPlayerParty(void)
 {
     u32 i;
     for (i = 0; i < gPlayerPartyCount; i++)
-        HealPokemon(&gPlayerParty[i]);
-    if (OW_PC_HEAL >= GEN_8)
+    {
+        if ((gPlayerParty[i].hp) != 0)
+        {
+            HealPokemon(&gPlayerParty[i]);
+        }
+        // The else condition (if it's dead) does nothing, thus not healing.
+    if (OW_PC_HEAL == GEN_2)
         HealPlayerBoxes();
 
     // Recharge Tera Orb, if possible.
     if (B_FLAG_TERA_ORB_CHARGED != 0 && CheckBagHasItem(ITEM_TERA_ORB, 1))
         FlagSet(B_FLAG_TERA_ORB_CHARGED);
+    }
 }
 
 static void HealPlayerBoxes(void)
@@ -57,6 +63,22 @@ static void HealPlayerBoxes(void)
             boxMon = &gPokemonStoragePtr->boxes[boxId][boxPosition];
             if (GetBoxMonData(boxMon, MON_DATA_SANITY_HAS_SPECIES))
                 HealBoxPokemon(boxMon);
+        }
+    }
+}
+
+void ReleasePlayerBoxes(void)
+{
+    int boxId, boxPosition;
+    struct BoxPokemon *boxMon;
+
+    for (boxId = 0; boxId < 13; boxId++)
+    {
+        for (boxPosition = 0; boxPosition < IN_BOX_COUNT; boxPosition++)
+        {
+            boxMon = &gPokemonStoragePtr->boxes[boxId][boxPosition];
+            if (GetBoxMonData(boxMon, MON_DATA_SANITY_HAS_SPECIES))
+                ZeroBoxMonAt(boxId, boxPosition);
         }
     }
 }
