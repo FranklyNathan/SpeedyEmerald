@@ -74,7 +74,6 @@ MossdeepCity_StevensHouse_EventScript_StevenGivesDive::
 	@ route 128
 	setvar VAR_ROUTE128_STATE, 2
 	@ cave of origin
-	setflag FLAG_WALLACE_GOES_TO_SKY_PILLAR @ sky pillar
 	setvar VAR_SOOTOPOLIS_CITY_STATE, 3
 	clearflag FLAG_HIDE_SKY_PILLAR_WALLACE
 	@ make rayquaza fly

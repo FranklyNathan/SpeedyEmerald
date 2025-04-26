@@ -3334,7 +3334,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sBunearyLevelUpLearnset,
         .teachableLearnset = sBunearyTeachableLearnset,
         .eggMoveLearnset = sBunearyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_LOPUNNY}),
+        .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_SECRET_BASE, SPECIES_LOPUNNY}),
     },
 
     [SPECIES_LOPUNNY] =
@@ -4387,7 +4387,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 57 : 72,
         .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
-        .eggCycles = 25,
+        .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
@@ -4440,7 +4440,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sRioluLevelUpLearnset,
         .teachableLearnset = sRioluTeachableLearnset,
         .eggMoveLearnset = sRioluEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 30, SPECIES_LUCARIO}),
+        .evolutions = EVOLUTION({EVO_MAPSEC, MAPSEC_SECRET_BASE, SPECIES_LUCARIO}),
     },
 
     [SPECIES_LUCARIO] =

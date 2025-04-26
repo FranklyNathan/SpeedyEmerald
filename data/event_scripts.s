@@ -708,7 +708,7 @@ Common_ShowEasyChatScreen::
 	return
 
 Common_EventScript_ReadyPetalburgGymForBattle::
-	clearflag FLAG_HIDE_PETALBURG_GYM_GREETER
+	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
 	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS
 	return
 
@@ -1130,6 +1130,7 @@ EventScript_WarpHomeRustboro::
 	clearflag FLAG_HIDE_RUSTBORO_CITY_RIVAL
 	setvar VAR_DEVON_CORP_3F_STATE, 1
     setvar VAR_RUSTBORO_LOCKED, 1
+    call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
 	warp MAP_RUSTBORO_CITY, 27, 20
 	waitstate
 	releaseall
@@ -1140,6 +1141,7 @@ EventScript_WarpHomeDewford::
 	addvar VAR_BADGE_COUNT, 1
     setvar VAR_DEWFORD_LOCKED, 1
     setvar VAR_DEWFORD_TOWN_STATE, 2
+    call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
 	warp MAP_DEWFORD_TOWN, 8, 17
 	waitstate
 	releaseall
@@ -1166,6 +1168,7 @@ EventScript_WarpHomeMauville::
 	clearflag FLAG_HIDE_WEATHER_INSTITUTE_1F_WORKERS
 	setflag FLAG_HIDE_WEATHER_INSTITUTE_2F_WORKERS
     setvar VAR_MAUVILLE_LOCKED, 1
+    call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
 	warp MAP_MAUVILLE_CITY, 8, 6
 	waitstate
 	releaseall
@@ -1175,11 +1178,10 @@ EventScript_WarpHomeLavaridge::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
-	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
+   	call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
 	warp MAP_LAVARIDGE_TOWN, 5, 15
-	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS //Access evolution stones after gym 4
 	waitstate
 	releaseall
 	end

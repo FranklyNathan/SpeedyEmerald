@@ -187,7 +187,7 @@
       "type": "trigger",
       "x": 22,
       "y": 12,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_GYM_LOCKED",
       "var_value": "1",
       "script": "FortreeCity_EventScript_GymDoor"

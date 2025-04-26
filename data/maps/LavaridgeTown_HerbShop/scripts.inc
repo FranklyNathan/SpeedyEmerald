@@ -6,6 +6,7 @@ LavaridgeTown_HerbShop_EventScript_Clerk::
 	faceplayer
 	message LavaridgeTown_HerbShop_Text_WelcomeToHerbShop
 	waitmessage
+	goto_if_ge VAR_BADGE_COUNT, 3, LavaridgeTown_HerbShop_Pokemart_Expanded
 	pokemart LavaridgeTown_HerbShop_Pokemart
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
@@ -13,6 +14,21 @@ LavaridgeTown_HerbShop_EventScript_Clerk::
 
 	.align 2
 LavaridgeTown_HerbShop_Pokemart:
+	.2byte ITEM_ENERGY_POWDER
+	.2byte ITEM_ENERGY_ROOT
+	.2byte ITEM_HEAL_POWDER
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	pokemartlistend
+
+LavaridgeTown_HerbShop_Pokemart_Expanded::
+pokemart LavaridgeTown_HerbShop_Pokemart_ExpandedItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+LavaridgeTown_HerbShop_Pokemart_ExpandedItems:
 	.2byte ITEM_ENERGY_POWDER
 	.2byte ITEM_ENERGY_ROOT
 	.2byte ITEM_HEAL_POWDER
@@ -24,6 +40,8 @@ LavaridgeTown_HerbShop_Pokemart:
 	.2byte ITEM_FLAME_ORB
 	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
+
+
 
 LavaridgeTown_HerbShop_EventScript_ExpertM::
 	msgbox LavaridgeTown_HerbShop_Text_HerbalMedicineWorksButMonWillDislike, MSGBOX_NPC

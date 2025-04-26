@@ -321,7 +321,8 @@ PlayersHouse_1F_Text_MaybeDadWillBeOn:
 PlayersHouse_1F_Text_ItsOverWeMissedHim:
 	.string "MOM: Oh… It's over.\p"
 	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
+	.string "Too bad.\p"
+	.string "Here, before you go, take this EGG.$"
 
 PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
 	.string "Oh, yes.\n"

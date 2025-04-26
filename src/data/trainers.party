@@ -14022,7 +14022,7 @@ Ability: Rock Head
 - Rock Tomb
 
 Relicanth
-Level: 40
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Rock Head
@@ -14391,15 +14391,15 @@ Ability: Pure Power
 - Reflect
 - Bulk Up
 
-Lilligant-Hisui
+Combusken
 Level: 32
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Hustle
-- Victory Dance
-- Drain Punch
-- Synthesis
-- Leaf Blade
+Ability: Blaze
+- Bulk Up
+- Double Kick
+- Flame Charge
+- Peck
 
 Sirfetch'd @ Leek
 Level: 33
@@ -14437,7 +14437,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
 - Submission
-- Cross Chop
+- Strength
 - Dual Chop
 - Bulk Up
 
@@ -14451,15 +14451,15 @@ Ability: Pure Power
 - Reflect
 - Bulk Up
 
-Lilligant-Hisui
+Blaziken
 Level: 40
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Hustle
-- Victory Dance
-- Drain Punch
-- Synthesis
-- Leaf Blade
+Ability: Blaze
+- Bulk Up
+- Double Kick
+- Blaze Kick
+- Focus Energy
 
 Sirfetch'd @ Leek
 Level: 41
@@ -14469,14 +14469,14 @@ Ability: Inner Focus
 - Brutal Swing
 - Fury Cutter
 - Brick Break
-- Leaf Blade
+- Iron Defense
 
 Hariyama @ Sitrus Berry
 Level: 42
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
-- Heavy Slam
+- Smelling Salts
 - Vital Throw
 - Knock Off
 - Bulk Up
@@ -14497,7 +14497,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
 - Submission
-- Cross Chop
+- Strength
 - Dual Chop
 - Bulk Up
 
@@ -14511,15 +14511,15 @@ Ability: Pure Power
 - Reflect
 - Bulk Up
 
-Lilligant-Hisui
+Blaziken
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Hustle
-- Victory Dance
-- Axe Kick
-- Synthesis
-- Leaf Blade
+Ability: Blaze
+- Bulk Up
+- Double Kick
+- Blaze Kick
+- Focus Energy
 
 Sirfetch'd @ Leek
 Level: 45
@@ -14536,7 +14536,7 @@ Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
-- Heavy Slam
+- Smelling Salts
 - Close Combat
 - Knock Off
 - Bulk Up
@@ -14876,7 +14876,7 @@ Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Magnet Pull
-- Zap Cannon
+- Tri Attack
 - Shock Wave
 - Thunder Wave
 - Flash Cannon
@@ -15272,7 +15272,7 @@ Ability: Flame Body
 - Sunny Day
 
 Ninetales
-Level: 40
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Flash Fire
@@ -15287,9 +15287,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
 Ability: Magma Armor
 - Overheat
-- Earthquake
+- Earth Power
 - Take Down
-- Attract
+- Rock Slide
 
 Torkoal @ White Herb
 Level: 42
@@ -15349,7 +15349,7 @@ Ability: Magma Armor
 - Overheat
 - Earthquake
 - Eruption
-- Attract
+- Rock Slide
 
 Torkoal @ White Herb
 Level: 46
@@ -15493,8 +15493,8 @@ Level: 24
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Vital Spirit
-- Slash
-- Reversal
+- Fury Swipes
+- Uproar
 - Facade
 - Feint Attack
 
@@ -15544,7 +15544,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Vital Spirit
 - Slash
-- Reversal
+- Uproar
 - Facade
 - Feint Attack
 
@@ -16244,7 +16244,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
 - Psywave
-- Rock Slide
+- Rock Throw
 - Calm Mind
 - Fire Spin
 
@@ -16294,7 +16294,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
 - Psywave
-- Rock Slide
+- Rock Throw
 - Calm Mind
 - Fire Spin
 
@@ -16479,17 +16479,17 @@ Ability: Synchronize
 - Calm Mind
 
 Slowbro-Galar
-Level: 40
+Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Bold
-Ability: Shell Armor
+Ability: Quick Draw
 - Shell Side Arm
 - Calm Mind
 - Yawn
 - Psychic
 
 Slowking-Galar
-Level: 40
+Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Bold
 Ability: Own Tempo
@@ -16552,7 +16552,7 @@ Slowbro-Galar
 Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Bold
-Ability: Shell Armor
+Ability: Quick Draw
 - Shell Side Arm
 - Calm Mind
 - Heal Pulse
@@ -16918,7 +16918,7 @@ Ability: Gooey
 - Triple Dive
 
 Wailord
-Level: 40
+Level: 39
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Water Veil
@@ -16928,7 +16928,7 @@ Ability: Water Veil
 - Water Pulse
 
 Whiscash
-Level: 40
+Level: 38
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Oblivious
@@ -17265,9 +17265,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Cursed Body
 - Shadow Ball
-- Psychic
-- Thunderbolt
-- Sucker Punch
+- Spite
+- Will O Wisp
+- Feint Attack
 
 Dusknoir @ Sitrus Berry
 Level: 51
@@ -17304,7 +17304,7 @@ Level: 49
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Poison Point
-- Barb Barrage
+- Sludge Bomb
 - Pin Missile
 - Crunch
 - Brine
@@ -17315,7 +17315,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Pressure
 - Dire Claw
-- Brick Break
+- Taunt
 - Slash
 - Agility
 

@@ -3326,8 +3326,13 @@ u8 GiveMonToPlayer(struct Pokemon *mon)
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_NONE)
             break;
     }
-
-    if (i >= 1)
+    if ((i < 6) && (GetMonData(mon, MON_DATA_IS_EGG, NULL) == TRUE))
+    {
+        CopyMon(&gPlayerParty[i], mon, sizeof(*mon));
+        gPlayerPartyCount = i + 1;
+        return MON_GIVEN_TO_PARTY;    
+    }
+    else if (i >= 1)
         return CopyMonToPC(mon);
 
     CopyMon(&gPlayerParty[i], mon, sizeof(*mon));

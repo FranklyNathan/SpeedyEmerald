@@ -47,6 +47,7 @@ VictoryRoad_1F_EventScript_WallyEntranceBattle::
 	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
 	copyobjectxytoperm LOCALID_WALLY_ENTRANCE
 	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
+	setflag FLAG_WALLACE_GOES_TO_SKY_PILLAR @ Opens Sky Pillar for Urshifu evolution
 	giveitem ITEM_MAX_REVIVE 
 	setvar VAR_FORCEANIM, 0
 	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008

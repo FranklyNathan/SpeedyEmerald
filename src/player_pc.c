@@ -255,6 +255,7 @@ static const u16 sNewGamePCItems[][2] =
     { ITEM_SILVER_POWDER, 3 },
     { ITEM_SPELL_TAG, 3 },
     { ITEM_TWISTED_SPOON, 3 },
+    { ITEM_MAX_REVIVE, 99 },
     { ITEM_NONE, 0 }
 };
 

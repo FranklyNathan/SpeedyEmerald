@@ -2428,8 +2428,9 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .teachableLearnset = sApplinTeachableLearnset,
         .eggMoveLearnset = sApplinEggMoveLearnset,
         .evolutions = EVOLUTION({EVO_ITEM, ITEM_HONEY, SPECIES_DIPPLIN},
-                                {EVO_MAPSEC, MAPSEC_FORTREE_CITY, SPECIES_FLAPPLE},
-                                {EVO_MAPSEC, MAPSEC_LAVARIDGE_TOWN, SPECIES_APPLETUN}),
+                                {EVO_SPECIFIC_MAP, MAP_FORTREE_CITY_GYM, SPECIES_FLAPPLE},
+                                {EVO_SPECIFIC_MAP, MAP_LAVARIDGE_TOWN_GYM_1F, SPECIES_APPLETUN},
+                                {EVO_SPECIFIC_MAP, MAP_LAVARIDGE_TOWN_GYM_B1F, SPECIES_APPLETUN}),
     },
 
     [SPECIES_FLAPPLE] =
@@ -3309,7 +3310,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .expYield = 48,
         .evYield_SpAttack = 1,
         .genderRatio = PERCENT_FEMALE(50),
-        .eggCycles = 25,
+        .eggCycles = 10,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroups = MON_EGG_GROUPS(EGG_GROUP_NO_EGGS_DISCOVERED),
@@ -6903,14 +6904,12 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
             gOverworldPalette_Kubfu,
             gShinyOverworldPalette_Kubfu
         )
-        .isLegendary = TRUE,
-        .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
+        //.isLegendary = TRUE,
+        //.perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sKubfuLevelUpLearnset,
         .teachableLearnset = sKubfuTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_DARK_SCROLL, 0, SPECIES_URSHIFU_SINGLE_STRIKE},
-                                {EVO_ITEM, ITEM_SCROLL_OF_DARKNESS, SPECIES_URSHIFU_SINGLE_STRIKE},
-                                {EVO_WATER_SCROLL, 0, SPECIES_URSHIFU_RAPID_STRIKE},
-                                {EVO_ITEM, ITEM_SCROLL_OF_WATERS, SPECIES_URSHIFU_RAPID_STRIKE}),
+        .evolutions = EVOLUTION({EVO_SPECIFIC_MAP, MAP_METEOR_FALLS_B1F_2R, SPECIES_URSHIFU_RAPID_STRIKE},
+                                {EVO_SPECIFIC_MAP, MAP_SKY_PILLAR_TOP, SPECIES_URSHIFU_SINGLE_STRIKE}),
     },
 
     [SPECIES_URSHIFU_SINGLE_STRIKE] =
