@@ -205,6 +205,7 @@ bool32 AreAllMovesUnusable(u32 battler);
 u8 GetImprisonedMovesCount(u32 battler, u16 move);
 u8 DoFieldEndTurnEffects(void);
 s32 GetDrainedBigRootHp(u32 battler, s32 hp);
+bool32 IsMagicGuardProtected(u32 battler, u32 ability);
 u8 DoBattlerEndTurnEffects(void);
 bool32 HandleWishPerishSongOnTurnEnd(void);
 bool32 HandleFaintedMonActions(void);
@@ -310,6 +311,8 @@ bool32 IsMoveEffectRemoveSpeciesType(u32 move, u32 moveEffect, u32 argument);
 bool32 MoveHasChargeTurnAdditionalEffect(u32 move);
 bool32 CanTargetPartner(u32 battlerAtk, u32 battlerDef);
 bool32 TargetFullyImmuneToCurrMove(u32 battlerAtk, u32 battlerDef);
+bool32 MoodyCantRaiseStat(u32 stat);
+bool32 MoodyCantLowerStat(u32 stat);
 
 bool32 CanBeSlept(u32 battler, u32 ability, enum SleepClauseBlock isBlockedBySleepClause);
 bool32 CanBePoisoned(u32 battlerAtk, u32 battlerDef, u32 defAbility);
@@ -348,5 +351,8 @@ void ClearPursuitValuesIfSet(u32 battler);
 void ClearPursuitValues(void);
 bool32 HasWeatherEffect(void);
 bool32 IsMovePowderBlocked(u32 battlerAtk, u32 battlerDef, u32 move);
+bool32 EmergencyExitCanBeTriggered(u32 battler);
+u32 RestoreWhiteHerbStats(u32 battler);
+bool32 IsFutureSightAttackerInParty(u32 battlerAtk, u32 battlerDef);
 
 #endif // GUARD_BATTLE_UTIL_H
