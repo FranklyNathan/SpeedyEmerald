@@ -502,16 +502,149 @@ SlateportCity_EventScript_DollClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	pokemart SlateportCity_PokemartDecor_Dolls
+	goto_if_eq VAR_BADGE_COUNT, 2, SlateportCity_PokemartDecor_Badge2
+	goto_if_eq VAR_BADGE_COUNT, 3, SlateportCity_PokemartDecor_Badge3
+	goto_if_eq VAR_BADGE_COUNT, 4, SlateportCity_PokemartDecor_Badge4
+	goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_PokemartDecor_Badge5
+	goto_if_ge VAR_BADGE_COUNT, 6, SlateportCity_PokemartDecor_Badge6
+	pokemart SlateportCity_PokemartDecor_Basic
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
 	.align 2
-SlateportCity_PokemartDecor_Dolls:
+SlateportCity_PokemartDecor_Basic:
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	pokemartlistend
+
+SlateportCity_PokemartDecor_Badge2::
+	pokemart SlateportCity_Pokemart_Badge2Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+
+	.align 2
+SlateportCity_Pokemart_Badge2Items:
 	.2byte ITEM_MAWILITE
 	.2byte ITEM_SABLENITE
-	.2byte ITEM_NONE
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	pokemartlistend
+
+SlateportCity_PokemartDecor_Badge3::
+	pokemart SlateportCity_Pokemart_Badge3Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_Badge3Items:
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	pokemartlistend
+
+SlateportCity_PokemartDecor_Badge4::
+	pokemart SlateportCity_Pokemart_Badge4Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_Badge4Items:
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	pokemartlistend
+
+SlateportCity_PokemartDecor_Badge5::
+	pokemart SlateportCity_Pokemart_Badge5Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_Badge5Items:
+	.2byte ITEM_LINKING_CORD
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
+	pokemartlistend
+
+SlateportCity_PokemartDecor_Badge6::
+	pokemart SlateportCity_Pokemart_Badge6Items
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_Badge6Items:
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_LOPUNNITE
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_MANECTITE
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_SHARPEDONITE
+	.2byte ITEM_LINKING_CORD
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_ICE_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_SHINY_STONE
+	.2byte ITEM_DAWN_STONE
+	.2byte ITEM_DUSK_STONE
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_RAZOR_CLAW
+	.2byte ITEM_RAZOR_FANG
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_FLAME_ORB
+	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
 
 SlateportCity_EventScript_ComeBackWithSecretPower::
@@ -553,6 +686,10 @@ SlateportCity_EventScript_PowerTMClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
+	goto_if_eq VAR_BADGE_COUNT, 4, SlateportCity_Pokemart_PowerTMs_Badge4TMs
+	goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_Pokemart_PowerTMs_Badge5TMs
+	goto_if_eq VAR_BADGE_COUNT, 6, SlateportCity_Pokemart_PowerTMs_Badge6TMs
+	goto_if_ge VAR_BADGE_COUNT, 7, SlateportCity_Pokemart_PowerTMs_Badge7TMs
 	pokemart SlateportCity_Pokemart_PowerTMs
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
@@ -561,7 +698,92 @@ SlateportCity_EventScript_PowerTMClerk::
 	.align 2
 SlateportCity_Pokemart_PowerTMs:
 	.2byte ITEM_TM_HONE_CLAWS
-	.2byte ITEM_TM_SECRET_POWER
+	pokemartlistend
+
+SlateportCity_Pokemart_PowerTMs_Badge4TMs::
+	pokemart SlateportCity_Pokemart_PowerTMs_Badge4TMsItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_PowerTMs_Badge4TMsItems:
+	.2byte ITEM_TM_HONE_CLAWS
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_RAIN_DANCE
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_SUNNY_DAY
+	pokemartlistend
+
+SlateportCity_Pokemart_PowerTMs_Badge5TMs::
+	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMsItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_PowerTMs_Badge5TMsItems:
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_ICE_BEAM
+	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_PSYCHIC
+	.2byte ITEM_TM_SOLAR_BEAM
+	.2byte ITEM_TM_HONE_CLAWS
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_RAIN_DANCE
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_SUNNY_DAY
+	pokemartlistend
+
+SlateportCity_Pokemart_PowerTMs_Badge6TMs::
+	pokemart SlateportCity_Pokemart_PowerTMs_Badge6TMsItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_PowerTMs_Badge6TMsItems:
+	.2byte ITEM_TM_SHADOW_BALL
+	.2byte ITEM_TM_DARK_PULSE
+	.2byte ITEM_TM_DAZZLING_GLEAM
+	.2byte ITEM_TM_X_SCISSOR
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_ICE_BEAM
+	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_PSYCHIC
+	.2byte ITEM_TM_SOLAR_BEAM
+	.2byte ITEM_TM_HONE_CLAWS
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_RAIN_DANCE
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_SUNNY_DAY
+	pokemartlistend
+
+SlateportCity_Pokemart_PowerTMs_Badge7TMs::
+	pokemart SlateportCity_Pokemart_PowerTMs_Badge7TMsItems
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_PowerTMs_Badge7TMsItems:
+	.2byte ITEM_TM_DRAGON_CLAW
+	.2byte ITEM_TM_EARTHQUAKE
+	.2byte ITEM_TM_IRON_TAIL
+	.2byte ITEM_TM_SHADOW_BALL
+	.2byte ITEM_TM_DARK_PULSE
+	.2byte ITEM_TM_DAZZLING_GLEAM
+	.2byte ITEM_TM_X_SCISSOR
+	.2byte ITEM_TM_THUNDERBOLT
+	.2byte ITEM_TM_ICE_BEAM
+	.2byte ITEM_TM_FLAMETHROWER
+	.2byte ITEM_TM_PSYCHIC
+	.2byte ITEM_TM_SOLAR_BEAM
+	.2byte ITEM_TM_HONE_CLAWS
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_RAIN_DANCE
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_SUNNY_DAY
 	pokemartlistend
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine

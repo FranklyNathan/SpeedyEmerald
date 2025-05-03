@@ -15594,7 +15594,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Truant
 - Counter
-- Yawn
+- Covet
 - Facade
 - Feint Attack
 
@@ -15648,13 +15648,13 @@ Ability: Quick Feet
 - Facade
 - Headbutt
 
-Slaking @ Kings Rock
+Slaking @ Sitrus Berry
 Level: 35
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Truant
 - Counter
-- Fling
+- Covet
 - Facade
 - Feint Attack
 

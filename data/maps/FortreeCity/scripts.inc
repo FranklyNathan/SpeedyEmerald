@@ -40,7 +40,7 @@ FortreeCity_EventScript_RandGymMauville::
 	call_if_set FLAG_DEFEATED_MAUVILLE_GYM, FortreeCity_EventScript_AlreadyBeaten
 	setvar VAR_RETURN_MAP, 5
     setdynamicwarp MAP_MAUVILLE_CITY_GYM, 4, 20
-    return
+    end
 
 FortreeCity_EventScript_RandGymLavaridge::
 	call_if_set FLAG_DEFEATED_LAVARIDGE_GYM, FortreeCity_EventScript_AlreadyBeaten

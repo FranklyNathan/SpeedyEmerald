@@ -709,7 +709,7 @@ Common_ShowEasyChatScreen::
 
 Common_EventScript_ReadyPetalburgGymForBattle::
 	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
-	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS
+	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	return
 
 Common_EventScript_BufferTrendyPhrase::
@@ -1113,7 +1113,6 @@ EventScript_WarpHomeRustboro::
 	addvar VAR_BADGE_COUNT, 1
 	setvar VAR_RUSTBORO_CITY_STATE, 7
 	giveitem ITEM_LETTER
-	giveitem ITEM_MEGA_RING
 	setflag FLAG_RETURNED_DEVON_GOODS
 	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
 	setvar VAR_RUSTBORO_CITY_STATE, 9

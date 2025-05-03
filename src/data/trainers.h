@@ -38563,7 +38563,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 15596
                 MOVE_COUNTER,
-                MOVE_YAWN,
+                MOVE_COVET,
                 MOVE_FACADE,
                 MOVE_FEINT_ATTACK,
             },
@@ -38680,7 +38680,7 @@ F_TRAINER_FEMALE |
             .species = SPECIES_SLAKING,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15651
-            .heldItem = ITEM_KINGS_ROCK,
+            .heldItem = ITEM_SITRUS_BERRY,
 #line 15653
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15655
@@ -38693,7 +38693,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 15656
                 MOVE_COUNTER,
-                MOVE_FLING,
+                MOVE_COVET,
                 MOVE_FACADE,
                 MOVE_FEINT_ATTACK,
             },

@@ -29,9 +29,6 @@ LilycoveCity_DepartmentStore_4F_Pokemart_AttackTMs:
 	.2byte ITEM_TM_THUNDER
 	.2byte ITEM_TM_BLIZZARD
 	.2byte ITEM_TM_HYPER_BEAM
-	.2byte ITEM_TM_DAZZLING_GLEAM
-	.2byte ITEM_TM_DARK_PULSE
-	.2byte ITEM_TM_X_SCISSOR
 	pokemartlistend
 
 LilycoveCity_DepartmentStore_4F_EventScript_ClerkRight::

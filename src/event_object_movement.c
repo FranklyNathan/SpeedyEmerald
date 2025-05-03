@@ -9579,8 +9579,10 @@ u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction)
     if (ledgeBehaviorFuncs[index](behavior) == TRUE)
         return index + 1;
 
-   if (gPlayerAvatar.acroBikeState == ACRO_STATE_BUNNY_HOP &&
-       MB_JUMP_EAST <= behavior && behavior <= MB_JUMP_SOUTH)
+   if ((gPlayerAvatar.acroBikeState == ACRO_STATE_BUNNY_HOP || 
+      gPlayerAvatar.acroBikeState == ACRO_STATE_WHEELIE_STANDING || 
+      gPlayerAvatar.acroBikeState == ACRO_STATE_WHEELIE_MOVING)
+      && MB_JUMP_EAST <= behavior && behavior <= MB_JUMP_SOUTH)
    {
        MoveCoords(direction, &x, &y);
        if (GetCollisionAtCoords(playerObjEvent, x, y, direction) == COLLISION_NONE)

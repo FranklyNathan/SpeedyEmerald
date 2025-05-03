@@ -11,7 +11,7 @@ FortreeCity_DecorationShop_EventScript_Rotom::
 	faceplayer
 	setflag FLAG_RECEIVED_ROTOM_CATALOG
 	msgbox FortreeCity_DecorationShop_Text_Rotom, MSGBOX_NPC
-	giveitem ITEM_ROTOM_CATALOG, 4
+	giveitem ITEM_ROTOM_CATALOG, 3
 	release
 	end
 
