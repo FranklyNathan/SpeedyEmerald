@@ -273,6 +273,23 @@ PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
 	end
 
+PlayersHouse_2F_EventScript_Fossil::
+	goto_if_set FLAG_UNUSED_0x264, PlayersHouse_2F_EventScript_Receive_Fossil
+	end
+
+PlayersHouse_2F_EventScript_Receive_Fossil::
+	msgbox PlayersHouse_2F_Text_DustyFossil, MSGBOX_SIGN
+	randomelement SPECIES_OMANYTE, SPECIES_KABUTO, SPECIES_ANORITH, SPECIES_LILEEP, SPECIES_CRANIDOS, SPECIES_SHIELDON, SPECIES_ARCHEN, SPECIES_TIRTOUGA, SPECIES_TYRUNT, SPECIES_AMAURA
+	givemon VAR_RESULT, 15, ITEM_NONE
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox PlayersHouse_2F_Text_AncientPokemon
+	waitmessage
+	waitfanfare
+    setflag FLAG_SYS_POKEMON_GET
+	clearflag FLAG_UNUSED_0x264
+	releaseall
+	end
+
 PlayersHouse_2F_Text_ClockIsStopped:
 	.string "Currently loading all POKéMON into\n"
 	.string "your PC. Please wait…$"
@@ -303,3 +320,15 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+PlayersHouse_2F_Text_DustyFossil:
+	.string "{PLAYER} looked under the bed…\p"
+	.string "Oh, what's this?\n"
+	.string "{PLAYER} pulled out a dusty old fossil.\p"
+	.string "Ah! It's reviving itself!$"
+
+PlayersHouse_2F_Text_AncientPokemon:
+	.string "{PLAYER} received an ancient POKéMON!$"
+
+PlayersHouse_1F_Text_ReceivedEgg:
+	.string "{PLAYER} received an egg!$"

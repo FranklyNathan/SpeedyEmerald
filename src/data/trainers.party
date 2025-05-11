@@ -15211,7 +15211,7 @@ Ability: Flame Body
 - Light Screen
 - Sunny Day
 
-Vulpix
+Ninetales
 Level: 30
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
@@ -15219,7 +15219,7 @@ Ability: Flash Fire
 - Overheat
 - Feint Attack
 - Hex
-- Quick Attack
+- Will O Wisp
 
 Camerupt
 Level: 33
@@ -15816,7 +15816,7 @@ Ability: Guts
 - Quick Attack
 - Aerial Ace
 - Focus Energy
-- Growl
+- Steel Wing
 
 === TRAINER_WINONA_2 ===
 Name: WINONA
@@ -15855,8 +15855,8 @@ Nature: Adamant
 Ability: Guts
 - Quick Attack
 - Aerial Ace
-- Focus Energy
 - Double Team
+- Steel Wing
 
 === TRAINER_WINONA_3 ===
 Name: WINONA
@@ -15874,7 +15874,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Natural Cure
 - Disarming Voice
-- Sing
+- Hyper Voice
 - Round
 - Aerial Ace
 
@@ -15906,7 +15906,7 @@ Ability: Guts
 - Quick Attack
 - Aerial Ace
 - Pluck
-- Double Team
+- Steel Wing
 
 === TRAINER_WINONA_4 ===
 Name: WINONA
@@ -15924,7 +15924,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Natural Cure
 - Disarming Voice
-- Sing
+- Hyper Voice
 - Round
 - Aerial Ace
 
@@ -15938,18 +15938,8 @@ Ability: Keen Eye
 - Steel Wing
 - Aerial Ace
 
-Swellow
-Level: 26
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Guts
-- Quick Attack
-- Aerial Ace
-- Pluck
-- Double Team
-
 Pelipper @ Deep Sea Tooth
-Level: 29
+Level: 28
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Keen Eye
@@ -15957,6 +15947,16 @@ Ability: Keen Eye
 - Fling
 - Brine
 - Aerial Ace
+
+Swellow @ Sitrus Berry
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Adamant
+Ability: Guts
+- Quick Attack
+- Aerial Ace
+- Pluck
+- Steel Wing
 
 === TRAINER_WINONA_5 ===
 Name: WINONA
@@ -15974,8 +15974,8 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Natural Cure
 - Disarming Voice
+- Hyper Voice
 - Perish Song
-- Round
 - Aerial Ace
 
 Skarmory
@@ -15988,18 +15988,8 @@ Ability: Keen Eye
 - Steel Wing
 - Aerial Ace
 
-Swellow
-Level: 30
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Guts
-- Quick Attack
-- Aerial Ace
-- Pluck
-- Double Team
-
 Pelipper @ Deep Sea Tooth
-Level: 32
+Level: 31
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Keen Eye
@@ -16007,6 +15997,16 @@ Ability: Keen Eye
 - Fling
 - Brine
 - Aerial Ace
+
+Swellow
+Level: 32
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Adamant
+Ability: Guts
+- Quick Attack
+- Aerial Ace
+- Pluck
+- Double Team
 
 === TRAINER_WINONA_6 ===
 Name: WINONA
@@ -16214,9 +16214,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
 - Psywave
-- Rock Throw
-- Calm Mind
 - Fire Spin
+- Calm Mind
+- Harden
 
 === TRAINER_TATE_AND_LIZA_2 ===
 Name: TATE&LIZA
@@ -16244,9 +16244,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
 - Psywave
-- Rock Throw
-- Calm Mind
 - Fire Spin
+- Calm Mind
+- Rock Throw
 
 === TRAINER_TATE_AND_LIZA_3 ===
 Name: TATE&LIZA
@@ -16294,9 +16294,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
 - Psywave
-- Rock Throw
-- Calm Mind
 - Fire Spin
+- Calm Mind
+- Rock Throw
 
 === TRAINER_TATE_AND_LIZA_4 ===
 Name: TATE&LIZA
@@ -16344,9 +16344,9 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
 - Cosmic Power
-- Rock Slide
-- Calm Mind
 - Fire Spin
+- Calm Mind
+- Rock Slide
 
 === TRAINER_TATE_AND_LIZA_5 ===
 Name: TATE&LIZA

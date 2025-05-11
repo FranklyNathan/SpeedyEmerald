@@ -709,7 +709,6 @@ Common_ShowEasyChatScreen::
 
 Common_EventScript_ReadyPetalburgGymForBattle::
 	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
-	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	return
 
 Common_EventScript_BufferTrendyPhrase::
@@ -1191,6 +1190,7 @@ EventScript_WarpHomePetalburg::
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call EventScript_HideMrBriney
 	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON //Since Wattson can't leave his gym based on event in Mauville's gym anymore
+	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN //TMs are now purchasable at Slateport
     setvar VAR_PETALBURG_LOCKED, 1
 	setvar VAR_PETALBURG_CITY_STATE, 7
 	setvar VAR_STEP_DOWN, 1

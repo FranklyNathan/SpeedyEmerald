@@ -2425,35 +2425,35 @@ void AnimTask_SetTargetToEffectBattler(u8 taskId)
 
 void TryShinyAnimation(u8 battler, struct Pokemon *mon)
 {
-    bool8 isShiny;
-    u8 taskCirc, taskDgnl;
-    struct Pokemon* illusionMon;
+        bool8 isShiny;
+        u8 taskCirc, taskDgnl;
+        //struct Pokemon* illusionMon;
 
-    isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
-    gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
-    illusionMon = GetIllusionMonPtr(battler);
-    if (illusionMon != NULL)
-        mon = illusionMon;
+        //isShiny = GetMonData(mon, MON_DATA_IS_SHINY);
+        gBattleSpritesDataPtr->healthBoxesData[battler].triedShinyMonAnim = TRUE;
+        //illusionMon = GetIllusionMonPtr(battler);
+        // if (illusionMon != NULL)
+        //     mon = illusionMon;
 
-    if (IsBattlerSpriteVisible(battler) && IsValidForBattle(mon))
-    {
-        if (isShiny)
-        {
-            if (GetSpriteTileStartByTag(ANIM_TAG_GOLD_STARS) == 0xFFFF)
-            {
-                LoadCompressedSpriteSheetUsingHeap(&gBattleAnimPicTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
-                LoadCompressedSpritePaletteUsingHeap(&gBattleAnimPaletteTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
-            }
+        // if (IsBattlerSpriteVisible(battler) && IsValidForBattle(mon))
+        // {
+        //     if (isShiny)
+        //     {
+        //         if (GetSpriteTileStartByTag(ANIM_TAG_GOLD_STARS) == 0xFFFF)
+        //         {
+        //             LoadCompressedSpriteSheetUsingHeap(&gBattleAnimPicTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
+        //             LoadCompressedSpritePaletteUsingHeap(&gBattleAnimPaletteTable[ANIM_TAG_GOLD_STARS - ANIM_SPRITES_START]);
+        //         }
 
-            taskCirc = CreateTask(Task_ShinyStars, 10);
-            taskDgnl = CreateTask(Task_ShinyStars, 10);
-            gTasks[taskCirc].tBattler = battler;
-            gTasks[taskDgnl].tBattler = battler;
-            gTasks[taskCirc].tStarMove = SHINY_STAR_ENCIRCLE;
-            gTasks[taskDgnl].tStarMove = SHINY_STAR_DIAGONAL;
-            return;
-        }
-    }
+        //         taskCirc = CreateTask(Task_ShinyStars, 10);
+        //         taskDgnl = CreateTask(Task_ShinyStars, 10);
+        //         gTasks[taskCirc].tBattler = battler;
+        //         gTasks[taskDgnl].tBattler = battler;
+        //         gTasks[taskCirc].tStarMove = SHINY_STAR_ENCIRCLE;
+        //         gTasks[taskDgnl].tStarMove = SHINY_STAR_DIAGONAL;
+        //         return;
+        //     }
+        // }
 
     gBattleSpritesDataPtr->healthBoxesData[battler].finishedShinyMonAnim = TRUE;
 }

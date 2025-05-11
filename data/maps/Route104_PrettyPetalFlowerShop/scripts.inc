@@ -18,7 +18,7 @@ Route104_PrettyPetalFlowerShop_EventScript_MoveShopOwner::
 Route104_PrettyPetalFlowerShop_EventScript_ShopOwner::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, Route104_PrettyPetalFlowerShop_EventScript_SellAllBerries
+	goto_if_eq VAR_BADGE_COUNT, 8, Route104_PrettyPetalFlowerShop_EventScript_SellAllBerries
 	goto_if_set FLAG_LANDMARK_FLOWER_SHOP, Route104_PrettyPetalFlowerShop_EventScript_SellBerries
 	//goto_if_set FLAG_TEMP_1, Route104_PrettyPetalFlowerShop_EventScript_SellDecorations
 	msgbox Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop, MSGBOX_DEFAULT
@@ -125,6 +125,7 @@ Route104_PrettyPetalFlowerShop_EventScript_GiveWailmerPail::
 Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
 	lock
 	faceplayer
+	goto_if_unset FLAG_RECEIVED_NECTAR, Route104_PrettyPetalFlowerShop_EventScript_Nectar
 	dotimebasedevents
 	goto_if_set FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY, Route104_PrettyPetalFlowerShop_EventScript_AlreadyReceivedBerry
 	msgbox Route104_PrettyPetalFlowerShop_Text_ImGrowingFlowers, MSGBOX_DEFAULT
@@ -134,6 +135,16 @@ Route104_PrettyPetalFlowerShop_EventScript_RandomBerryGirl::
 	goto_if_eq VAR_RESULT, 0, Common_EventScript_ShowBagIsFull
 	setflag FLAG_DAILY_FLOWER_SHOP_RECEIVED_BERRY
 	msgbox Route104_PrettyPetalFlowerShop_Text_MachineMixesBerries, MSGBOX_DEFAULT
+	release
+	end
+
+Route104_PrettyPetalFlowerShop_EventScript_Nectar::
+	msgbox Route104_PrettyPetalFlowerShop_Text_Nectar, MSGBOX_DEFAULT
+	giveitem ITEM_RED_NECTAR, 1
+	giveitem ITEM_YELLOW_NECTAR, 1
+	giveitem ITEM_PINK_NECTAR, 1
+	giveitem ITEM_PURPLE_NECTAR, 1
+	setflag FLAG_RECEIVED_NECTAR
 	release
 	end
 

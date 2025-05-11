@@ -37716,7 +37716,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15214
-            .species = SPECIES_VULPIX,
+            .species = SPECIES_NINETALES,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15216
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -37732,7 +37732,7 @@ F_TRAINER_FEMALE |
                 MOVE_OVERHEAT,
                 MOVE_FEINT_ATTACK,
                 MOVE_HEX,
-                MOVE_QUICK_ATTACK,
+                MOVE_WILL_O_WISP,
             },
             },
             {
@@ -39045,7 +39045,7 @@ F_TRAINER_FEMALE |
                 MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
                 MOVE_FOCUS_ENERGY,
-                MOVE_GROWL,
+                MOVE_STEEL_WING,
             },
             },
         },
@@ -39134,8 +39134,8 @@ F_TRAINER_FEMALE |
 #line 15856
                 MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
-                MOVE_FOCUS_ENERGY,
                 MOVE_DOUBLE_TEAM,
+                MOVE_STEEL_WING,
             },
             },
         },
@@ -39179,7 +39179,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 15876
                 MOVE_DISARMING_VOICE,
-                MOVE_SING,
+                MOVE_HYPER_VOICE,
                 MOVE_ROUND,
                 MOVE_AERIAL_ACE,
             },
@@ -39246,7 +39246,7 @@ F_TRAINER_FEMALE |
                 MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
                 MOVE_PLUCK,
-                MOVE_DOUBLE_TEAM,
+                MOVE_STEEL_WING,
             },
             },
         },
@@ -39290,7 +39290,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 15926
                 MOVE_DISARMING_VOICE,
-                MOVE_SING,
+                MOVE_HYPER_VOICE,
                 MOVE_ROUND,
                 MOVE_AERIAL_ACE,
             },
@@ -39318,46 +39318,48 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15941
-            .species = SPECIES_SWELLOW,
+            .species = SPECIES_PELIPPER,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 15941
+            .heldItem = ITEM_DEEP_SEA_TOOTH,
 #line 15943
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15945
-            .ability = ABILITY_GUTS,
-#line 15942
-            .lvl = 26,
-#line 15944
-            .nature = NATURE_ADAMANT,
-            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
-            .moves = {
-#line 15946
-                MOVE_QUICK_ATTACK,
-                MOVE_AERIAL_ACE,
-                MOVE_PLUCK,
-                MOVE_DOUBLE_TEAM,
-            },
-            },
-            {
-#line 15951
-            .species = SPECIES_PELIPPER,
-            .gender = TRAINER_MON_RANDOM_GENDER,
-#line 15951
-            .heldItem = ITEM_DEEP_SEA_TOOTH,
-#line 15953
-            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 15955
             .ability = ABILITY_KEEN_EYE,
-#line 15952
-            .lvl = 29,
-#line 15954
+#line 15942
+            .lvl = 28,
+#line 15944
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 15956
+#line 15946
                 MOVE_WATER_PULSE,
                 MOVE_FLING,
                 MOVE_BRINE,
                 MOVE_AERIAL_ACE,
+            },
+            },
+            {
+#line 15951
+            .species = SPECIES_SWELLOW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 15951
+            .heldItem = ITEM_SITRUS_BERRY,
+#line 15953
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 15955
+            .ability = ABILITY_GUTS,
+#line 15952
+            .lvl = 29,
+#line 15954
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 15956
+                MOVE_QUICK_ATTACK,
+                MOVE_AERIAL_ACE,
+                MOVE_PLUCK,
+                MOVE_STEEL_WING,
             },
             },
         },
@@ -39401,8 +39403,8 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 15976
                 MOVE_DISARMING_VOICE,
+                MOVE_HYPER_VOICE,
                 MOVE_PERISH_SONG,
-                MOVE_ROUND,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -39429,46 +39431,46 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15991
-            .species = SPECIES_SWELLOW,
+            .species = SPECIES_PELIPPER,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 15991
+            .heldItem = ITEM_DEEP_SEA_TOOTH,
 #line 15993
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 15995
-            .ability = ABILITY_GUTS,
-#line 15992
-            .lvl = 30,
-#line 15994
-            .nature = NATURE_ADAMANT,
-            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
-            .moves = {
-#line 15996
-                MOVE_QUICK_ATTACK,
-                MOVE_AERIAL_ACE,
-                MOVE_PLUCK,
-                MOVE_DOUBLE_TEAM,
-            },
-            },
-            {
-#line 16001
-            .species = SPECIES_PELIPPER,
-            .gender = TRAINER_MON_RANDOM_GENDER,
-#line 16001
-            .heldItem = ITEM_DEEP_SEA_TOOTH,
-#line 16003
-            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 16005
             .ability = ABILITY_KEEN_EYE,
-#line 16002
-            .lvl = 32,
-#line 16004
+#line 15992
+            .lvl = 31,
+#line 15994
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 16006
+#line 15996
                 MOVE_WATER_PULSE,
                 MOVE_FLING,
                 MOVE_BRINE,
                 MOVE_AERIAL_ACE,
+            },
+            },
+            {
+#line 16001
+            .species = SPECIES_SWELLOW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16003
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16005
+            .ability = ABILITY_GUTS,
+#line 16002
+            .lvl = 32,
+#line 16004
+            .nature = NATURE_ADAMANT,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16006
+                MOVE_QUICK_ATTACK,
+                MOVE_AERIAL_ACE,
+                MOVE_PLUCK,
+                MOVE_DOUBLE_TEAM,
             },
             },
         },
@@ -39937,9 +39939,9 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 16216
                 MOVE_PSYWAVE,
-                MOVE_ROCK_THROW,
-                MOVE_CALM_MIND,
                 MOVE_FIRE_SPIN,
+                MOVE_CALM_MIND,
+                MOVE_HARDEN,
             },
             },
         },
@@ -40006,9 +40008,9 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 16246
                 MOVE_PSYWAVE,
-                MOVE_ROCK_THROW,
-                MOVE_CALM_MIND,
                 MOVE_FIRE_SPIN,
+                MOVE_CALM_MIND,
+                MOVE_ROCK_THROW,
             },
             },
         },
@@ -40117,9 +40119,9 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 16296
                 MOVE_PSYWAVE,
-                MOVE_ROCK_THROW,
-                MOVE_CALM_MIND,
                 MOVE_FIRE_SPIN,
+                MOVE_CALM_MIND,
+                MOVE_ROCK_THROW,
             },
             },
         },
@@ -40228,9 +40230,9 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 16346
                 MOVE_COSMIC_POWER,
-                MOVE_ROCK_SLIDE,
-                MOVE_CALM_MIND,
                 MOVE_FIRE_SPIN,
+                MOVE_CALM_MIND,
+                MOVE_ROCK_SLIDE,
             },
             },
         },

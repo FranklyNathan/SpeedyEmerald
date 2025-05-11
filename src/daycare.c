@@ -1176,7 +1176,7 @@ static bool8 TryProduceOrHatchEgg(struct DayCare *daycare)
     if (((P_EGG_CYCLE_LENGTH <= GEN_3 || P_EGG_CYCLE_LENGTH == GEN_7) && daycare->stepCounter >= 256)
      || (P_EGG_CYCLE_LENGTH == GEN_4 && daycare->stepCounter >= 255)
      || ((P_EGG_CYCLE_LENGTH == GEN_5 || P_EGG_CYCLE_LENGTH == GEN_6) && daycare->stepCounter >= 257)
-     || (P_EGG_CYCLE_LENGTH >= GEN_8 && daycare->stepCounter >= 128))
+     || (P_EGG_CYCLE_LENGTH >= GEN_8 && daycare->stepCounter >= 100))
     {
         u32 eggCycles;
         u8 toSub = GetEggCyclesToSubtract();

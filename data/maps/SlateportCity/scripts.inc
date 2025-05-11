@@ -542,7 +542,6 @@ SlateportCity_Pokemart_Badge3Items:
 	.2byte ITEM_DRAGON_SCALE
 	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_METAL_COAT
-	.2byte ITEM_RAZOR_CLAW
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_MAWILITE
 	.2byte ITEM_SABLENITE
@@ -571,7 +570,6 @@ SlateportCity_Pokemart_Badge4Items:
 	.2byte ITEM_DRAGON_SCALE
 	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_METAL_COAT
-	.2byte ITEM_RAZOR_CLAW
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_MAWILITE
 	.2byte ITEM_SABLENITE
@@ -601,7 +599,6 @@ SlateportCity_Pokemart_Badge5Items:
 	.2byte ITEM_DRAGON_SCALE
 	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_METAL_COAT
-	.2byte ITEM_RAZOR_CLAW
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_MAWILITE
 	.2byte ITEM_SABLENITE
@@ -617,6 +614,7 @@ SlateportCity_PokemartDecor_Badge6::
 
 	.align 2
 SlateportCity_Pokemart_Badge6Items:
+	.2byte ITEM_BANETTITE
 	.2byte ITEM_CAMERUPTITE
 	.2byte ITEM_GLALITITE
 	.2byte ITEM_HOUNDOOMINITE
@@ -639,7 +637,6 @@ SlateportCity_Pokemart_Badge6Items:
 	.2byte ITEM_DRAGON_SCALE
 	.2byte ITEM_KINGS_ROCK
 	.2byte ITEM_METAL_COAT
-	.2byte ITEM_RAZOR_CLAW
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_MAWILITE
 	.2byte ITEM_SABLENITE
@@ -686,19 +683,13 @@ SlateportCity_EventScript_PowerTMClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	goto_if_eq VAR_BADGE_COUNT, 4, SlateportCity_Pokemart_PowerTMs_Badge4TMs
-	goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_Pokemart_PowerTMs_Badge5TMs
+	//goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_Pokemart_PowerTMs_Badge5TMs
 	goto_if_eq VAR_BADGE_COUNT, 6, SlateportCity_Pokemart_PowerTMs_Badge6TMs
 	goto_if_ge VAR_BADGE_COUNT, 7, SlateportCity_Pokemart_PowerTMs_Badge7TMs
-	pokemart SlateportCity_Pokemart_PowerTMs
+	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMs
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
-
-	.align 2
-SlateportCity_Pokemart_PowerTMs:
-	.2byte ITEM_TM_HONE_CLAWS
-	pokemartlistend
 
 SlateportCity_Pokemart_PowerTMs_Badge4TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge4TMsItems
@@ -708,11 +699,6 @@ SlateportCity_Pokemart_PowerTMs_Badge4TMs::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs_Badge4TMsItems:
-	.2byte ITEM_TM_HONE_CLAWS
-	.2byte ITEM_TM_HAIL
-	.2byte ITEM_TM_RAIN_DANCE
-	.2byte ITEM_TM_SANDSTORM
-	.2byte ITEM_TM_SUNNY_DAY
 	pokemartlistend
 
 SlateportCity_Pokemart_PowerTMs_Badge5TMs::
@@ -746,7 +732,6 @@ SlateportCity_Pokemart_PowerTMs_Badge6TMsItems:
 	.2byte ITEM_TM_SHADOW_BALL
 	.2byte ITEM_TM_DARK_PULSE
 	.2byte ITEM_TM_DAZZLING_GLEAM
-	.2byte ITEM_TM_X_SCISSOR
 	.2byte ITEM_TM_THUNDERBOLT
 	.2byte ITEM_TM_ICE_BEAM
 	.2byte ITEM_TM_FLAMETHROWER
@@ -773,7 +758,6 @@ SlateportCity_Pokemart_PowerTMs_Badge7TMsItems:
 	.2byte ITEM_TM_SHADOW_BALL
 	.2byte ITEM_TM_DARK_PULSE
 	.2byte ITEM_TM_DAZZLING_GLEAM
-	.2byte ITEM_TM_X_SCISSOR
 	.2byte ITEM_TM_THUNDERBOLT
 	.2byte ITEM_TM_ICE_BEAM
 	.2byte ITEM_TM_FLAMETHROWER

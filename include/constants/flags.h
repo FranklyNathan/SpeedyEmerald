@@ -1224,7 +1224,7 @@
 
 #define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
 #define FLAG_NUZLOCKE	                                            0x494 // Are we nuzlocking?
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
+#define FLAG_RECEIVED_NECTAR                                        0x495 // Did you get Oricorio's nectar?
 #define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag

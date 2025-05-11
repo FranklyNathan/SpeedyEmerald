@@ -9,9 +9,9 @@ FortreeCity_DecorationShop_EventScript_PokefanM::
 FortreeCity_DecorationShop_EventScript_Rotom::
 	lock
 	faceplayer
-	setflag FLAG_RECEIVED_ROTOM_CATALOG
-	msgbox FortreeCity_DecorationShop_Text_Rotom, MSGBOX_NPC
+	msgbox FortreeCity_DecorationShop_Text_Rotom, MSGBOX_DEFAULT
 	giveitem ITEM_ROTOM_CATALOG, 3
+	setflag FLAG_RECEIVED_ROTOM_CATALOG
 	release
 	end
 
