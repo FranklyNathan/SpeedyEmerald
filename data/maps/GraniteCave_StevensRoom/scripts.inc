@@ -1,5 +1,3 @@
-.set LOCALID_STEVEN, 1
-
 GraniteCave_StevensRoom_MapScripts::
 	.byte 0
 
@@ -44,19 +42,19 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	end
 
 GraniteCave_StevensRoom_EventScript_StevenExitNorth::
-	applymovement LOCALID_STEVEN, GraniteCave_StevensRoom_Movement_StevenExit
+	applymovement LOCALID_GRANITE_CAVE_STEVEN, GraniteCave_StevensRoom_Movement_StevenExit
 	waitmovement 0
 	return
 
 GraniteCave_StevensRoom_EventScript_StevenExitWestEast::
-	applymovement OBJ_EVENT_ID_PLAYER, GraniteCave_StevensRoom_Movement_PlayerTurnTowardExit
-	applymovement LOCALID_STEVEN, GraniteCave_StevensRoom_Movement_StevenExit
+	applymovement LOCALID_PLAYER, GraniteCave_StevensRoom_Movement_PlayerTurnTowardExit
+	applymovement LOCALID_GRANITE_CAVE_STEVEN, GraniteCave_StevensRoom_Movement_StevenExit
 	waitmovement 0
 	return
 
 GraniteCave_StevensRoom_EventScript_StevenExitSouth::
-	applymovement OBJ_EVENT_ID_PLAYER, GraniteCave_StevensRoom_Movement_PlayerTurnTowardExit
-	applymovement LOCALID_STEVEN, GraniteCave_StevensRoom_Movement_StevenExitSouth
+	applymovement LOCALID_PLAYER, GraniteCave_StevensRoom_Movement_PlayerTurnTowardExit
+	applymovement LOCALID_GRANITE_CAVE_STEVEN, GraniteCave_StevensRoom_Movement_StevenExitSouth
 	waitmovement 0
 	return
 

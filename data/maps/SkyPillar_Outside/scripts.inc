@@ -1,5 +1,3 @@
-.set LOCALID_WALLACE, 1
-
 SkyPillar_Outside_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SkyPillar_Outside_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, SkyPillar_Outside_OnLoad
@@ -33,6 +31,60 @@ SkyPillar_Outside_OnFrame:
 	.2byte 0
 
 SkyPillar_Outside_EventScript_WallaceScene::
+	lockall
+	applymovement LOCALID_SKY_PILLAR_WALLACE, SkyPillar_Outside_Movement_WallaceApproachPlayer
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox SkyPillar_Outside_Text_OpenedDoorToSkyPillar, MSGBOX_DEFAULT
+	closemessage
+	delay 30
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 8  @ num shakes
+	setvar VAR_0x8007, 3  @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 40
+	msgbox SkyPillar_Outside_Text_EarthquakeNotMomentToWaste, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_PLAYER, SkyPillar_Outside_Movement_PlayerClimbSkyPillar
+	applymovement LOCALID_SKY_PILLAR_WALLACE, SkyPillar_Outside_Movement_WallaceClimbSkyPillar
+	waitmovement 0
+	setvar VAR_0x8004, 1   @ vertical pan
+	setvar VAR_0x8005, 3   @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 5   @ shake delay
+	special ShakeCamera
+	waitstate
+	delay 20
+	applymovement LOCALID_SKY_PILLAR_WALLACE, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	delay 10
+	applymovement LOCALID_SKY_PILLAR_WALLACE, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_SKY_PILLAR_WALLACE, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	delay 30
+	msgbox SkyPillar_Outside_Text_SituationGettingWorse, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SYS_WEATHER_CTRL
+	setweather WEATHER_ABNORMAL
+	doweather
+	special WaitWeather
+	waitstate
+	delay 30
+	msgbox SkyPillar_Outside_Text_GotToGoBackForSootopolis, MSGBOX_DEFAULT
+	closemessage
+	playse SE_EXIT
+	fadescreenswapbuffers FADE_TO_BLACK
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 4
+	removeobject LOCALID_SKY_PILLAR_WALLACE
+	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
+	fadescreenswapbuffers FADE_FROM_BLACK
+	releaseall
 	end
 
 SkyPillar_Outside_Movement_WallaceApproachPlayer:
