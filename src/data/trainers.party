@@ -14201,7 +14201,7 @@ Ability: Inner Focus
 - Rock Smash
 - Sand Attack
 
-Makuhita @ Sitrus Berry
+Makuhita @ Oran Berry
 Level: 19
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
@@ -15816,7 +15816,7 @@ Ability: Guts
 - Quick Attack
 - Aerial Ace
 - Focus Energy
-- Steel Wing
+- Double Team
 
 === TRAINER_WINONA_2 ===
 Name: WINONA
@@ -15855,8 +15855,8 @@ Nature: Adamant
 Ability: Guts
 - Quick Attack
 - Aerial Ace
+- Focus Energy
 - Double Team
-- Steel Wing
 
 === TRAINER_WINONA_3 ===
 Name: WINONA
@@ -15906,7 +15906,7 @@ Ability: Guts
 - Quick Attack
 - Aerial Ace
 - Pluck
-- Steel Wing
+- Double Team
 
 === TRAINER_WINONA_4 ===
 Name: WINONA
@@ -17479,7 +17479,7 @@ Ability: Harvest
 - Leaf Storm
 - Dragon Hammer
 - Sludge Bomb
-- Flamethrower
+- Seed Bomb
 
 Altaria
 Level: 54
@@ -17548,7 +17548,7 @@ Nature: Adamant
 Ability: Tangling Hair
 - Earthquake
 - Tri Attack
-- Sucker Punch
+- Dig
 - Iron Head
 
 Flygon
@@ -17556,9 +17556,9 @@ Level: 53
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Levitate
-- Flamethrower
-- Crunch
-- Dragon Rush
+- Sandstorm
+- Rock Slide
+- Dragon Claw
 - Earthquake
 
 Rhyperior
@@ -17571,7 +17571,7 @@ Ability: Solid Rock
 - Earthquake
 - Hammer Arm
 
-Regirock
+Regirock @ Sitrus Berry
 Level: 55
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Careful
@@ -17608,7 +17608,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Hydration
 - Muddy Water
-- Power Whip
+- Iron Tail
 - Rain Dance
 - Dragon Breath
 
@@ -17638,7 +17638,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Swift Swim
 - Aerial Ace
-- Ancient Power
+- Rock Blast
 - X Scissor
 - Crush Claw
 
@@ -17650,7 +17650,7 @@ Ability: Clear Body
 - Hammer Arm
 - Psychic
 - Meteor Mash
-- Shadow Ball
+- Hyper Beam
 
 === TRAINER_ANGELO ===
 Name: ANGELO

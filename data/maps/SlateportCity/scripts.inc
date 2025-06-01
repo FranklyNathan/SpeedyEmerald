@@ -683,10 +683,10 @@ SlateportCity_EventScript_PowerTMClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	//goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_Pokemart_PowerTMs_Badge5TMs
+	goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_Pokemart_PowerTMs_Badge5TMs
 	goto_if_eq VAR_BADGE_COUNT, 6, SlateportCity_Pokemart_PowerTMs_Badge6TMs
 	goto_if_ge VAR_BADGE_COUNT, 7, SlateportCity_Pokemart_PowerTMs_Badge7TMs
-	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMs
+	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end

@@ -5820,8 +5820,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sUrsaringLevelUpLearnset,
         .teachableLearnset = sUrsaringTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 48, SPECIES_URSALUNA},
-                                {EVO_ITEM, ITEM_HONEY, SPECIES_URSALUNA},
+        .evolutions = EVOLUTION({EVO_LEVEL_NIGHT, 48, SPECIES_URSALUNA},
                                 {EVO_NONE, 0, SPECIES_URSALUNA_BLOODMOON}),
     },
 

@@ -35494,7 +35494,7 @@ F_TRAINER_FEMALE |
             .species = SPECIES_MAKUHITA,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 14204
-            .heldItem = ITEM_SITRUS_BERRY,
+            .heldItem = ITEM_ORAN_BERRY,
 #line 14206
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 14208
@@ -39045,7 +39045,7 @@ F_TRAINER_FEMALE |
                 MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
                 MOVE_FOCUS_ENERGY,
-                MOVE_STEEL_WING,
+                MOVE_DOUBLE_TEAM,
             },
             },
         },
@@ -39134,8 +39134,8 @@ F_TRAINER_FEMALE |
 #line 15856
                 MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
+                MOVE_FOCUS_ENERGY,
                 MOVE_DOUBLE_TEAM,
-                MOVE_STEEL_WING,
             },
             },
         },
@@ -39246,7 +39246,7 @@ F_TRAINER_FEMALE |
                 MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
                 MOVE_PLUCK,
-                MOVE_STEEL_WING,
+                MOVE_DOUBLE_TEAM,
             },
             },
         },
@@ -42726,7 +42726,7 @@ F_TRAINER_FEMALE |
                 MOVE_LEAF_STORM,
                 MOVE_DRAGON_HAMMER,
                 MOVE_SLUDGE_BOMB,
-                MOVE_FLAMETHROWER,
+                MOVE_SEED_BOMB,
             },
             },
             {
@@ -42876,7 +42876,7 @@ F_TRAINER_FEMALE |
 #line 17549
                 MOVE_EARTHQUAKE,
                 MOVE_TRI_ATTACK,
-                MOVE_SUCKER_PUNCH,
+                MOVE_DIG,
                 MOVE_IRON_HEAD,
             },
             },
@@ -42895,9 +42895,9 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17559
-                MOVE_FLAMETHROWER,
-                MOVE_CRUNCH,
-                MOVE_DRAGON_RUSH,
+                MOVE_SANDSTORM,
+                MOVE_ROCK_SLIDE,
+                MOVE_DRAGON_CLAW,
                 MOVE_EARTHQUAKE,
             },
             },
@@ -42926,6 +42926,8 @@ F_TRAINER_FEMALE |
 #line 17574
             .species = SPECIES_REGIROCK,
             .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17574
+            .heldItem = ITEM_SITRUS_BERRY,
 #line 17576
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17578
@@ -43005,7 +43007,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 17610
                 MOVE_MUDDY_WATER,
-                MOVE_POWER_WHIP,
+                MOVE_IRON_TAIL,
                 MOVE_RAIN_DANCE,
                 MOVE_DRAGON_BREATH,
             },
@@ -43068,7 +43070,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 17640
                 MOVE_AERIAL_ACE,
-                MOVE_ANCIENT_POWER,
+                MOVE_ROCK_BLAST,
                 MOVE_X_SCISSOR,
                 MOVE_CRUSH_CLAW,
             },
@@ -43093,7 +43095,7 @@ F_TRAINER_FEMALE |
                 MOVE_HAMMER_ARM,
                 MOVE_PSYCHIC,
                 MOVE_METEOR_MASH,
-                MOVE_SHADOW_BALL,
+                MOVE_HYPER_BEAM,
             },
             },
         },
