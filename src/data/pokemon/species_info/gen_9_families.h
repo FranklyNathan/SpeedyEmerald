@@ -6398,11 +6398,7 @@ const struct SpeciesInfo gSpeciesInfoGen9[] =
         .levelUpLearnset = sGimmighoulLevelUpLearnset,
         .teachableLearnset = sGimmighoulTeachableLearnset,
         .formSpeciesIdTable = sGimmighoulFormSpeciesIdTable,
-<<<<<<< HEAD
-        .evolutions = EVOLUTION({EVO_COIN_COUNT_999, 1, SPECIES_GHOLDENGO}),
-=======
         .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_GHOLDENGO, CONDITIONS({IF_BAG_ITEM_COUNT, ITEM_GIMMIGHOUL_COIN, 999})}),
->>>>>>> upstream/master
     },
 
     [SPECIES_GHOLDENGO] =

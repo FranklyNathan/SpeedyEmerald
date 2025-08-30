@@ -2850,7 +2850,8 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
 static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 {
     u8 i, j;
-    u16 targetSpecies = GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_NORMAL, ITEM_NONE, NULL);
+    bool32 canStopEvo = TRUE;
+    u16 targetSpecies = GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, CHECK_EVO);
 
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
@@ -5707,6 +5708,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
     bool8 canEvolve = FALSE; // Variable to track if the Pokemon can evolve
     u16 learnMove;  // Declare learnMove before use
     u16 targetSpecies;  // Declare targetSpecies before use
+    bool32 canStopEvo = TRUE;
 
     for (i = 0; i < 25 && !learnedNewMove && !canEvolve; i++)
     {
@@ -5724,7 +5726,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
             }
 
             // Check if the Pokémon can evolve
-            targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, SPECIES_NONE);
+            targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, SPECIES_NONE, &canStopEvo, CHECK_EVO);
             if (targetSpecies != SPECIES_NONE)  // If the Pokémon can evolve
             {
                 canEvolve = TRUE;
@@ -5835,14 +5837,10 @@ static void Task_TryLearningNextMove(u8 taskId)
 static void PartyMenuTryEvolution(u8 taskId)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
-    u32 targetSpecies = SPECIES_NONE;
     bool32 canStopEvo = TRUE;
 
-    // Resets values to 0 so other means of teaching moves doesn't overwrite levels
-    sInitialLevel = 0;
-    sFinalLevel = 0;
+    u32 targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, SPECIES_NONE, &canStopEvo, DO_EVO);
 
-    targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, CHECK_EVO);
 
     if (targetSpecies != SPECIES_NONE)
     {
@@ -7871,6 +7869,27 @@ void IsLastMonThatKnowsSurf(void)
         }
         if (AnyStorageMonWithMove(move) != TRUE)
             gSpecialVar_Result = !P_CAN_FORGET_HIDDEN_MOVE;
+    }
+}
+
+static void CursorCb_Evolution(u8 taskId)
+
+{
+
+    bool32 canStopEvo = TRUE;
+    u16 targetSpecies = GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_NORMAL, ITEM_NONE, NULL, &canStopEvo, CHECK_EVO);
+
+    PlaySE(SE_SELECT);
+    if (targetSpecies != SPECIES_NONE)
+    {
+        gPartyMenu.exitCallback = CB2_ReturnToPartyMenuFromFlyMap;
+        PartyMenuTryEvolution(taskId);
+    }
+    else
+    {
+        DisplayPartyMenuMessage(gText_WontHaveEffect, FALSE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
     }
 }
 

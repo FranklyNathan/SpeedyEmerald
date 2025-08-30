@@ -7,7 +7,7 @@ static const struct SpriteFrameImage sPicTable_BrendanMachBike[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanAcroBike[] = {
-    overworld_ascending_frames(gObjectEventPic_BrendanAcroBike, 4, 4),
+    overworld_ascending_frames(gObjectEventPic_BrendanAcroBike, 8, 8),
 };
 
 static const struct SpriteFrameImage sPicTable_BrendanSurfing[] = {
@@ -419,7 +419,7 @@ static const struct SpriteFrameImage sPicTable_MayMachBike[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_MayAcroBike[] = {
-    overworld_ascending_frames(gObjectEventPic_MayAcroBike, 4, 4),
+    overworld_ascending_frames(gObjectEventPic_MayAcroBike, 8, 8),
 };
 
 static const struct SpriteFrameImage sPicTable_MaySurfing[] = {

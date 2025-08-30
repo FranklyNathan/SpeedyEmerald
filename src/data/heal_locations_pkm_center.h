@@ -140,6 +140,20 @@ static const struct HealLocation sHealLocationsPokemonCenter[NUM_HEAL_LOCATIONS 
         .mapNum = MAP_NUM(MAP_BATTLE_FRONTIER_POKEMON_CENTER_1F),
         DEFAULT_POKEMON_CENTER_COORDS,
     },
+    [HEAL_LOCATION_ROUTE_104 - 1] =
+    {
+        .mapGroup = MAP_GROUP(MAP_ROUTE104),
+        .mapNum = MAP_NUM(MAP_ROUTE104),
+        .x = 5,
+        .y = 19,
+    },
+    [HEAL_LOCATION_ROUTE_123 - 1] =
+    {
+        .mapGroup = MAP_GROUP(MAP_ROUTE123),
+        .mapNum = MAP_NUM(MAP_ROUTE123),
+        .x = 20,
+        .y = 8,
+    },
 };
 
 #undef DEFAULT_POKEMON_CENTER_COORDS
@@ -172,4 +186,6 @@ static const u8 sHealNpcLocalId[NUM_HEAL_LOCATIONS - 1] =
     [HEAL_LOCATION_EVER_GRANDE_CITY_POKEMON_LEAGUE - 1] = 1,
     [HEAL_LOCATION_SOUTHERN_ISLAND_EXTERIOR - 1] = 0, // no heal npc
     [HEAL_LOCATION_BATTLE_FRONTIER_OUTSIDE_EAST - 1] = 1,
+    [HEAL_LOCATION_ROUTE_104 - 1] = 0, // no heal npc
+    [HEAL_LOCATION_ROUTE_123 - 1] = 0, // no heal npc
 };

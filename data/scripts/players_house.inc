@@ -89,6 +89,7 @@ msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	givemon SPECIES_DEWPIDER, 15, ITEM_NONE
 	givemon SPECIES_DIGLETT, 15, ITEM_NONE
 	givemon SPECIES_DRILBUR, 15, ITEM_NONE
+	givemon SPECIES_DURALUDON, 15, ITEM_NONE
 	givemon SPECIES_ELECTRIKE, 15, ITEM_NONE
 	givemon SPECIES_EXEGGCUTE, 15, ITEM_NONE
 	givemon SPECIES_FENNEKIN, 15, ITEM_NONE
@@ -156,6 +157,7 @@ msgbox PlayersHouse_2F_Text_ClockIsStopped, MSGBOX_DEFAULT
 	givemon SPECIES_SOLOSIS, 15, ITEM_NONE
 	givemon SPECIES_SPHEAL, 15, ITEM_NONE
 	givemon SPECIES_SPOINK, 15, ITEM_NONE
+	givemon SPECIES_SPRIGATITO, 15, ITEM_NONE
 	givemon SPECIES_STARYU, 15, ITEM_NONE
 	givemon SPECIES_SURSKIT, 15, ITEM_NONE
 	//givemon SPECIES_TADBULB, 15, ITEM_NONE
@@ -197,12 +199,8 @@ PlayersHouse_2F_EventScript_MomComesUpstairsMale::
 	return
 
 PlayersHouse_2F_EventScript_MomComesUpstairsFemale::
-<<<<<<< HEAD
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F
-	setvar VAR_0x8008, LOCALID_MOM_2F
-=======
 	setvar VAR_0x8008, LOCALID_PLAYERS_HOUSE_2F_MOM
->>>>>>> upstream/master
 	addobject VAR_0x8008
 	applymovement VAR_0x8008, PlayersHouse_2F_Movement_MomEntersFemale
 	waitmovement 0

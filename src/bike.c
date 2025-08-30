@@ -6,6 +6,7 @@
 #include "field_specials.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
+#include "main.h"
 #include "sound.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
@@ -306,28 +307,11 @@ static u8 AcroBikeHandleInputNormal(u8 *newDirection, u16 newKeys, u16 heldKeys)
     gPlayerAvatar.bikeFrameCounter = 0;
     if (*newDirection == DIR_NONE)
     {
-        if (newKeys & B_BUTTON)
-        {
-            //We're standing still with the B button held.
-            //Do a wheelie.
-            *newDirection = direction;
-            gPlayerAvatar.runningState = NOT_MOVING;
-            gPlayerAvatar.acroBikeState = ACRO_STATE_WHEELIE_STANDING;
-            return ACRO_TRANS_NORMAL_TO_WHEELIE;
-        }
-        else
-        {
-            *newDirection = direction;
-            gPlayerAvatar.runningState = NOT_MOVING;
-            return ACRO_TRANS_FACE_DIRECTION;
-        }
+        *newDirection = direction;
+        gPlayerAvatar.runningState = NOT_MOVING;
+        return ACRO_TRANS_FACE_DIRECTION;
     }
-    if (*newDirection == direction && (heldKeys & B_BUTTON) && gPlayerAvatar.bikeSpeed == PLAYER_SPEED_STANDING)
-    {
-        gPlayerAvatar.bikeSpeed++;
-        gPlayerAvatar.acroBikeState = ACRO_STATE_WHEELIE_MOVING;
-        return ACRO_TRANS_WHEELIE_RISING_MOVING;
-    }
+    // Removed B button checks that initiated wheelies.
     if (*newDirection != direction && gPlayerAvatar.runningState != MOVING)
     {
         gPlayerAvatar.acroBikeState = ACRO_STATE_TURNING;
@@ -355,25 +339,7 @@ static u8 AcroBikeHandleInputTurning(u8 *newDirection, u16 newKeys, u16 heldKeys
         return ACRO_TRANS_TURN_DIRECTION;
     }
     direction = GetPlayerMovementDirection();
-    if (*newDirection == AcroBike_GetJumpDirection())
-    {
-        Bike_SetBikeStill(); // Bike_SetBikeStill sets speed to standing, but the next line immediately overrides it. could have just reset acroBikeState to 0 here instead of wasting a jump.
-        gPlayerAvatar.bikeSpeed = PLAYER_SPEED_NORMAL;
-        if (*newDirection == GetOppositeDirection(direction))
-        {
-            // do a turn jump.
-            // no need to update runningState, didnt move.
-            gPlayerAvatar.acroBikeState = ACRO_STATE_TURN_JUMP;
-            return ACRO_TRANS_TURN_JUMP;
-        }
-        else
-        {
-            // do a sideways jump.
-            gPlayerAvatar.runningState = MOVING; // we need to move, set state to moving.
-            gPlayerAvatar.acroBikeState = ACRO_STATE_SIDE_JUMP;
-            return ACRO_TRANS_SIDE_JUMP;
-        }
-    }
+    // Removed check for B button to do side/turn jumps.
     *newDirection = direction;
     return ACRO_TRANS_FACE_DIRECTION;
 }
@@ -582,10 +548,17 @@ static void AcroBikeTransition_Moving(u8 direction)
     }
     else
     {
-        if (ObjectMovingOnRockStairs(playerObjEvent, direction))
-            PlayerWalkFast(direction);
+        if (gMain.heldKeys & B_BUTTON)
+        {
+            PlayerWalkFaster(direction);
+        }
         else
-            PlayerRideWaterCurrent(direction);
+        {
+            if (ObjectMovingOnRockStairs(playerObjEvent, direction))
+                PlayerWalkFast(direction);
+            else
+                PlayerRideWaterCurrent(direction);
+        }
     }
 }
 
@@ -901,6 +874,9 @@ static u8 GetBikeCollisionAt(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 d
 {
     u8 collision = CheckForObjectEventCollision(objectEvent, x, y, direction, metatileBehavior);
 
+    if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE) && MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior))
+        return COLLISION_NONE;
+
     if (collision > COLLISION_OBJECT_EVENT)
         return collision;
 
@@ -974,6 +950,14 @@ bool8 IsBikingDisallowedByPlayer(void)
 {
     s16 x, y;
     u8 tileBehavior;
+
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    {
+        PlayerGetDestCoords(&x, &y);
+        tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior))
+            return TRUE;
+    }
 
     if (!(gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_UNDERWATER)))
     {

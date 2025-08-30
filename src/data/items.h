@@ -12246,19 +12246,19 @@ const struct Item gItemsInfo[] =
 
     [ITEM_ACRO_BIKE] =
     {
-        .name = _("Acro Bike"),
+        .name = _("Birch's Flygon"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A folding bicycle\n"
-            "capable of jumps\n"
-            "and wheelies."),
+            "A special FLYGON\n"
+            "bred specifically\n"
+            "for speed."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_Bike,
         .secondaryId = ACRO_BIKE,
-        .iconPic = gItemIcon_AcroBike,
-        .iconPalette = gItemIconPalette_AcroBike,
+        .iconPic = gItemIcon_CherishBall,
+        .iconPalette = gItemIconPalette_CherishBall,
     },
 
     [ITEM_OLD_ROD] =

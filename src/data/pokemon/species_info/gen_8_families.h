@@ -2465,10 +2465,10 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .levelUpLearnset = sApplinLevelUpLearnset,
         .teachableLearnset = sApplinTeachableLearnset,
         .eggMoveLearnset = sApplinEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_SPECIFIC_MAP, MAP_RUSTBORO_CITY_GYM, SPECIES_DIPPLIN},
-                                {EVO_SPECIFIC_MAP, MAP_FORTREE_CITY_GYM, SPECIES_FLAPPLE},
-                                {EVO_SPECIFIC_MAP, MAP_LAVARIDGE_TOWN_GYM_1F, SPECIES_APPLETUN},
-                                {EVO_SPECIFIC_MAP, MAP_LAVARIDGE_TOWN_GYM_B1F, SPECIES_APPLETUN}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_DIPPLIN, CONDITIONS({IF_IN_MAP, MAP_RUSTBORO_CITY_GYM})},
+                                {EVO_LEVEL, 0, SPECIES_FLAPPLE, CONDITIONS({IF_IN_MAP, MAP_FORTREE_CITY_GYM})},
+                                {EVO_LEVEL, 0, SPECIES_APPLETUN, CONDITIONS({IF_IN_MAP, MAP_LAVARIDGE_TOWN_GYM_1F})},
+                                {EVO_LEVEL, 0, SPECIES_APPLETUN, CONDITIONS({IF_IN_MAP, MAP_LAVARIDGE_TOWN_GYM_B1F})}),
     },
 
     [SPECIES_FLAPPLE] =

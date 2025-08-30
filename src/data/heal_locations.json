@@ -21,8 +21,8 @@
     {
       "id": "HEAL_LOCATION_SLATEPORT_CITY",
       "map": "MAP_SLATEPORT_CITY",
-      "x": 19,
-      "y": 20
+      "x": 14,
+      "y": 52
     },
     {
       "id": "HEAL_LOCATION_MAUVILLE_CITY",
@@ -131,6 +131,18 @@
       "map": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
       "x": 3,
       "y": 52
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE_104",
+      "map": "MAP_ROUTE104",
+      "x": 5,
+      "y": 19
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE_123",
+      "map": "MAP_ROUTE123",
+      "x": 20,
+      "y": 8
     }
   ]
 }

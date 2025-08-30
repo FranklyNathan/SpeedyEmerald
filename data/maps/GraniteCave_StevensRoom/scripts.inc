@@ -28,7 +28,7 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	call_if_eq VAR_FACING, DIR_WEST, GraniteCave_StevensRoom_EventScript_StevenExitWestEast
 	call_if_eq VAR_FACING, DIR_EAST, GraniteCave_StevensRoom_EventScript_StevenExitWestEast
 	playse SE_EXIT
-	removeobject LOCALID_STEVEN
+	removeobject LOCALID_GRANITE_CAVE_STEVEN
 	setflag FLAG_DOCK_REJECTED_DEVON_GOODS
 	setflag FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA
 	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS

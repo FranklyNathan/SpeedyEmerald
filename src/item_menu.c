@@ -1680,7 +1680,8 @@ static void OpenContextMenu(u8 taskId)
     {
         u8 *end = CopyItemName(gSpecialVar_ItemId, gStringVar1);
         WrapFontIdToFit(gStringVar1, end, FONT_NORMAL, WindowWidthPx(WIN_DESCRIPTION) - 10 - 6);
-        if (ItemId_GetBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE) 
+        //if (ItemId_GetBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE) 
+        if (GetItemBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE) 
         && gBagPosition.pocket != BALLS_POCKET && gBagPosition.location == ITEMMENULOCATION_BATTLE)
             StringExpandPlaceholders(gStringVar4, gText_Var1NuzlockePrevents);
         else

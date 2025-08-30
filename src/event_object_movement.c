@@ -519,6 +519,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_GroudonReflection,     OBJ_EVENT_PAL_TAG_GROUDON_REFLECTION},
     {gObjectEventPal_SubmarineShadow,       OBJ_EVENT_PAL_TAG_SUBMARINE_SHADOW},
     {gObjectEventPal_Poochyena,             OBJ_EVENT_PAL_TAG_POOCHYENA},
+    {gObjectEventPal_FlygonBike,            OBJ_EVENT_PAL_TAG_FLYGON_BIKE},
+    {gObjectEventPal_FlygonBike_May,         OBJ_EVENT_PAL_TAG_FLYGON_BIKE_MAY},
     {gObjectEventPal_RedLeaf,               OBJ_EVENT_PAL_TAG_RED_LEAF},
     {gObjectEventPal_Deoxys,                OBJ_EVENT_PAL_TAG_DEOXYS},
     {gObjectEventPal_BirthIslandStone,      OBJ_EVENT_PAL_TAG_BIRTH_ISLAND_STONE},
@@ -7149,7 +7151,15 @@ bool8 MovementAction_WalkNormalDiagonalDownRight_Step1(struct ObjectEvent *objec
 
 bool8 MovementAction_WalkNormalDown_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_SOUTH, MOVE_SPEED_NORMAL);
+    u8 speed = MOVE_SPEED_NORMAL;
+    if (objectEvent->isPlayer && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        if (gMain.heldKeys & B_BUTTON)
+            speed = MOVE_SPEED_FAST_2;
+        else
+            speed = MOVE_SPEED_FAST_1;
+    }
+    InitMovementNormal(objectEvent, sprite, DIR_SOUTH, speed);
     return MovementAction_WalkNormalDown_Step1(objectEvent, sprite);
 }
 
@@ -7165,7 +7175,15 @@ bool8 MovementAction_WalkNormalDown_Step1(struct ObjectEvent *objectEvent, struc
 
 bool8 MovementAction_WalkNormalUp_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
-    InitMovementNormal(objectEvent, sprite, DIR_NORTH, MOVE_SPEED_NORMAL);
+    u8 speed = MOVE_SPEED_NORMAL;
+    if (objectEvent->isPlayer && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        if (gMain.heldKeys & B_BUTTON)
+            speed = MOVE_SPEED_FAST_2;
+        else
+            speed = MOVE_SPEED_FAST_1;
+    }
+    InitMovementNormal(objectEvent, sprite, DIR_NORTH, speed);
     return MovementAction_WalkNormalUp_Step1(objectEvent, sprite);
 }
 
@@ -7181,10 +7199,19 @@ bool8 MovementAction_WalkNormalUp_Step1(struct ObjectEvent *objectEvent, struct 
 
 bool8 MovementAction_WalkNormalLeft_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
+    u8 speed = MOVE_SPEED_NORMAL;
+    u8 direction = DIR_WEST;
     if (objectEvent->directionOverwrite)
-        InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
-    else
-        InitMovementNormal(objectEvent, sprite, DIR_WEST, MOVE_SPEED_NORMAL);
+        direction = objectEvent->directionOverwrite;
+
+    if (objectEvent->isPlayer && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        if (gMain.heldKeys & B_BUTTON)
+            speed = MOVE_SPEED_FAST_2;
+        else
+            speed = MOVE_SPEED_FAST_1;
+    }
+    InitMovementNormal(objectEvent, sprite, direction, speed);
     return MovementAction_WalkNormalLeft_Step1(objectEvent, sprite);
 }
 
@@ -7200,10 +7227,19 @@ bool8 MovementAction_WalkNormalLeft_Step1(struct ObjectEvent *objectEvent, struc
 
 bool8 MovementAction_WalkNormalRight_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
+    u8 speed = MOVE_SPEED_NORMAL;
+    u8 direction = DIR_EAST;
     if (objectEvent->directionOverwrite)
-        InitMovementNormal(objectEvent, sprite, objectEvent->directionOverwrite, MOVE_SPEED_NORMAL);
-    else
-        InitMovementNormal(objectEvent, sprite, DIR_EAST, MOVE_SPEED_NORMAL);
+        direction = objectEvent->directionOverwrite;
+
+    if (objectEvent->isPlayer && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        if (gMain.heldKeys & B_BUTTON)
+            speed = MOVE_SPEED_FAST_2;
+        else
+            speed = MOVE_SPEED_FAST_1;
+    }
+    InitMovementNormal(objectEvent, sprite, direction, speed);
     return MovementAction_WalkNormalRight_Step1(objectEvent, sprite);
 }
 
@@ -9783,10 +9819,8 @@ u8 GetLedgeJumpDirection(s16 x, s16 y, u8 direction)
     if (ledgeBehaviorFuncs[index](behavior) == TRUE)
         return index + 1;
 
-   if ((gPlayerAvatar.acroBikeState == ACRO_STATE_BUNNY_HOP || 
-      gPlayerAvatar.acroBikeState == ACRO_STATE_WHEELIE_STANDING || 
-      gPlayerAvatar.acroBikeState == ACRO_STATE_WHEELIE_MOVING)
-      && MB_JUMP_EAST <= behavior && behavior <= MB_JUMP_SOUTH)
+   if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    && MB_JUMP_EAST <= behavior && behavior <= MB_JUMP_SOUTH)
    {
        MoveCoords(direction, &x, &y);
        if (GetCollisionAtCoords(playerObjEvent, x, y, direction) == COLLISION_NONE)
@@ -9880,6 +9914,13 @@ void ObjectEventUpdateElevation(struct ObjectEvent *objEvent, struct Sprite *spr
 {
     u8 curElevation = MapGridGetElevationAt(objEvent->currentCoords.x, objEvent->currentCoords.y);
     u8 prevElevation = MapGridGetElevationAt(objEvent->previousCoords.x, objEvent->previousCoords.y);
+
+        if (objEvent->isPlayer && (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE) && MetatileBehavior_IsSurfableWaterOrUnderwater(objEvent->currentMetatileBehavior))
+    {
+        objEvent->currentElevation = 3;
+        objEvent->previousElevation = 3;
+        return;
+    }
 
     if (curElevation == 15 || prevElevation == 15)
     {

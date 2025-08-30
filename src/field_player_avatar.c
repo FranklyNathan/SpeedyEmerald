@@ -106,6 +106,9 @@ static bool8 ShouldJumpLedge(s16, s16, u8);
 static bool8 TryPushBoulder(s16, s16, u8);
 static void CheckAcroBikeCollision(s16, s16, u8, u8 *);
 
+static void DestroyAcroBikeSurfBlob(struct ObjectEvent *);
+static void SpriteCB_AcroBike(struct Sprite *sprite);
+static void RestorePlayerSpriteCallback(struct ObjectEvent *objEvent);
 static void DoPlayerAvatarTransition(void);
 static void PlayerAvatarTransition_Dummy(struct ObjectEvent *);
 static void PlayerAvatarTransition_Normal(struct ObjectEvent *);
@@ -381,7 +384,7 @@ void PlayerStep(u8 direction, u16 newKeys, u16 heldKeys)
     HideShowWarpArrow(playerObjEvent);
     if (gPlayerAvatar.preventStep == FALSE)
     {
-        Bike_TryAcroBikeHistoryUpdate(newKeys, heldKeys);
+        // Bike_TryAcroBikeHistoryUpdate(newKeys, heldKeys);
         if (TryInterruptObjectEventSpecialAnim(playerObjEvent, direction) == 0)
         {
             npc_clear_strange_bits(playerObjEvent);
@@ -895,6 +898,18 @@ u8 CheckForObjectEventCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u
     if (collision == COLLISION_ELEVATION_MISMATCH && CanStartSurfing(x, y, direction))
         return COLLISION_START_SURFING;
 
+    // Allow Acro Bike to hop over 1-tile objects.
+    if ((collision == COLLISION_OBJECT_EVENT || collision == COLLISION_IMPASSABLE) && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    {
+        s16 x2 = x, y2 = y;
+        MoveCoords(direction, &x2, &y2);
+
+        // Check if the tile behind the object is empty and hop.
+        // Re-uses ledge jump collision to trigger a hop.
+        if (GetCollisionAtCoords(objectEvent, x2, y2, direction) == COLLISION_NONE && !MetatileBehavior_IsNonAnimDoor(MapGridGetMetatileBehaviorAt(x2, y2)))
+            return COLLISION_LEDGE_JUMP;
+    }
+
     if (ShouldJumpLedge(x, y, direction))
     {
         IncrementGameStat(GAME_STAT_JUMPED_DOWN_LEDGES);
@@ -1108,6 +1123,52 @@ static void DoPlayerAvatarTransition(void)
     }
 }
 
+static void DestroyAcroBikeSurfBlob(struct ObjectEvent *objEvent)
+{
+    if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE) && objEvent->fieldEffectSpriteId != 0xFF)
+    {
+        DestroySprite(&gSprites[objEvent->fieldEffectSpriteId]);
+        objEvent->fieldEffectSpriteId = 0xFF;
+    }
+}
+
+static void SpriteCB_AcroBike(struct Sprite *sprite)
+{
+    struct ObjectEvent *object = &gObjectEvents[sprite->data[0]];
+    s16 bobbingOffset = 0;
+
+    sprite->x2 = 0;
+    sprite->y2 = 0;
+
+    // This handles the player's movement between tiles.
+    UpdateObjectEventCurrentMovement(object, sprite, (bool8 (*)(struct ObjectEvent *, struct Sprite *))ObjectEventCB2_NoMovement2);
+
+    // Get the bobbing offset from the surf blob sprite.
+    if (object->fieldEffectSpriteId != 0xFF)
+        bobbingOffset = gSprites[object->fieldEffectSpriteId].y2;
+
+    // Apply the static vertical offset for the large sprite.
+    if (object->facingDirection == DIR_NORTH)
+        sprite->y2 += 17;
+    if (object->facingDirection == DIR_SOUTH)
+        sprite->y2 += 5;
+    if (object->facingDirection == DIR_WEST || object->facingDirection == DIR_EAST)
+        sprite->y2 += 1;
+
+    // Apply the bobbing offset.
+    sprite->y2 += bobbingOffset;
+}
+
+static void RestorePlayerSpriteCallback(struct ObjectEvent *objEvent)
+{
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    {
+        struct Sprite *sprite = &gSprites[objEvent->spriteId];
+        sprite->callback = MovementType_Player;
+        sprite->y2 = 0;
+    }
+}
+
 static void PlayerAvatarTransition_Dummy(struct ObjectEvent *objEvent)
 {
 
@@ -1115,6 +1176,8 @@ static void PlayerAvatarTransition_Dummy(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_Normal(struct ObjectEvent *objEvent)
 {
+    RestorePlayerSpriteCallback(objEvent);
+    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_NORMAL));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ON_FOOT);
@@ -1122,6 +1185,8 @@ static void PlayerAvatarTransition_Normal(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_MachBike(struct ObjectEvent *objEvent)
 {
+    RestorePlayerSpriteCallback(objEvent);
+    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_MACH_BIKE));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_MACH_BIKE);
@@ -1130,17 +1195,29 @@ static void PlayerAvatarTransition_MachBike(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_AcroBike(struct ObjectEvent *objEvent)
 {
+    u8 spriteId;
+
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_ACRO_BIKE));
+    gSprites[objEvent->spriteId].callback = SpriteCB_AcroBike;
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ACRO_BIKE);
     BikeClearState(0, 0);
     Bike_HandleBumpySlopeJump();
+    gFieldEffectArguments[0] = objEvent->currentCoords.x;
+    gFieldEffectArguments[1] = objEvent->currentCoords.y;
+    gFieldEffectArguments[2] = gPlayerAvatar.objectEventId;
+    spriteId = FieldEffectStart(FLDEFF_SURF_BLOB);
+    objEvent->fieldEffectSpriteId = spriteId;
+    gSprites[spriteId].invisible = TRUE;
+    SetSurfBlob_BobState(spriteId, BOB_JUST_MON);
 }
 
 static void PlayerAvatarTransition_Surfing(struct ObjectEvent *objEvent)
 {
     u8 spriteId;
 
+    RestorePlayerSpriteCallback(objEvent);
+    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_SURFING);
@@ -1154,6 +1231,8 @@ static void PlayerAvatarTransition_Surfing(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_Underwater(struct ObjectEvent *objEvent)
 {
+    RestorePlayerSpriteCallback(objEvent);
+    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_UNDERWATER));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_UNDERWATER);
@@ -1283,6 +1362,9 @@ static void PlayerRun(u8 direction)
 
 void PlayerOnBikeCollide(u8 direction)
 {
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE))
+        return;
+
     PlayCollisionSoundIfNotFacingWarp(direction);
     PlayerSetAnimId(GetWalkInPlaceNormalMovementAction(direction), COPY_MOVE_WALK);
     // Edge case: If the player stops at the top of a mud slide, but the NPC follower is still on a mud slide tile,
