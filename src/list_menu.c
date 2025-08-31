@@ -645,9 +645,13 @@ static void ListMenuPrintEntries(struct ListMenu *list, u16 startIndex, u16 yOff
 
         y = (yOffset + i) * yMultiplier + list->template.upText_Y;
         if (list->template.itemPrintFunc != NULL)
+        {
             list->template.itemPrintFunc(list->template.windowId, list->template.items[startIndex].id, y);
-
-        ListMenuPrint(list, list->template.items[startIndex].name, x, y);
+        }
+        else
+        {
+            ListMenuPrint(list, list->template.items[startIndex].name, x, y);
+        }
         startIndex++;
     }
 }

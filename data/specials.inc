@@ -15,6 +15,7 @@
 .set __special__, 0
 		.align 2
 gSpecials::
+	def_special BuildGiftPokemonMenu
 	def_special HealPlayerParty
 	def_special SetCableClubWarp
 	def_special DoCableClubWarp
@@ -565,4 +566,4 @@ gSpecials::
 	def_special GetCodeFeedback
 	def_special AdvanceTimeToNextPeriod
 	def_special ReleasePlayerBoxes
-
+	def_special SetIsGiftPokemonMenu

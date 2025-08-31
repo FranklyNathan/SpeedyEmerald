@@ -46,5 +46,8 @@ int DisplayTextAndGetWidth(const u8 *str, int prevWidth);
 int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width);
 bool16 ScriptMenu_CreatePCMultichoice(void);
 void ScriptMenu_DisplayPCStartupPrompt(void);
+void ScriptMenu_ClearDynMultichoice(void);
+void ScriptMenu_AddDynmultichoice(const u8 *name, s32 id, s32 unused);
+void SetIsGiftPokemonMenu(void);
 
 #endif //GUARD_SCRIPT_MENU_H

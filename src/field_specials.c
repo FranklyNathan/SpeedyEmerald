@@ -36,6 +36,7 @@
 #include "random.h"
 #include "rayquaza_scene.h"
 #include "region_map.h"
+#include "script_menu.h"
 #include "rtc.h"
 #include "script.h"
 #include "script_menu.h"
@@ -4360,4 +4361,9 @@ void GetCodeFeedback(void)
         gSpecialVar_Result = 1;
     else
         gSpecialVar_Result = 0;
+}
+
+void Special_SetIsGiftPokemonMenu(void)
+{
+    SetIsGiftPokemonMenu();
 }

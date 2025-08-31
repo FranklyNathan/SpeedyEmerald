@@ -1132,6 +1132,7 @@ const u8 gText_PkmnForSwap[] = _("{PKMN} FOR SWAP");
 const u8 gText_Cancel3[] = _("CANCEL");
 const u8 gText_Swap2[] = _("SWAP"); // Unused
 const u8 gText_Accept[] = _("ACCEPT"); // Unused
+const u8 gText_Finished[] = _("Finish");
 const u8 gText_AcceptThisPkmn[] = _("Accept this POKéMON?");
 const u8 gText_4Spaces[] = _("    "); // Unused
 const u8 gText_SamePkmnInPartyAlready[] = _("Same {PKMN} in party already.");

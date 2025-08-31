@@ -23,25 +23,25 @@ Common_EventScript_TransferredToPC::
 EventScript_TransferredSomeonesPC::
 	specialvar VAR_RESULT, ShouldShowBoxWasFullMessage
 	goto_if_eq VAR_RESULT, TRUE, EventScript_SomeonesPCBoxFull
-	msgbox gText_PkmnTransferredSomeonesPC, MSGBOX_DEFAULT
+	// msgbox gText_PkmnTransferredSomeonesPC, MSGBOX_DEFAULT
 	return
 
 EventScript_SomeonesPCBoxFull::
 	specialvar VAR_RESULT, GetPCBoxToSendMon
 	bufferboxname STR_VAR_3, VAR_RESULT
-	msgbox gText_PkmnTransferredSomeonesPCBoxFull, MSGBOX_DEFAULT
+	// msgbox gText_PkmnTransferredSomeonesPCBoxFull, MSGBOX_DEFAULT
 	return
 
 EventScript_TransferredLanettesPC::
 	specialvar VAR_RESULT, ShouldShowBoxWasFullMessage
 	goto_if_eq VAR_RESULT, TRUE, EventScript_LanettesPCBoxFull
-	msgbox gText_PkmnTransferredLanettesPC, MSGBOX_DEFAULT
+	// msgbox gText_PkmnTransferredLanettesPC, MSGBOX_DEFAULT
 	return
 
 EventScript_LanettesPCBoxFull::
 	specialvar VAR_RESULT, GetPCBoxToSendMon
 	bufferboxname STR_VAR_3, VAR_RESULT
-	msgbox gText_PkmnTransferredLanettesPCBoxFull, MSGBOX_DEFAULT
+	// msgbox gText_PkmnTransferredLanettesPCBoxFull, MSGBOX_DEFAULT
 	return
 
 Common_EventScript_NoMoreRoomForPokemon::

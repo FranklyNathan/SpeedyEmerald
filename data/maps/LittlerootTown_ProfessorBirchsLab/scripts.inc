@@ -163,6 +163,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setvar VAR_REGISTER_BIRCH_STATE, 1 @ fix for no Birch on Route 110
 
 	@ Wattson Flags
+	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY
+	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY
+	setflag FLAG_DEFEATED_WALLY_MAUVILLE
+
 	setflag FLAG_HIDE_ROUTE_112_TEAM_MAGMA
 	setvar VAR_METEOR_FALLS_STATE, 1
 	setflag FLAG_HIDE_METEOR_FALLS_TEAM_AQUA
