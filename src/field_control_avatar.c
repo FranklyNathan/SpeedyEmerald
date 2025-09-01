@@ -562,6 +562,14 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 {
     if (VarGet(VAR_BADGE_COUNT) >= 5 && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
         return EventScript_UseSurf;
+    
+        // Show "nervous" message if on the bike and facing rough water without the Surf HM.
+   
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    && MetatileBehavior_IsDarkWater(metatileBehavior))
+        {
+            return EventScript_FlygonNervous;
+        }
 
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE
      && CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_WATERFALL)

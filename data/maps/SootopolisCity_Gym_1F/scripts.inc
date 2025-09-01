@@ -171,6 +171,8 @@ SootopolisCity_Gym_1F_EventScript_GiveWaterPulse::
 
 SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2::
 	giveitem ITEM_TM_WATER_PULSE
+	giveitem ITEM_HM_WATERFALL
+	setflag FLAG_RECEIVED_HM_WATERFALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox SootopolisCity_Gym_1F_Text_ExplainWaterPulse, MSGBOX_DEFAULT
 	setflag FLAG_RECEIVED_TM_WATER_PULSE
@@ -287,6 +289,9 @@ SootopolisCity_Gym_1F_Text_ExplainWaterPulse:
 	.string "contains WATER PULSE.\p"
 	.string "In use, it will occasionally confuse\n"
 	.string "the target with ultrasonic waves.\p"
+
+	.string "And here's WATERFALL!\n"
+	.string "There are two of us, after all!\p"
 	.string "… … … … … …$"
 
 SootopolisCity_Gym_1F_Text_RegisteredJuan:

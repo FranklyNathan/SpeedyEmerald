@@ -4,6 +4,7 @@ LittlerootTown_MaysHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_MaysHouse_2F_OnTransition:
+	call_if_unset FLAG_GAVE_STARTER_EEVEE, LittlerootTown_MaysHouse_2F_EventScript_GiveEevee
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_MaysHouse_2F_EventScript_CheckShouldUpdateMayPos
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
@@ -25,6 +26,15 @@ LittlerootTown_MaysHouse_2F_EventScript_TryUpdateMayPos::
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_Ret::
+	return
+
+LittlerootTown_MaysHouse_2F_EventScript_GiveEevee::
+    setflag FLAG_SYS_POKEMON_GET
+	givemon SPECIES_EEVEE, 15
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq LittlerootTown_MaysHouse_2F_EventScript_GiveEevee_End
+	setflag FLAG_GAVE_STARTER_EEVEE
+LittlerootTown_MaysHouse_2F_EventScript_GiveEevee_End::
 	return
 
 LittlerootTown_MaysHouse_2F_EventScript_CheckSetReadyToMeetMay::

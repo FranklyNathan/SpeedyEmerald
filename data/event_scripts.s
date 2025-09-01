@@ -623,6 +623,12 @@ EventScript_AfterWhiteOutMomHeal::
 	fadedefaultbgm
 	releaseall
 	end
+	
+EventScript_FlygonNervous::
+	lock
+	msgbox gText_FlygonNervous, MSGBOX_DEFAULT
+	release
+	end
 
 EventScript_ResetMrBriney::
 	goto_if_eq VAR_BRINEY_LOCATION, 1, EventScript_MoveMrBrineyToHouse

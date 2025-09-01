@@ -144,7 +144,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setflag FLAG_RETURNED_DEVON_GOODS
 	setflag FLAG_HIDE_RUSTBORO_CITY_DEVON_EMPLOYEE_1
 	clearflag FLAG_DEVON_GOODS_STOLEN
-	clearflag FLAG_HIDE_RUSTBORO_CITY_RIVAL
+	setflag FLAG_HIDE_RUSTBORO_CITY_RIVAL
 	setflag FLAG_RECOVERED_DEVON_GOODS
 	setvar VAR_BRINEY_HOUSE_STATE, 1
 	setflag FLAG_HIDE_ROUTE_116_WANDAS_BOYFRIEND
@@ -164,7 +164,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 
 	@ Wattson Flags
 	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY
-	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY
+	setflag FLAG_HIDE_MAUVILLE_CITY_WALLYS_UNCLE
 	setflag FLAG_DEFEATED_WALLY_MAUVILLE
 
 	setflag FLAG_HIDE_ROUTE_112_TEAM_MAGMA
@@ -187,6 +187,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
     setflag FLAG_HIDE_MAGMA_HIDEOUT_GRUNTS
     setflag FLAG_HIDE_MAGMA_HIDEOUT_4F_GROUDON
     setflag FLAG_HIDE_JAGGED_PASS_MAGMA_GUARD
+
+	@ Route 119 & Lillycove Rival Battle
+	setvar VAR_ROUTE119_STATE, 1
+	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
 
 	@ Route 120 Steven Flags
 	setflag FLAG_HIDE_FORTREE_CITY_KECLEON
@@ -229,9 +233,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	clearflag FLAG_UNKNOWN_0x393
 	clearflag FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS
 	clearflag FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA
-	clearflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA
-	clearflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA
-	clearflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_STEVEN
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_TEAM_MAGMA
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_TEAM_MAGMA
+	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_STEVEN
 	setflag FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_1F_STEVEN
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 1
 	setflag FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA
@@ -289,7 +293,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 
 	@ Juan Flags
 	clearflag FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1
-	setvar VAR_SOOTOPOLIS_CITY_STATE, 7
+	setvar VAR_SOOTOPOLIS_CITY_STATE, 6
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_RESIDENTS
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_STEVEN
 	setflag FLAG_HIDE_SOOTOPOLIS_CITY_WALLACE
@@ -298,8 +302,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
     setflag FLAG_HIDE_CAVE_OF_ORIGIN_B1F_WALLACE @ also hides the expert as a hack
     giveitem ITEM_ACRO_BIKE
     setflag FLAG_RECEIVED_BIKE
+
 	@ Automatically register the Flygon Bike
 	special SwapRegisteredBike
+
     goto LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex
 	//goto LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival
 	end

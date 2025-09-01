@@ -8,6 +8,8 @@
 #include "field_effect_helpers.h"
 #include "field_screen_effect.h"
 #include "field_player_avatar.h"
+#include "event_data.h"
+#include "constants/event_objects.h"
 #include "fieldmap.h"
 #include "item_menu.h"
 #include "follower_npc.h"
@@ -23,6 +25,7 @@
 #include "sprite.h"
 #include "strings.h"
 #include "task.h"
+#include "constants/vars.h"
 #include "tv.h"
 #include "wild_encounter.h"
 #include "constants/abilities.h"
@@ -899,15 +902,28 @@ u8 CheckForObjectEventCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, u
         return COLLISION_START_SURFING;
 
     // Allow Acro Bike to hop over 1-tile objects.
-    if ((collision == COLLISION_OBJECT_EVENT || collision == COLLISION_IMPASSABLE) && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE))
+    if (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE))
     {
-        s16 x2 = x, y2 = y;
-        MoveCoords(direction, &x2, &y2);
+        if (collision == COLLISION_OBJECT_EVENT)
+        {
+            u8 objectId = GetObjectEventIdByXY(x, y);
+            if (objectId != OBJECT_EVENTS_COUNT)
+            {
+                u16 graphicsId = gObjectEvents[objectId].graphicsId;
+                if (graphicsId == OBJ_EVENT_GFX_CUTTABLE_TREE
+                 || graphicsId == OBJ_EVENT_GFX_BREAKABLE_ROCK
+                 || graphicsId == OBJ_EVENT_GFX_PUSHABLE_BOULDER)
+                {
+                    s16 x2 = x, y2 = y;
+                    MoveCoords(direction, &x2, &y2);
 
-        // Check if the tile behind the object is empty and hop.
-        // Re-uses ledge jump collision to trigger a hop.
-        if (GetCollisionAtCoords(objectEvent, x2, y2, direction) == COLLISION_NONE && !MetatileBehavior_IsNonAnimDoor(MapGridGetMetatileBehaviorAt(x2, y2)))
-            return COLLISION_LEDGE_JUMP;
+                    // Check if the tile behind the object is empty and hop.
+                    // Re-uses ledge jump collision to trigger a hop.
+                    if (GetCollisionAtCoords(objectEvent, x2, y2, direction) == COLLISION_NONE && !MetatileBehavior_IsNonAnimDoor(MapGridGetMetatileBehaviorAt(x2, y2)))
+                        return COLLISION_LEDGE_JUMP;
+                }
+            }
+        }
     }
 
     if (ShouldJumpLedge(x, y, direction))
@@ -1639,6 +1655,9 @@ u16 GetRSAvatarGraphicsIdByGender(u8 gender)
 
 u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 {
+    if (state == PLAYER_AVATAR_STATE_SURFING && VarGet(VAR_TEMP_1) == 1)
+        return OBJ_EVENT_GFX_SPECIES(FLYGON);
+
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);
 }
 

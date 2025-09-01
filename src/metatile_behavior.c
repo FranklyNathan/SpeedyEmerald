@@ -309,6 +309,24 @@ bool8 MetatileBehavior_IsWestArrowWarp(u8 metatileBehavior)
         return FALSE;
 }
 
+bool8 MetatileBehavior_IsDarkWater(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_DEEP_WATER
+     || metatileBehavior == MB_OCEAN_WATER
+     || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER
+     || metatileBehavior == MB_INTERIOR_DEEP_WATER
+     || metatileBehavior == MB_WATERFALL
+     || metatileBehavior == MB_NO_SURFACING
+     || metatileBehavior == MB_SEAWEED
+     || metatileBehavior == MB_SEAWEED_NO_SURFACING
+     || metatileBehavior == MB_WATER_DOOR
+     || metatileBehavior == MB_WATER_SOUTH_ARROW_WARP
+     || (metatileBehavior >= MB_EASTWARD_CURRENT && metatileBehavior <= MB_SOUTHWARD_CURRENT))
+        return TRUE;
+
+    return FALSE;
+}
+
 bool8 MetatileBehavior_IsNorthArrowWarp(u8 metatileBehavior)
 {
     if (metatileBehavior == MB_NORTH_ARROW_WARP

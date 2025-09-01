@@ -9,7 +9,6 @@
 #include "event_data.h"
 
 static const u16 sGiftPokemonList[] = {
-    SPECIES_EEVEE, 
     SPECIES_APPLIN, 
     SPECIES_ARON, 
     SPECIES_BAGON, 

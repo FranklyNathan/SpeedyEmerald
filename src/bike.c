@@ -2,6 +2,9 @@
 #include "bike.h"
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
+#include "script.h"
+#include "event_data.h"
+#include "event_scripts.h"
 #include "fieldmap.h"
 #include "field_specials.h"
 #include "metatile_behavior.h"
@@ -10,6 +13,7 @@
 #include "sound.h"
 #include "constants/map_types.h"
 #include "constants/songs.h"
+#include "constants/vars.h"
 
 // this file's functions
 static void MovePlayerOnMachBike(u8, u16, u16);
@@ -303,6 +307,17 @@ static u8 CheckMovementInputAcroBike(u8 *newDirection, u16 newKeys, u16 heldKeys
 static u8 AcroBikeHandleInputNormal(u8 *newDirection, u16 newKeys, u16 heldKeys)
 {
     u8 direction = GetPlayerMovementDirection();
+
+    if (newKeys & L_BUTTON)
+    {
+        if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+        {
+            VarSet(VAR_TEMP_1, 1); // Use a temporary variable to signal Flygon-fly
+            ScriptContext_SetupScript(EventScript_UseFlyAcroBike);
+            *newDirection = direction;
+            return ACRO_TRANS_FACE_DIRECTION; // Stop moving and face forward
+        }
+    }
 
     gPlayerAvatar.bikeFrameCounter = 0;
     if (*newDirection == DIR_NONE)
@@ -806,7 +821,7 @@ static bool8 HasPlayerInputTakenLongerThanList(const u8 *dirTimerList, const u8 
     return TRUE;
 }
 
-static u8 AcroBike_GetJumpDirection(void)
+static u8 UNUSED AcroBike_GetJumpDirection(void)
 {
     u32 i;
 
@@ -873,10 +888,14 @@ static u8 GetBikeCollision(u8 direction)
 static u8 GetBikeCollisionAt(struct ObjectEvent *objectEvent, s16 x, s16 y, u8 direction, u8 metatileBehavior)
 {
     u8 collision = CheckForObjectEventCollision(objectEvent, x, y, direction, metatileBehavior);
-
-    if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE) && MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior))
-        return COLLISION_NONE;
-
+ 
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE)
+    {
+        if (MetatileBehavior_IsDarkWater(metatileBehavior))
+            return COLLISION_IMPASSABLE; // This makes the water act like a wall, but won't show a message.
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(metatileBehavior))
+            return COLLISION_NONE;
+    }
     if (collision > COLLISION_OBJECT_EVENT)
         return collision;
 

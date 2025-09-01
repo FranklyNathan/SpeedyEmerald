@@ -1464,6 +1464,8 @@ static u8 InitObjectEventStateFromTemplate(const struct ObjectEventTemplate *tem
     objectEvent->trainerType = template->trainerType;
     objectEvent->mapNum = mapNum;
     objectEvent->trainerRange_berryTreeId = template->trainerRange_berryTreeId;
+    if (objectEvent->trainerType == TRAINER_TYPE_NORMAL || objectEvent->trainerType == TRAINER_TYPE_BURIED)
+        objectEvent->trainerRange_berryTreeId = 0;
     objectEvent->previousMovementDirection = gInitialMovementTypeFacingDirections[template->movementType];
     SetObjectEventDirection(objectEvent, objectEvent->previousMovementDirection);
     if (sMovementTypeHasRange[objectEvent->movementType])

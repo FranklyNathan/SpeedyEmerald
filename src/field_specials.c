@@ -4367,3 +4367,11 @@ void Special_SetIsGiftPokemonMenu(void)
 {
     SetIsGiftPokemonMenu();
 }
+
+void Special_AcroBikeFly(void)
+{
+    VarSet(VAR_TEMP_2, 1);
+    gSkipShowMonAnim = TRUE;
+    ScriptContext_Stop();
+    SetMainCallback2(CB2_OpenFlyMap);
+}

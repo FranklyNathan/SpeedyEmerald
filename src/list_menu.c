@@ -431,6 +431,19 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
         ListMenuChangeSelection(list, TRUE, 1, TRUE);
         return LIST_NOTHING_CHOSEN;
     }
+    else if (list->template.scrollMultiple == LIST_MULTIPLE_SCROLL_GIFT)
+    {
+        if (JOY_NEW(DPAD_LEFT))
+        {
+            PlaySE(SE_SELECT);
+            return LIST_PAGE_UP;
+        }
+        else if (JOY_NEW(DPAD_RIGHT))
+        {
+            PlaySE(SE_SELECT);
+            return LIST_PAGE_DOWN;
+        }
+    }
     else // try to move by one window scroll
     {
         bool16 rightButton, leftButton;
@@ -468,6 +481,7 @@ s32 ListMenu_ProcessInput(u8 listTaskId)
             return LIST_NOTHING_CHOSEN;
         }
     }
+    return LIST_NOTHING_CHOSEN;
 }
 
 void DestroyListMenuTask(u8 listTaskId, u16 *scrollOffset, u16 *selectedRow)
@@ -646,7 +660,17 @@ static void ListMenuPrintEntries(struct ListMenu *list, u16 startIndex, u16 yOff
         y = (yOffset + i) * yMultiplier + list->template.upText_Y;
         if (list->template.itemPrintFunc != NULL)
         {
-            list->template.itemPrintFunc(list->template.windowId, list->template.items[startIndex].id, y);
+            if (list->template.scrollMultiple == LIST_MULTIPLE_SCROLL_GIFT)
+            {
+                // This print func handles printing the name itself.
+                list->template.itemPrintFunc(list->template.windowId, list->template.items[startIndex].id, y);
+            }
+            else
+            {
+                // This print func is for supplementary printing.
+                list->template.itemPrintFunc(list->template.windowId, list->template.items[startIndex].id, y);
+                ListMenuPrint(list, list->template.items[startIndex].name, x, y);
+            }
         }
         else
         {

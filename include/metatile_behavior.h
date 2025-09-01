@@ -29,6 +29,7 @@ bool8 MetatileBehavior_IsDeepSouthWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSurfableWaterOrUnderwater(u8 metatileBehavior);
 bool8 MetatileBehavior_IsEastArrowWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsWestArrowWarp(u8 metatileBehavior);
+bool8 MetatileBehavior_IsDarkWater(u8 metatileBehavior);
 bool8 MetatileBehavior_IsNorthArrowWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsSouthArrowWarp(u8 metatileBehavior);
 bool8 MetatileBehavior_IsForcedMovementTile(u8 metatileBehavior);

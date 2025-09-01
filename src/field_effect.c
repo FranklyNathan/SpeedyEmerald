@@ -1410,6 +1410,17 @@ static void Task_UseFly(u8 taskId)
     }
     if (taskState == 2)
     {
+        // Skip the entire take-off animation if flying from the Acro Bike
+        if (VarGet(VAR_TEMP_2) == 1)
+        {
+            Overworld_ResetStateAfterFly();
+            WarpIntoMap();
+            SetMainCallback2(CB2_LoadMap);
+            gFieldCallback = FieldCallback_FlyIntoMap;
+            DestroyTask(taskId);
+            return;
+        }
+
         if (!fieldEffectStarted)
         {
             if (!IsWeatherNotFadingIn())
@@ -1496,8 +1507,15 @@ static void Task_FlyIntoMap(u8 taskId)
     }
     if (taskState == tTaskEnd)
     {
+            if (VarGet(VAR_TEMP_1) == 1)
+            {
+                Overworld_SetSavedMusic(MUS_CYCLING);
+                Overworld_PlaySpecialMapMusic();
+            }
         UnlockPlayerFieldControls();
         UnfreezeObjectEvents();
+    VarSet(VAR_TEMP_2, 0);
+        VarSet(VAR_TEMP_1, 0);
         DestroyTask(taskId);
     }
 }
@@ -2341,8 +2359,18 @@ static bool8 LavaridgeGym1FWarpEffect_Warp(struct Task *task, struct ObjectEvent
 {
     if (!gPaletteFade.active && BGMusicStopped() == TRUE)
     {
+        // If this is the special warp to Flannery, use the B1F warp-in animation
+        if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_LAVARIDGE_TOWN_GYM_1F)
+         && objectEvent->currentCoords.x == 10 + MAP_OFFSET
+         && objectEvent->currentCoords.y == 18 + MAP_OFFSET)
+        {
+            gFieldCallback = FieldCB_LavaridgeGymB1FWarpExit;
+        }
+        else
+        {
+            gFieldCallback = FieldCB_FallWarpExit;
+        }
         WarpIntoMap();
-        gFieldCallback = FieldCB_FallWarpExit;
         SetMainCallback2(CB2_LoadMap);
         DestroyTask(FindTaskIdByFunc(Task_LavaridgeGym1FWarp));
     }
@@ -2812,10 +2840,20 @@ bool8 FldEff_FieldMoveShowMonInit(void)
 {
     struct Pokemon *pokemon;
     bool32 noDucking = gFieldEffectArguments[0] & SHOW_MON_CRY_NO_DUCKING;
-    pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
-    gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
-    gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
-    gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
+
+    if (VarGet(VAR_TEMP_1) == 1)
+    {
+        gFieldEffectArguments[0] = SPECIES_FLYGON;
+        gFieldEffectArguments[1] = FALSE; // isShiny
+        gFieldEffectArguments[2] = 0;     // personality
+    }
+    else
+    {
+        pokemon = &gPlayerParty[(u8)gFieldEffectArguments[0]];
+        gFieldEffectArguments[0] = GetMonData(pokemon, MON_DATA_SPECIES);
+        gFieldEffectArguments[1] = GetMonData(pokemon, MON_DATA_IS_SHINY);
+        gFieldEffectArguments[2] = GetMonData(pokemon, MON_DATA_PERSONALITY);
+    }
     gFieldEffectArguments[0] |= noDucking;
     FieldEffectStart(FLDEFF_FIELD_MOVE_SHOW_MON);
     FieldEffectActiveListRemove(FLDEFF_FIELD_MOVE_SHOW_MON_INIT);
@@ -3462,10 +3500,26 @@ static void FlyOutFieldEffect_WaitBirdLeave(struct Task *task)
 {
     if (GetFlyBirdAnimCompleted(task->tBirdSpriteId))
     {
-        task->tState++;
-        task->tTimer = 16;
-        SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
-        ObjectEventSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], MOVEMENT_ACTION_FACE_LEFT);
+        if (VarGet(VAR_TEMP_2) == 1)
+        {
+            struct ObjectEvent *playerObj = &gObjectEvents[gPlayerAvatar.objectEventId];
+
+            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE);
+            playerObj->invisible = TRUE;
+            if (task->tAvatarFlags & PLAYER_AVATAR_FLAG_SURFING)
+                gSprites[playerObj->fieldEffectSpriteId].invisible = TRUE;
+            DestroySprite(&gSprites[task->tBirdSpriteId]);
+            task->tBirdSpriteId = MAX_SPRITES;
+            WarpFadeOutScreen();
+            task->tState = 8; // Skip to FlyOutFieldEffect_End
+        }
+        else
+        {
+            task->tState++;
+            task->tTimer = 16;
+            SetPlayerAvatarTransitionFlags(PLAYER_AVATAR_FLAG_ON_FOOT);
+            ObjectEventSetHeldMovement(&gObjectEvents[gPlayerAvatar.objectEventId], MOVEMENT_ACTION_FACE_LEFT);
+        }
     }
 }
 
@@ -3525,6 +3579,8 @@ static void FlyOutFieldEffect_End(struct Task *task)
 {
     if (!gPaletteFade.active)
     {
+        if (task->tBirdSpriteId != MAX_SPRITES)
+            DestroySprite(&gSprites[task->tBirdSpriteId]);
         FieldEffectActiveListRemove(FLDEFF_USE_FLY);
         DestroyTask(FindTaskIdByFunc(Task_FlyOut));
     }

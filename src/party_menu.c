@@ -76,6 +76,7 @@
 #include "constants/party_menu.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/vars.h"
 #include "battle_setup.h"
 
 enum {
@@ -2863,7 +2864,6 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
         {
             if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == sFieldMoves[j])
             {
-                if (sFieldMoves[j] != MOVE_FLY) // If Mon already knows FLY, prevent it from being added to action list
                     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, j + MENU_FIELD_MOVES);
                     break;
             }
@@ -2874,18 +2874,6 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             }
         }
     }
-
-        if (sPartyMenuInternal->numActions < 5) // If action list consists of < 4 moves, add FLY to action list. All Pokemon can fly.
-            if ((gPlayerParty[gPartyMenu.slotId].hp) != 0)
-        {
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
-        }
-
-        if (sPartyMenuInternal->numActions < 5) // If action list consists of < 4 moves, add TELEPORT to action list.
-            if ((gPlayerParty[gPartyMenu.slotId].hp) != 0)
-        {
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 8 + MENU_FIELD_MOVES);
-        }
 
     if (!InBattlePike())
     {
@@ -4218,7 +4206,15 @@ static bool8 SetUpFieldMove_Fly(void)
 
 void CB2_ReturnToPartyMenuFromFlyMap(void)
 {
-    InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldWithOpenMenu);
+    if (VarGet(VAR_TEMP_2) == 1)
+    {
+        VarSet(VAR_TEMP_2, 0);
+        SetMainCallback2(CB2_ReturnToField);
+    }
+    else
+    {
+        InitPartyMenu(PARTY_MENU_TYPE_FIELD, PARTY_LAYOUT_SINGLE, PARTY_ACTION_CHOOSE_MON, TRUE, PARTY_MSG_CHOOSE_MON, Task_HandleChooseMonInput, CB2_ReturnToFieldWithOpenMenu);
+    }
 }
 
 static void FieldCallback_Waterfall(void)

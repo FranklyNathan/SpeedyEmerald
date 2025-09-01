@@ -1,11 +1,14 @@
 #include "global.h"
 #include "main.h"
 #include "pokemon.h"
+#include "pokemon.h"
 #include "event_data.h"
 #include "field_effect.h"
 #include "field_screen_effect.h"
 #include "field_specials.h"
+#include "pokemon.h"
 #include "field_weather.h"
+#include "graphics.h"
 #include "item.h"
 #include "menu.h"
 #include "palette.h"
@@ -19,11 +22,13 @@
 #include "strings.h"
 #include "task.h"
 #include "text.h"
+#include "text_window.h"
 #include "list_menu.h"
 #include "malloc.h"
 #include "util.h"
 #include "decompress.h"
 #include "item_icon.h"
+#include "pokemon_icon.h"
 #include "constants/field_specials.h"
 #include "constants/items.h"
 #include "constants/script_menu.h"
@@ -33,6 +38,8 @@
 
 #define TAG_GIFT_MON_PIC_TILES 5510
 #define TAG_GIFT_MON_PIC_PALETTE 5511
+
+#define MAX_GIFT_MON 10
 
 #include "data/script_menu.h"
 
@@ -57,11 +64,13 @@ struct GiftMonMenu
     u8 iconSlot;
     u8 spriteIds[2];
     u8 windowId;
+    u8 bottomWindowId;
 };
 
 static EWRAM_DATA struct GiftMonMenu sGiftMonMenuData = {0};
 
 static EWRAM_DATA u8 sProcessInputDelay = 0;
+static EWRAM_DATA u8 sGiftSpriteIds[MAX_GIFT_MON];
 static EWRAM_DATA u8 sDynamicMenuEventId = 0;
 static EWRAM_DATA struct DynamicMultichoiceStack *sDynamicMultiChoiceStack = NULL;
 static EWRAM_DATA u16 *sDynamicMenuEventScratchPad = NULL;
@@ -81,6 +90,9 @@ static void Task_HandleMultichoiceInput(u8 taskId);
 static void Task_HandleYesNoInput(u8 taskId);
 static void Task_HandleMultichoiceGridInput(u8 taskId);
 static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u32 initialRow, u8 maxBeforeScroll, u32 callbackSet);
+static u8 CountTakenGiftMons(void);
+static void GiftMonMenu_CreateMonIcon(u16 species);
+static void GiftMonMenu_DestroyMonIcons(void);
 static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos);
 static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId);
 static void DrawLinkServicesMultichoiceMenu(u8 multichoiceId);
@@ -174,6 +186,63 @@ static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollecti
         .OnDestroy = MultichoiceDynamicEventShowItem_OnDestroy
     }
 };
+
+static void GiftMonMenu_CreateMonIcon(u16 species)
+{
+    u8 i;
+    u8 spriteId;
+    u8 row, col;
+    u16 x, y;
+
+    // Display up to 10 Pokémon icons in a 2x5 grid.
+    for (i = 0; i < 10; i++)
+    {
+        if (sGiftSpriteIds[i] == 0xFF)
+        {
+            // Found an empty slot.
+            row = i / 5;
+            col = i % 5;
+
+            // Position the 2x5 grid on the center-right of the screen.
+            x = 120 + col * 24;
+            y = 112 + row *24;
+
+            spriteId = CreateMonIcon(species, SpriteCallbackDummy, x, y, 4, 0);
+            if (spriteId != MAX_SPRITES)
+            {
+                // The window is on BG0 (priority 0). The icons also need to have priority 0 to be drawn on top.
+                // Sprites with the same priority as a BG are drawn on top of it.
+                gSprites[spriteId].oam.priority = 0;
+                sGiftSpriteIds[i] = spriteId;
+            }
+            break;
+        }
+    }
+}
+
+static void GiftMonMenu_DestroyMonIcons(void)
+{
+    u8 i;
+
+    for (i = 0; i < MAX_GIFT_MON; i++)
+    {
+        if (sGiftSpriteIds[i] != 0xFF)
+            FreeAndDestroyMonIconSprite(&gSprites[sGiftSpriteIds[i]]);
+    }
+}
+
+static u8 CountTakenGiftMons(void)
+{
+    u8 i;
+    u8 count = 0;
+
+    for (i = 0; i < MAX_GIFT_MON; i++)
+    {
+        if (sGiftSpriteIds[i] != 0xFF)
+            count++;
+    }
+    return count;
+}
 
 static void GiftMonMenu_RemovePokemonPic(u8 iconSlot)
 {
@@ -272,8 +341,14 @@ static void Task_ExitGiftMenu(u8 taskId)
         // Cleanup logic
         GiftMonMenu_RemovePokemonPic(0);
         GiftMonMenu_RemovePokemonPic(1);
+        GiftMonMenu_DestroyMonIcons();
         ClearStdWindowAndFrameToTransparent(sGiftMonMenuData.windowId, TRUE);
         RemoveWindow(sGiftMonMenuData.windowId);
+        if (sGiftMonMenuData.bottomWindowId != WINDOW_NONE)
+        {
+            ClearStdWindowAndFrameToTransparent(sGiftMonMenuData.bottomWindowId, TRUE);
+            RemoveWindow(sGiftMonMenuData.bottomWindowId);
+        }
         sIsGiftMonMenu = FALSE;
 
         if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnDestroy)
@@ -505,6 +580,8 @@ for (i = 0; i < argc; ++i)
         sGiftMonMenuData.spriteIds[0] = MAX_SPRITES;
         sGiftMonMenuData.spriteIds[1] = MAX_SPRITES;
         memset(sGiftMonIsTaken, 0, sizeof(sGiftMonIsTaken));
+        LoadMonIconPalettes();
+        memset(sGiftSpriteIds, 0xFF, sizeof(sGiftSpriteIds));
 
         struct WindowTemplate template = CreateWindowTemplate(0, 18, 2, 8, 8, 15, 300);
         sGiftMonMenuData.windowId = AddWindow(&template);
@@ -513,6 +590,42 @@ for (i = 0; i < argc; ++i)
         SetStandardWindowBorderStyle(sGiftMonMenuData.windowId, TRUE);
         ScheduleBgCopyTilemapToVram(0);
     }
+    if (sIsGiftMonMenu)
+    {
+        sGiftMonMenuData.iconSlot = 0;
+        sGiftMonMenuData.spriteIds[0] = MAX_SPRITES;
+        sGiftMonMenuData.spriteIds[1] = MAX_SPRITES;
+        sGiftMonMenuData.bottomWindowId = WINDOW_NONE;
+        memset(sGiftMonIsTaken, 0, sizeof(sGiftMonIsTaken));
+        LoadMonIconPalettes();
+        memset(sGiftSpriteIds, 0xFF, sizeof(sGiftSpriteIds));
+
+        struct WindowTemplate template;
+        template.bg = 0;
+        template.tilemapLeft = 18;
+        template.tilemapTop = 2;
+        template.width = 8;
+        template.height = 8;
+        template.paletteNum = 15;
+        template.baseBlock = 300;
+        sGiftMonMenuData.windowId = AddWindow(&template);
+        FillWindowPixelBuffer(sGiftMonMenuData.windowId, PIXEL_FILL(1));
+        PutWindowTilemap(sGiftMonMenuData.windowId);
+        SetStandardWindowBorderStyle(sGiftMonMenuData.windowId, TRUE);
+
+        template.bg = 0;
+        template.tilemapLeft = 14;
+        template.tilemapTop = 13;
+        template.width = 14;
+        template.height = 6;
+        // template.paletteNum = 14;
+        template.baseBlock = 0x250;
+        sGiftMonMenuData.bottomWindowId = AddWindow(&template);
+        FillWindowPixelBuffer(sGiftMonMenuData.bottomWindowId, PIXEL_FILL(1));
+        LoadUserWindowBorderGfx(sGiftMonMenuData.bottomWindowId, 0x214, BG_PLTT_ID(14));
+        DrawStdFrameWithCustomTileAndPalette(sGiftMonMenuData.bottomWindowId, TRUE, 0x214, 14);
+    }
+
     LoadPalette(gStandardMenuPalette, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
     windowHeight = (argc < maxBeforeScroll) ? argc * 2 : maxBeforeScroll * 2;
     newWidth = ConvertPixelWidthToTileWidth(width);
@@ -535,9 +648,15 @@ for (i = 0; i < argc; ++i)
     gMultiuseListMenuTemplate.totalItems = argc;
     gMultiuseListMenuTemplate.maxShowed = maxBeforeScroll;
     if (sIsGiftMonMenu)
+    {
         gMultiuseListMenuTemplate.itemPrintFunc = GiftMonMenu_ItemPrintFunc;
+        gMultiuseListMenuTemplate.scrollMultiple = LIST_MULTIPLE_SCROLL_GIFT;
+    }
     else
+    {
         gMultiuseListMenuTemplate.itemPrintFunc = NULL;
+        gMultiuseListMenuTemplate.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
+    }
 
     taskId = CreateTask(Task_HandleScrollingMultichoiceInput, 80);
     gTasks[taskId].data[1] = ignoreBPress;
@@ -656,10 +775,20 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
             done = TRUE;
         }
         break;
+
+
+    case LIST_PAGE_UP:
+        ListMenuChangeSelection((struct ListMenu *)gTasks[gTasks[taskId].data[0]].data, TRUE, 8, FALSE);
+        break;
+    case LIST_PAGE_DOWN:
+        ListMenuChangeSelection((struct ListMenu *)gTasks[gTasks[taskId].data[0]].data, TRUE, 8, TRUE);
+        break;
+
+        break;
     default:
         if (sIsGiftMonMenu && input != 999)
         {
-            if (sGiftMonIsTaken[input])
+            if (sGiftMonIsTaken[input] || CountTakenGiftMons() >= MAX_GIFT_MON)
             {
                 PlaySE(SE_FAILURE);
             }
@@ -667,11 +796,14 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
             {
                 u8 result = ScriptGiveMon(input, 15, ITEM_NONE);
                 if (result != MON_CANT_GIVE)
-                PlaySE(SE_SUCCESS);
+                {
+                    PlaySE(SE_SUCCESS);
                     sGiftMonIsTaken[input] = TRUE;
+                    GiftMonMenu_CreateMonIcon(input);
                     RedrawListMenu(gTasks[taskId].data[0]);
                 }
             }
+        }
         else
         {
             gSpecialVar_Result = input;

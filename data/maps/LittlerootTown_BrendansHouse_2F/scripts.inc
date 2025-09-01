@@ -4,6 +4,7 @@ LittlerootTown_BrendansHouse_2F_MapScripts::
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
+	call_if_unset FLAG_GAVE_STARTER_EEVEE, LittlerootTown_BrendansHouse_2F_EventScript_GiveEevee
 	call_if_lt VAR_LITTLEROOT_RIVAL_STATE, 2, LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan
 	call_if_ge VAR_LITTLEROOT_RIVAL_STATE, 3, LittlerootTown_BrendansHouse_2F_EventScript_CheckShouldUpdateBrendanPos
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 4, PlayersHouse_2F_EventScript_BlockStairsUntilClockIsSet
@@ -35,6 +36,15 @@ LittlerootTown_BrendansHouse_2F_EventScript_CheckSetReadyToMeetBrendan::
 
 LittlerootTown_BrendansHouse_2F_EventScript_SetReadyToMeetBrendan::
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 2
+	return
+
+LittlerootTown_BrendansHouse_2F_EventScript_GiveEevee::
+    setflag FLAG_SYS_POKEMON_GET
+	givemon SPECIES_EEVEE, 15
+	compare VAR_RESULT, MON_CANT_GIVE
+	goto_if_eq LittlerootTown_BrendansHouse_2F_EventScript_GiveEevee_End
+	setflag FLAG_GAVE_STARTER_EEVEE
+LittlerootTown_BrendansHouse_2F_EventScript_GiveEevee_End::
 	return
 
 LittlerootTown_BrendansHouse_2F_OnWarp:
@@ -284,7 +294,6 @@ PlayersHouse_2F_EventScript_Receive_Fossil::
 	msgbox PlayersHouse_2F_Text_AncientPokemon
 	waitmessage
 	waitfanfare
-    setflag FLAG_SYS_POKEMON_GET
 	clearflag FLAG_UNUSED_0x264
 	releaseall
 	end

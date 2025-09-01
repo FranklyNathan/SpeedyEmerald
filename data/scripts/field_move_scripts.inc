@@ -1,4 +1,5 @@
 @ Interact with cuttable tree
+
 EventScript_CutTree::
 	lockall
 	//goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
@@ -238,6 +239,11 @@ EventScript_StrengthBoulder::
 	dofieldeffect FLDEFF_USE_STRENGTH
 	waitstate
 	goto EventScript_ActivateStrength
+	end
+
+EventScript_UseFlyAcroBike::
+	fadescreen FADE_TO_BLACK
+	special Special_AcroBikeFly
 	end
 
 EventScript_UseStrength::

@@ -112,6 +112,7 @@ const u8 gText_HOFDexRating[] = _("Spotted POKéMON: {STR_VAR_1}!\nOwned POKéMO
 const u8 gText_HOFDexSaving[] = _("SAVING…\nDON'T TURN OFF THE POWER.");
 const u8 gText_HOFCorrupted[] = _("The HALL OF FAME data is corrupted.");
 const u8 gText_HOFNumber[] = _("HALL OF FAME No. {STR_VAR_1}");
+const u8 gText_TakenMon[] = _("TAKEN");
 const u8 gText_LeagueChamp[] = _("LEAGUE CHAMPION!\nCONGRATULATIONS!");
 const u8 gText_Number[] = _("No. ");
 const u8 gText_Level[] = _("Lv. ");
@@ -172,6 +173,8 @@ const u8 gText_TheBattle[] = _("the battle");
 const u8 gText_ThePokemonList[] = _("the POKéMON LIST");
 const u8 gText_TheShop[] = _("the shop");
 const u8 gText_ThePC[] = _("the PC");
+const u8 gText_FlygonNervous[] = _("The rough waters make FLYGON nervous…$");
+
 
 const u8 *const gBagMenu_ReturnToStrings[] =
 {

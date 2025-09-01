@@ -225,7 +225,7 @@ EverGrandeCity_ChampionsRoom_Text_IntroSpeech:
 	.string "STEVEN: Welcome, {PLAYER}{KUN}.\p"
 	.string "I was looking forward to seeing you\n"
 	.string "here one day.\p"
-	.string "You... What did you see on your\n"
+	.string "You… What did you see on your\n"
 	.string "journey with POKéMON?\p"
 	.string "What did you feel, meeting so many\n"
 	.string "other TRAINERS like you?\p"
@@ -242,15 +242,15 @@ EverGrandeCity_ChampionsRoom_Text_Defeat:
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech:
 	.string "STEVEN: Congratulations!\p"
 	.string "The feelings you have for your\n"
-	.string "POKéMON...\p"
+	.string "POKéMON…\p"
 	.string "And the POKéMON that responded to\n"
-	.string "those feelings with all their might...\p"
+	.string "those feelings with all their might…\p"
 	.string "They came together as one, and created\n"
 	.string "an even greater power.\p"
 	.string "And thus, you were able to grasp\n"
 	.string "victory today!\p"
 	.string "You are rightfully the HOENN region's\n"
-	.string "new...$"
+	.string "new…$"
 
 EverGrandeCity_ChampionsRoom_Text_MayAdvice:
 	.string "MAY: {PLAYER}{KUN}!\p"
