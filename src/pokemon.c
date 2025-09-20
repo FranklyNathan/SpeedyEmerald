@@ -43,6 +43,7 @@
 #include "string_util.h"
 #include "strings.h"
 #include "task.h"
+#include "constants/species.h"
 #include "test_runner.h"
 #include "text.h"
 #include "trainer_hill.h"
@@ -82,6 +83,7 @@ static void EncryptBoxMon(struct BoxPokemon *boxMon);
 static void DecryptBoxMon(struct BoxPokemon *boxMon);
 static void Task_PlayMapChosenOrBattleBGM(u8 taskId);
 static bool8 ShouldSkipFriendshipChange(void);
+void TryEvolveFaintedCorsola(void);
 void TrySpecialOverworldEvo();
 
 EWRAM_DATA static u8 sLearningMoveTableID = 0;
@@ -7168,4 +7170,33 @@ u32 GetTeraTypeFromPersonality(struct Pokemon *mon)
 {
     const u8 *types = gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES)].types;
     return (GetMonData(mon, MON_DATA_PERSONALITY) & 0x1) == 0 ? types[0] : types[1];
+}
+
+void TryEvolveFaintedCorsola(void)
+{
+    u32 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_CORSOLA
+         && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) == 0)
+        {
+            u16 species = SPECIES_CORSOLA_GALAR;
+            u8 nickname[POKEMON_NAME_LENGTH + 1];
+            bool8 isNicknamed;
+
+            GetMonData(&gPlayerParty[i], MON_DATA_NICKNAME, nickname);
+            isNicknamed = (StringCompare(nickname, gSpeciesInfo[SPECIES_CORSOLA].speciesName) != 0);
+
+            SetMonData(&gPlayerParty[i], MON_DATA_SPECIES, &species);
+
+            // If it wasn't nicknamed, update its name to the new species name.
+            if (!isNicknamed)
+                SetMonData(&gPlayerParty[i], MON_DATA_NICKNAME, gSpeciesInfo[SPECIES_CORSOLA_GALAR].speciesName);
+
+            CalculateMonStats(&gPlayerParty[i]);
+
+            // Heal it to full HP and restore PP.
+            HealPokemon(&gPlayerParty[i]);
+        }
+    }
 }

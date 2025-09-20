@@ -2551,7 +2551,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .levelUpLearnset = sWoobatLevelUpLearnset,
         .teachableLearnset = sWoobatTeachableLearnset,
         .eggMoveLearnset = sWoobatEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SWOOBAT, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_SWOOBAT}),
     },
 
     [SPECIES_SWOOBAT] =
@@ -3624,7 +3624,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         )
         .levelUpLearnset = sSwadloonLevelUpLearnset,
         .teachableLearnset = sSwadloonTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_LEAVANNY, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_LEAVANNY}),
     },
 
     [SPECIES_LEAVANNY] =

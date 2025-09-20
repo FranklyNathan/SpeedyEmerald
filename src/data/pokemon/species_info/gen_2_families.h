@@ -1551,7 +1551,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sTogepiLevelUpLearnset,
         .teachableLearnset = sTogepiTeachableLearnset,
         .eggMoveLearnset = sTogepiEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_TOGETIC, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_TOGETIC}),
     },
 
     [SPECIES_TOGETIC] =
@@ -2233,7 +2233,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sAzurillLevelUpLearnset,
         .teachableLearnset = sAzurillTeachableLearnset,
         .eggMoveLearnset = sAzurillEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MARILL, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_MARILL}),
     },
 #endif //P_GEN_3_CROSS_EVOS
 
@@ -6937,7 +6937,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sMantykeLevelUpLearnset,
         .teachableLearnset = sMantykeTeachableLearnset,
         .eggMoveLearnset = sMantykeEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_MANTINE, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_MANTINE}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 

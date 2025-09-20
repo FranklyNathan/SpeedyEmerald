@@ -2784,7 +2784,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sPichuTeachableLearnset,
         .eggMoveLearnset = sPichuEggMoveLearnset,
         .formSpeciesIdTable = sPichuFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_PIKACHU, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_PIKACHU}),
     },
 
     [SPECIES_PICHU_SPIKY_EARED] =
@@ -4844,7 +4844,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sCleffaLevelUpLearnset,
         .teachableLearnset = sCleffaTeachableLearnset,
         .eggMoveLearnset = sCleffaEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CLEFAIRY, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_CLEFAIRY}),
     },
 #endif //P_GEN_2_CROSS_EVOS
 
@@ -5369,7 +5369,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sIgglybuffLevelUpLearnset,
         .teachableLearnset = sIgglybuffTeachableLearnset,
         .eggMoveLearnset = sIgglybuffEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_JIGGLYPUFF, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_JIGGLYPUFF}),
     },
 #endif //P_GEN_2_CROSS_EVOS
 
@@ -5730,7 +5730,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sGolbatLevelUpLearnset,
         .teachableLearnset = sGolbatTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CROBAT, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_CROBAT}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -7021,7 +7021,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .teachableLearnset = sMeowthAlolaTeachableLearnset,
         .eggMoveLearnset = sMeowthAlolaEggMoveLearnset,
         .formSpeciesIdTable = sMeowthFormSpeciesIdTable,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_PERSIAN_ALOLA, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_PERSIAN_ALOLA}),
     },
 
     [SPECIES_PERSIAN_ALOLA] =
@@ -14437,7 +14437,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sHappinyLevelUpLearnset,
         .teachableLearnset = sHappinyTeachableLearnset,
         .eggMoveLearnset = sHappinyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_CHANSEY, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_CHANSEY}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 
@@ -14508,7 +14508,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sChanseyLevelUpLearnset,
         .teachableLearnset = sChanseyTeachableLearnset,
         .eggMoveLearnset = sChanseyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_BLISSEY, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_BLISSEY}),
     },
 
 #if P_GEN_2_CROSS_EVOS
@@ -19043,7 +19043,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         .levelUpLearnset = sMunchlaxLevelUpLearnset,
         .teachableLearnset = sMunchlaxTeachableLearnset,
         .eggMoveLearnset = sMunchlaxEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SNORLAX, CONDITIONS({IF_IN_MAPSEC, MAPSEC_SECRET_BASE})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_SNORLAX}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 

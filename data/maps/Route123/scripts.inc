@@ -9,7 +9,8 @@ Route123_OnTransition:
 Route123_EventScript_GigaDrainGirl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_TM_GIGA_DRAIN, Route123_EventScript_ReceivedGigaDrain
+	@ goto_if_set FLAG_RECEIVED_TM_GIGA_DRAIN, Route123_EventScript_ReceivedGigaDrain
+	goto Route123_EventScript_ReceivedGigaDrain
 	msgbox Route123_Text_LoveGrassMonsHaveAny, MSGBOX_DEFAULT
 	special IsGrassTypeInParty
 	goto_if_eq VAR_RESULT, FALSE, Route123_EventScript_NoGrassMons

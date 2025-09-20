@@ -900,6 +900,81 @@ static const u32 sStatusFlagsForMoveEffects[NUM_MOVE_EFFECTS] =
     [MOVE_EFFECT_THRASH]         = STATUS2_LOCK_CONFUSE,
 };
 
+// Make it so that only gym leaders pay money after battle
+static bool8 IsGymLeader(u16 trainerId)
+{
+    switch (trainerId)
+    {
+    case TRAINER_ROXANNE_1:
+    case TRAINER_ROXANNE_2:
+    case TRAINER_ROXANNE_3:
+    case TRAINER_ROXANNE_4:
+    case TRAINER_ROXANNE_5:
+    case TRAINER_ROXANNE_6:
+    case TRAINER_ROXANNE_7:
+    case TRAINER_ROXANNE_8:
+    case TRAINER_BRAWLY_1:
+    case TRAINER_BRAWLY_2:
+    case TRAINER_BRAWLY_3:
+    case TRAINER_BRAWLY_4:
+    case TRAINER_BRAWLY_5:
+    case TRAINER_BRAWLY_6:
+    case TRAINER_BRAWLY_7:
+    case TRAINER_BRAWLY_8:
+    case TRAINER_WATTSON_1:
+    case TRAINER_WATTSON_2:
+    case TRAINER_WATTSON_3:
+    case TRAINER_WATTSON_4:
+    case TRAINER_WATTSON_5:
+    case TRAINER_WATTSON_6:
+    case TRAINER_WATTSON_7:
+    case TRAINER_WATTSON_8:
+    case TRAINER_FLANNERY_1:
+    case TRAINER_FLANNERY_2:
+    case TRAINER_FLANNERY_3:
+    case TRAINER_FLANNERY_4:
+    case TRAINER_FLANNERY_5:
+    case TRAINER_FLANNERY_6:
+    case TRAINER_FLANNERY_7:
+    case TRAINER_FLANNERY_8:
+    case TRAINER_NORMAN_1:
+    case TRAINER_NORMAN_2:
+    case TRAINER_NORMAN_3:
+    case TRAINER_NORMAN_4:
+    case TRAINER_NORMAN_5:
+    case TRAINER_NORMAN_6:
+    case TRAINER_NORMAN_7:
+    case TRAINER_NORMAN_8:
+    case TRAINER_WINONA_1:
+    case TRAINER_WINONA_2:
+    case TRAINER_WINONA_3:
+    case TRAINER_WINONA_4:
+    case TRAINER_WINONA_5:
+    case TRAINER_WINONA_6:
+    case TRAINER_WINONA_7:
+    case TRAINER_WINONA_8:
+    case TRAINER_TATE_AND_LIZA_1:
+    case TRAINER_TATE_AND_LIZA_2:
+    case TRAINER_TATE_AND_LIZA_3:
+    case TRAINER_TATE_AND_LIZA_4:
+    case TRAINER_TATE_AND_LIZA_5:
+    case TRAINER_TATE_AND_LIZA_6:
+    case TRAINER_TATE_AND_LIZA_7:
+    case TRAINER_TATE_AND_LIZA_8:
+    case TRAINER_JUAN_1:
+    case TRAINER_JUAN_2:
+    case TRAINER_JUAN_3:
+    case TRAINER_JUAN_4:
+    case TRAINER_JUAN_5:
+    case TRAINER_JUAN_6:
+    case TRAINER_JUAN_7:
+    case TRAINER_JUAN_8:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
 static const u8 *const sMoveEffectBS_Ptrs[] =
 {
     [MOVE_EFFECT_SLEEP]            = BattleScript_MoveEffectSleep,
@@ -8784,6 +8859,10 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
     }
     else
     {
+        // Only Gym Leaders give prize money.
+        if (!IsGymLeader(trainerId))
+            return 0;
+
         const struct TrainerMon *party = GetTrainerPartyFromId(trainerId);
         if (party == NULL)
             return 20;
@@ -8791,11 +8870,11 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         trainerMoney = gTrainerClasses[GetTrainerClassFromId(trainerId)].money ?: 5;
 
         if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
-        else if (IsDoubleBattle())
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
+            moneyReward = 8 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
+        // else if (IsDoubleBattle())
+            // moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
         else
-            moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = 12 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
     }
 
     return moneyReward;

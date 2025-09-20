@@ -8,6 +8,8 @@
 #include "constants/flags.h"
 #include "event_data.h"
 
+static const u8 sText_MysteryEgg[] = _("Mystery Egg");
+
 static const u16 sGiftPokemonList[] = {
     SPECIES_APPLIN, 
     SPECIES_ARON, 
@@ -20,6 +22,7 @@ static const u16 sGiftPokemonList[] = {
     SPECIES_CHESPIN,
     SPECIES_CHINCHOU, 
     SPECIES_CORPHISH, 
+    SPECIES_CORSOLA,
     SPECIES_CUBONE, 
     SPECIES_CUTIEFLY, 
     SPECIES_DEWPIDER,
@@ -43,7 +46,6 @@ static const u16 sGiftPokemonList[] = {
     SPECIES_HONEDGE, 
     SPECIES_HORSEA,
     SPECIES_HOUNDOUR, 
-    SPECIES_KUBFU, 
     SPECIES_LITTEN, 
     SPECIES_LITWICK, 
     SPECIES_MAGNEMITE,
@@ -60,7 +62,6 @@ static const u16 sGiftPokemonList[] = {
     SPECIES_NOIBAT, 
     SPECIES_NUMEL, 
     SPECIES_ODDISH, 
-    SPECIES_ORICORIO, 
     SPECIES_PANCHAM,
     SPECIES_PIKIPEK, 
     SPECIES_POLIWAG, 
@@ -87,7 +88,6 @@ static const u16 sGiftPokemonList[] = {
     SPECIES_SOLOSIS, 
     SPECIES_SPHEAL, 
     SPECIES_SPOINK,
-    SPECIES_SPRIGATITO, 
     SPECIES_STARYU, 
     SPECIES_SURSKIT, 
     SPECIES_TEDDIURSA, 
@@ -104,7 +104,8 @@ static const u16 sGiftPokemonList[] = {
     SPECIES_WISHIWASHI,
     SPECIES_WOOPER_PALDEA, 
     SPECIES_ZIGZAGOON_GALAR, 
-    SPECIES_ZUBAT
+    SPECIES_ZUBAT,
+    SPECIES_EGG
 };
 
 // This function builds the list of Pokémon for the multichoice menu.
@@ -115,8 +116,14 @@ void BuildGiftPokemonMenu(void)
     ScriptMenu_ClearDynMultichoice();
 
     for (i = 0; i < ARRAY_COUNT(sGiftPokemonList); i++)
+    {
         // This will add all Pokémon from the list to the menu every time.
         // This allows the player to receive the same Pokémon multiple times.
-        ScriptMenu_AddDynmultichoice(gSpeciesInfo[sGiftPokemonList[i]].speciesName, sGiftPokemonList[i], 0);
+        if (sGiftPokemonList[i] == SPECIES_EGG)
+            ScriptMenu_AddDynmultichoice(sText_MysteryEgg, sGiftPokemonList[i], 0);
+        else
+            ScriptMenu_AddDynmultichoice(gSpeciesInfo[sGiftPokemonList[i]].speciesName, sGiftPokemonList[i], 0);
+    }
+
     ScriptMenu_AddDynmultichoice(gText_Finished, 999, -1);
 }

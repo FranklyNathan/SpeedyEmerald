@@ -1048,6 +1048,11 @@ gText_Sudowoodo_Attacked::
 	.string "WAILMER PAIL!\p"
 	.string "The weird tree attacked!$"
 
+gText_FlygonUniversalFly::
+	.string "Flygon gained universal Fly!\n"
+	.string "Fly anywhere on the map, including\l"
+	.string "places you've never visited before.$"
+
 gText_LegendaryFlewAway::
 	.string "The {STR_VAR_1} flew away!$"
 
@@ -1119,6 +1124,7 @@ EventScript_NoBackingOut::
 EventScript_WarpHomeRustboro::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	setvar VAR_RUSTBORO_CITY_STATE, 7
 	setvar VAR_RUSTBORO_CITY_STATE, 9
 	setflag 2050 @ get rid of first roxanne rematch
@@ -1133,6 +1139,7 @@ EventScript_WarpHomeRustboro::
 EventScript_WarpHomeDewford::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
     setvar VAR_DEWFORD_LOCKED, 1
     setvar VAR_DEWFORD_TOWN_STATE, 2
     call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
@@ -1144,6 +1151,7 @@ EventScript_WarpHomeDewford::
 EventScript_WarpHomeMauville::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setvar VAR_MAUVILLE_CITY_STATE, 2
@@ -1157,10 +1165,12 @@ EventScript_WarpHomeMauville::
 EventScript_WarpHomeLavaridge::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
    	call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
+	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	warp MAP_LAVARIDGE_TOWN, 5, 15
 	waitstate
 	releaseall
@@ -1169,13 +1179,27 @@ EventScript_WarpHomeLavaridge::
 EventScript_WarpHomePetalburg::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call EventScript_HideMrBriney
+	setflag FLAG_VISITED_DEWFORD_TOWN
+	setflag FLAG_VISITED_LAVARIDGE_TOWN
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setflag FLAG_VISITED_VERDANTURF_TOWN
+	setflag FLAG_VISITED_PACIFIDLOG_TOWN
+	setflag FLAG_VISITED_PETALBURG_CITY
+	setflag FLAG_VISITED_SLATEPORT_CITY
+	setflag FLAG_VISITED_MAUVILLE_CITY
+	setflag FLAG_VISITED_RUSTBORO_CITY
+	setflag FLAG_VISITED_FORTREE_CITY
+	setflag FLAG_VISITED_LILYCOVE_CITY
+	setflag FLAG_VISITED_MOSSDEEP_CITY
+	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON //Since Wattson can't leave his gym based on event in Mauville's gym anymore
-	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN //TMs are now purchasable at Slateport
     setvar VAR_PETALBURG_LOCKED, 1
 	setvar VAR_PETALBURG_CITY_STATE, 7
 	setvar VAR_STEP_DOWN, 1
+	msgbox gText_FlygonUniversalFly, MSGBOX_DEFAULT
 	warp MAP_PETALBURG_CITY, 15, 8
 	waitstate
 	releaseall
@@ -1184,6 +1208,7 @@ EventScript_WarpHomePetalburg::
 EventScript_WarpHomeFortree::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	setvar VAR_FORTREE_CITY_STATE, 2
     setvar VAR_FORTREE_LOCKED, 1
 	warp MAP_FORTREE_CITY, 22, 11
@@ -1194,6 +1219,7 @@ EventScript_WarpHomeFortree::
 EventScript_WarpHomeMossdeep::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	setvar VAR_MOSSDEEP_CITY_STATE, 8
     setvar VAR_MOSSDEEP_LOCKED, 1
 	warp MAP_MOSSDEEP_CITY, 38, 9
@@ -1204,11 +1230,18 @@ EventScript_WarpHomeMossdeep::
 EventScript_WarpHomeSootopolis::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
+	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
     setvar VAR_SOOTOPOLIS_LOCKED, 1
+	giveitem ITEM_MAX_REVIVE
 	warp MAP_SOOTOPOLIS_CITY, 31, 32
 	waitstate
 	releaseall
 	end
+
+EventScript_SetEverGrandeVisited::
+	setflag FLAG_VISITED_EVER_GRANDE_CITY
+	setflag FLAG_LANDMARK_POKEMON_LEAGUE
+	return
 
 	.include "data/scripts/pc_transfer.inc"
 	.include "data/scripts/questionnaire.inc"

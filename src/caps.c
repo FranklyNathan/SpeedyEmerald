@@ -17,7 +17,6 @@ u32 GetCurrentLevelCap(void)
         35, // After Badge 6
         42, // After Badge 7
         46, // After Badge 8
-        48, // After Wally in Victory Road
         55, // After Elite 4 Drake
         59, // After Champion
     };
@@ -41,12 +40,10 @@ u32 GetCurrentLevelCap(void)
     }
 
     // If all badges are obtained, check other flags (Wally, Elite 4, Champion)
-    if (!FlagGet(FLAG_DEFEATED_WALLY_VICTORY_ROAD))
-        return sLevelCapFlagMap[8];
     if (!FlagGet(FLAG_DEFEATED_ELITE_4_DRAKE))
-        return sLevelCapFlagMap[9];
+        return sLevelCapFlagMap[8];
     if (!FlagGet(FLAG_IS_CHAMPION))
-        return sLevelCapFlagMap[10];
+        return sLevelCapFlagMap[9];
 
     // If everything is complete, return the max level
     return MAX_LEVEL;

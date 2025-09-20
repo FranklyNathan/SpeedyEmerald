@@ -12,7 +12,7 @@ EventScript_EndGiftPokemon::
 
 Text_ChooseAGiftPokemon:
 	.string "{PLAYER} checked their notes…\n"
-	.string "Who did you draft?$"
+	.string "Let's see which POKéMON they drafted!$"
 
 gText_ReceivedGiftMon::
 	.string "{PLAYER} received a {STR_VAR_1}!$"

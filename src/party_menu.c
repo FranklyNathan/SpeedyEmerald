@@ -5617,7 +5617,7 @@ static void DisplayPartyMenuForgotMoveMessage(u8 taskId)
 
     GetMonNickname(mon, gStringVar1);
     StringCopy(gStringVar2, GetMoveName(move));
-    DisplayLearnMoveMessage(gText_12PoofForgotMove);
+    // DisplayLearnMoveMessage(gText_12PoofForgotMove);
     gTasks[taskId].func = Task_PartyMenuReplaceMove;
 }
 

@@ -133,7 +133,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setflag FLAG_VISITED_LILYCOVE_CITY
 	setflag FLAG_VISITED_MOSSDEEP_CITY
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY
-	setflag FLAG_VISITED_EVER_GRANDE_CITY
 
 	@ Petalburg Woods Flags
 	setvar VAR_PETALBURG_WOODS_STATE, 1  //First set of speedchoice variables to set
@@ -161,6 +160,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_2F_CAPTAIN_STERN
 	setflag FLAG_HIDE_ROUTE_110_TEAM_AQUA
 	setvar VAR_REGISTER_BIRCH_STATE, 1 @ fix for no Birch on Route 110
+	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_FAMILIAR_AQUA_GRUNT
+	setflag FLAG_HIDE_GRANITE_CAVE_STEVEN
 
 	@ Wattson Flags
 	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY

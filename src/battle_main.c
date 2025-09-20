@@ -5598,6 +5598,7 @@ static void HandleEndTurn_FinishBattle(void)
         // if the previous battler would've had it.
         for (i = 0; i < MAX_BATTLERS_COUNT; i++)
         {
+            TryEvolveFaintedCorsola();
             gBattleMons[i].species = SPECIES_NONE;
         }
         gBattleMainFunc = FreeResetData_ReturnToOvOrDoEvolutions;

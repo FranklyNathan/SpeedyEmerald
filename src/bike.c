@@ -559,8 +559,12 @@ static void AcroBikeTransition_Moving(u8 direction)
         else if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandMew(direction))
             PlayerOnBikeCollideWithFarawayIslandMew(direction);
         else if (collision < COLLISION_STOP_SURFING || collision > COLLISION_ROTATING_GATE)
-            PlayerOnBikeCollide(direction);
-    }
+        {
+            // If turning into a wall, just face the wall without a bonk.
+                ObjectEventClearHeldMovement(playerObjEvent);
+                PlayerFaceDirection(direction);
+            }
+        }
     else
     {
         if (gMain.heldKeys & B_BUTTON)

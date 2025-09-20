@@ -13,6 +13,7 @@
 #include "menu.h"
 #include "palette.h"
 #include "script.h"
+#include "random.h"
 #include "script_menu.h"
 #include "battle_gfx_sfx_util.h"
 #include "overworld.h"
@@ -74,9 +75,32 @@ static EWRAM_DATA u8 sGiftSpriteIds[MAX_GIFT_MON];
 static EWRAM_DATA u8 sDynamicMenuEventId = 0;
 static EWRAM_DATA struct DynamicMultichoiceStack *sDynamicMultiChoiceStack = NULL;
 static EWRAM_DATA u16 *sDynamicMenuEventScratchPad = NULL;
-static EWRAM_DATA bool8 sGiftMonIsTaken[NUM_SPECIES] = {0};
+static EWRAM_DATA bool8 sGiftMonIsTaken[NUM_SPECIES + 1] = {0};
 static EWRAM_DATA bool8 sIsGiftMonMenu = FALSE; // TODO: Make this a part of the dynamic list menu args
 static u8 sLilycoveSSTidalSelections[SSTIDAL_SELECTION_COUNT] = {0}; // TODO: Make this a part of the dynamic list menu args
+
+static const u16 sGiftEggPool[] =
+{
+    SPECIES_PICHU,
+    SPECIES_CLEFFA,
+    SPECIES_IGGLYBUFF,
+    SPECIES_TOGEPI,
+    SPECIES_TYROGUE,
+    SPECIES_SMOOCHUM,
+    SPECIES_ELEKID,
+    SPECIES_MAGBY,
+    SPECIES_AZURILL,
+    SPECIES_WYNAUT,
+    SPECIES_BUDEW,
+    SPECIES_CHINGLING,
+    SPECIES_BONSLY,
+    SPECIES_MIME_JR,
+    SPECIES_HAPPINY,
+    SPECIES_MUNCHLAX,
+    SPECIES_RIOLU,
+    SPECIES_MANTYKE,
+    SPECIES_TOXEL,
+};
 
 static const u8 sGiftMenuTextColors[][3] =
 {
@@ -169,7 +193,7 @@ static void GiftMonMenu_ShowPokemonPic(u16 species, u8 iconSlot)
 {
     if (sGiftMonMenuData.spriteIds[iconSlot] == MAX_SPRITES)
     {
-        if (species != SPECIES_NONE && species != 999 && species < NUM_SPECIES)
+        if (species != SPECIES_NONE && species != 999 && species <= NUM_SPECIES)
         {
             // The x, y, and subpriority are hardcoded to match the old ScriptMenu_ShowPokemonPic call
             sGiftMonMenuData.spriteIds[iconSlot] = CreateMonSprite_PicBox_Tagged(species, TAG_GIFT_MON_PIC_TILES + iconSlot, TAG_GIFT_MON_PIC_PALETTE + iconSlot, 18 * 8 + 32, 2 * 8 + 32);
@@ -579,22 +603,6 @@ for (i = 0; i < argc; ++i)
         sGiftMonMenuData.iconSlot = 0;
         sGiftMonMenuData.spriteIds[0] = MAX_SPRITES;
         sGiftMonMenuData.spriteIds[1] = MAX_SPRITES;
-        memset(sGiftMonIsTaken, 0, sizeof(sGiftMonIsTaken));
-        LoadMonIconPalettes();
-        memset(sGiftSpriteIds, 0xFF, sizeof(sGiftSpriteIds));
-
-        struct WindowTemplate template = CreateWindowTemplate(0, 18, 2, 8, 8, 15, 300);
-        sGiftMonMenuData.windowId = AddWindow(&template);
-        FillWindowPixelBuffer(sGiftMonMenuData.windowId, PIXEL_FILL(1));
-        PutWindowTilemap(sGiftMonMenuData.windowId);
-        SetStandardWindowBorderStyle(sGiftMonMenuData.windowId, TRUE);
-        ScheduleBgCopyTilemapToVram(0);
-    }
-    if (sIsGiftMonMenu)
-    {
-        sGiftMonMenuData.iconSlot = 0;
-        sGiftMonMenuData.spriteIds[0] = MAX_SPRITES;
-        sGiftMonMenuData.spriteIds[1] = MAX_SPRITES;
         sGiftMonMenuData.bottomWindowId = WINDOW_NONE;
         memset(sGiftMonIsTaken, 0, sizeof(sGiftMonIsTaken));
         LoadMonIconPalettes();
@@ -786,9 +794,29 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
 
         break;
     default:
-        if (sIsGiftMonMenu && input != 999)
+        if (sIsGiftMonMenu && input != 999) // 999 is the "Finished" option
         {
-            if (sGiftMonIsTaken[input] || CountTakenGiftMons() >= MAX_GIFT_MON)
+            if (input == SPECIES_EGG)
+            {
+                if (CountTakenGiftMons() >= MAX_GIFT_MON)
+                {
+                    PlaySE(SE_FAILURE);
+                }
+                else
+                {
+                    u16 species = sGiftEggPool[Random() % ARRAY_COUNT(sGiftEggPool)];
+                    u8 result = ScriptGiveEgg(species);
+
+                    if (result != MON_CANT_GIVE)
+                    {
+                        PlaySE(SE_SUCCESS);
+                        sGiftMonIsTaken[SPECIES_EGG] = TRUE;
+                        GiftMonMenu_CreateMonIcon(SPECIES_EGG);
+                        RedrawListMenu(gTasks[taskId].data[0]);
+                    }
+                }
+            }
+            else if (sGiftMonIsTaken[input] || CountTakenGiftMons() >= MAX_GIFT_MON)
             {
                 PlaySE(SE_FAILURE);
             }
