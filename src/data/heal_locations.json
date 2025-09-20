@@ -191,13 +191,17 @@
       "id": "HEAL_LOCATION_ROUTE_104",
       "map": "MAP_ROUTE104",
       "x": 5,
-      "y": 19
+      "y": 19,
+      "respawn_x": 5,
+      "respawn_y": 19
     },
     {
       "id": "HEAL_LOCATION_ROUTE_123",
       "map": "MAP_ROUTE123",
       "x": 20,
       "y": 8
+      "respawn_x": 20,
+      "respawn_y": 8
     }
   ]
 }
