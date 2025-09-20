@@ -84,7 +84,7 @@ static union PokemonSubstruct *GetSubstruct(struct BoxPokemon *boxMon, u32 perso
 static void EncryptBoxMon(struct BoxPokemon *boxMon);
 static void DecryptBoxMon(struct BoxPokemon *boxMon);
 static void Task_PlayMapChosenOrBattleBGM(u8 taskId);
-static bool8 ShouldSkipFriendshipChange(void);
+bool8 ShouldSkipFriendshipChange(void);
 void TryEvolveFaintedCorsola(void);
 void TrySpecialOverworldEvo();
 
@@ -7226,3 +7226,4 @@ u32 IsSpeciesOfType(u32 species, u32 type)
      || gSpeciesInfo[species].types[1] == type)
         return TRUE;
     return FALSE;
+}

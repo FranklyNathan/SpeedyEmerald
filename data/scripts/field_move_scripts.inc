@@ -4,7 +4,7 @@ EventScript_CutTree::
 	lockall
 	//goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
 	goto_if_lt VAR_BADGE_COUNT, 1, EventScript_CheckTreeCantCut
-	checkpartymove MOVE_CUT
+	checkfieldmove FIELD_MOVE_CUT
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
@@ -68,7 +68,7 @@ EventScript_RockSmash::
 	lockall
 	goto_if_lt VAR_BADGE_COUNT, 3, EventScript_CantSmashRock
 	//goto_if FLAG_BADGE03_GET, EventScript_CantSmashRock
-	checkpartymove MOVE_ROCK_SMASH
+	checkfieldmove FIELD_MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT

@@ -845,7 +845,7 @@ void ItemUseOutOfBattle_CleanseTag(u8 taskId)
         FlagSet(FLAG_CLEANSE_TAG);
         PlaySE(SE_EXP_MAX);
         
-        if (!InBattlePyramid())
+        if (!InBattlePyramid_())
             DisplayItemMessage(taskId, FONT_NORMAL, gText_CleanseTagTurnOn, CloseItemMessage);
         else
             DisplayItemMessageInBattlePyramid(taskId, gText_CleanseTagTurnOn, Task_CloseBattlePyramidBagMessage);
@@ -855,7 +855,7 @@ void ItemUseOutOfBattle_CleanseTag(u8 taskId)
         FlagClear(FLAG_CLEANSE_TAG);
         PlaySE(SE_PC_OFF);
         
-        if (!InBattlePyramid())
+        if (!InBattlePyramid_())
             DisplayItemMessage(taskId, FONT_NORMAL, gText_CleanseTagTurnOff, CloseItemMessage);
         else
             DisplayItemMessageInBattlePyramid(taskId, gText_CleanseTagTurnOff, Task_CloseBattlePyramidBagMessage);

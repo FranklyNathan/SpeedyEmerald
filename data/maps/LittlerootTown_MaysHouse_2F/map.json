@@ -267,14 +267,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EventScript_PC"
-    },
-      // {
-      //   "type": "sign",
-      //   "x": 7,
-      //   "y": 4,
-      //   "elevation": 0,
-      //   "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      //   "script": "PlayersHouse_2F_EventScript_Fossil"
-      // }
+    }
   ]
 }

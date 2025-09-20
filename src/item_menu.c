@@ -1610,8 +1610,8 @@ static void OpenContextMenu(u8 taskId)
     {
     case ITEMMENULOCATION_BATTLE:
     case ITEMMENULOCATION_WALLY:
-        if (GetItemBattleUsage(gSpecialVar_ItemId) && (!FlagGet(FLAG_NUZLOCKE) 
-        || gBagPosition.pocket == BALLS_POCKET || gBagPosition.location != ITEMMENULOCATION_BATTLE))  
+        if (GetItemBattleUsage(gSpecialVar_ItemId) && (!FlagGet(FLAG_NUZLOCKE)
+        || gBagPosition.pocket == POCKET_POKE_BALLS || gBagPosition.location != ITEMMENULOCATION_BATTLE))
         {
             gBagMenu->contextMenuItemsPtr = sContextMenuItems_BattleUse;
             gBagMenu->contextMenuNumItems = ARRAY_COUNT(sContextMenuItems_BattleUse);
@@ -1731,9 +1731,9 @@ static void OpenContextMenu(u8 taskId)
     {
         u8 *end = CopyItemName(gSpecialVar_ItemId, gStringVar1);
         WrapFontIdToFit(gStringVar1, end, FONT_NORMAL, WindowWidthPx(WIN_DESCRIPTION) - 10 - 6);
-        //if (ItemId_GetBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE) 
-        if (GetItemBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE) 
-        && gBagPosition.pocket != BALLS_POCKET && gBagPosition.location == ITEMMENULOCATION_BATTLE)
+        //if (ItemId_GetBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE)
+        if (GetItemBattleUsage(gSpecialVar_ItemId) && FlagGet(FLAG_NUZLOCKE)
+        && gBagPosition.pocket != POCKET_POKE_BALLS && gBagPosition.location == ITEMMENULOCATION_BATTLE)
             StringExpandPlaceholders(gStringVar4, gText_Var1NuzlockePrevents);
         else
             StringExpandPlaceholders(gStringVar4, gText_Var1IsSelected);

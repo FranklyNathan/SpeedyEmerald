@@ -6,7 +6,7 @@ EventScript_ChooseGiftPokemon::
 	special SetIsGiftPokemonMenu
 	// This custom command from your original script displays the dynamic multichoice menu.
 	// The max items shown before scrolling is set to 8 to fit on the screen.
-	dynmultistack 0, 0, FALSE, 8, FALSE, 0, FALSE
+	dynmultistack 0, 0, FALSE, 8, FALSE, 0, NULL
 EventScript_EndGiftPokemon::
 	return
 
