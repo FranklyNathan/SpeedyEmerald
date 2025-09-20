@@ -568,3 +568,4 @@ gSpecials::
 	def_special AdvanceTimeToNextPeriod
 	def_special ReleasePlayerBoxes
 	def_special SetIsGiftPokemonMenu
+	def_special SetHiddenNature
