@@ -11,7 +11,6 @@
 #include "overworld.h"
 #include "main.h"
 #include "sound.h"
-#include "constants/map_types.h"
 #include "constants/songs.h"
 #include "constants/vars.h"
 
