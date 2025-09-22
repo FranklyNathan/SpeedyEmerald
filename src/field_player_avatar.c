@@ -1192,8 +1192,8 @@ static void PlayerAvatarTransition_Dummy(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_Normal(struct ObjectEvent *objEvent)
 {
-    RestorePlayerSpriteCallback(objEvent);
     DestroyAcroBikeSurfBlob(objEvent);
+    RestorePlayerSpriteCallback(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_NORMAL));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_ON_FOOT);
@@ -1201,8 +1201,6 @@ static void PlayerAvatarTransition_Normal(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_MachBike(struct ObjectEvent *objEvent)
 {
-    RestorePlayerSpriteCallback(objEvent);
-    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_MACH_BIKE));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_MACH_BIKE);
@@ -1232,8 +1230,6 @@ static void PlayerAvatarTransition_Surfing(struct ObjectEvent *objEvent)
 {
     u8 spriteId;
 
-    RestorePlayerSpriteCallback(objEvent);
-    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_SURFING));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_SURFING);
@@ -1247,8 +1243,6 @@ static void PlayerAvatarTransition_Surfing(struct ObjectEvent *objEvent)
 
 static void PlayerAvatarTransition_Underwater(struct ObjectEvent *objEvent)
 {
-    RestorePlayerSpriteCallback(objEvent);
-    DestroyAcroBikeSurfBlob(objEvent);
     ObjectEventSetGraphicsId(objEvent, GetPlayerAvatarGraphicsIdByStateId(PLAYER_AVATAR_STATE_UNDERWATER));
     ObjectEventTurn(objEvent, objEvent->movementDirection);
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_UNDERWATER);
@@ -1655,7 +1649,7 @@ u16 GetRSAvatarGraphicsIdByGender(u8 gender)
 
 u16 GetPlayerAvatarGraphicsIdByStateId(u8 state)
 {
-    if (state == PLAYER_AVATAR_STATE_SURFING && VarGet(VAR_TEMP_1) == 1)
+    if (state == PLAYER_AVATAR_STATE_SURFING && VarGet(VAR_TEMP_1) == 1 && VarGet(VAR_TEMP_2) == 1)
         return OBJ_EVENT_GFX_SPECIES(FLYGON);
 
     return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gPlayerAvatar.gender);

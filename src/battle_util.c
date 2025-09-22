@@ -9870,7 +9870,8 @@ bool32 CanMegaEvolve(u32 battler)
     if (!TESTING
         && (GetBattlerPosition(battler) == B_POSITION_PLAYER_LEFT || (!(gBattleTypeFlags & BATTLE_TYPE_MULTI) && GetBattlerPosition(battler) == B_POSITION_PLAYER_RIGHT))
         )
-        return FALSE;
+        if (!CheckBagHasItem(ITEM_RARE_CANDY, 1))
+            return FALSE;
 
     // Check if Trainer has already Mega Evolved.
     if (HasTrainerUsedGimmick(battler, GIMMICK_MEGA))

@@ -79,6 +79,7 @@ enum {
     ACTION_TOSS,
     ACTION_REGISTER,
     ACTION_GIVE,
+    ACTION_GIVE_ALL,
     ACTION_CANCEL,
     ACTION_BATTLE_USE,
     ACTION_CHECK,
@@ -195,6 +196,7 @@ static void ItemMenu_UseOutOfBattle(u8);
 static void ItemMenu_Toss(u8);
 static void ItemMenu_Register(u8);
 static void ItemMenu_Give(u8);
+static void ItemMenu_GiveAll(u8);
 static void ItemMenu_Cancel(u8);
 static void ItemMenu_UseInBattle(u8);
 static void ItemMenu_CheckTag(u8);
@@ -276,6 +278,7 @@ static const struct MenuAction sItemMenuActions[] = {
     [ACTION_TOSS]              = {gMenuText_Toss,               {ItemMenu_Toss}},
     [ACTION_REGISTER]          = {gMenuText_Register,           {ItemMenu_Register}},
     [ACTION_GIVE]              = {gMenuText_Give,               {ItemMenu_Give}},
+    [ACTION_GIVE_ALL]          = {gMenuText_GiveAll,            {ItemMenu_GiveAll}},
     [ACTION_CANCEL]            = {gText_Cancel2,                {ItemMenu_Cancel}},
     [ACTION_BATTLE_USE]        = {gMenuText_Use,                {ItemMenu_UseInBattle}},
     [ACTION_CHECK]             = {COMPOUND_STRING("CHECK"),     {ItemMenu_UseOutOfBattle}},
@@ -312,7 +315,7 @@ static const u8 sContextMenuItems_TmHmPocket[] = {
 };
 
 static const u8 sContextMenuItems_BerriesPocket[] = {
-    ACTION_CHECK_TAG,   ACTION_DUMMY,
+    ACTION_CHECK_TAG,   ACTION_GIVE_ALL,
     ACTION_USE,         ACTION_GIVE,
     ACTION_TOSS,        ACTION_CANCEL
 };
@@ -1979,6 +1982,67 @@ static void ItemMenu_Give(u8 taskId)
     {
         PrintItemCantBeHeld(taskId);
     }
+}
+
+static void ItemMenu_GiveAll(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    u8 i;
+    u8 monsToGive = 0;
+    u16 itemId = gSpecialVar_ItemId;
+    u16 itemsAvailable;
+
+    if (gBagPosition.pocket != BERRIES_POCKET)
+    {
+        ItemMenu_Cancel(taskId);
+        return;
+    }
+
+    itemsAvailable = BagGetQuantityByPocketPosition(gBagPosition.pocket + 1, tListPosition);
+
+    if (CalculatePlayerPartyCount() == 0)
+    {
+        PrintThereIsNoPokemon(taskId);
+        return;
+    }
+
+    // Count Pokémon that can hold an item
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM) == ITEM_NONE)
+            monsToGive++;
+    }
+
+    if (monsToGive == 0)
+    {
+        // All Pokémon are holding items.
+        RemoveContextWindow();
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_NoPokemonToGiveItem, HandleErrorMessage);
+        return;
+    }
+
+    if (itemsAvailable < monsToGive)
+    {
+        // Not enough berries.
+        RemoveContextWindow();
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_NotEnoughBerries, HandleErrorMessage);
+        return;
+    }
+
+    // Give berries
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM) == ITEM_NONE)
+            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, &itemId);
+    }
+
+    RemoveBagItem(itemId, monsToGive);
+
+    // Show confirmation message
+    RemoveContextWindow();
+    CopyItemNameHandlePlural(itemId, gStringVar1, monsToGive);
+    StringExpandPlaceholders(gStringVar4, gText_GaveToAllPkmn);
+    DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, HandleErrorMessage);
 }
 
 static void PrintThereIsNoPokemon(u8 taskId)

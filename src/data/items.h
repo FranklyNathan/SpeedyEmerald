@@ -838,7 +838,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Energy Powder"),
         .pluralName = _("Energy Powder"),
-        .price = 500,
+        .price = 100,
         .description = COMPOUND_STRING(
             "A bitter powder\n"
             "that restores HP\n"
@@ -860,7 +860,7 @@ const struct Item gItemsInfo[] =
     [ITEM_ENERGY_ROOT] =
     {
         .name = _("Energy Root"),
-        .price = (I_PRICE >= GEN_7) ? 1200 : 800,
+        .price = 200,
         .description = COMPOUND_STRING(
             "A bitter root\n"
             "that restores HP\n"
@@ -883,7 +883,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Heal Powder"),
         .pluralName = _("Heal Powder"),
-        .price = (I_PRICE >= GEN_7) ? 300 : 450,
+        .price = 50,
         .description = COMPOUND_STRING(
             "A bitter powder\n"
             "that heals all\n"
@@ -10450,7 +10450,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_HONE_CLAWS] =
     {
         .name = _("Hone Claws"),
-        .price = 2000,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "The user sharpens\n"
             "its claws in\n"

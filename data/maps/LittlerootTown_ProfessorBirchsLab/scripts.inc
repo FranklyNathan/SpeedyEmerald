@@ -118,26 +118,11 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setvar VAR_BADGE_COUNT, 0
     setvar VAR_GYM_LOCKED, 1
 
-	setflag FLAG_VISITED_LITTLEROOT_TOWN
-	setflag FLAG_VISITED_OLDALE_TOWN
-	setflag FLAG_VISITED_DEWFORD_TOWN
-	setflag FLAG_VISITED_LAVARIDGE_TOWN
-	setflag FLAG_VISITED_FALLARBOR_TOWN
-	setflag FLAG_VISITED_VERDANTURF_TOWN
-	setflag FLAG_VISITED_PACIFIDLOG_TOWN
-	setflag FLAG_VISITED_PETALBURG_CITY
-	setflag FLAG_VISITED_SLATEPORT_CITY
-	setflag FLAG_VISITED_MAUVILLE_CITY
-	setflag FLAG_VISITED_RUSTBORO_CITY
-	setflag FLAG_VISITED_FORTREE_CITY
-	setflag FLAG_VISITED_LILYCOVE_CITY
-	setflag FLAG_VISITED_MOSSDEEP_CITY
-	setflag FLAG_VISITED_SOOTOPOLIS_CITY
-
 	@ Petalburg Woods Flags
 	setvar VAR_PETALBURG_WOODS_STATE, 1  //First set of speedchoice variables to set
 	setflag FLAG_HIDE_PETALBURG_WOODS_DEVON_EMPLOYEE
 	setflag FLAG_HIDE_PETALBURG_WOODS_AQUA_GRUNT
+	setflag FLAG_RECEIVED_NECTAR //Is Oricorio in the game? If not, set this flag
 
 	@ Roxanne Flags
 	setflag FLAG_RETURNED_DEVON_GOODS
@@ -154,6 +139,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setvar VAR_BRINEY_LOCATION, 1
 
 	@ Steven Letter Delivery Flags
+	setflag FLAG_DELIVERED_STEVEN_LETTER
 	setflag FLAG_DOCK_REJECTED_DEVON_GOODS
 	setflag FLAG_HIDE_SLATEPORT_CITY_TEAM_AQUA
 	setflag FLAG_HIDE_SLATEPORT_CITY_OCEANIC_MUSEUM_AQUA_GRUNTS
@@ -164,6 +150,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setflag FLAG_HIDE_GRANITE_CAVE_STEVEN
 
 	@ Wattson Flags
+	setvar VAR_REGISTER_BIRCH_STATE, 2
+	setvar VAR_ROUTE110_STATE, 1
 	setflag FLAG_HIDE_MAUVILLE_CITY_WALLY
 	setflag FLAG_HIDE_MAUVILLE_CITY_WALLYS_UNCLE
 	setflag FLAG_DEFEATED_WALLY_MAUVILLE
@@ -194,6 +182,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GiveStarterEvent::
 	setflag FLAG_HIDE_LILYCOVE_CITY_RIVAL
 
 	@ Route 120 Steven Flags
+	setvar VAR_ROUTE118_STATE, 1
 	setflag FLAG_HIDE_FORTREE_CITY_KECLEON
 	setflag FLAG_HIDE_ROUTE_120_STEVEN
 	setflag FLAG_HIDE_ROUTE_120_KECLEON_BRIDGE

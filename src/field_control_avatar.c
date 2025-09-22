@@ -560,7 +560,7 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
 
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, u8 direction)
 {
-    if (VarGet(VAR_BADGE_COUNT) >= 5 && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
+    if (VarGet(VAR_BADGE_COUNT) >= 5 && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_ACRO_BIKE))
         return EventScript_UseSurf;
     
         // Show "nervous" message if on the bike and facing rough water without the Surf HM.

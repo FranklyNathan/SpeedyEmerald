@@ -13709,7 +13709,7 @@ Class: Leader
 Pic: Leader Roxanne
 Gender: Female
 Music: Female
-Items: Potion / Potion
+Items: Potion
 Double Battle: No
 AI: Basic Trainer
 
@@ -14072,7 +14072,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Golem
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
 Ability: Rock Head
@@ -14082,7 +14082,7 @@ Ability: Rock Head
 - Rock Tomb
 
 Relicanth
-Level: 41
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Rock Head
@@ -14092,7 +14092,7 @@ Ability: Rock Head
 - Head Smash
 
 Kleavor
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Swarm
@@ -14102,7 +14102,7 @@ Ability: Swarm
 - Rock Tomb
 
 Arcanine-Hisui
-Level: 45
+Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
@@ -14112,7 +14112,7 @@ Ability: Intimidate
 - Flare Blitz
 
 Probopass @ Sitrus Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Impish
 Ability: Sturdy
@@ -14127,7 +14127,7 @@ Class: Leader
 Pic: Leader Brawly
 Gender: Male
 Music: Male
-Items: Potion / Potion
+Items: Potion
 Double Battle: No
 AI: Basic Trainer
 
@@ -14492,7 +14492,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Machamp
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
@@ -14502,7 +14502,7 @@ Ability: Guts
 - Bulk Up
 
 Medicham
-Level: 41
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Pure Power
@@ -14512,7 +14512,7 @@ Ability: Pure Power
 - Bulk Up
 
 Blaziken
-Level: 43
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Blaze
@@ -14522,7 +14522,7 @@ Ability: Blaze
 - Focus Energy
 
 Sirfetch'd @ Leek
-Level: 45
+Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Inner Focus
@@ -14532,7 +14532,7 @@ Ability: Inner Focus
 - Leaf Blade
 
 Hariyama @ Sitrus Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
@@ -14547,7 +14547,7 @@ Class: Leader
 Pic: Leader Wattson
 Gender: Male
 Music: Male
-Items: Potion / Potion
+Items: Potion
 Double Battle: No
 AI: Basic Trainer
 
@@ -14912,7 +14912,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Golem-Alola
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Sturdy
@@ -14922,7 +14922,7 @@ Ability: Sturdy
 - Shock Wave
 
 Electrode-Hisui
-Level: 41
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Soundproof
@@ -14932,7 +14932,7 @@ Ability: Soundproof
 - Explosion
 
 Magnezone
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Magnet Pull
@@ -14942,7 +14942,7 @@ Ability: Magnet Pull
 - Flash Cannon
 
 Raichu-Alola
-Level: 45
+Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Surge Surfer
@@ -14952,7 +14952,7 @@ Ability: Surge Surfer
 - Nuzzle
 
 Manectric @ Sitrus Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Rash
 Ability: Static
@@ -14967,7 +14967,7 @@ Class: Leader
 Pic: Leader Flannery
 Gender: Female
 Music: Female
-Items: Potion / Potion
+Items: Potion
 Double Battle: No
 AI: Basic Trainer
 
@@ -15312,7 +15312,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Marowak-Alola @ Thick Club
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Cursed Body
@@ -15322,7 +15322,7 @@ Ability: Cursed Body
 - Bone Rush
 
 Magcargo
-Level: 41
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
 Ability: Flame Body
@@ -15332,7 +15332,7 @@ Ability: Flame Body
 - Sunny Day
 
 Ninetales
-Level: 43
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Flash Fire
@@ -15342,7 +15342,7 @@ Ability: Flash Fire
 - Attract
 
 Camerupt
-Level: 45
+Level: 47
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
 Ability: Magma Armor
@@ -15352,7 +15352,7 @@ Ability: Magma Armor
 - Rock Slide
 
 Torkoal @ White Herb
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quiet
 Ability: White Smoke
@@ -15367,7 +15367,7 @@ Class: Leader
 Pic: Leader Norman
 Gender: Male
 Music: Male
-Items: Potion / Potion
+Items: Potion
 Double Battle: No
 AI: Basic Trainer
 
@@ -15729,7 +15729,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Spinda
-Level: 41
+Level: 43
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Own Tempo
@@ -15739,7 +15739,7 @@ Ability: Own Tempo
 - Flail
 
 Zoroark-Hisui
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quirky
 Ability: Illusion
@@ -15749,7 +15749,7 @@ Ability: Illusion
 - Nasty Plot
 
 Exploud
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Quirky
 Ability: Soundproof
@@ -15759,7 +15759,7 @@ Ability: Soundproof
 - Thunder Fang
 
 Obstagoon
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Guts
@@ -15769,7 +15769,7 @@ Ability: Guts
 - Submission
 
 Slaking @ Kings Rock
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Truant
@@ -15784,7 +15784,7 @@ Class: Leader
 Pic: Leader Winona
 Gender: Female
 Music: Female
-Items: Potion / Potion
+Items: Potion
 Double Battle: No
 AI: Basic Trainer / Risky
 
@@ -16139,7 +16139,7 @@ Double Battle: No
 AI: Basic Trainer / Risky
 
 Tropius
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Sassy
 Ability: Chlorophyll
@@ -16149,7 +16149,7 @@ Ability: Chlorophyll
 - Leaf Storm
 
 Braviary-Hisui
-Level: 43
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Sheer Force
@@ -16159,7 +16159,7 @@ Ability: Sheer Force
 - Aerial Ace
 
 Pelipper @ Deep Sea Tooth
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Keen Eye
@@ -16169,7 +16169,7 @@ Ability: Keen Eye
 - Aerial Ace
 
 Skarmory
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Keen Eye
@@ -16179,7 +16179,7 @@ Ability: Keen Eye
 - Aerial Ace
 
 Altaria @ Sitrus Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Natural Cure
@@ -16194,7 +16194,7 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Female
-Items: Potion / Potion
+Items: Potion
 Double Battle: Yes
 AI: Basic Trainer
 
@@ -16529,7 +16529,7 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Claydol
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Levitate
@@ -16539,7 +16539,7 @@ Ability: Levitate
 - Light Screen
 
 Xatu
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Synchronize
@@ -16549,7 +16549,7 @@ Ability: Synchronize
 - Calm Mind
 
 Slowbro-Galar
-Level: 43
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Bold
 Ability: Quick Draw
@@ -16559,7 +16559,7 @@ Ability: Quick Draw
 - Psychic
 
 Slowking-Galar
-Level: 43
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Bold
 Ability: Own Tempo
@@ -16569,7 +16569,7 @@ Ability: Own Tempo
 - Sludge Bomb
 
 Lunatone @ Sitrus Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Levitate
@@ -16594,7 +16594,7 @@ Class: Leader
 Pic: Leader Juan
 Gender: Male
 Music: Male
-Items: Potion / Potion
+Items: Potion
 Double Battle: Yes
 AI: Basic Trainer
 
@@ -16978,7 +16978,7 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Wugtrio
-Level: 43
+Level: 45
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Gooey
@@ -16988,7 +16988,7 @@ Ability: Gooey
 - Water Pulse
 
 Wailord
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Water Veil
@@ -16998,7 +16998,7 @@ Ability: Water Veil
 - Water Pulse
 
 Whiscash
-Level: 42
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Hardy
 Ability: Oblivious
@@ -17008,7 +17008,7 @@ Ability: Oblivious
 - Earthquake
 
 Gyarados
-Level: 44
+Level: 46
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
 Ability: Intimidate
@@ -17018,7 +17018,7 @@ Ability: Intimidate
 - Dragon Dance
 
 Milotic @ Sitrus Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Calm
 Ability: Marvel Scale
@@ -17028,7 +17028,7 @@ Ability: Marvel Scale
 - Icy Wind
 
 Kingdra @ Chesto Berry
-Level: 46
+Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
 Ability: Swift Swim
@@ -17036,66 +17036,6 @@ Ability: Swift Swim
 - Double Team
 - Dragon Pulse
 - Rest
-
-=== TRAINER_WALLY_VR_1 ===
-Name: WALLY
-Class: Rival
-Pic: Wally
-Gender: Male
-Music: Male
-Items: Full Restore / Full Restore
-Double Battle: No
-AI: Basic Trainer
-
-Altaria
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Sassy
-Ability: Natural Cure
-- Aerial Ace
-- Perish Song
-- Dragon Pulse
-- Safeguard
-
-Delcatty
-Level: 46
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Cute Charm
-- Sing
-- Assist
-- Charm
-- Play Rough
-
-Roserade
-Level: 47
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Poison Point
-- Petal Blizzard
-- Leech Seed
-- Synthesis
-- Toxic
-
-Magnezone
-Level: 44
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Magnet Pull
-- Supersonic
-- Flash Cannon
-- Tri Attack
-- Discharge
-
-Gallade @ Galladite
-Level: 48
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Adamant
-Ability: Steadfast
-- Close Combat
-- Aerial Ace
-- Psycho Cut
-- Swords Dance
 
 === TRAINER_SIDNEY ===
 Name: SIDNEY
@@ -17164,19 +17104,20 @@ Class: Palace Maven
 Pic: Palace Maven Spenser
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
 
-Vileplume @ Durin Berry
-Level: 46
+Toedscruel
+Level: 44
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Modest
-Ability: Effect Spore
-- Sludge Bomb
-- Moonlight
+Ability: Mycelium Might
+- Spore
 - Giga Drain
-- Natural Gift
+- Earth Power
+- Wrap
 
 Decidueye-Hisui
 Level: 48
@@ -17188,15 +17129,15 @@ Ability: Overgrow
 - Feather Dance
 - Triple Arrows
 
-Toedscruel
+Sceptile
 Level: 48
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Modest
-Ability: Mycelium Might
-- Spore
-- Giga Drain
-- Earth Power
-- Wrap
+Nature: Adamant
+Ability: Overgrow
+- Leaf Blade
+- X Scissor
+- Agility
+- Dual Chop
 
 Ludicolo
 Level: 46
@@ -17285,6 +17226,7 @@ Class: Pike Queen
 Pic: Pike Queen Lucy
 Gender: Female
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Purple
@@ -17406,6 +17348,7 @@ Class: Dome Ace
 Pic: Dome Ace Tucker
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Pink
@@ -17424,7 +17367,7 @@ Azumarill
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Adamant
-Ability: Huge Power
+Ability: Thick Fat
 - Play Rough
 - Aqua Tail
 - Brick Break
@@ -17527,19 +17470,10 @@ Class: Pyramid King
 Pic: Pyramid King Brandon
 Gender: Male
 Music: Male
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Yellow
-
-Clodsire
-Level: 52
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Nature: Relaxed
-Ability: Water Absorb
-- Earthquake
-- Sludge Wave
-- Toxic Spikes
-- Yawn
 
 Dugtrio-Alola
 Level: 54
@@ -17550,6 +17484,16 @@ Ability: Tangling Hair
 - Tri Attack
 - Dig
 - Iron Head
+
+Swampert
+Level: 52
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Relaxed
+Ability: Torrent
+- Earthquake
+- Muddy Water
+- Protect
+- Mud Shot
 
 Flygon
 Level: 53
@@ -17587,7 +17531,7 @@ Class: Rival
 Pic: Steven
 Gender: Male
 Music: Male
-Items: Full Restore / Full Restore / Full Restore / Full Restore
+Items: Full Restore / Full Restore
 Double Battle: No
 AI: Basic Trainer
 Mugshot: Yellow
@@ -17651,6 +17595,66 @@ Ability: Clear Body
 - Psychic
 - Meteor Mash
 - Hyper Beam
+
+=== TRAINER_WALLY_VR_1 ===
+Name: WALLY
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer
+
+Altaria
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Sassy
+Ability: Natural Cure
+- Aerial Ace
+- Perish Song
+- Dragon Pulse
+- Safeguard
+
+Delcatty
+Level: 46
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Adamant
+Ability: Cute Charm
+- Sing
+- Assist
+- Charm
+- Play Rough
+
+Roserade
+Level: 47
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Adamant
+Ability: Poison Point
+- Petal Blizzard
+- Leech Seed
+- Synthesis
+- Toxic
+
+Magnezone
+Level: 44
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Modest
+Ability: Magnet Pull
+- Supersonic
+- Flash Cannon
+- Tri Attack
+- Discharge
+
+Gallade @ Galladite
+Level: 48
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Nature: Adamant
+Ability: Steadfast
+- Close Combat
+- Aerial Ace
+- Psycho Cut
+- Swords Dance
 
 === TRAINER_ANGELO ===
 Name: ANGELO

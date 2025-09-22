@@ -8874,7 +8874,7 @@ static u32 GetTrainerMoneyToGive(u16 trainerId)
         // else if (IsDoubleBattle())
             // moneyReward = 4 * lastMonLevel * gBattleStruct->moneyMultiplier * 2 * trainerMoney;
         else
-            moneyReward = 12 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
+            moneyReward = 10 * lastMonLevel * gBattleStruct->moneyMultiplier * trainerMoney;
     }
 
     return moneyReward;

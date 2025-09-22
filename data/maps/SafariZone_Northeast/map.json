@@ -151,7 +151,7 @@
       "x": 31,
       "y": 35,
       "elevation": 3,
-      "item": "ITEM_RARE_CANDY",
+      "item": "ITEM_FULL_RESTORE",
       "flag": "FLAG_HIDDEN_ITEM_SAFARI_ZONE_NORTH_EAST_RARE_CANDY"
     },
     {

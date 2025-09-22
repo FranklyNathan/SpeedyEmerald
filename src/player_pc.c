@@ -234,28 +234,9 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 
 static const u16 sNewGamePCItems[][2] =
 {
-    { ITEM_ABILITY_CAPSULE, 5 },
-    { ITEM_ABILITY_PATCH, 5 },
-    { ITEM_BIG_ROOT, 3 },
-    { ITEM_BLACK_BELT, 3 },
-    { ITEM_BRIGHT_POWDER, 3 },
-    { ITEM_CHOICE_SCARF, 3 },
-    { ITEM_DRAGON_FANG, 3 },
-    { ITEM_EJECT_BUTTON, 3 },
-    { ITEM_FAIRY_FEATHER, 3 },
-    { ITEM_FOCUS_SASH, 3 },
-    { ITEM_HARD_STONE, 3 },
-    { ITEM_LEFTOVERS, 3 },
-    { ITEM_MAGNET, 3 },
-    { ITEM_METAL_COAT, 3 },
-    { ITEM_NEVER_MELT_ICE, 3 },
-    { ITEM_POISON_BARB, 3 },
-    { ITEM_SHARP_BEAK, 3 },
-    { ITEM_SHELL_BELL, 3 },
-    { ITEM_SILVER_POWDER, 3 },
-    { ITEM_SPELL_TAG, 3 },
-    { ITEM_TWISTED_SPOON, 3 },
-    { ITEM_MAX_REVIVE, 99 },
+    { ITEM_ABILITY_CAPSULE, 50 },
+    { ITEM_ABILITY_PATCH, 50 },
+    { ITEM_MAX_REVIVE, 50 },
     { ITEM_NONE, 0 }
 };
 

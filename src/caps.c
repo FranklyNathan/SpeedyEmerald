@@ -16,7 +16,7 @@ u32 GetCurrentLevelCap(void)
         32, // After Badge 5
         35, // After Badge 6
         42, // After Badge 7
-        46, // After Badge 8
+        48, // After Badge 8
         55, // After Elite 4 Drake
         59, // After Champion
     };

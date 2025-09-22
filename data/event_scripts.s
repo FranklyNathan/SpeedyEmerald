@@ -718,6 +718,7 @@ Common_ShowEasyChatScreen::
 
 Common_EventScript_ReadyPetalburgGymForBattle::
 	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
+	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	return
 
 Common_EventScript_BufferTrendyPhrase::
@@ -1170,7 +1171,6 @@ EventScript_WarpHomeLavaridge::
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
    	call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
-	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	warp MAP_LAVARIDGE_TOWN, 5, 15
 	waitstate
 	releaseall
@@ -1182,24 +1182,10 @@ EventScript_WarpHomePetalburg::
 	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call EventScript_HideMrBriney
-	setflag FLAG_VISITED_DEWFORD_TOWN
-	setflag FLAG_VISITED_LAVARIDGE_TOWN
-	setflag FLAG_VISITED_FALLARBOR_TOWN
-	setflag FLAG_VISITED_VERDANTURF_TOWN
-	setflag FLAG_VISITED_PACIFIDLOG_TOWN
-	setflag FLAG_VISITED_PETALBURG_CITY
-	setflag FLAG_VISITED_SLATEPORT_CITY
-	setflag FLAG_VISITED_MAUVILLE_CITY
-	setflag FLAG_VISITED_RUSTBORO_CITY
-	setflag FLAG_VISITED_FORTREE_CITY
-	setflag FLAG_VISITED_LILYCOVE_CITY
-	setflag FLAG_VISITED_MOSSDEEP_CITY
-	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON //Since Wattson can't leave his gym based on event in Mauville's gym anymore
     setvar VAR_PETALBURG_LOCKED, 1
 	setvar VAR_PETALBURG_CITY_STATE, 7
 	setvar VAR_STEP_DOWN, 1
-	msgbox gText_FlygonUniversalFly, MSGBOX_DEFAULT
 	warp MAP_PETALBURG_CITY, 15, 8
 	waitstate
 	releaseall
@@ -1209,8 +1195,15 @@ EventScript_WarpHomeFortree::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
 	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
+	setflag FLAG_VISITED_FALLARBOR_TOWN
+	setflag FLAG_VISITED_VERDANTURF_TOWN
+	setflag FLAG_VISITED_PACIFIDLOG_TOWN
+	setflag FLAG_VISITED_LILYCOVE_CITY
+	setflag FLAG_VISITED_MOSSDEEP_CITY
+	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	setvar VAR_FORTREE_CITY_STATE, 2
     setvar VAR_FORTREE_LOCKED, 1
+	msgbox gText_FlygonUniversalFly, MSGBOX_DEFAULT
 	warp MAP_FORTREE_CITY, 22, 11
 	waitstate
 	releaseall

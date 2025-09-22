@@ -33,6 +33,7 @@
 #include "string_util.h"
 #include "strings.h"
 #include "text_window.h"
+#include "constants/maps.h"
 #include "tv.h"
 #include "constants/decorations.h"
 #include "constants/event_objects.h"
@@ -916,6 +917,13 @@ static void BuyMenuDrawObjectEvents(void)
     {
         if (sShopData->viewportObjects[i][OBJ_EVENT_ID] == OBJECT_EVENTS_COUNT)
             continue;
+
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SLATEPORT_CITY)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SLATEPORT_CITY)
+         && sShopData->viewportObjects[i][OBJ_EVENT_ID] == gPlayerAvatar.objectEventId)
+        {
+            continue;
+        }
 
         graphicsInfo = GetObjectEventGraphicsInfo(gObjectEvents[sShopData->viewportObjects[i][OBJ_EVENT_ID]].graphicsId);
 

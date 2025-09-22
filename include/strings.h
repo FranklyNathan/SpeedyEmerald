@@ -175,6 +175,7 @@ extern const u8 gText_Gold[];
 extern const u8 gMenuText_Use[];
 extern const u8 gMenuText_Toss[];
 extern const u8 gMenuText_Give[];
+extern const u8 gMenuText_GiveAll[];
 extern const u8 gMenuText_Give2[];
 extern const u8 gMenuText_Register[];
 extern const u8 gMenuText_Confirm[];
@@ -313,6 +314,8 @@ extern const u8 gText_TossHowManyVar1s[];
 extern const u8 gText_ConfirmTossItems[];
 extern const u8 gText_ThrewAwayVar2Var1s[];
 extern const u8 gText_CantWriteMail[];
+extern const u8 gText_NotEnoughBerries[];
+extern const u8 gText_NoPokemonToGiveItem[];
 extern const u8 gText_NoPokemon[];
 extern const u8 gText_Var1CantBeHeld[];
 extern const u8 gText_CantBuyKeyItem[];
@@ -320,6 +323,7 @@ extern const u8 gText_HowManyToSell[];
 extern const u8 gText_ICanPayVar1[];
 extern const u8 gText_TurnedOverVar1ForVar2[];
 extern const u8 gText_ThreeDashes[];
+extern const u8 gText_GaveToAllPkmn[];
 extern const u8 *const gPocketNamesStringsTable[];
 
 // party menu text

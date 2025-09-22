@@ -499,12 +499,11 @@ SlateportCity_PokemartDecor_Badge2::
 	pokemart SlateportCity_Pokemart_Badge2Items
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
-
+	end
+	
 	.align 2
 SlateportCity_Pokemart_Badge2Items:
 	.2byte ITEM_SOOTHE_BELL
-	.2byte ITEM_MAWILITE
-	.2byte ITEM_SABLENITE
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	.2byte ITEM_FLAME_ORB
