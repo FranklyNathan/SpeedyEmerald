@@ -1011,6 +1011,7 @@ static void CreateStartSurfingTask(u8 direction)
 {
     u8 taskId;
 
+    RestorePlayerSpriteCallback(&gObjectEvents[gPlayerAvatar.objectEventId]);
     ScriptContext_Enable();
     Overworld_ClearSavedMusic();
     gPlayerAvatar.flags ^= PLAYER_AVATAR_FLAG_ON_FOOT;

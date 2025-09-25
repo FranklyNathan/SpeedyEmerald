@@ -853,8 +853,8 @@ const struct Item gItemsInfo[] =
 
     [ITEM_ENERGY_POWDER] =
     {
-        .name = _("Energy Powder"),
-        .pluralName = _("Energy Powder"),
+        .name = ITEM_NAME("Energy Powder"),
+        .pluralName = ITEM_PLURAL_NAME("Energy Powder"),
         .price = 100,
         .description = COMPOUND_STRING(
             "A bitter powder\n"
@@ -877,7 +877,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_ENERGY_ROOT] =
     {
-        .name = _("Energy Root"),
+        .name = ITEM_NAME("Energy Root"),
         .price = 200,
         .description = COMPOUND_STRING(
             "A bitter root\n"
@@ -900,8 +900,8 @@ const struct Item gItemsInfo[] =
 
     [ITEM_HEAL_POWDER] =
     {
-        .name = _("Heal Powder"),
-        .pluralName = _("Heal Powder"),
+        .name = ITEM_NAME("Heal Powder"),
+        .pluralName = ITEM_PLURAL_NAME("Heal Powder"),
         .price = 50,
         .description = COMPOUND_STRING(
             "A bitter powder\n"
@@ -10939,7 +10939,7 @@ const struct Item gItemsInfo[] =
 
     [ITEM_TM_HONE_CLAWS] =
     {
-        .name = _("Hone Claws"),
+        .name = ITEM_NAME("Hone Claws"),
         .price = 5000,
         .description = COMPOUND_STRING(
             "The user sharpens\n"

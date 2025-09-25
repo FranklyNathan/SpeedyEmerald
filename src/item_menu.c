@@ -2043,13 +2043,13 @@ static void ItemMenu_GiveAll(u8 taskId)
     u16 itemId = gSpecialVar_ItemId;
     u16 itemsAvailable;
 
-    if (gBagPosition.pocket != BERRIES_POCKET)
+    if (gBagPosition.pocket != POCKET_BERRIES)
     {
         ItemMenu_Cancel(taskId);
         return;
     }
 
-    itemsAvailable = BagGetQuantityByPocketPosition(gBagPosition.pocket + 1, tListPosition);
+    itemsAvailable = GetBagItemIdAndQuantity(gBagPosition.pocket, tListPosition).quantity;
 
     if (CalculatePlayerPartyCount() == 0)
     {

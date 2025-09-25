@@ -36,11 +36,14 @@
 #include "constants/pokemon_icon.h"
 #include "constants/songs.h"
 #include "script_pokemon_util.h"
+#include "trainer_pokemon_sprites.h"
+#include "list_menu.h"
 
 #define TAG_GIFT_MON_PIC_TILES 5510
 #define TAG_GIFT_MON_PIC_PALETTE 5511
 
 #define MAX_GIFT_MON 10
+#define GIFT_POKEMON_COUNT 100
 
 #include "data/script_menu.h"
 
@@ -62,20 +65,21 @@ struct DynamicListMenuEventCollection
 
 struct GiftMonMenu
 {
-    u8 iconSlot;
-    u8 spriteIds[2];
+    u8 monSpriteId;
     u8 windowId;
     u8 bottomWindowId;
+    u16 monSpriteIds[4];
+    u16 selectedMonSpriteId;
 };
 
 static EWRAM_DATA struct GiftMonMenu sGiftMonMenuData = {0};
 
 static EWRAM_DATA u8 sProcessInputDelay = 0;
-static EWRAM_DATA u8 sGiftSpriteIds[MAX_GIFT_MON];
+static EWRAM_DATA u8 sGiftSpriteIds[GIFT_POKEMON_COUNT];
 static EWRAM_DATA u8 sDynamicMenuEventId = 0;
 static EWRAM_DATA struct DynamicMultichoiceStack *sDynamicMultiChoiceStack = NULL;
 static EWRAM_DATA u16 *sDynamicMenuEventScratchPad = NULL;
-static EWRAM_DATA bool8 sGiftMonIsTaken[NUM_SPECIES + 1] = {0};
+static EWRAM_DATA bool8 sGiftMonIsTaken[SPECIES_EGG + 1] = {0};
 static EWRAM_DATA bool8 sIsGiftMonMenu = FALSE; // TODO: Make this a part of the dynamic list menu args
 static u8 sLilycoveSSTidalSelections[SSTIDAL_SELECTION_COUNT] = {0}; // TODO: Make this a part of the dynamic list menu args
 
@@ -114,8 +118,9 @@ static void Task_HandleMultichoiceInput(u8 taskId);
 static void Task_HandleYesNoInput(u8 taskId);
 static void Task_HandleMultichoiceGridInput(u8 taskId);
 static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u32 initialRow, u8 maxBeforeScroll, u32 callbackSet);
+void ListMenuSetLRBtnWrap(u8 listTaskId, bool8 lrWrap);
+u16 ListMenu_GetSelectedRowIndex(u8 listTaskId);
 static u8 CountTakenGiftMons(void);
-static void GiftMonMenu_CreateMonIcon(u16 species);
 static void GiftMonMenu_DestroyMonIcons(void);
 static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos);
 static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId);
@@ -129,10 +134,7 @@ static void MultichoiceDynamicEventShowItem_OnDestroy(struct DynamicListMenuEven
 static void Task_PokemonPicWindow(u8 taskId);
 static void CreatePCMultichoice(void);
 static void Task_ExitGiftMenu(u8 taskId);
-static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y);
-
-static const struct OamData sMonPicOamData =
-{
+static const struct OamData sMonPicOamData = {
     .y = 0,
     .affineMode = ST_OAM_AFFINE_OFF,
     .objMode = ST_OAM_OBJ_NORMAL,
@@ -146,6 +148,8 @@ static const struct OamData sMonPicOamData =
     .priority = 2,
     .paletteNum = 0,
 };
+static void CreateGiftMonSpritesAtPos(u16 selectedMon);
+
 
 const struct SpriteTemplate gMonPicSpriteTemplate = {
     .tileTag = TAG_NONE,
@@ -155,51 +159,6 @@ const struct SpriteTemplate gMonPicSpriteTemplate = {
     .images = NULL,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCallbackDummy};
-
-static u8 CreateMonSprite_PicBox_Tagged(u16 species, u16 tileTag, u16 paletteTag, s16 x, s16 y)
-{
-    struct SpriteSheet sheet;
-    struct SpritePalette palette;
-    struct SpriteTemplate template;
-    u8 spriteId;
-    void *buffer;
-
-    buffer = Alloc(MON_PIC_SIZE);
-    if (buffer == NULL)
-        return MAX_SPRITES;
-
-    HandleLoadSpecialPokePic(TRUE, buffer, species, 0);
-
-    sheet.data = buffer;
-    sheet.size = MON_PIC_SIZE;
-    sheet.tag = tileTag;
-    LoadSpriteSheet(&sheet);
-
-    palette.data = GetMonSpritePalFromSpeciesAndPersonality(species, FALSE, 0);
-    palette.tag = paletteTag;
-    LoadSpritePalette(&palette);
-
-    Free(buffer);
-
-    template = gMonPicSpriteTemplate;
-    template.tileTag = tileTag;
-    template.paletteTag = paletteTag;
-    spriteId = CreateSprite(&template, x, y, 0);
-    gSprites[spriteId].oam.priority = 0;
-    return spriteId;
-}
-
-static void GiftMonMenu_ShowPokemonPic(u16 species, u8 iconSlot)
-{
-    if (sGiftMonMenuData.spriteIds[iconSlot] == MAX_SPRITES)
-    {
-        if (species != SPECIES_NONE && species != 999 && species <= NUM_SPECIES)
-        {
-            // The x, y, and subpriority are hardcoded to match the old ScriptMenu_ShowPokemonPic call
-            sGiftMonMenuData.spriteIds[iconSlot] = CreateMonSprite_PicBox_Tagged(species, TAG_GIFT_MON_PIC_TILES + iconSlot, TAG_GIFT_MON_PIC_PALETTE + iconSlot, 18 * 8 + 32, 2 * 8 + 32);
-        }
-    }
-}
 
 static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollections[] =
 {
@@ -211,15 +170,38 @@ static const struct DynamicListMenuEventCollection sDynamicListMenuEventCollecti
     }
 };
 
-static void GiftMonMenu_CreateMonIcon(u16 species)
+static void GiftMonMenu_CreateFrontSprite(u16 species)
+{
+    u8 spriteId;
+
+    // Destroy the old sprite if it exists
+    if (sGiftMonMenuData.selectedMonSpriteId != 0xFFFF)
+    {
+        // The species of the previously displayed mon is not tracked, so we can't reliably free its specific palette tag.
+        // Instead, we'll free the generic tag and rely on the new unique tag to load the correct palette.
+        FreeSpritePaletteByTag(TAG_GIFT_MON_PIC_PALETTE);
+        FreeAndDestroyMonPicSprite(sGiftMonMenuData.selectedMonSpriteId);
+        sGiftMonMenuData.selectedMonSpriteId = 0xFFFF;
+    }
+
+    if (species != SPECIES_EGG && species != 999)
+    {
+        // Use the species ID as the palette tag to ensure each Pokémon gets its own unique palette.
+        spriteId = CreateMonPicSprite(species, FALSE, 0, TRUE, 176, 50, 15, species);
+        gSprites[spriteId].oam.priority = 0; // Ensure it's drawn on top of the window
+        sGiftMonMenuData.selectedMonSpriteId = spriteId;
+    }
+}
+
+static void GiftMonMenu_CreateChosenMonIcon(u16 species)
 {
     u8 i;
     u8 spriteId;
     u8 row, col;
     u16 x, y;
 
-    // Display up to 10 Pokémon icons in a 2x5 grid.
-    for (i = 0; i < 10; i++)
+    // Display up to 10 Pokémon icons in a 2x5 grid in the bottom right window.
+    for (i = 0; i < GIFT_POKEMON_COUNT; i++)
     {
         if (sGiftSpriteIds[i] == 0xFF)
         {
@@ -248,11 +230,22 @@ static void GiftMonMenu_DestroyMonIcons(void)
 {
     u8 i;
 
-    for (i = 0; i < MAX_GIFT_MON; i++)
+    for (i = 0; i < GIFT_POKEMON_COUNT; i++)
     {
         if (sGiftSpriteIds[i] != 0xFF)
             FreeAndDestroyMonIconSprite(&gSprites[sGiftSpriteIds[i]]);
     }
+    if (sGiftMonMenuData.selectedMonSpriteId != 0xFFFF)
+    {
+        FreeAndDestroyMonPicSprite(sGiftMonMenuData.selectedMonSpriteId);
+        FreeSpritePaletteByTag(TAG_GIFT_MON_PIC_PALETTE);
+        sGiftMonMenuData.selectedMonSpriteId = 0xFFFF;
+    }
+}
+
+void ListMenuSetLRBtnWrap(u8 listTaskId, bool8 lrWrap)
+{
+    struct ListMenu *list = (void *)gTasks[listTaskId].data;
 }
 
 static u8 CountTakenGiftMons(void)
@@ -260,53 +253,12 @@ static u8 CountTakenGiftMons(void)
     u8 i;
     u8 count = 0;
 
-    for (i = 0; i < MAX_GIFT_MON; i++)
+    for (i = 0; i < GIFT_POKEMON_COUNT; i++)
     {
         if (sGiftSpriteIds[i] != 0xFF)
             count++;
     }
     return count;
-}
-
-static void GiftMonMenu_RemovePokemonPic(u8 iconSlot)
-{
-    if (sGiftMonMenuData.spriteIds[iconSlot] != MAX_SPRITES)
-    {
-        FreeSpriteTilesByTag(TAG_GIFT_MON_PIC_TILES + iconSlot);
-        FreeSpritePaletteByTag(TAG_GIFT_MON_PIC_PALETTE + iconSlot);
-        DestroySprite(&gSprites[sGiftMonMenuData.spriteIds[iconSlot]]);
-        sGiftMonMenuData.spriteIds[iconSlot] = MAX_SPRITES;
-    }
-}
-
-static void MultichoiceDynamic_MoveCursor(s32 itemIndex, bool8 onInit, struct ListMenu *list)
-{
-    u8 taskId;
-    if (!onInit)
-        PlaySE(SE_SELECT);
-    taskId = FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput);
-    if (taskId != TASK_NONE)
-    {
-        ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, NULL);
-        if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged && !onInit)
-        {
-            struct DynamicListMenuEventArgs eventArgs = {.selectedItem = itemIndex, .windowId = list->template.windowId, .list = &list->template};
-            sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged(&eventArgs);
-        }
-    }
-
-    if (sIsGiftMonMenu)
-    {
-        u16 species = itemIndex;
-
-        // Don't show a picture for the "Finished" option.
-        if (species == 999)
-            species = SPECIES_NONE;
-
-        GiftMonMenu_ShowPokemonPic(species, sGiftMonMenuData.iconSlot);
-        GiftMonMenu_RemovePokemonPic(sGiftMonMenuData.iconSlot ^ 1);
-        sGiftMonMenuData.iconSlot ^= 1;
-    }
 }
 
 static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y)
@@ -323,22 +275,42 @@ static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y)
     // Find the item in the list to get its name
     for (i = 0; i < count; i++)
     {
-        if (items[i].id == speciesId)
+        if ((u16)items[i].id == speciesId)
         {
             name = items[i].name;
             break;
         }
     }
 
-    if (name == NULL)
-        return;
+    if (sGiftMonIsTaken[speciesId])
+        colors = sGiftMenuTextColors[1];
+    else
+        colors = sGiftMenuTextColors[0];
+    AddTextPrinterParameterized3(windowId, FONT_NORMAL, 8, y, colors, TEXT_SKIP_DRAW, name);
 
-        if (sGiftMonIsTaken[speciesId])
-            colors = sGiftMenuTextColors[1];
-        else
-            colors = sGiftMenuTextColors[0];
+}
 
-        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 8, y, colors, TEXT_SKIP_DRAW, name);
+void MultichoiceDynamic_MoveCursor(s32 itemIndex, bool8 onInit, struct ListMenu *list)
+{
+    u8 taskId;
+    if (!onInit && !sIsGiftMonMenu) // In gift menu, scrolling sound is handled elsewhere
+        PlaySE(SE_SELECT);
+
+    taskId = FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput);
+    if (taskId != TASK_NONE)
+    {
+        ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, (u16 *)&itemIndex);
+        if (sIsGiftMonMenu) // This is a custom callback for the gift mon menu
+        {
+            if (onInit || gScrollableMultichoice_ScrollOffset + itemIndex != sGiftMonMenuData.selectedMonSpriteId)
+                CreateGiftMonSpritesAtPos(onInit ? itemIndex : gScrollableMultichoice_ScrollOffset + itemIndex);
+        }
+        else if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged && !onInit) // Otherwise, use the generic dynamic list menu callbacks
+        {
+            struct DynamicListMenuEventArgs eventArgs = {.selectedItem = itemIndex, .windowId = list->template.windowId, .list = &list->template};
+            sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged(&eventArgs);
+        }
+    }
 }
 
 static const struct ListMenuTemplate sScriptableListMenuTemplate =
@@ -355,7 +327,7 @@ static const struct ListMenuTemplate sScriptableListMenuTemplate =
     .fontId = FONT_NORMAL,
 };
 
-static void Task_ExitGiftMenu(u8 taskId)
+void Task_ExitGiftMenu(u8 taskId)
 {
     if (!gPaletteFade.active)
     {
@@ -363,8 +335,13 @@ static void Task_ExitGiftMenu(u8 taskId)
         s16 *taskData = gTasks[taskId].data;
 
         // Cleanup logic
-        GiftMonMenu_RemovePokemonPic(0);
-        GiftMonMenu_RemovePokemonPic(1);
+        u32 i;
+        for (i = 0; i < ARRAY_COUNT(sGiftMonMenuData.monSpriteIds); i++)
+        {
+            if (sGiftMonMenuData.monSpriteIds[i] != 0xFFFF)
+                FreeAndDestroyMonPicSprite(sGiftMonMenuData.monSpriteIds[i]);
+        }
+
         GiftMonMenu_DestroyMonIcons();
         ClearStdWindowAndFrameToTransparent(sGiftMonMenuData.windowId, TRUE);
         RemoveWindow(sGiftMonMenuData.windowId);
@@ -467,7 +444,7 @@ static void MultichoiceDynamicEventShowItem_OnSelectionChanged(struct DynamicLis
 
     if (sItemSpriteId != MAX_SPRITES)
     {
-        FreeSpriteTilesByTag(TAG_CB_ITEM_ICON);
+        FreeSpriteTilesByTag(TAG_CB_ITEM_ICON); // This seems to be unused in your provided code, but I'll leave it.
         FreeSpritePaletteByTag(TAG_CB_ITEM_ICON);
         DestroySprite(&gSprites[sItemSpriteId]);
     }
@@ -586,12 +563,11 @@ struct ListMenuItem *MultichoiceDynamic_PeekElementAt(u32 index)
 static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenuItem *items, bool8 ignoreBPress, u32 initialRow, u8 maxBeforeScroll, u32 callbackSet)
 {
     u32 i;
-    u8 windowId;
     s32 width = 0;
     u8 newWidth;
     u8 taskId;
     u32 windowHeight;
-    struct ListMenu *list;
+    u8 windowId;
 
 for (i = 0; i < argc; ++i)
     {
@@ -600,13 +576,17 @@ for (i = 0; i < argc; ++i)
 
     if (sIsGiftMonMenu)
     {
-        sGiftMonMenuData.iconSlot = 0;
-        sGiftMonMenuData.spriteIds[0] = MAX_SPRITES;
-        sGiftMonMenuData.spriteIds[1] = MAX_SPRITES;
+        sGiftMonMenuData.monSpriteId = MAX_SPRITES;
         sGiftMonMenuData.bottomWindowId = WINDOW_NONE;
         memset(sGiftMonIsTaken, 0, sizeof(sGiftMonIsTaken));
+        sGiftMonMenuData.selectedMonSpriteId = 0xFFFF;
         LoadMonIconPalettes();
         memset(sGiftSpriteIds, 0xFF, sizeof(sGiftSpriteIds));
+        sGiftMonMenuData.monSpriteId = MAX_SPRITES;
+        
+        u32 j;
+        for (j = 0; j < ARRAY_COUNT(sGiftMonMenuData.monSpriteIds); j++)
+            sGiftMonMenuData.monSpriteIds[j] = 0xFFFF;
 
         struct WindowTemplate template;
         template.bg = 0;
@@ -630,7 +610,7 @@ for (i = 0; i < argc; ++i)
         template.baseBlock = 0x250;
         sGiftMonMenuData.bottomWindowId = AddWindow(&template);
         FillWindowPixelBuffer(sGiftMonMenuData.bottomWindowId, PIXEL_FILL(1));
-        LoadUserWindowBorderGfx(sGiftMonMenuData.bottomWindowId, 0x214, BG_PLTT_ID(14));
+        // Create the single Pokémon sprite. It will be invisible until the first scroll.
         DrawStdFrameWithCustomTileAndPalette(sGiftMonMenuData.bottomWindowId, TRUE, 0x214, 14);
     }
 
@@ -645,7 +625,7 @@ for (i = 0; i < argc; ++i)
     sDynamicMenuEventId = callbackSet;
     sDynamicMenuEventScratchPad = AllocZeroed(100 * sizeof(u16));
     if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnInit)
-    {
+    { // This is never used in the provided code, but it's good practice to keep it safe.
         struct DynamicListMenuEventArgs eventArgs = {.selectedItem = initialRow, .windowId = windowId, .list = NULL};
         sDynamicListMenuEventCollections[sDynamicMenuEventId].OnInit(&eventArgs);
     }
@@ -672,11 +652,10 @@ for (i = 0; i < argc; ++i)
     gTasks[taskId].data[5] = argc;
     gTasks[taskId].data[7] = maxBeforeScroll;
     StoreWordInTwoHalfwords((u16*) &gTasks[taskId].data[3], (u32) items);
-    gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
-    ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, NULL);
+    gTasks[taskId].data[0] = ListMenuInit(&gMultiuseListMenuTemplate, 0, initialRow);
     if (argc > maxBeforeScroll)
     {
-   // Create Scrolling Arrows
+    // Create Scrolling Arrows
         struct ScrollArrowsTemplate template;
         template.firstX = (newWidth / 2) * 8 + 12 + (left) * 8;
         template.firstY = top * 8 + 5;
@@ -686,19 +665,22 @@ for (i = 0; i < argc; ++i)
         template.fullyDownThreshold = argc - maxBeforeScroll;
         template.firstArrowType = SCROLL_ARROW_UP;
         template.secondArrowType = SCROLL_ARROW_DOWN;
-        template.tileTag = 2000;
-        template.palTag = 100,
+        template.tileTag = 2000,
+        template.palTag = 1,
         template.palNum = 0;
 
         gTasks[taskId].data[6] = AddScrollIndicatorArrowPair(&template, &gScrollableMultichoice_ScrollOffset);
     }
-    list = (void *) gTasks[gTasks[taskId].data[0]].data;
-    ListMenuChangeSelection(list, TRUE, initialRow, TRUE);
+    ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, NULL);
 
     if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged)
     {
-        struct DynamicListMenuEventArgs eventArgs = {.selectedItem = items[initialRow].id, .windowId = windowId, .list = &gMultiuseListMenuTemplate};
-        sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged(&eventArgs);
+        CreateGiftMonSpritesAtPos(initialRow);
+    }
+
+    if (sIsGiftMonMenu)
+    {
+        ListMenuSetLRBtnWrap(gTasks[taskId].data[0], TRUE); // Enables page up/down with L/R
     }
 }
 
@@ -724,7 +706,7 @@ void DrawMultichoiceMenuInternal(u8 left, u8 top, u8 multichoiceId, bool8 ignore
     InitMultichoiceCheckWrap(ignoreBPress, count, windowId, multichoiceId);
 }
 
-static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos)
+void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreBPress, u8 cursorPos)
 {
     DrawMultichoiceMenuInternal(left, top, multichoiceId, ignoreBPress, cursorPos, sMultichoiceLists[multichoiceId].list, sMultichoiceLists[multichoiceId].count);
 }
@@ -738,7 +720,7 @@ static void DrawMultichoiceMenu(u8 left, u8 top, u8 multichoiceId, bool8 ignoreB
 #define tWindowId       data[6]
 #define tMultichoiceId  data[7]
 
-static void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId)
+void InitMultichoiceCheckWrap(bool8 ignoreBPress, u8 count, u8 windowId, u8 multichoiceId)
 {
     u8 i;
     u8 taskId;
@@ -777,7 +759,7 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
     case LIST_NOTHING_CHOSEN:
         break;
     case LIST_CANCEL:
-        if (!gTasks[taskId].data[1])
+        if (gTasks[taskId].data[1] == 0)
         {
             gSpecialVar_Result = MULTI_B_PRESSED;
             done = TRUE;
@@ -787,18 +769,26 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
 
     case LIST_PAGE_UP:
         ListMenuChangeSelection((struct ListMenu *)gTasks[gTasks[taskId].data[0]].data, TRUE, 8, FALSE);
+        if (sIsGiftMonMenu)
+        {
+            PlaySE(SE_DEX_PAGE);
+        }
         break;
     case LIST_PAGE_DOWN:
         ListMenuChangeSelection((struct ListMenu *)gTasks[gTasks[taskId].data[0]].data, TRUE, 8, TRUE);
+        if (sIsGiftMonMenu)
+        {
+            PlaySE(SE_DEX_PAGE);
+        }
         break;
 
         break;
     default:
         if (sIsGiftMonMenu && input != 999) // 999 is the "Finished" option
         {
-            if (input == SPECIES_EGG)
+            if ((u16)input == SPECIES_EGG)
             {
-                if (CountTakenGiftMons() >= MAX_GIFT_MON)
+                if (CountTakenGiftMons() >= GIFT_POKEMON_COUNT)
                 {
                     PlaySE(SE_FAILURE);
                 }
@@ -811,12 +801,12 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
                     {
                         PlaySE(SE_SUCCESS);
                         sGiftMonIsTaken[SPECIES_EGG] = TRUE;
-                        GiftMonMenu_CreateMonIcon(SPECIES_EGG);
+                GiftMonMenu_CreateChosenMonIcon(SPECIES_EGG);
                         RedrawListMenu(gTasks[taskId].data[0]);
                     }
                 }
             }
-            else if (sGiftMonIsTaken[input] || CountTakenGiftMons() >= MAX_GIFT_MON)
+            else if (sGiftMonIsTaken[(u16)input] || CountTakenGiftMons() >= GIFT_POKEMON_COUNT)
             {
                 PlaySE(SE_FAILURE);
             }
@@ -826,8 +816,8 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
                 if (result != MON_CANT_GIVE)
                 {
                     PlaySE(SE_SUCCESS);
-                    sGiftMonIsTaken[input] = TRUE;
-                    GiftMonMenu_CreateMonIcon(input);
+                    sGiftMonIsTaken[(u16)input] = TRUE;
+                GiftMonMenu_CreateChosenMonIcon(input);
                     RedrawListMenu(gTasks[taskId].data[0]);
                 }
             }
@@ -1516,4 +1506,19 @@ int ScriptMenu_AdjustLeftCoordFromWidth(int left, int width)
 void SetIsGiftPokemonMenu(void)
 {
     sIsGiftMonMenu = TRUE;
+}
+
+static void CreateGiftMonSpritesAtPos(u16 selectedMon)
+{
+    u16 species;
+    struct ListMenuItem *items;
+    u8 taskId = FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput);
+    
+    if (taskId == TASK_NONE)
+        return;
+
+    LoadWordFromTwoHalfwords((u16 *)&gTasks[taskId].data[3], (u32 *)&items);
+
+    species = items[selectedMon].id;
+    GiftMonMenu_CreateFrontSprite(species);
 }
