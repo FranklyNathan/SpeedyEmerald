@@ -43,7 +43,7 @@
 #define TAG_GIFT_MON_PIC_PALETTE 5511
 
 #define MAX_GIFT_MON 10
-#define GIFT_POKEMON_COUNT 100
+#define GIFT_POKEMON_COUNT 10
 
 #include "data/script_menu.h"
 
@@ -68,7 +68,7 @@ struct GiftMonMenu
     u8 monSpriteId;
     u8 windowId;
     u8 bottomWindowId;
-    u16 monSpriteIds[4];
+    u16 monSpriteIds[MAX_GIFT_MON];
     u16 selectedMonSpriteId;
 };
 
@@ -184,7 +184,7 @@ static void GiftMonMenu_CreateFrontSprite(u16 species)
         sGiftMonMenuData.selectedMonSpriteId = 0xFFFF;
     }
 
-    if (species != SPECIES_EGG && species != 999)
+    if (species != 999)
     {
         // Use the species ID as the palette tag to ensure each Pokémon gets its own unique palette.
         spriteId = CreateMonPicSprite(species, FALSE, 0, TRUE, 176, 50, 15, species);
@@ -788,7 +788,7 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
         {
             if ((u16)input == SPECIES_EGG)
             {
-                if (CountTakenGiftMons() >= GIFT_POKEMON_COUNT)
+                if (CountTakenGiftMons() >= MAX_GIFT_MON)
                 {
                     PlaySE(SE_FAILURE);
                 }
@@ -806,7 +806,7 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
                     }
                 }
             }
-            else if (sGiftMonIsTaken[(u16)input] || CountTakenGiftMons() >= GIFT_POKEMON_COUNT)
+            else if (sGiftMonIsTaken[(u16)input] || CountTakenGiftMons() >= MAX_GIFT_MON)
             {
                 PlaySE(SE_FAILURE);
             }
