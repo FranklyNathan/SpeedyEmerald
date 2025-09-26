@@ -2110,11 +2110,8 @@ static void PrintItemCantBeHeld(u8 taskId)
 
 static void HandleErrorMessage(u8 taskId)
 {
-    if (JOY_NEW(A_BUTTON))
-    {
-        PlaySE(SE_SELECT);
-        CloseItemMessage(taskId);
-    }
+    PlaySE(SE_SELECT);
+    CloseItemMessage(taskId);
 }
 
 static void ItemMenu_CheckTag(u8 taskId)
@@ -2347,12 +2344,9 @@ static void SellItem(u8 taskId)
 
 static void WaitAfterItemSell(u8 taskId)
 {
-    if (JOY_NEW(A_BUTTON | B_BUTTON))
-    {
-        PlaySE(SE_SELECT);
-        RemoveMoneyWindow();
-        CloseItemMessage(taskId);
-    }
+    PlaySE(SE_SELECT);
+    RemoveMoneyWindow();
+    CloseItemMessage(taskId);
 }
 
 static void Task_ItemContext_Deposit(u8 taskId)
@@ -2907,11 +2901,8 @@ static void SortBagItems(u8 taskId)
 
 static void Task_SortFinish(u8 taskId)
 {
-    if (gMain.newKeys & (A_BUTTON | B_BUTTON))
-    {
-        RemoveItemMessageWindow(4);
-        ReturnToItemList(taskId);
-    }
+    RemoveItemMessageWindow(4);
+    ReturnToItemList(taskId);
 }
 
 void SortItemsInBag(struct BagPocket *pocket, enum BagSortOptions type)

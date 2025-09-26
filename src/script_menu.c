@@ -43,7 +43,6 @@
 #define TAG_GIFT_MON_PIC_PALETTE 5511
 
 #define MAX_GIFT_MON 10
-#define GIFT_POKEMON_COUNT 10
 
 #include "data/script_menu.h"
 
@@ -75,7 +74,7 @@ struct GiftMonMenu
 static EWRAM_DATA struct GiftMonMenu sGiftMonMenuData = {0};
 
 static EWRAM_DATA u8 sProcessInputDelay = 0;
-static EWRAM_DATA u8 sGiftSpriteIds[GIFT_POKEMON_COUNT];
+static EWRAM_DATA u8 sGiftSpriteIds[MAX_GIFT_MON];
 static EWRAM_DATA u8 sDynamicMenuEventId = 0;
 static EWRAM_DATA struct DynamicMultichoiceStack *sDynamicMultiChoiceStack = NULL;
 static EWRAM_DATA u16 *sDynamicMenuEventScratchPad = NULL;
@@ -201,7 +200,7 @@ static void GiftMonMenu_CreateChosenMonIcon(u16 species)
     u16 x, y;
 
     // Display up to 10 Pokémon icons in a 2x5 grid in the bottom right window.
-    for (i = 0; i < GIFT_POKEMON_COUNT; i++)
+    for (i = 0; i < MAX_GIFT_MON; i++)
     {
         if (sGiftSpriteIds[i] == 0xFF)
         {
@@ -211,7 +210,7 @@ static void GiftMonMenu_CreateChosenMonIcon(u16 species)
 
             // Position the 2x5 grid on the center-right of the screen.
             x = 120 + col * 24;
-            y = 112 + row *24;
+            y = 112 + row * 24;
 
             spriteId = CreateMonIcon(species, SpriteCallbackDummy, x, y, 4, 0);
             if (spriteId != MAX_SPRITES)
@@ -230,7 +229,7 @@ static void GiftMonMenu_DestroyMonIcons(void)
 {
     u8 i;
 
-    for (i = 0; i < GIFT_POKEMON_COUNT; i++)
+    for (i = 0; i < MAX_GIFT_MON; i++)
     {
         if (sGiftSpriteIds[i] != 0xFF)
             FreeAndDestroyMonIconSprite(&gSprites[sGiftSpriteIds[i]]);
@@ -246,6 +245,10 @@ static void GiftMonMenu_DestroyMonIcons(void)
 void ListMenuSetLRBtnWrap(u8 listTaskId, bool8 lrWrap)
 {
     struct ListMenu *list = (void *)gTasks[listTaskId].data;
+    if (lrWrap)
+        list->template.scrollMultiple = LIST_MULTIPLE_SCROLL_DPAD;
+    else
+        list->template.scrollMultiple = LIST_NO_MULTIPLE_SCROLL;
 }
 
 static u8 CountTakenGiftMons(void)
@@ -253,7 +256,7 @@ static u8 CountTakenGiftMons(void)
     u8 i;
     u8 count = 0;
 
-    for (i = 0; i < GIFT_POKEMON_COUNT; i++)
+    for (i = 0; i < MAX_GIFT_MON; i++)
     {
         if (sGiftSpriteIds[i] != 0xFF)
             count++;
@@ -282,7 +285,7 @@ static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y)
         }
     }
 
-    if (sGiftMonIsTaken[speciesId])
+    if (sGiftMonIsTaken[i])
         colors = sGiftMenuTextColors[1];
     else
         colors = sGiftMenuTextColors[0];
@@ -299,11 +302,10 @@ void MultichoiceDynamic_MoveCursor(s32 itemIndex, bool8 onInit, struct ListMenu 
     taskId = FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput);
     if (taskId != TASK_NONE)
     {
-        ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, (u16 *)&itemIndex);
+        ListMenuGetScrollAndRow(gTasks[taskId].data[0], &gScrollableMultichoice_ScrollOffset, (u16 *)&itemIndex); // This is the selected row index on screen
         if (sIsGiftMonMenu) // This is a custom callback for the gift mon menu
         {
-            if (onInit || gScrollableMultichoice_ScrollOffset + itemIndex != sGiftMonMenuData.selectedMonSpriteId)
-                CreateGiftMonSpritesAtPos(onInit ? itemIndex : gScrollableMultichoice_ScrollOffset + itemIndex);
+            CreateGiftMonSpritesAtPos(gScrollableMultichoice_ScrollOffset + itemIndex);
         }
         else if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged && !onInit) // Otherwise, use the generic dynamic list menu callbacks
         {
@@ -801,7 +803,7 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
                     {
                         PlaySE(SE_SUCCESS);
                         sGiftMonIsTaken[SPECIES_EGG] = TRUE;
-                GiftMonMenu_CreateChosenMonIcon(SPECIES_EGG);
+                        GiftMonMenu_CreateChosenMonIcon(SPECIES_EGG);
                         RedrawListMenu(gTasks[taskId].data[0]);
                     }
                 }
@@ -817,7 +819,7 @@ static void Task_HandleScrollingMultichoiceInput(u8 taskId)
                 {
                     PlaySE(SE_SUCCESS);
                     sGiftMonIsTaken[(u16)input] = TRUE;
-                GiftMonMenu_CreateChosenMonIcon(input);
+                    GiftMonMenu_CreateChosenMonIcon(input);
                     RedrawListMenu(gTasks[taskId].data[0]);
                 }
             }
