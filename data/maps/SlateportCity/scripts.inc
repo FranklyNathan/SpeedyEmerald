@@ -671,6 +671,7 @@ SlateportCity_PokemartDecor:
 
 SlateportCity_EventScript_PowerTMClerk::
 	lock
+	setvar VAR_POWER_TM_CLERK, 1
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
@@ -681,6 +682,7 @@ SlateportCity_EventScript_PowerTMClerk::
 	@ goto_if_eq VAR_BADGE_COUNT, 6, SlateportCity_Pokemart_PowerTMs_Badge6TMs
 	@ goto_if_ge VAR_BADGE_COUNT, 7, SlateportCity_Pokemart_PowerTMs_Badge7TMs
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMsItems
+	setvar VAR_POWER_TM_CLERK, 0
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release
 	end
@@ -688,6 +690,7 @@ SlateportCity_EventScript_PowerTMClerk::
 SlateportCity_Pokemart_PowerTMs_Badge2TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge2TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setvar VAR_POWER_TM_CLERK, 0
 	release
 	end
 
@@ -701,6 +704,7 @@ SlateportCity_Pokemart_PowerTMs_Badge2TMsItems:
 SlateportCity_Pokemart_PowerTMs_Badge3TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge3TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setvar VAR_POWER_TM_CLERK, 0
 	release
 	end
 
@@ -714,6 +718,7 @@ SlateportCity_Pokemart_PowerTMs_Badge3TMsItems:
 SlateportCity_Pokemart_PowerTMs_Badge4TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge4TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setvar VAR_POWER_TM_CLERK, 0
 	release
 	end
 
@@ -728,6 +733,7 @@ SlateportCity_Pokemart_PowerTMs_Badge4TMsItems:
 SlateportCity_Pokemart_PowerTMs_Badge5TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setvar VAR_POWER_TM_CLERK, 0
 	release
 	end
 
@@ -754,6 +760,7 @@ SlateportCity_Pokemart_PowerTMs_Badge5TMsItems:
 SlateportCity_Pokemart_PowerTMs_Badge6TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge6TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setvar VAR_POWER_TM_CLERK, 0
 	release
 	end
 
@@ -792,6 +799,7 @@ SlateportCity_Pokemart_PowerTMs_Badge6TMsItems:
 SlateportCity_Pokemart_PowerTMs_Badge7TMs::
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge7TMsItems
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	setvar VAR_POWER_TM_CLERK, 0
 	release
 	end
 

@@ -4,6 +4,7 @@
 #include "decompress.h"
 #include "decoration.h"
 #include "decoration_inventory.h"
+#include "event_data.h"
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
 #include "field_screen_effect.h"
@@ -16,6 +17,7 @@
 #include "item_icon.h"
 #include "item_menu.h"
 #include "list_menu.h"
+#include "pokemon.h"
 #include "main.h"
 #include "malloc.h"
 #include "menu.h"
@@ -25,6 +27,7 @@
 #include "overworld.h"
 #include "palette.h"
 #include "party_menu.h"
+#include "pokemon_icon.h"
 #include "scanline_effect.h"
 #include "script.h"
 #include "shop.h"
@@ -105,6 +108,7 @@ struct ShopData
     u8 scrollIndicatorsTaskId;
     u8 iconSlot;
     u8 itemSpriteIds[2];
+    u8 pokemonIconSpriteIds[PARTY_SIZE];
     s16 viewportObjects[OBJECT_EVENTS_COUNT][5];
 };
 
@@ -135,6 +139,7 @@ static void BuyMenuRemoveItemIcon(u16, u8);
 static void BuyMenuPrint(u8 windowId, const u8 *text, u8 x, u8 y, s8 speed, u8 colorSet);
 static void BuyMenuDrawMapGraphics(void);
 static void BuyMenuCopyMenuBgToBg1TilemapBuffer(void);
+static void CreateShopPokemonIconSprites(u16 itemId);
 static void BuyMenuCollectObjectEventData(void);
 static void BuyMenuDrawObjectEvents(void);
 static void BuyMenuDrawMapBg(void);
@@ -522,6 +527,7 @@ static void CB2_InitBuyMenu(void)
         sShopData->scrollIndicatorsTaskId = TASK_NONE;
         sShopData->itemSpriteIds[0] = SPRITE_NONE;
         sShopData->itemSpriteIds[1] = SPRITE_NONE;
+    memset(sShopData->pokemonIconSpriteIds, SPRITE_NONE, sizeof(sShopData->pokemonIconSpriteIds));
         BuyMenuBuildListMenuTemplate();
         BuyMenuInitBgs();
         FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 0x20, 0x20);
@@ -553,6 +559,7 @@ static void BuyMenuFreeMemory(void)
 {
     Free(sShopData);
     Free(sListMenuItems);
+    memset(sShopData->pokemonIconSpriteIds, SPRITE_NONE, sizeof(sShopData->pokemonIconSpriteIds));
     Free(sItemNames);
     FreeAllWindowBuffers();
 }
@@ -615,10 +622,22 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
     else
     {
         description = gText_QuitShopping;
+        if (VarGet(VAR_POWER_TM_CLERK) == 1)
+        {
+            u8 i;
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                if (sShopData->pokemonIconSpriteIds[i] != SPRITE_NONE)
+                    FreeAndDestroyMonIconSprite(&gSprites[sShopData->pokemonIconSpriteIds[i]]);
+            }
+        }
     }
 
     FillWindowPixelBuffer(WIN_ITEM_DESCRIPTION, PIXEL_FILL(0));
-    BuyMenuPrint(WIN_ITEM_DESCRIPTION, description, 3, 1, 0, COLORID_NORMAL);
+    if (VarGet(VAR_POWER_TM_CLERK) == 1 && item != LIST_CANCEL)
+        CreateShopPokemonIconSprites(item);
+    else
+        BuyMenuPrint(WIN_ITEM_DESCRIPTION, description, 3, 1, 0, COLORID_NORMAL);
 }
 
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
@@ -650,6 +669,37 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
             StringExpandPlaceholders(gStringVar4, gText_PokedollarVar1);
         x = GetStringRightAlignXOffset(FONT_NARROW, gStringVar4, 120);
         AddTextPrinterParameterized4(windowId, FONT_NARROW, x, y, 0, 0, sShopBuyMenuTextColors[COLORID_ITEM_LIST], TEXT_SKIP_DRAW, gStringVar4);
+    }
+}
+
+static void CreateShopPokemonIconSprites(u16 itemId)
+{
+    LoadMonIconPalettes();
+
+    u32 i;
+    u8 spriteId;
+    u8 count = 0;
+    u16 move = ItemIdToBattleMoveId(itemId); // This is correct
+
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (sShopData->pokemonIconSpriteIds[i] != SPRITE_NONE)
+            FreeAndDestroyMonIconSprite(&gSprites[sShopData->pokemonIconSpriteIds[i]]);
+        sShopData->pokemonIconSpriteIds[i] = SPRITE_NONE;
+    }
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES);
+        if (species != SPECIES_NONE && CanLearnTeachableMove(species, move))
+        {
+            u16 x = 16 + (count % 4) * 24;
+            u16 y = 112 + (count / 4) * 24;
+            u32 personality = GetMonData(&gPlayerParty[i], MON_DATA_PERSONALITY);
+            spriteId = CreateMonIcon(species, SpriteCallbackDummy, x, y, 4, personality);
+            sShopData->pokemonIconSpriteIds[i] = spriteId;
+            count++;
+        }
     }
 }
 
@@ -1259,6 +1309,13 @@ static void Task_ExitBuyMenu(u8 taskId)
     if (!gPaletteFade.active)
     {
         RemoveMoneyLabelObject();
+        if (VarGet(VAR_POWER_TM_CLERK) == 1)
+        {
+            u8 i;
+            for (i = 0; i < PARTY_SIZE; i++)
+                if (sShopData->pokemonIconSpriteIds[i] != SPRITE_NONE)
+                    DestroySprite(&gSprites[sShopData->pokemonIconSpriteIds[i]]);
+        }
         BuyMenuFreeMemory();
         SetMainCallback2(CB2_ReturnToField);
         DestroyTask(taskId);
