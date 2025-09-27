@@ -39,6 +39,16 @@ static const struct MenuAction MultichoiceList_BasePCWithRegistry[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_StatusEffects[] =
+{
+    {COMPOUND_STRING("POISON")},
+    {COMPOUND_STRING("BURN")},
+    {COMPOUND_STRING("PARALYZE")},
+    {COMPOUND_STRING("FREEZE")},
+    {COMPOUND_STRING("SLEEP")},
+    {gText_Cancel2},
+};
+
 static const struct MenuAction MultichoiceList_BasePCNoRegistry[] =
 {
     {gText_Decoration2},
@@ -906,6 +916,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_STATUS_EFFECTS]             = MULTICHOICE(MultichoiceList_StatusEffects),
 };
 
 const u8 *const gStdStrings[] =

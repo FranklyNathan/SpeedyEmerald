@@ -161,11 +161,62 @@ SlateportCity_EventScript_MonHasEffortRibbon::
 	release
 	end
 
-SlateportCity_EventScript_Cook::
+SlateportCity_EventScript_Cook:: @ The new Status Chef
 	lock
 	faceplayer
-	call_if_eq VAR_SLATEPORT_CITY_STATE, 1, SlateportCity_EventScript_CookSternInterview
-	msgbox SlateportCity_Text_SeaweedFullOfLife, MSGBOX_DEFAULT
+	msgbox SlateportCity_Text_CookIntro, MSGBOX_DEFAULT
+	goto SlateportCity_EventScript_CookChooseStatus
+	end
+
+SlateportCity_EventScript_CookChooseStatus::
+	message SlateportCity_Text_CookWhichStatus
+	waitmessage
+	multichoice 20, 0, MULTI_STATUS_EFFECTS, FALSE
+	switch VAR_RESULT
+	case 0, SlateportCity_EventScript_CookSetStatusPoison
+	case 1, SlateportCity_EventScript_CookSetStatusBurn
+	case 2, SlateportCity_EventScript_CookSetStatusParalyze
+	case 3, SlateportCity_EventScript_CookSetStatusFreeze
+	case 4, SlateportCity_EventScript_CookSetStatusSleep
+	case 5, SlateportCity_EventScript_CookCancel
+	case MULTI_B_PRESSED, SlateportCity_EventScript_CookCancel
+	end
+
+SlateportCity_EventScript_CookSetStatusPoison::
+	setvar VAR_0x8005, STATUS1_POISON
+	goto SlateportCity_EventScript_CookChoosePokemon
+
+SlateportCity_EventScript_CookSetStatusBurn::
+	setvar VAR_0x8005, STATUS1_BURN
+	goto SlateportCity_EventScript_CookChoosePokemon
+
+SlateportCity_EventScript_CookSetStatusParalyze::
+	setvar VAR_0x8005, STATUS1_PARALYSIS
+	goto SlateportCity_EventScript_CookChoosePokemon
+
+SlateportCity_EventScript_CookSetStatusFreeze::
+	setvar VAR_0x8005, STATUS1_FREEZE
+	goto SlateportCity_EventScript_CookChoosePokemon
+
+SlateportCity_EventScript_CookSetStatusSleep::
+	setvar VAR_0x8005, STATUS1_SLEEP
+	goto SlateportCity_EventScript_CookChoosePokemon
+
+SlateportCity_EventScript_CookChoosePokemon::
+	msgbox SlateportCity_Text_CookWhichPokemon, MSGBOX_DEFAULT
+	special ChoosePartyMon
+	waitstate
+	// Exit if player cancels party menu
+	compare VAR_0x8004, PARTY_SIZE
+	goto_if_ge SlateportCity_EventScript_CookCancel
+	// Apply the status
+	setstatus1 VAR_0x8005, VAR_0x8004
+	msgbox SlateportCity_Text_CookDone, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_CookCancel::
+	msgbox SlateportCity_Text_CookComeAgain, MSGBOX_DEFAULT
 	release
 	end
 
@@ -173,7 +224,6 @@ SlateportCity_EventScript_CookSternInterview::
 	msgbox SlateportCity_Text_CaptainComeBackWithBigFish, MSGBOX_DEFAULT
 	release
 	end
-
 SlateportCity_EventScript_OldWoman::
 	lock
 	faceplayer
@@ -491,8 +541,8 @@ SlateportCity_EventScript_DollClerk::
 
 	.align 2
 SlateportCity_PokemartDecor_Basic:
-	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_TOXIC_ORB
+	.2byte ITEM_ABILITY_CAPSULE
+	.2byte ITEM_ABILITY_PATCH
 	pokemartlistend
 
 SlateportCity_PokemartDecor_Badge2::
@@ -506,8 +556,6 @@ SlateportCity_Pokemart_Badge2Items:
 	.2byte ITEM_SOOTHE_BELL
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
-	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
 
 SlateportCity_PokemartDecor_Badge3::
@@ -525,8 +573,6 @@ SlateportCity_Pokemart_Badge3Items:
 	.2byte ITEM_SOOTHE_BELL
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
-	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
 
 SlateportCity_PokemartDecor_Badge4::
@@ -554,8 +600,6 @@ SlateportCity_Pokemart_Badge4Items:
 	.2byte ITEM_SOOTHE_BELL
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
-	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
 
 SlateportCity_PokemartDecor_Badge5::
@@ -584,8 +628,6 @@ SlateportCity_Pokemart_Badge5Items:
 	.2byte ITEM_SOOTHE_BELL
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
-	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
 
 SlateportCity_PokemartDecor_Badge6::
@@ -614,8 +656,6 @@ SlateportCity_Pokemart_Badge6Items:
 	.2byte ITEM_SOOTHE_BELL
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
-	.2byte ITEM_FLAME_ORB
-	.2byte ITEM_TOXIC_ORB
 	pokemartlistend
 
 SlateportCity_EventScript_ComeBackWithSecretPower::
@@ -1236,6 +1276,23 @@ SlateportCity_EventScript_BerryCrushRankingsSign::
 	waitstate
 	releaseall
 	end
+
+SlateportCity_Text_CookIntro:
+	.string "My cooking is so potent, it can change\n"
+	.string "a POKéMON's very condition!$"
+
+SlateportCity_Text_CookWhichStatus:
+	.string "What effect would you like?$"
+
+SlateportCity_Text_CookWhichPokemon:
+	.string "And for which POKéMON?$"
+
+SlateportCity_Text_CookDone:
+	.string "There you go! All done!$"
+
+SlateportCity_Text_CookComeAgain:
+	.string "Oh? Changed your mind?\n"
+	.string "Come again!$"
 
 SlateportCity_Text_EnergyGuruSellWhatYouNeed:
 	.string "I'm the ENERGY GURU! I'll go for it and\n"
