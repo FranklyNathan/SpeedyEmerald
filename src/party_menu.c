@@ -5708,6 +5708,15 @@ static void UNUSED DisplayExpPoints(u8 taskId, TaskFunc task, u8 holdEffectParam
     gTasks[taskId].func = task;
 }
 
+static void Task_WaitForAButtonPressAfterMessage(u8 taskId)
+{
+        if (JOY_NEW(A_BUTTON | B_BUTTON))
+        {
+            PlaySE(SE_SELECT); // Optional: play a sound
+            gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+        }
+}
+
 void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
 {
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
@@ -5757,9 +5766,11 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         if (cannotUseEffect)
         {
             gPartyMenuUseExitCallback = FALSE;
-            DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+            GetMonNickname(mon, gStringVar1);
+            StringExpandPlaceholders(gStringVar4, gText_LevelCapReached);
+            DisplayPartyMenuMessage(gStringVar4, TRUE);
             ScheduleBgCopyTilemapToVram(2);
-            gTasks[taskId].func = task;
+            gTasks[taskId].func = Task_WaitForAButtonPressAfterMessage;
         }
         else
         {
@@ -5777,7 +5788,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
             }
             else
             {
-                gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+                gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
             }
         }
     }
@@ -5863,7 +5874,7 @@ static void PartyMenuTryEvolution(u8 taskId)
     }
     else
     {
-        gTasks[taskId].func = Task_ClosePartyMenuAfterText;
+        gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
     }
 }
 static void DisplayMonNeedsToReplaceMove(u8 taskId)

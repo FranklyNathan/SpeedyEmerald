@@ -523,8 +523,6 @@ SlateportCity_Pokemart_Badge3Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
-	.2byte ITEM_MAWILITE
-	.2byte ITEM_SABLENITE
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	.2byte ITEM_FLAME_ORB
@@ -554,8 +552,6 @@ SlateportCity_Pokemart_Badge4Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
-	.2byte ITEM_MAWILITE
-	.2byte ITEM_SABLENITE
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	.2byte ITEM_FLAME_ORB
@@ -586,8 +582,6 @@ SlateportCity_Pokemart_Badge5Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
-	.2byte ITEM_MAWILITE
-	.2byte ITEM_SABLENITE
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	.2byte ITEM_FLAME_ORB
@@ -602,15 +596,6 @@ SlateportCity_PokemartDecor_Badge6::
 
 	.align 2
 SlateportCity_Pokemart_Badge6Items:
-	.2byte ITEM_BANETTITE
-	.2byte ITEM_CAMERUPTITE
-	.2byte ITEM_GLALITITE
-	.2byte ITEM_HOUNDOOMINITE
-	.2byte ITEM_LOPUNNITE
-	.2byte ITEM_LUCARIONITE
-	.2byte ITEM_MANECTITE
-	.2byte ITEM_SCIZORITE
-	.2byte ITEM_SHARPEDONITE
 	.2byte ITEM_LINKING_CORD
 	.2byte ITEM_FIRE_STONE
 	.2byte ITEM_WATER_STONE
@@ -627,8 +612,6 @@ SlateportCity_Pokemart_Badge6Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
-	.2byte ITEM_MAWILITE
-	.2byte ITEM_SABLENITE
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	.2byte ITEM_FLAME_ORB
@@ -675,12 +658,9 @@ SlateportCity_EventScript_PowerTMClerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	goto_if_le VAR_BADGE_COUNT, 8, SlateportCity_Pokemart_PowerTMs_Badge7TMs
-	@ goto_if_eq VAR_BADGE_COUNT, 3, SlateportCity_Pokemart_PowerTMs_Badge3TMs
+	goto_if_ge VAR_BADGE_COUNT, 4, SlateportCity_Pokemart_PowerTMs_Badge7TMs
+	goto_if_le VAR_BADGE_COUNT, 3, SlateportCity_Pokemart_PowerTMs_Badge2TMs
 	@ goto_if_eq VAR_BADGE_COUNT, 4, SlateportCity_Pokemart_PowerTMs_Badge4TMs
-	@ goto_if_eq VAR_BADGE_COUNT, 5, SlateportCity_Pokemart_PowerTMs_Badge5TMs
-	@ goto_if_eq VAR_BADGE_COUNT, 6, SlateportCity_Pokemart_PowerTMs_Badge6TMs
-	@ goto_if_ge VAR_BADGE_COUNT, 7, SlateportCity_Pokemart_PowerTMs_Badge7TMs
 	pokemart SlateportCity_Pokemart_PowerTMs_Badge5TMsItems
 	setvar VAR_POWER_TM_CLERK, 0
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
@@ -697,8 +677,14 @@ SlateportCity_Pokemart_PowerTMs_Badge2TMs::
 	.align 2
 SlateportCity_Pokemart_PowerTMs_Badge2TMsItems:
 	.2byte ITEM_TM_BULLET_SEED
-	.2byte ITEM_TM_STEEL_WING
+	.2byte ITEM_TM_DOUBLE_TEAM
+	.2byte ITEM_TM_HAIL
+	.2byte ITEM_TM_SAFEGUARD
+	.2byte ITEM_TM_SANDSTORM
+	.2byte ITEM_TM_SKILL_SWAP
+	.2byte ITEM_TM_SUNNY_DAY
 	.2byte ITEM_TM_THIEF
+	.2byte ITEM_TM_TOXIC
 	pokemartlistend
 
 SlateportCity_Pokemart_PowerTMs_Badge3TMs::
@@ -739,21 +725,6 @@ SlateportCity_Pokemart_PowerTMs_Badge5TMs::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs_Badge5TMsItems:
-	.2byte ITEM_TM_THUNDERBOLT
-	.2byte ITEM_TM_ICE_BEAM
-	.2byte ITEM_TM_FLAMETHROWER
-	.2byte ITEM_TM_GIGA_DRAIN
-	.2byte ITEM_TM_PSYCHIC
-	.2byte ITEM_TM_SLUDGE_BOMB
-	.2byte ITEM_TM_SOLAR_BEAM
-	.2byte ITEM_TM_HONE_CLAWS
-	.2byte ITEM_TM_HAIL
-	.2byte ITEM_TM_RAIN_DANCE
-	.2byte ITEM_TM_SANDSTORM
-	.2byte ITEM_TM_SUNNY_DAY
-	.2byte ITEM_TM_DIG
-	.2byte ITEM_TM_BULLET_SEED
-	.2byte ITEM_TM_STEEL_WING
 	.2byte ITEM_TM_THIEF
 	pokemartlistend
 
@@ -766,33 +737,6 @@ SlateportCity_Pokemart_PowerTMs_Badge6TMs::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs_Badge6TMsItems:
-	.2byte ITEM_TM_SHADOW_BALL
-	.2byte ITEM_TM_DARK_PULSE
-	.2byte ITEM_TM_DAZZLING_GLEAM
-	.2byte ITEM_TM_FIRE_BLAST
-	.2byte ITEM_TM_THUNDER
-	.2byte ITEM_TM_BLIZZARD
-	.2byte ITEM_TM_HYPER_BEAM
-	.2byte ITEM_TM_REST
-	.2byte ITEM_TM_PROTECT
-	.2byte ITEM_TM_SAFEGUARD
-	.2byte ITEM_TM_REFLECT
-	.2byte ITEM_TM_LIGHT_SCREEN
-	.2byte ITEM_TM_THUNDERBOLT
-	.2byte ITEM_TM_ICE_BEAM
-	.2byte ITEM_TM_FLAMETHROWER
-	.2byte ITEM_TM_GIGA_DRAIN
-	.2byte ITEM_TM_PSYCHIC
-	.2byte ITEM_TM_SLUDGE_BOMB
-	.2byte ITEM_TM_SOLAR_BEAM
-	.2byte ITEM_TM_HONE_CLAWS
-	.2byte ITEM_TM_HAIL
-	.2byte ITEM_TM_RAIN_DANCE
-	.2byte ITEM_TM_SANDSTORM
-	.2byte ITEM_TM_SUNNY_DAY
-	.2byte ITEM_TM_DIG
-	.2byte ITEM_TM_BULLET_SEED
-	.2byte ITEM_TM_STEEL_WING
 	.2byte ITEM_TM_THIEF
 	pokemartlistend
 
@@ -805,6 +749,7 @@ SlateportCity_Pokemart_PowerTMs_Badge7TMs::
 
 	.align 2
 SlateportCity_Pokemart_PowerTMs_Badge7TMsItems:
+	.2byte ITEM_TM_BULLET_SEED
 	.2byte ITEM_TM_DOUBLE_TEAM
 	.2byte ITEM_TM_HAIL
 	.2byte ITEM_TM_SAFEGUARD
@@ -841,6 +786,77 @@ SlateportCity_Pokemart_PowerTMs_Badge7TMsItems:
 	.2byte ITEM_TM_EARTHQUAKE
 	.2byte ITEM_TM_HONE_CLAWS
 	.2byte ITEM_TM_RAIN_DANCE
+	pokemartlistend
+
+SlateportCity_EventScript_MegaSalesman::
+	lock
+	faceplayer
+	msgbox SlateportCity_Text_MegaSalesmanIntro, MSGBOX_DEFAULT
+	compare VAR_BADGE_COUNT, 6
+	goto_if_lt SlateportCity_EventScript_SellStageOneStones
+	compare VAR_BADGE_COUNT, 8
+	goto_if_lt SlateportCity_EventScript_SellStageTwoStones
+	pokemart SlateportCity_Pokemart_StageThreeMegas
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_SellStageOneStones::
+	pokemart SlateportCity_Pokemart_StageOneMegas
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+SlateportCity_EventScript_SellStageTwoStones::
+	pokemart SlateportCity_Pokemart_StageTwoMegas
+	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+	release
+	end
+
+	.align 2
+SlateportCity_Pokemart_StageOneMegas:
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	pokemartlistend
+
+	.align 2
+SlateportCity_Pokemart_StageTwoMegas:
+	.2byte ITEM_BANETTITE
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_LOPUNNITE
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_MANECTITE
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_SHARPEDONITE
+	pokemartlistend
+
+	.align 2
+SlateportCity_Pokemart_StageThreeMegas:
+	.2byte ITEM_AGGRONITE
+	.2byte ITEM_ALAKAZITE
+	.2byte ITEM_AMPHAROSITE
+	.2byte ITEM_BANETTITE
+	.2byte ITEM_BLAZIKENITE
+	.2byte ITEM_CAMERUPTITE
+	.2byte ITEM_GALLADITE
+	.2byte ITEM_GARCHOMPITE
+	.2byte ITEM_GARDEVOIRITE
+	.2byte ITEM_GLALITITE
+	.2byte ITEM_HOUNDOOMINITE
+	.2byte ITEM_LOPUNNITE
+	.2byte ITEM_LUCARIONITE
+	.2byte ITEM_MANECTITE
+	.2byte ITEM_MAWILITE
+	.2byte ITEM_SABLENITE
+	.2byte ITEM_SALAMENCITE
+	.2byte ITEM_SCEPTILITE
+	.2byte ITEM_SCIZORITE
+	.2byte ITEM_SHARPEDONITE
+	.2byte ITEM_SWAMPERTITE
 	pokemartlistend
 
 @ Scene with Capt Sterns interview and Team Aqua announcing plans to steal Submarine
@@ -1654,3 +1670,6 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+SlateportCity_Text_MegaSalesmanIntro:
+	.string "Psst... Kid. Looking for a good deal?$"

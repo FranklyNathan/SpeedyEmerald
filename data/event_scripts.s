@@ -719,7 +719,6 @@ Common_ShowEasyChatScreen::
 
 Common_EventScript_ReadyPetalburgGymForBattle::
 	setflag FLAG_HIDE_PETALBURG_BOY //Remove boy blocking Petalburg gym's entrance
-	clearflag FLAG_HIDE_SLATEPORT_CITY_TM_SALESMAN
 	return
 
 Common_EventScript_BufferTrendyPhrase::
