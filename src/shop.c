@@ -635,9 +635,14 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
 
     FillWindowPixelBuffer(WIN_ITEM_DESCRIPTION, PIXEL_FILL(0));
     if (VarGet(VAR_POWER_TM_CLERK) == 1 && item != LIST_CANCEL)
+    {
         CreateShopPokemonIconSprites(item);
+        CopyWindowToVram(WIN_ITEM_DESCRIPTION, COPYWIN_GFX);
+    }
     else
+    {
         BuyMenuPrint(WIN_ITEM_DESCRIPTION, description, 3, 1, 0, COLORID_NORMAL);
+    }
 }
 
 static void BuyMenuPrintPriceInList(u8 windowId, u32 itemId, u8 y)
@@ -808,6 +813,19 @@ static void BuyMenuInitWindows(void)
     LoadUserWindowBorderGfx(WIN_MONEY, 1, BG_PLTT_ID(13));
     LoadMessageBoxGfx(WIN_MONEY, 0xA, BG_PLTT_ID(14));
     PutWindowTilemap(WIN_MONEY);
+    if (VarGet(VAR_POWER_TM_CLERK) == 1)
+    {
+        struct WindowTemplate template = {
+            .bg = 0,
+            .tilemapLeft = 1,
+            .tilemapTop = 13,
+            .width = 12,
+            .height = 6,
+            .paletteNum = 15,
+            .baseBlock = 0x122,
+        };
+        AddWindow(&template);
+    }
     PutWindowTilemap(WIN_ITEM_LIST);
     PutWindowTilemap(WIN_ITEM_DESCRIPTION);
 }
