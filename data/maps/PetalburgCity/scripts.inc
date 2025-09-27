@@ -105,6 +105,12 @@ PetalburgCity_EventScript_WalkDown::
 	setvar VAR_PETALBURG_CITY_STATE, 5
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkDown
 	waitmovement 0
+	msgbox PetalburgCity_Text_ImLookingForTalentedTrainers, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_HM_SURF
+	waitfanfare
+	setflag FLAG_RECEIVED_HM_SURF
+	closemessage
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	releaseall
 	end
@@ -836,6 +842,10 @@ PetalburgCity_Text_WellMaybeNot:
 	.string "or maybe you're just an ordinary kid.$"
 
 PetalburgCity_Text_ImLookingForTalentedTrainers:
-	.string "I'm roaming the land in search of\n"
-	.string "talented TRAINERS.\p"
-	.string "I'm sorry to have taken your time.$"
+	.string "Oh, what's this on the ground?\n"
+	.string "A gift!\p"
+	.string "There's a note attached to it:\p"
+	.string "Congratulations on your victory, {PLAYER}!\n"
+	.string "I knew you could do it.\p"
+	.string "Please take this as a gift from me.\p"
+	.string "-WALLY's Dad$"
