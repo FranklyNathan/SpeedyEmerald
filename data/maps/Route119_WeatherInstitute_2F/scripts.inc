@@ -80,48 +80,10 @@ Route119_WeatherInstitute_2F_EventScript_ShellyDefeated::
 	end
 
 Route119_WeatherInstitute_2F_EventScript_ReceiveCastform::
-	msgbox Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
-	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CASTFORM_NORMAL
-	givemon SPECIES_CASTFORM_NORMAL, 25, ITEM_MYSTIC_WATER
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, Route119_WeatherInstitute_2F_EventScript_ReceiveCastformParty
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, Route119_WeatherInstitute_2F_EventScript_ReceiveCastformPC
-	goto Common_EventScript_NoMoreRoomForPokemon
-	release
-	end
-
-Route119_WeatherInstitute_2F_EventScript_ReceiveCastformParty::
-	call Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare
-	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_ExplainCastform
-	call Common_EventScript_GetGiftMonPartySlot
-	call Common_EventScript_NameReceivedPartyMon
-	goto Route119_WeatherInstitute_2F_EventScript_ExplainCastform
-	end
-
-Route119_WeatherInstitute_2F_EventScript_ReceiveCastformPC::
-	call Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare
-	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
-	call Common_EventScript_NameReceivedBoxMon
-	goto Route119_WeatherInstitute_2F_EventScript_SendCastformToPC
-	end
-
-Route119_WeatherInstitute_2F_EventScript_SendCastformToPC::
-	call Common_EventScript_TransferredToPC
-	goto Route119_WeatherInstitute_2F_EventScript_ExplainCastform
-	end
-
-Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare::
-	playfanfare MUS_OBTAIN_ITEM
-	message Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform
-	waitmessage
-	waitfanfare
-	bufferspeciesname STR_VAR_1, SPECIES_CASTFORM_NORMAL
-	return
-
-Route119_WeatherInstitute_2F_EventScript_ExplainCastform::
-	msgbox Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_CASTFORM
+	msgbox Route119_WeatherInstitute_2F_Text_ThanksPleaseTakeThis, MSGBOX_DEFAULT
+	giveitem ITEM_MYSTIC_WATER
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
+	setflag FLAG_RECEIVED_CASTFORM @ Using this flag to prevent getting the item again
 	release
 	end
 
@@ -264,21 +226,7 @@ Route119_WeatherInstitute_2F_Text_ShellyPostBattle:
 	.string "What makes you want to sniff around\n"
 	.string "in our business, anyway?$"
 
-Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy:
-	.string "We have a situation here!\p"
-	.string "A TEAM MAGMA mob just passed\n"
-	.string "the WEATHER INSTITUTE.\p"
-	.string "They appear to be headed for\n"
-	.string "MT. PYRE!$"
-
-Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre:
-	.string "What?!\p"
-	.string "We can't waste any more time here!\n"
-	.string "We have to hurry to MT. PYRE, too!\p"
-	.string "Ahahahaha!\n"
-	.string "TEAM MAGMA, just you wait!$"
-
-Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon:
+Route119_WeatherInstitute_2F_Text_ThanksPleaseTakeThis:
 	.string "Thanks!\n"
 	.string "Thanks to you, we're safe!\p"
 	.string "It might be an odd way of thanking you,\n"
@@ -288,15 +236,6 @@ Route119_WeatherInstitute_2F_Text_ThanksPleaseTakePokemon:
 Route119_WeatherInstitute_2F_Text_NoRoomForPokemon:
 	.string "Hm? You don't seem to have any room\n"
 	.string "for this POKéMON.$"
-
-Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform:
-	.string "{PLAYER} received CASTFORM!$"
-
-Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
-	.string "That POKéMON changes shape according\n"
-	.string "to the weather conditions.\p"
-	.string "There're plenty of them in the\n"
-	.string "INSTITUTE--go ahead and take it.$"
 
 Route119_WeatherInstitute_2F_Text_ChangingWeatherRidiculous:
 	.string "I've been researching rain for many\n"
@@ -325,3 +264,16 @@ Route119_WeatherInstitute_2F_Text_NoAbnormalWeather:
 	.string "The occasional rainfall is a blessing,\n"
 	.string "really.$"
 
+Route119_WeatherInstitute_2F_Text_TeamMagmaJustPassedBy:
+	.string "We have a situation here!\p"
+	.string "A TEAM MAGMA mob just passed\n"
+	.string "the WEATHER INSTITUTE.\p"
+	.string "They appear to be headed for\n"
+	.string "MT. PYRE!$"
+
+Route119_WeatherInstitute_2F_Text_WeHaveToHurryToMtPyre:
+	.string "What?!\p"
+	.string "We can't waste any more time here!\n"
+	.string "We have to hurry to MT. PYRE, too!\p"
+	.string "Ahahahaha!\n"
+	.string "TEAM MAGMA, just you wait!$"

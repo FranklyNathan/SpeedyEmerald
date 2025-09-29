@@ -500,6 +500,11 @@ void SwapRegisteredBike(void)
         gSaveBlock1Ptr->registeredItem = ITEM_ACRO_BIKE;
 }
 
+void SwapRegisteredKit(void)
+{
+        gSaveBlock1Ptr->registeredItem = ITEM_MED_KIT;
+}
+
 void CompactItemsInBagPocket(enum Pocket pocketId)
 {
     BagPocket_CompactItems(&gBagPockets[pocketId]);

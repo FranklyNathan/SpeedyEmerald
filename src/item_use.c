@@ -94,6 +94,7 @@ static const u8 sText_UsedVar2WildLured[] = _("{PLAYER} used the\n{STR_VAR_2}.\p
 static const u8 sText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be repelled.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PlayedPokeFluteCatchy[] = _("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
+static const u8 gText_MonsHealed[] = _("Your team's HP was restored.{PAUSE_UNTIL_PRESS}");
 static const u8 sText_PokeFluteAwakenedMon[] = _("The POKé FLUTE awakened sleeping\nPOKéMON.{PAUSE_UNTIL_PRESS}");
 
 // EWRAM variables
@@ -211,7 +212,7 @@ static void DisplayCannotDismountBikeMessage(u8 taskId, bool8 isUsingRegisteredK
     DisplayCannotUseItemMessage(taskId, isUsingRegisteredKeyItemOnField, sText_CantDismountBike);
 }
 
-static void Task_CloseCantUseKeyItemMessage(u8 taskId)
+void Task_CloseCantUseKeyItemMessage(u8 taskId)
 {
     ClearDialogWindowAndFrame(0, TRUE);
     DestroyTask(taskId);
@@ -1489,6 +1490,74 @@ void ItemUseOutOfBattle_Honey(u8 taskId)
     gBagMenu->newScreenCallback = CB2_ReturnToField;
     Task_FadeAndCloseBagMenu(taskId);
 }
+
+void ItemUseOutOfBattle_MedKit(u8 taskId)
+{
+    u32 i;
+    bool8 canRestore = FALSE;
+
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) == FALSE
+         && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
+        {
+            u16 hp = GetMonData(&gPlayerParty[i], MON_DATA_HP);
+            u16 maxHp = GetMonData(&gPlayerParty[i], MON_DATA_MAX_HP);
+            if (hp < maxHp)
+            {
+                canRestore = TRUE;
+                break;
+            }
+
+            u32 j;
+            for (j = 0; j < MAX_MON_MOVES; j++)
+            {
+                u16 move = GetMonData(&gPlayerParty[i], MON_DATA_MOVE1 + j);
+                u16 pp = GetMonData(&gPlayerParty[i], MON_DATA_PP1 + j);
+                u16 maxPP = CalculatePPWithBonus(move, GetMonData(&gPlayerParty[i], MON_DATA_PP_BONUSES), j);
+                if (move != MOVE_NONE && pp < maxPP)
+                {
+                    canRestore = TRUE;
+                    break;
+                }
+            }
+            if (canRestore)
+                break;
+        }
+    }
+
+    if (canRestore)
+    {
+        gSpecialVar_Result = 1;
+        gSpecialVar_Result = TRUE;
+        PlaySE(SE_USE_ITEM);
+        for (i = 0; i < gPlayerPartyCount; i++)
+        {
+            u16 maxHp;
+            if (GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) == FALSE
+             && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
+            {
+                maxHp = GetMonData(&gPlayerParty[i], MON_DATA_MAX_HP);
+                SetMonData(&gPlayerParty[i], MON_DATA_HP, &maxHp);
+                MonRestorePP(&gPlayerParty[i]);
+            }
+        }
+        if (!gTasks[taskId].tUsingRegisteredKeyItem) // tUsingRegisteredKeyItem is set in item_menu.c
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_MonsHealed, CloseItemMessage);
+        else
+            DisplayItemMessageOnField(taskId, gText_MonsHealed, Task_CloseCantUseKeyItemMessage);
+    }
+    else
+    {
+        gSpecialVar_Result = 0;
+        gSpecialVar_Result = FALSE;
+        if (!gTasks[taskId].tUsingRegisteredKeyItem) // tUsingRegisteredKeyItem is set in item_menu.c
+            DisplayItemMessage(taskId, FONT_NORMAL, gText_WontHaveEffect, CloseItemMessage);
+        else
+            DisplayItemMessageOnField(taskId, gText_WontHaveEffect, Task_CloseCantUseKeyItemMessage);
+    }
+}
+
 
 void ItemUseOutOfBattle_CannotUse(u8 taskId)
 {

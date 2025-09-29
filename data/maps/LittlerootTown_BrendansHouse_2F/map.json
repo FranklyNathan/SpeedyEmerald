@@ -272,7 +272,7 @@
       "type": "sign",
       "x": 1,
       "y": 4,
-      "elevation": 0,
+      "elevation": 1,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PlayersHouse_2F_EventScript_Fossil"
     }

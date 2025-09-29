@@ -237,8 +237,10 @@ void NewGameInitData(void)
 
         AddBagItem(ITEM_RARE_CANDY, 1);
         AddBagItem(ITEM_CLEANSE_TAG, 1);
+        AddBagItem(ITEM_MED_KIT, 1);
         FlagSet(FLAG_SYS_B_DASH);
         FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE);
+        FlagSet(FLAG_CLEANSE_TAG);
         VarSet(VAR_LITTLEROOT_INTRO_STATE, 5);
         VarSet(VAR_0x8005, 8);
         FlagClear(FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN);
