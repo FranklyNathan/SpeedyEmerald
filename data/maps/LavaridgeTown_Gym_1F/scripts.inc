@@ -196,7 +196,6 @@ LavaridgeTown_Gym_B1F_EventScript_Eli::
 LavaridgeTown_Gym_1F_EventScript_GymGuide::
 	lock
 	faceplayer
-    special HealPlayerParty
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, LavaridgeTown_Gym_1F_EventScript_GymGuidePostVictory
 	msgbox LavaridgeTown_Gym_1F_Text_GymGuideAdvice, MSGBOX_DEFAULT
 	release
@@ -238,9 +237,7 @@ LavaridgeTown_Gym_1F_Text_GymGuideAdvice:
 	.string "and hotter than a volcano.\p"
 	.string "Don't get too close to her--you'll burn!\n"
 	.string "Hose her down with water and then\l"
-	.string "go for it!\p"
-	.string "After this chat, your POKéMON should\n"
-	.string "be refreshed and ready to go!$"
+	.string "go for it!$"
 
 LavaridgeTown_Gym_1F_Text_GymGuidePostVictory:
 	.string "Yow! That was a scorching-hot battle!$"

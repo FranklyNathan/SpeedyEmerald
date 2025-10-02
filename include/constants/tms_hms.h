@@ -6,7 +6,7 @@
     F(DRAGON_CLAW) \
     F(WATER_PULSE) \
     F(CALM_MIND) \
-    F(ROAR) \
+    F(DARK_PULSE) \
     F(TOXIC) \
     F(HAIL) \
     F(BULK_UP) \
@@ -22,7 +22,7 @@
     F(RAIN_DANCE) \
     F(GIGA_DRAIN) \
     F(SAFEGUARD) \
-    F(FRUSTRATION) \
+    F(DAZZLING_GLEAM) \
     F(SOLAR_BEAM) \
     F(IRON_TAIL) \
     F(THUNDERBOLT) \
@@ -42,7 +42,7 @@
     F(FIRE_BLAST) \
     F(ROCK_TOMB) \
     F(AERIAL_ACE) \
-    F(TORMENT) \
+    F(X_SCISSOR) \
     F(FACADE) \
     F(SECRET_POWER) \
     F(REST) \
@@ -50,11 +50,8 @@
     F(THIEF) \
     F(STEEL_WING) \
     F(SKILL_SWAP) \
-    F(SNATCH) \
+    F(TRICK_ROOM) \
     F(OVERHEAT) \
-    F(DAZZLING_GLEAM) \
-    F(DARK_PULSE) \
-    F(X_SCISSOR) 
 
 #define FOREACH_HM(F) \
     F(CUT) \

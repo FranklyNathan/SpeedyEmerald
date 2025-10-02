@@ -10,7 +10,7 @@ EverGrandeCity_SidneysRoom_OnTransition:
 	copyvar VAR_0x800A, VAR_RESULT
 	switch VAR_RESULT
 	case 0, EverGrandeCity_SidneyAppears
-	case 1, EverGrandeCity_SpenserAppears
+	case 1, EverGrandeCity_BrandonAppears
 	setflag FLAG_MET_SCOTT_IN_EVERGRANDE
 	setflag FLAG_HIDE_EVER_GRANDE_POKEMON_CENTER_1F_SCOTT
 	end
@@ -19,8 +19,8 @@ EverGrandeCity_SidneyAppears:
     setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SIDNEY
     return
 
-EverGrandeCity_SpenserAppears:
-    setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_SPENSER
+EverGrandeCity_BrandonAppears:
+    setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_BRANDON
     setflag FLAG_TEMP_5
     return
 
@@ -63,13 +63,13 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney::
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox EverGrandeCity_SidneysRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_TEMP_5, EverGrandeCity_SidneysRoom_EventScript_Spenser
+	goto_if_set FLAG_TEMP_5, EverGrandeCity_SidneysRoom_EventScript_Brandon
 	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 
-EverGrandeCity_SidneysRoom_EventScript_Spenser::
-	trainerbattle_no_intro TRAINER_SPENSER, EverGrandeCity_SidneysRoom_Text_Defeat
+EverGrandeCity_SidneysRoom_EventScript_Brandon::
+	trainerbattle_no_intro TRAINER_BRANDON, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 

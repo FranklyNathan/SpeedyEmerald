@@ -554,6 +554,7 @@ SlateportCity_PokemartDecor_Badge2::
 	.align 2
 SlateportCity_Pokemart_Badge2Items:
 	.2byte ITEM_SOOTHE_BELL
+	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	pokemartlistend
@@ -566,11 +567,8 @@ SlateportCity_PokemartDecor_Badge3::
 
 	.align 2
 SlateportCity_Pokemart_Badge3Items:
-	.2byte ITEM_DRAGON_SCALE
-	.2byte ITEM_KINGS_ROCK
-	.2byte ITEM_METAL_COAT
-	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
+	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	pokemartlistend
@@ -598,6 +596,7 @@ SlateportCity_Pokemart_Badge4Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
+	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	pokemartlistend
@@ -626,6 +625,7 @@ SlateportCity_Pokemart_Badge5Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
+	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	pokemartlistend
@@ -654,6 +654,7 @@ SlateportCity_Pokemart_Badge6Items:
 	.2byte ITEM_METAL_COAT
 	.2byte ITEM_RAZOR_FANG
 	.2byte ITEM_SOOTHE_BELL
+	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH
 	pokemartlistend
@@ -725,6 +726,7 @@ SlateportCity_Pokemart_PowerTMs_Badge2TMsItems:
 	.2byte ITEM_TM_SUNNY_DAY
 	.2byte ITEM_TM_THIEF
 	.2byte ITEM_TM_TOXIC
+	.2byte ITEM_TM_TRICK_ROOM
 	pokemartlistend
 
 SlateportCity_Pokemart_PowerTMs_Badge3TMs::
@@ -798,6 +800,7 @@ SlateportCity_Pokemart_PowerTMs_Badge7TMsItems:
 	.2byte ITEM_TM_SUNNY_DAY
 	.2byte ITEM_TM_THIEF
 	.2byte ITEM_TM_TOXIC
+	.2byte ITEM_TM_TRICK_ROOM
 	.2byte ITEM_TM_LIGHT_SCREEN
 	.2byte ITEM_TM_RETURN
 	.2byte ITEM_TM_REFLECT

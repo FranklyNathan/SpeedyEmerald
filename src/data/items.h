@@ -4436,8 +4436,8 @@ const struct Item gItemsInfo[] =
             "a certain Pokémon."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
-        .type = EVO_HELD_ITEM_TYPE,
-        .fieldUseFunc = EVO_HELD_ITEM_FIELD_FUNC,
+        .type = ITEM_USE_PARTY_MENU, // This will open the party menu.
+        .fieldUseFunc = ItemUseOutOfBattle_WhippedDream,
         .effect = gItemEffect_EvoItem,
         .flingPower = 80,
         .iconPic = gItemIcon_WhippedDream,
@@ -10949,7 +10949,6 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_HONE_CLAWS,
     },
 
     [ITEM_TM_DRAGON_CLAW] =
@@ -10994,14 +10993,14 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_ROAR] =
+    [ITEM_TM_DARK_PULSE] =
     {
-        .name = ITEM_NAME("Roar"),
-        .price = 1000,
+        .name = ITEM_NAME("Dark Pulse"),
+        .price = 3000,
         .description = COMPOUND_STRING(
-            "A savage roar that\n"
-            "makes the foe flee \n"
-            "to end the battle."),
+            "The user releases a\n"
+            "horrible aura imbued\n"
+            "with dark thoughts."), 
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11235,18 +11234,19 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_FRUSTRATION] =
+    [ITEM_TM_DAZZLING_GLEAM] =
     {
-        .name = ITEM_NAME("Frustration"),
-        .price = 1000,
+        .name = ITEM_NAME("Dazzling Gleam"),
+        .price = 3000,
         .description = COMPOUND_STRING(
-            "The less the user\n"
-            "likes you, the more\n"
-            "powerful this move."),
+            "The user damages\n"
+            "the foe by emitting\n"
+            "a powerful flash."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .secondaryId = MOVE_DAZZLING_GLEAM, // Todo
     },
 
     [ITEM_TM_SOLAR_BEAM] =
@@ -11515,18 +11515,19 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_TORMENT] =
+    [ITEM_TM_X_SCISSOR] =
     {
-        .name = ITEM_NAME("Torment"),
+        .name = ITEM_NAME("X Scissor"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Prevents the foe\n"
-            "from using the same\n"
-            "move in a row."),
+            "The user slashes at\n"
+            "the foe by crossing\n"
+            "its scythes."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
+        .secondaryId = MOVE_X_SCISSOR, // Todo
     },
 
     [ITEM_TM_FACADE] =
@@ -11627,14 +11628,14 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_SNATCH] =
+    [ITEM_TM_TRICK_ROOM] =
     {
-        .name = ITEM_NAME("Snatch"),
-        .price = 3000,
+        .name = ITEM_NAME("Trick Room"),
+        .price = 1000,
         .description = COMPOUND_STRING(
-            "Steals the effects\n"
-            "of the move the foe\n"
-            "is trying to use."),
+            "The user creates a\n"
+            "bizarre area that\n"
+            "inverts speed."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11655,59 +11656,45 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
     },
 
-    [ITEM_TM_DAZZLING_GLEAM] =
+    [ITEM_TM51] =
     {
-        .name = ITEM_NAME("Dazzling Gleam"),
+        .name = ITEM_NAME("TM55"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "The user damages\n"
-            "the foe by emitting\n"
-            "a powerful flash."),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_DAZZLING_GLEAM, // Todo
     },
 
-    [ITEM_TM_DARK_PULSE] =
+    [ITEM_TM52] =
     {
-        .name = ITEM_NAME("Dark Pulse"),
+        .name = ITEM_NAME("TM55"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "The user releases a\n"
-            "horrible aura imbued\n"
-            "with dark thoughts."), 
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_DARK_PULSE, // Todo
     },
 
-    [ITEM_TM_X_SCISSOR] =
+    [ITEM_TM53] =
     {
-        .name = ITEM_NAME("X Scissor"),
+        .name = ITEM_NAME("TM55"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "The user slashes at\n"
-            "the foe by crossing\n"
-            "its scythes."),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_X_SCISSOR, // Todo
     },
 
     [ITEM_TM54] =
     {
-        .name = ITEM_NAME("TM54"),
+        .name = ITEM_NAME("TM55"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-        "Enables full-power\n"
-        "attack, but sharply\n"
-        "lowers Sp. Atk."),        .importance = I_REUSABLE_TMS,
+        .description = sQuestionMarksDesc, // Todo
+        .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
