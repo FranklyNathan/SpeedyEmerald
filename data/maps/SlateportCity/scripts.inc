@@ -553,7 +553,6 @@ SlateportCity_PokemartDecor_Badge2::
 	
 	.align 2
 SlateportCity_Pokemart_Badge2Items:
-	.2byte ITEM_SOOTHE_BELL
 	.2byte ITEM_WHIPPED_DREAM
 	.2byte ITEM_ABILITY_CAPSULE
 	.2byte ITEM_ABILITY_PATCH

@@ -4850,6 +4850,18 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
                 if (evolutions[i].param == evolutionItem)
                     conditionMet = TRUE;
                 break;
+            case EVO_LEVEL:
+                if (evolutionItem == ITEM_WHIPPED_DREAM)
+                {
+                    u16 targetSpeciesBST;
+                    const struct SpeciesInfo *speciesInfo = &gSpeciesInfo[evolutions[i].targetSpecies];
+                    targetSpeciesBST = speciesInfo->baseHP + speciesInfo->baseAttack + speciesInfo->baseDefense + speciesInfo->baseSpAttack + speciesInfo->baseSpDefense + speciesInfo->baseSpeed;
+
+                    if (targetSpeciesBST < 380)
+                    {
+                        conditionMet = TRUE;
+                    }
+                }
             }
 
             if (conditionMet && DoesMonMeetAdditionalConditions(mon, evolutions[i].params, NULL, PARTY_SIZE, canStopEvo, evoState))

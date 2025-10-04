@@ -44450,7 +44450,7 @@ F_TRAINER_FEMALE |
 #line 17513
                 MOVE_GIGA_DRAIN,
                 MOVE_HYDRO_PUMP,
-                MOVE_FAKE_OUT,
+                MOVE_ICE_BEAM,
                 MOVE_ASTONISH,
             },
             },

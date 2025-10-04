@@ -19540,8 +19540,8 @@ static const struct LevelUpMove sPolteageistLevelUpLearnset[] = {
 
 #if P_FAMILY_HATENNA
 static const struct LevelUpMove sHatennaLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 1, MOVE_PLAY_NICE),
+    LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 5, MOVE_LIFE_DEW),
     LEVEL_UP_MOVE(10, MOVE_DISARMING_VOICE),
     LEVEL_UP_MOVE(15, MOVE_AROMATHERAPY),

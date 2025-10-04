@@ -4500,7 +4500,7 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .levelUpLearnset = sRioluLevelUpLearnset,
         .teachableLearnset = sRioluTeachableLearnset,
         .eggMoveLearnset = sRioluEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_ITEM, ITEM_SOOTHE_BELL, SPECIES_LUCARIO}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_LUCARIO}),
     },
 
     [SPECIES_LUCARIO] =
