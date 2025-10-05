@@ -1207,6 +1207,8 @@ EventScript_WarpHomeFortree::
 	setflag FLAG_VISITED_SOOTOPOLIS_CITY
 	setvar VAR_FORTREE_CITY_STATE, 2
     setvar VAR_FORTREE_LOCKED, 1
+	giveitem ITEM_HM_FLY
+	setflag FLAG_RECEIVED_HM_FLY
 	msgbox gText_FlygonUniversalFly, MSGBOX_DEFAULT
 	warp MAP_FORTREE_CITY, 22, 11
 	waitstate

@@ -56,10 +56,14 @@ PlayersHouse_2F_EventScript_WallClock::
 	goto_if_set FLAG_SET_WALL_CLOCK, PlayersHouse_2F_EventScript_CheckWallClock
 	call PlayersHouse_2F_EventScript_SetWallClock
 	delay 30
-	setvar VAR_LITTLEROOT_INTRO_STATE, 6
+	//setvar VAR_LITTLEROOT_INTRO_STATE, 6
 	setflag FLAG_SET_WALL_CLOCK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2
+	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
+	setvar VAR_LITTLEROOT_TOWN_STATE, 1
+	setflag FLAG_MET_RIVAL_MOM
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, PlayersHouse_2F_EventScript_MomComesUpstairsMale
 	call_if_eq VAR_RESULT, FEMALE, PlayersHouse_2F_EventScript_MomComesUpstairsFemale
@@ -146,22 +150,22 @@ PlayersHouse_1F_EventScript_SetWatchedBroadcast::
 	end
 
 PlayersHouse_1F_EventScript_PetalburgGymReportMale::
-	applymovement VAR_0x8005, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
-	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymMale
-	waitmovement 0
-	playbgm MUS_ENCOUNTER_INTERVIEWER, FALSE
-	msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVMale
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVMale
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_WatchGymBroadcast
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	//applymovement VAR_0x8005, Common_Movement_WalkInPlaceFasterRight
+	//waitmovement 0
+	//call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
+	//applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymMale
+	//waitmovement 0
+	//playbgm MUS_ENCOUNTER_INTERVIEWER, FALSE
+	//msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
+	//closemessage
+	//applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVMale
+	//waitmovement 0
+	//applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVMale
+	//waitmovement 0
+	//call PlayersHouse_1F_EventScript_WatchGymBroadcast
+	//applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	//waitmovement 0
+	//msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
 	//msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, 
 	//randomelement SPECIES_PICHU, SPECIES_CLEFFA, SPECIES_IGGLYBUFF, SPECIES_TOGEPI, SPECIES_TYROGUE, SPECIES_SMOOCHUM, SPECIES_ELEKID, SPECIES_MAGBY, SPECIES_AZURILL, SPECIES_WYNAUT, SPECIES_BUDEW, SPECIES_CHINGLING, SPECIES_BONSLY, SPECIES_MIME_JR, SPECIES_HAPPINY, SPECIES_MUNCHLAX, SPECIES_RIOLU, SPECIES_MANTYKE, SPECIES_TOXEL
 	//giveegg VAR_RESULT
@@ -169,37 +173,30 @@ PlayersHouse_1F_EventScript_PetalburgGymReportMale::
 	//msgbox PlayersHouse_1F_Text_ReceivedEgg
 	//waitmessage
 	//waitfanfare
-	closemessage
-	setvar VAR_TEMP_1, 1
-	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
-	setvar VAR_LITTLEROOT_TOWN_STATE, 1
-	setflag FLAG_MET_RIVAL_MOM
-    setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MAY
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_2F_POKE_BALL
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_RIVAL_BEDROOM
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
-	waitmovement 0
-	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
+	//closemessage
+	//setvar VAR_TEMP_1, 1
+	//applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatMale
+	//waitmovement 0
+	//goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
 	end
 
 PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
-	applymovement VAR_0x8005, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
-	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale
-	waitmovement 0
-	playbgm MUS_ENCOUNTER_INTERVIEWER, FALSE
-	msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
-	closemessage
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVFemale
-	waitmovement 0
-	applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVFemale
-	waitmovement 0
-	call PlayersHouse_1F_EventScript_WatchGymBroadcast
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
+	//applymovement VAR_0x8005, Common_Movement_WalkInPlaceFasterLeft
+	//waitmovement 0
+	//call PlayersHouse_1F_EventScript_MomNoticeGymBroadcast
+	//applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerApproachTVForGymFemale
+	//waitmovement 0
+	//playbgm MUS_ENCOUNTER_INTERVIEWER, FALSE
+	//msgbox PlayersHouse_1F_Text_MaybeDadWillBeOn, MSGBOX_DEFAULT
+	//closemessage
+	//applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomMakeRoomToSeeTVFemale
+	//waitmovement 0
+	//applymovement LOCALID_PLAYER, PlayersHouse_1F_Movement_PlayerMoveToTVFemale
+	//waitmovement 0
+	//call PlayersHouse_1F_EventScript_WatchGymBroadcast
+	//applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	//waitmovement 0
+	//msgbox PlayersHouse_1F_Text_ItsOverWeMissedHim, MSGBOX_DEFAULT
 	//msgbox PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor, MSGBOX_DEFAULT
 	//randomelement SPECIES_PICHU, SPECIES_CLEFFA, SPECIES_IGGLYBUFF, SPECIES_TOGEPI, SPECIES_TYROGUE, SPECIES_SMOOCHUM, SPECIES_ELEKID, SPECIES_MAGBY, SPECIES_AZURILL, SPECIES_WYNAUT, SPECIES_BUDEW, SPECIES_CHINGLING, SPECIES_BONSLY, SPECIES_MIME_JR, SPECIES_HAPPINY, SPECIES_MUNCHLAX, SPECIES_RIOLU, SPECIES_MANTYKE, SPECIES_TOXEL
 	//giveegg VAR_RESULT
@@ -207,7 +204,7 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	//msgbox PlayersHouse_1F_Text_ReceivedEgg
 	//waitmessage
 	//waitfanfare
-	closemessage
+	//closemessage
 	setvar VAR_TEMP_1, 1
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
@@ -216,8 +213,8 @@ PlayersHouse_1F_EventScript_PetalburgGymReportFemale::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_BEDROOM
-	applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
-	waitmovement 0
+	//applymovement VAR_0x8005, PlayersHouse_1F_Movement_MomReturnToSeatFemale
+	//waitmovement 0
 	goto PlayersHouse_1F_EventScript_SetWatchedBroadcast
 	end
 

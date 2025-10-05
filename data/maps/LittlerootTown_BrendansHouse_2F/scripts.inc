@@ -298,10 +298,6 @@ PlayersHouse_2F_EventScript_Receive_Fossil::
 	releaseall
 	end
 
-PlayersHouse_2F_Text_ClockIsStopped:
-	.string "Currently loading all POKéMON into\n"
-	.string "your PC. Please wait…$"
-
 PlayersHouse_2F_Text_HowDoYouLikeYourRoom:
 	.string "MOM: {PLAYER}, how do you like your\n"
 	.string "new room?\p"
