@@ -2464,7 +2464,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .levelUpLearnset = sBonslyLevelUpLearnset,
         .teachableLearnset = sBonslyTeachableLearnset,
         .eggMoveLearnset = sBonslyEggMoveLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_SUDOWOODO, CONDITIONS({IF_KNOWS_MOVE, MOVE_MIMIC})}),
+        .evolutions = EVOLUTION({EVO_LEVEL, 20, SPECIES_SUDOWOODO}),
     },
 #endif //P_GEN_4_CROSS_EVOS
 

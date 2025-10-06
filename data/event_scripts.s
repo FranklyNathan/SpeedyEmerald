@@ -1186,7 +1186,6 @@ EventScript_WarpHomePetalburg::
 	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call EventScript_HideMrBriney
-	clearflag FLAG_HIDE_MAUVILLE_CITY_WATTSON //Since Wattson can't leave his gym based on event in Mauville's gym anymore
     setvar VAR_PETALBURG_LOCKED, 1
 	setvar VAR_PETALBURG_CITY_STATE, 7
 	setvar VAR_STEP_DOWN, 1

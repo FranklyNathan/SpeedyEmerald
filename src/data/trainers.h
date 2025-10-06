@@ -43565,7 +43565,7 @@ F_TRAINER_FEMALE |
 #line 17116
             .ability = ABILITY_TANGLING_HAIR,
 #line 17113
-            .lvl = 44,
+            .lvl = 46,
 #line 17115
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -44513,7 +44513,7 @@ F_TRAINER_FEMALE |
 #line 17543
             .ability = ABILITY_STURDY,
 #line 17540
-            .lvl = 57,
+            .lvl = 58,
 #line 17542
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -44555,7 +44555,7 @@ F_TRAINER_FEMALE |
 #line 17563
             .ability = ABILITY_STURDY,
 #line 17560
-            .lvl = 57,
+            .lvl = 56,
 #line 17562
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
