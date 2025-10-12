@@ -12,6 +12,7 @@ static const u8 sText_MysteryEgg[] = _("Mystery Egg");
 
 static const u16 sGiftPokemonList[] = {
     SPECIES_APPLIN, 
+    SPECIES_ARBOLIVA,
     SPECIES_ARON, 
     SPECIES_BAGON, 
     SPECIES_BUIZEL,

@@ -4903,13 +4903,20 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             }
             break;
         case ABILITY_SEED_SOWER:
-            if (!gProtectStructs[gBattlerAttacker].confusionSelfDmg
+            if (IsBattlerAlive(gBattlerAttacker)
+             && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
              && IsBattlerTurnDamaged(gBattlerTarget)
-             && IsBattlerAlive(gBattlerTarget)
-             && TryChangeBattleTerrain(gBattlerTarget, STATUS_FIELD_GRASSY_TERRAIN, &gFieldTimers.terrainTimer))
+             && IsBattlerAlive(gBattlerTarget))
             {
+                if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_GRASS)
+                 && !gBattleMons[gBattlerAttacker].volatiles.leechSeed
+                 && GetBattlerHoldEffect(gBattlerAttacker, TRUE) != HOLD_EFFECT_SAFETY_GOGGLES
+                 && GetBattlerAbility(gBattlerAttacker) != ABILITY_OVERCOAT)
+                {
+                SWAP(gBattlerAttacker, gBattlerTarget, i);
                 BattleScriptCall(BattleScript_SeedSowerActivates);
                 effect++;
+                }
             }
             break;
         case ABILITY_THERMAL_EXCHANGE:

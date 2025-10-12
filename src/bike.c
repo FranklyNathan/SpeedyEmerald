@@ -309,7 +309,7 @@ static u8 AcroBikeHandleInputNormal(u8 *newDirection, u16 newKeys, u16 heldKeys)
 
     if (newKeys & L_BUTTON)
     {
-        if ((VarGet(VAR_BADGE_COUNT) >= 3) && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+        if (Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
         {
             VarSet(VAR_TEMP_1, 1); // Use a temporary variable to signal Flygon-fly
             ScriptContext_SetupScript(EventScript_UseFlyAcroBike);

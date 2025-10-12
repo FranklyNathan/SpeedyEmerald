@@ -1130,7 +1130,7 @@ EventScript_NoBackingOut::
 EventScript_WarpHomeRustboro::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
+	@ call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
 	setvar VAR_RUSTBORO_CITY_STATE, 7
 	setvar VAR_RUSTBORO_CITY_STATE, 9
 	setvar VAR_BRINEY_HOUSE_STATE, 1
@@ -1149,7 +1149,7 @@ EventScript_WarpHomeRustboro::
 EventScript_WarpHomeDewford::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
+	@ call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
     setvar VAR_DEWFORD_LOCKED, 1
     setvar VAR_DEWFORD_TOWN_STATE, 2
     call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
@@ -1161,7 +1161,7 @@ EventScript_WarpHomeDewford::
 EventScript_WarpHomeMauville::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
+	@ call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setvar VAR_MAUVILLE_CITY_STATE, 2
@@ -1175,7 +1175,7 @@ EventScript_WarpHomeMauville::
 EventScript_WarpHomeLavaridge::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
+	@ call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
