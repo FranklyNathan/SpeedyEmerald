@@ -2383,6 +2383,10 @@ static void DrawEmptySlot(u8 windowId)
     LoadPalette(GetPartyMenuPalBufferPtr(paletteIds[2]), paletteOffsets[2] + palOffset, PLTT_SIZEOF(1));  \
 }
 
+static const u8 sPartyBoxEvolutionPalIds1[] = {57, 58, 58};
+static const u8 sPartyBoxEvolutionPalIds2[] = {57, 58, 58};
+static const u8 sPartyBoxCurrSelectionEvolutionPalIds[] = {57, 58, 58};
+
 static void LoadPartyBoxPalette(struct PartyMenuBox *menuBox, u8 palFlags)
 {
     u8 palOffset = BG_PLTT_ID(GetWindowAttribute(menuBox->windowId, WINDOW_PALETTE_NUM));
@@ -2457,6 +2461,20 @@ static void LoadPartyBoxPalette(struct PartyMenuBox *menuBox, u8 palFlags)
     {
         LOAD_PARTY_BOX_PAL(sPartyBoxEmptySlotPalIds1, sPartyBoxPalOffsets1);
         LOAD_PARTY_BOX_PAL(sPartyBoxEmptySlotPalIds2, sPartyBoxPalOffsets2);
+    }
+
+    if (!(palFlags & (PARTY_PAL_NO_MON | PARTY_PAL_FAINTED | PARTY_PAL_MULTI_ALT))
+        && GetMonData(&gPlayerParty[menuBox->windowId], MON_DATA_SPECIES) == SPECIES_EEVEE)
+    {
+        if (palFlags & PARTY_PAL_SELECTED)
+        {
+            LOAD_PARTY_BOX_PAL(sPartyBoxCurrSelectionEvolutionPalIds, sPartyBoxPalOffsets1);
+        }
+        else
+        {
+            LOAD_PARTY_BOX_PAL(sPartyBoxEvolutionPalIds1, sPartyBoxPalOffsets1);
+            LOAD_PARTY_BOX_PAL(sPartyBoxEvolutionPalIds2, sPartyBoxPalOffsets2);
+        }
     }
 }
 
