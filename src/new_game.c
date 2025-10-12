@@ -238,6 +238,7 @@ void NewGameInitData(void)
         AddBagItem(ITEM_RARE_CANDY, 1);
         AddBagItem(ITEM_CLEANSE_TAG, 1);
         AddBagItem(ITEM_MED_KIT, 1);
+        AddBagItem(ITEM_PORTABLE_PC, 1);
         FlagSet(FLAG_SYS_B_DASH);
         FlagSet(FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE);
         FlagSet(FLAG_CLEANSE_TAG);

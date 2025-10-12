@@ -17,5 +17,5 @@ gText_AccessedLanettesPC::
 	.string "Accessed LANETTE's PC.$"
 
 Text_BootUpStatue:
-	.string "{PLAYER} booted up the gym statue.\n"
+	.string "{PLAYER} booted up the PC.\n"
 	.string "…Well this sure is convenient!$"

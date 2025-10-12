@@ -110,19 +110,13 @@ LavaridgeTown_OnFrame:
 	.2byte 0
 
 LavaridgeTown_EventScript_RivalGiveGoGoggles::
-	lockall
-	getplayerxy VAR_0x8008, VAR_0x8009
-	call_if_eq VAR_0x8008, 9, LavaridgeTown_EventScript_RivalNoticePlayer
-	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalExitHerbShop
-	delay 20
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, LavaridgeTown_EventScript_PlayMayMusic
-	call_if_eq VAR_RESULT, FEMALE, LavaridgeTown_EventScript_PlayBrendanMusic
-	call_if_eq VAR_0x8008, 9, LavaridgeTown_EventScript_RivalApproachPlayer1
-	call_if_ne VAR_0x8008, 9, LavaridgeTown_EventScript_RivalApproachPlayer2
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, LavaridgeTown_EventScript_MayGiveGoGoggles
-	goto_if_eq VAR_RESULT, FEMALE, LavaridgeTown_EventScript_BrendanGiveGoGoggles
+	setflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_STEP_DOWN, 0
+	applymovement OBJ_EVENT_ID_PLAYER, Movement_WalkRight
+	waitmovement 0
+	setvar VAR_LAVARIDGE_TOWN_STATE, 2
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	releaseall
 	end
 
 LavaridgeTown_EventScript_MayGiveGoGoggles::

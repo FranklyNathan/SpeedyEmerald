@@ -1049,8 +1049,13 @@ gText_Sudowoodo_Attacked::
 	.string "WAILMER PAIL!\p"
 	.string "The weird tree attacked!$"
 
+gText_FlygonLearnedFly::
+	.string "Birch's Flygon learned how to Fly!\n"
+	.string "Fly anywhere on the map that you've\l"
+	.string "visited before.$"
+
 gText_FlygonUniversalFly::
-	.string "Flygon gained universal Fly!\n"
+	.string "Birch's Flygon gained universal Fly!\n"
 	.string "Fly anywhere on the map, including\l"
 	.string "places you've never visited before.$"
 
@@ -1125,7 +1130,7 @@ EventScript_NoBackingOut::
 EventScript_WarpHomeRustboro::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
+	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
 	setvar VAR_RUSTBORO_CITY_STATE, 7
 	setvar VAR_RUSTBORO_CITY_STATE, 9
 	setvar VAR_BRINEY_HOUSE_STATE, 1
@@ -1144,7 +1149,7 @@ EventScript_WarpHomeRustboro::
 EventScript_WarpHomeDewford::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
+	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
     setvar VAR_DEWFORD_LOCKED, 1
     setvar VAR_DEWFORD_TOWN_STATE, 2
     call_if_eq VAR_BADGE_COUNT, 4, Common_EventScript_ReadyPetalburgGymForBattle
@@ -1156,7 +1161,7 @@ EventScript_WarpHomeDewford::
 EventScript_WarpHomeMauville::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
+	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
 	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
 	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
 	setvar VAR_MAUVILLE_CITY_STATE, 2
@@ -1170,7 +1175,7 @@ EventScript_WarpHomeMauville::
 EventScript_WarpHomeLavaridge::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
+	call_if_eq VAR_BADGE_COUNT, 3, EventScript_FlygonLearnedFly
 	setflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
 	setvar VAR_LAVARIDGE_TOWN_STATE, 1
     setvar VAR_LAVARIDGE_LOCKED, 1
@@ -1183,7 +1188,6 @@ EventScript_WarpHomeLavaridge::
 EventScript_WarpHomePetalburg::
 	lockall
 	addvar VAR_BADGE_COUNT, 1
-	call_if_eq VAR_BADGE_COUNT, 8, EventScript_SetEverGrandeVisited
 	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call EventScript_HideMrBriney
     setvar VAR_PETALBURG_LOCKED, 1
@@ -1239,6 +1243,10 @@ EventScript_WarpHomeSootopolis::
 EventScript_SetEverGrandeVisited::
 	setflag FLAG_VISITED_EVER_GRANDE_CITY
 	setflag FLAG_LANDMARK_POKEMON_LEAGUE
+	return
+
+EventScript_FlygonLearnedFly::
+	msgbox gText_FlygonLearnedFly, MSGBOX_DEFAULT
 	return
 
 	.include "data/scripts/pc_transfer.inc"

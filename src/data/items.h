@@ -12948,6 +12948,23 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_BoosterEnergy,
     },
 
+    [ITEM_PORTABLE_PC] =
+    {
+        .name = ITEM_NAME("Portable PC"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A PC storage\n"
+            "system right in\n"
+            "your pocket!"),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_PortablePC,
+        .secondaryId = 0,
+        .iconPic = gItemIcon_TeachyTV,
+        .iconPalette = gItemIconPalette_TeachyTV,
+    },
+
 // Story Key Items
 
     [ITEM_SS_TICKET] =

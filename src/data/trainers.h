@@ -30631,7 +30631,7 @@ F_TRAINER_FEMALE |
 #line 11664
             .lvl = 37,
 #line 11666
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11668
@@ -30652,7 +30652,7 @@ F_TRAINER_FEMALE |
 #line 11674
             .lvl = 37,
 #line 11676
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11678
@@ -30673,7 +30673,7 @@ F_TRAINER_FEMALE |
 #line 11684
             .lvl = 37,
 #line 11686
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11688
@@ -30694,7 +30694,7 @@ F_TRAINER_FEMALE |
 #line 11694
             .lvl = 39,
 #line 11696
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11698
@@ -30738,7 +30738,7 @@ F_TRAINER_FEMALE |
 #line 11713
             .lvl = 37,
 #line 11715
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11717
@@ -30759,7 +30759,7 @@ F_TRAINER_FEMALE |
 #line 11723
             .lvl = 37,
 #line 11725
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11727
@@ -30780,7 +30780,7 @@ F_TRAINER_FEMALE |
 #line 11733
             .lvl = 37,
 #line 11735
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11737
@@ -30801,7 +30801,7 @@ F_TRAINER_FEMALE |
 #line 11743
             .lvl = 39,
 #line 11745
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11747
@@ -30845,7 +30845,7 @@ F_TRAINER_FEMALE |
 #line 11762
             .lvl = 37,
 #line 11764
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11766
@@ -30866,7 +30866,7 @@ F_TRAINER_FEMALE |
 #line 11772
             .lvl = 37,
 #line 11774
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11776
@@ -30887,7 +30887,7 @@ F_TRAINER_FEMALE |
 #line 11782
             .lvl = 37,
 #line 11784
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11786
@@ -30908,7 +30908,7 @@ F_TRAINER_FEMALE |
 #line 11792
             .lvl = 39,
 #line 11794
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11796
@@ -30954,7 +30954,7 @@ F_TRAINER_FEMALE |
 #line 11811
             .lvl = 37,
 #line 11813
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11815
@@ -30975,7 +30975,7 @@ F_TRAINER_FEMALE |
 #line 11821
             .lvl = 37,
 #line 11823
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11825
@@ -30996,7 +30996,7 @@ F_TRAINER_FEMALE |
 #line 11831
             .lvl = 37,
 #line 11833
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11835
@@ -31017,7 +31017,7 @@ F_TRAINER_FEMALE |
 #line 11841
             .lvl = 39,
 #line 11843
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11845
@@ -31063,7 +31063,7 @@ F_TRAINER_FEMALE |
 #line 11860
             .lvl = 37,
 #line 11862
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11864
@@ -31084,7 +31084,7 @@ F_TRAINER_FEMALE |
 #line 11870
             .lvl = 37,
 #line 11872
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11874
@@ -31105,7 +31105,7 @@ F_TRAINER_FEMALE |
 #line 11880
             .lvl = 37,
 #line 11882
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11884
@@ -31126,7 +31126,7 @@ F_TRAINER_FEMALE |
 #line 11890
             .lvl = 39,
 #line 11892
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11894
@@ -31172,7 +31172,7 @@ F_TRAINER_FEMALE |
 #line 11909
             .lvl = 37,
 #line 11911
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11913
@@ -31193,7 +31193,7 @@ F_TRAINER_FEMALE |
 #line 11919
             .lvl = 37,
 #line 11921
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11923
@@ -31214,7 +31214,7 @@ F_TRAINER_FEMALE |
 #line 11929
             .lvl = 37,
 #line 11931
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11933
@@ -31235,7 +31235,7 @@ F_TRAINER_FEMALE |
 #line 11939
             .lvl = 39,
 #line 11941
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 11943
@@ -35937,7 +35937,7 @@ F_TRAINER_FEMALE |
 #line 13717
             .lvl = 12,
 #line 13719
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13721
@@ -35958,7 +35958,7 @@ F_TRAINER_FEMALE |
 #line 13727
             .lvl = 12,
 #line 13729
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13731
@@ -35980,7 +35980,7 @@ F_TRAINER_FEMALE |
 #line 13736
             .lvl = 15,
 #line 13738
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13740
@@ -36028,7 +36028,7 @@ F_TRAINER_FEMALE |
 #line 13756
             .lvl = 16,
 #line 13758
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13760
@@ -36049,7 +36049,7 @@ F_TRAINER_FEMALE |
 #line 13766
             .lvl = 16,
 #line 13768
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13770
@@ -36070,7 +36070,7 @@ F_TRAINER_FEMALE |
 #line 13776
             .lvl = 17,
 #line 13778
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13780
@@ -36092,7 +36092,7 @@ F_TRAINER_FEMALE |
 #line 13785
             .lvl = 19,
 #line 13787
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13789
@@ -36140,7 +36140,7 @@ F_TRAINER_FEMALE |
 #line 13805
             .lvl = 21,
 #line 13807
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13809
@@ -36161,7 +36161,7 @@ F_TRAINER_FEMALE |
 #line 13815
             .lvl = 22,
 #line 13817
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13819
@@ -36182,7 +36182,7 @@ F_TRAINER_FEMALE |
 #line 13825
             .lvl = 23,
 #line 13827
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13829
@@ -36205,7 +36205,7 @@ F_TRAINER_FEMALE |
 #line 13835
             .lvl = 24,
 #line 13837
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13839
@@ -36253,7 +36253,7 @@ F_TRAINER_FEMALE |
 #line 13855
             .lvl = 26,
 #line 13857
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13859
@@ -36274,7 +36274,7 @@ F_TRAINER_FEMALE |
 #line 13865
             .lvl = 24,
 #line 13867
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13869
@@ -36295,7 +36295,7 @@ F_TRAINER_FEMALE |
 #line 13875
             .lvl = 26,
 #line 13877
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13879
@@ -36318,7 +36318,7 @@ F_TRAINER_FEMALE |
 #line 13885
             .lvl = 29,
 #line 13887
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13889
@@ -36366,7 +36366,7 @@ F_TRAINER_FEMALE |
 #line 13905
             .lvl = 28,
 #line 13907
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13909
@@ -36387,7 +36387,7 @@ F_TRAINER_FEMALE |
 #line 13915
             .lvl = 30,
 #line 13917
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13919
@@ -36408,7 +36408,7 @@ F_TRAINER_FEMALE |
 #line 13925
             .lvl = 30,
 #line 13927
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13929
@@ -36431,7 +36431,7 @@ F_TRAINER_FEMALE |
 #line 13935
             .lvl = 32,
 #line 13937
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13939
@@ -36479,7 +36479,7 @@ F_TRAINER_FEMALE |
 #line 13955
             .lvl = 32,
 #line 13957
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13959
@@ -36500,7 +36500,7 @@ F_TRAINER_FEMALE |
 #line 13965
             .lvl = 31,
 #line 13967
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13969
@@ -36521,7 +36521,7 @@ F_TRAINER_FEMALE |
 #line 13975
             .lvl = 33,
 #line 13977
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13979
@@ -36542,7 +36542,7 @@ F_TRAINER_FEMALE |
 #line 13985
             .lvl = 33,
 #line 13987
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13989
@@ -36565,7 +36565,7 @@ F_TRAINER_FEMALE |
 #line 13995
             .lvl = 35,
 #line 13997
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 13999
@@ -36613,7 +36613,7 @@ F_TRAINER_FEMALE |
 #line 14015
             .lvl = 40,
 #line 14017
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14019
@@ -36634,7 +36634,7 @@ F_TRAINER_FEMALE |
 #line 14025
             .lvl = 39,
 #line 14027
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14029
@@ -36655,7 +36655,7 @@ F_TRAINER_FEMALE |
 #line 14035
             .lvl = 41,
 #line 14037
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14039
@@ -36676,7 +36676,7 @@ F_TRAINER_FEMALE |
 #line 14045
             .lvl = 41,
 #line 14047
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14049
@@ -36699,7 +36699,7 @@ F_TRAINER_FEMALE |
 #line 14055
             .lvl = 42,
 #line 14057
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14059
@@ -36747,7 +36747,7 @@ F_TRAINER_FEMALE |
 #line 14075
             .lvl = 44,
 #line 14077
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14079
@@ -36768,7 +36768,7 @@ F_TRAINER_FEMALE |
 #line 14085
             .lvl = 43,
 #line 14087
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14089
@@ -36789,7 +36789,7 @@ F_TRAINER_FEMALE |
 #line 14095
             .lvl = 46,
 #line 14097
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14099
@@ -36810,7 +36810,7 @@ F_TRAINER_FEMALE |
 #line 14105
             .lvl = 47,
 #line 14107
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14109
@@ -36833,7 +36833,7 @@ F_TRAINER_FEMALE |
 #line 14115
             .lvl = 48,
 #line 14117
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14119
@@ -36879,7 +36879,7 @@ F_TRAINER_FEMALE |
 #line 14135
             .lvl = 12,
 #line 14137
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14139
@@ -36900,7 +36900,7 @@ F_TRAINER_FEMALE |
 #line 14145
             .lvl = 12,
 #line 14147
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14149
@@ -36923,7 +36923,7 @@ F_TRAINER_FEMALE |
 #line 14155
             .lvl = 15,
 #line 14157
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14159
@@ -36969,7 +36969,7 @@ F_TRAINER_FEMALE |
 #line 14175
             .lvl = 16,
 #line 14177
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14179
@@ -36990,7 +36990,7 @@ F_TRAINER_FEMALE |
 #line 14185
             .lvl = 16,
 #line 14187
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14189
@@ -37011,7 +37011,7 @@ F_TRAINER_FEMALE |
 #line 14195
             .lvl = 17,
 #line 14197
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14199
@@ -37034,7 +37034,7 @@ F_TRAINER_FEMALE |
 #line 14205
             .lvl = 19,
 #line 14207
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14209
@@ -37080,7 +37080,7 @@ F_TRAINER_FEMALE |
 #line 14225
             .lvl = 21,
 #line 14227
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14229
@@ -37101,7 +37101,7 @@ F_TRAINER_FEMALE |
 #line 14235
             .lvl = 22,
 #line 14237
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14239
@@ -37122,7 +37122,7 @@ F_TRAINER_FEMALE |
 #line 14245
             .lvl = 23,
 #line 14247
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14249
@@ -37145,7 +37145,7 @@ F_TRAINER_FEMALE |
 #line 14255
             .lvl = 24,
 #line 14257
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14259
@@ -37191,7 +37191,7 @@ F_TRAINER_FEMALE |
 #line 14275
             .lvl = 26,
 #line 14277
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14279
@@ -37212,7 +37212,7 @@ F_TRAINER_FEMALE |
 #line 14285
             .lvl = 24,
 #line 14287
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14289
@@ -37233,7 +37233,7 @@ F_TRAINER_FEMALE |
 #line 14295
             .lvl = 26,
 #line 14297
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14299
@@ -37256,7 +37256,7 @@ F_TRAINER_FEMALE |
 #line 14305
             .lvl = 29,
 #line 14307
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14309
@@ -37302,7 +37302,7 @@ F_TRAINER_FEMALE |
 #line 14325
             .lvl = 30,
 #line 14327
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14329
@@ -37323,7 +37323,7 @@ F_TRAINER_FEMALE |
 #line 14335
             .lvl = 28,
 #line 14337
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14339
@@ -37346,7 +37346,7 @@ F_TRAINER_FEMALE |
 #line 14345
             .lvl = 30,
 #line 14347
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14349
@@ -37369,7 +37369,7 @@ F_TRAINER_FEMALE |
 #line 14355
             .lvl = 32,
 #line 14357
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14359
@@ -37415,7 +37415,7 @@ F_TRAINER_FEMALE |
 #line 14375
             .lvl = 33,
 #line 14377
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14379
@@ -37436,7 +37436,7 @@ F_TRAINER_FEMALE |
 #line 14385
             .lvl = 31,
 #line 14387
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14389
@@ -37457,7 +37457,7 @@ F_TRAINER_FEMALE |
 #line 14395
             .lvl = 32,
 #line 14397
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14399
@@ -37480,7 +37480,7 @@ F_TRAINER_FEMALE |
 #line 14405
             .lvl = 33,
 #line 14407
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14409
@@ -37503,7 +37503,7 @@ F_TRAINER_FEMALE |
 #line 14415
             .lvl = 35,
 #line 14417
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14419
@@ -37549,7 +37549,7 @@ F_TRAINER_FEMALE |
 #line 14435
             .lvl = 39,
 #line 14437
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14439
@@ -37570,7 +37570,7 @@ F_TRAINER_FEMALE |
 #line 14445
             .lvl = 39,
 #line 14447
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14449
@@ -37591,7 +37591,7 @@ F_TRAINER_FEMALE |
 #line 14455
             .lvl = 40,
 #line 14457
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14459
@@ -37614,7 +37614,7 @@ F_TRAINER_FEMALE |
 #line 14465
             .lvl = 41,
 #line 14467
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14469
@@ -37637,7 +37637,7 @@ F_TRAINER_FEMALE |
 #line 14475
             .lvl = 42,
 #line 14477
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14479
@@ -37683,7 +37683,7 @@ F_TRAINER_FEMALE |
 #line 14495
             .lvl = 44,
 #line 14497
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14499
@@ -37704,7 +37704,7 @@ F_TRAINER_FEMALE |
 #line 14505
             .lvl = 43,
 #line 14507
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14509
@@ -37725,7 +37725,7 @@ F_TRAINER_FEMALE |
 #line 14515
             .lvl = 45,
 #line 14517
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14519
@@ -37748,7 +37748,7 @@ F_TRAINER_FEMALE |
 #line 14525
             .lvl = 47,
 #line 14527
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14529
@@ -37771,7 +37771,7 @@ F_TRAINER_FEMALE |
 #line 14535
             .lvl = 48,
 #line 14537
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14539
@@ -37817,7 +37817,7 @@ F_TRAINER_FEMALE |
 #line 14555
             .lvl = 12,
 #line 14557
-            .nature = NATURE_LAX,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14559
@@ -37838,7 +37838,7 @@ F_TRAINER_FEMALE |
 #line 14565
             .lvl = 12,
 #line 14567
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14569
@@ -37861,7 +37861,7 @@ F_TRAINER_FEMALE |
 #line 14575
             .lvl = 15,
 #line 14577
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14579
@@ -37907,7 +37907,7 @@ F_TRAINER_FEMALE |
 #line 14595
             .lvl = 16,
 #line 14597
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14599
@@ -37928,7 +37928,7 @@ F_TRAINER_FEMALE |
 #line 14605
             .lvl = 16,
 #line 14607
-            .nature = NATURE_LAX,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14609
@@ -37949,7 +37949,7 @@ F_TRAINER_FEMALE |
 #line 14615
             .lvl = 17,
 #line 14617
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14619
@@ -37972,7 +37972,7 @@ F_TRAINER_FEMALE |
 #line 14625
             .lvl = 19,
 #line 14627
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14629
@@ -38018,7 +38018,7 @@ F_TRAINER_FEMALE |
 #line 14645
             .lvl = 21,
 #line 14647
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14649
@@ -38039,7 +38039,7 @@ F_TRAINER_FEMALE |
 #line 14655
             .lvl = 23,
 #line 14657
-            .nature = NATURE_LAX,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14659
@@ -38060,7 +38060,7 @@ F_TRAINER_FEMALE |
 #line 14665
             .lvl = 22,
 #line 14667
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14669
@@ -38083,7 +38083,7 @@ F_TRAINER_FEMALE |
 #line 14675
             .lvl = 24,
 #line 14677
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14679
@@ -38129,7 +38129,7 @@ F_TRAINER_FEMALE |
 #line 14695
             .lvl = 25,
 #line 14697
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14699
@@ -38150,7 +38150,7 @@ F_TRAINER_FEMALE |
 #line 14705
             .lvl = 25,
 #line 14707
-            .nature = NATURE_LAX,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14709
@@ -38171,7 +38171,7 @@ F_TRAINER_FEMALE |
 #line 14715
             .lvl = 26,
 #line 14717
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14719
@@ -38194,7 +38194,7 @@ F_TRAINER_FEMALE |
 #line 14725
             .lvl = 29,
 #line 14727
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14729
@@ -38240,7 +38240,7 @@ F_TRAINER_FEMALE |
 #line 14745
             .lvl = 28,
 #line 14747
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14749
@@ -38261,7 +38261,7 @@ F_TRAINER_FEMALE |
 #line 14755
             .lvl = 30,
 #line 14757
-            .nature = NATURE_LAX,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14759
@@ -38282,7 +38282,7 @@ F_TRAINER_FEMALE |
 #line 14765
             .lvl = 30,
 #line 14767
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14769
@@ -38305,7 +38305,7 @@ F_TRAINER_FEMALE |
 #line 14775
             .lvl = 32,
 #line 14777
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14779
@@ -38351,7 +38351,7 @@ F_TRAINER_FEMALE |
 #line 14795
             .lvl = 31,
 #line 14797
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14799
@@ -38372,7 +38372,7 @@ F_TRAINER_FEMALE |
 #line 14805
             .lvl = 32,
 #line 14807
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14809
@@ -38393,7 +38393,7 @@ F_TRAINER_FEMALE |
 #line 14815
             .lvl = 33,
 #line 14817
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14819
@@ -38414,7 +38414,7 @@ F_TRAINER_FEMALE |
 #line 14825
             .lvl = 33,
 #line 14827
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14829
@@ -38437,7 +38437,7 @@ F_TRAINER_FEMALE |
 #line 14835
             .lvl = 35,
 #line 14837
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14839
@@ -38483,7 +38483,7 @@ F_TRAINER_FEMALE |
 #line 14855
             .lvl = 40,
 #line 14857
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14859
@@ -38504,7 +38504,7 @@ F_TRAINER_FEMALE |
 #line 14865
             .lvl = 39,
 #line 14867
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14869
@@ -38525,7 +38525,7 @@ F_TRAINER_FEMALE |
 #line 14875
             .lvl = 41,
 #line 14877
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14879
@@ -38546,7 +38546,7 @@ F_TRAINER_FEMALE |
 #line 14885
             .lvl = 41,
 #line 14887
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14889
@@ -38569,7 +38569,7 @@ F_TRAINER_FEMALE |
 #line 14895
             .lvl = 42,
 #line 14897
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14899
@@ -38615,7 +38615,7 @@ F_TRAINER_FEMALE |
 #line 14915
             .lvl = 44,
 #line 14917
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14919
@@ -38636,7 +38636,7 @@ F_TRAINER_FEMALE |
 #line 14925
             .lvl = 43,
 #line 14927
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14929
@@ -38657,7 +38657,7 @@ F_TRAINER_FEMALE |
 #line 14935
             .lvl = 46,
 #line 14937
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14939
@@ -38678,7 +38678,7 @@ F_TRAINER_FEMALE |
 #line 14945
             .lvl = 47,
 #line 14947
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14949
@@ -38701,7 +38701,7 @@ F_TRAINER_FEMALE |
 #line 14955
             .lvl = 48,
 #line 14957
-            .nature = NATURE_RASH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14959
@@ -38749,7 +38749,7 @@ F_TRAINER_FEMALE |
 #line 14975
             .lvl = 12,
 #line 14977
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14979
@@ -38770,7 +38770,7 @@ F_TRAINER_FEMALE |
 #line 14985
             .lvl = 12,
 #line 14987
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14989
@@ -38793,7 +38793,7 @@ F_TRAINER_FEMALE |
 #line 14995
             .lvl = 15,
 #line 14997
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 14999
@@ -38841,7 +38841,7 @@ F_TRAINER_FEMALE |
 #line 15015
             .lvl = 16,
 #line 15017
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15019
@@ -38862,7 +38862,7 @@ F_TRAINER_FEMALE |
 #line 15025
             .lvl = 17,
 #line 15027
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15029
@@ -38885,7 +38885,7 @@ F_TRAINER_FEMALE |
 #line 15035
             .lvl = 19,
 #line 15037
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15039
@@ -38933,7 +38933,7 @@ F_TRAINER_FEMALE |
 #line 15055
             .lvl = 22,
 #line 15057
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15059
@@ -38954,7 +38954,7 @@ F_TRAINER_FEMALE |
 #line 15065
             .lvl = 23,
 #line 15067
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15069
@@ -38977,7 +38977,7 @@ F_TRAINER_FEMALE |
 #line 15075
             .lvl = 24,
 #line 15077
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15079
@@ -39025,7 +39025,7 @@ F_TRAINER_FEMALE |
 #line 15095
             .lvl = 26,
 #line 15097
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15099
@@ -39046,7 +39046,7 @@ F_TRAINER_FEMALE |
 #line 15105
             .lvl = 24,
 #line 15107
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15109
@@ -39067,7 +39067,7 @@ F_TRAINER_FEMALE |
 #line 15115
             .lvl = 26,
 #line 15117
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15119
@@ -39090,7 +39090,7 @@ F_TRAINER_FEMALE |
 #line 15125
             .lvl = 29,
 #line 15127
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15129
@@ -39140,7 +39140,7 @@ F_TRAINER_FEMALE |
 #line 15145
             .lvl = 30,
 #line 15147
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15149
@@ -39161,7 +39161,7 @@ F_TRAINER_FEMALE |
 #line 15155
             .lvl = 28,
 #line 15157
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15159
@@ -39182,7 +39182,7 @@ F_TRAINER_FEMALE |
 #line 15165
             .lvl = 30,
 #line 15167
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15169
@@ -39205,7 +39205,7 @@ F_TRAINER_FEMALE |
 #line 15175
             .lvl = 32,
 #line 15177
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15179
@@ -39255,7 +39255,7 @@ F_TRAINER_FEMALE |
 #line 15195
             .lvl = 33,
 #line 15197
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15199
@@ -39276,7 +39276,7 @@ F_TRAINER_FEMALE |
 #line 15205
             .lvl = 31,
 #line 15207
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15209
@@ -39297,7 +39297,7 @@ F_TRAINER_FEMALE |
 #line 15215
             .lvl = 30,
 #line 15217
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15219
@@ -39318,7 +39318,7 @@ F_TRAINER_FEMALE |
 #line 15225
             .lvl = 33,
 #line 15227
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15229
@@ -39341,7 +39341,7 @@ F_TRAINER_FEMALE |
 #line 15235
             .lvl = 35,
 #line 15237
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15239
@@ -39391,7 +39391,7 @@ F_TRAINER_FEMALE |
 #line 15255
             .lvl = 41,
 #line 15257
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15259
@@ -39412,7 +39412,7 @@ F_TRAINER_FEMALE |
 #line 15265
             .lvl = 40,
 #line 15267
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15269
@@ -39433,7 +39433,7 @@ F_TRAINER_FEMALE |
 #line 15275
             .lvl = 39,
 #line 15277
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15279
@@ -39454,7 +39454,7 @@ F_TRAINER_FEMALE |
 #line 15285
             .lvl = 42,
 #line 15287
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15289
@@ -39477,7 +39477,7 @@ F_TRAINER_FEMALE |
 #line 15295
             .lvl = 42,
 #line 15297
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15299
@@ -39527,7 +39527,7 @@ F_TRAINER_FEMALE |
 #line 15315
             .lvl = 46,
 #line 15317
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15319
@@ -39548,7 +39548,7 @@ F_TRAINER_FEMALE |
 #line 15325
             .lvl = 43,
 #line 15327
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15329
@@ -39569,7 +39569,7 @@ F_TRAINER_FEMALE |
 #line 15335
             .lvl = 45,
 #line 15337
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15339
@@ -39590,7 +39590,7 @@ F_TRAINER_FEMALE |
 #line 15345
             .lvl = 47,
 #line 15347
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15349
@@ -39613,7 +39613,7 @@ F_TRAINER_FEMALE |
 #line 15355
             .lvl = 48,
 #line 15357
-            .nature = NATURE_QUIET,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15359
@@ -39659,7 +39659,7 @@ F_TRAINER_FEMALE |
 #line 15375
             .lvl = 12,
 #line 15377
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15379
@@ -39679,7 +39679,7 @@ F_TRAINER_FEMALE |
 #line 15384
             .lvl = 12,
 #line 15386
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15388
@@ -39702,7 +39702,7 @@ F_TRAINER_FEMALE |
 #line 15394
             .lvl = 15,
 #line 15396
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15398
@@ -39748,7 +39748,7 @@ F_TRAINER_FEMALE |
 #line 15414
             .lvl = 16,
 #line 15416
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15418
@@ -39768,7 +39768,7 @@ F_TRAINER_FEMALE |
 #line 15423
             .lvl = 17,
 #line 15425
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15427
@@ -39788,7 +39788,7 @@ F_TRAINER_FEMALE |
 #line 15432
             .lvl = 17,
 #line 15434
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15436
@@ -39811,7 +39811,7 @@ F_TRAINER_FEMALE |
 #line 15442
             .lvl = 19,
 #line 15444
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15446
@@ -39857,7 +39857,7 @@ F_TRAINER_FEMALE |
 #line 15462
             .lvl = 21,
 #line 15464
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15466
@@ -39878,7 +39878,7 @@ F_TRAINER_FEMALE |
 #line 15472
             .lvl = 23,
 #line 15474
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15476
@@ -39899,7 +39899,7 @@ F_TRAINER_FEMALE |
 #line 15482
             .lvl = 23,
 #line 15484
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15486
@@ -39922,7 +39922,7 @@ F_TRAINER_FEMALE |
 #line 15492
             .lvl = 24,
 #line 15494
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15496
@@ -39968,7 +39968,7 @@ F_TRAINER_FEMALE |
 #line 15512
             .lvl = 24,
 #line 15514
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15516
@@ -39989,7 +39989,7 @@ F_TRAINER_FEMALE |
 #line 15522
             .lvl = 26,
 #line 15524
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15526
@@ -40010,7 +40010,7 @@ F_TRAINER_FEMALE |
 #line 15532
             .lvl = 26,
 #line 15534
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15536
@@ -40033,7 +40033,7 @@ F_TRAINER_FEMALE |
 #line 15542
             .lvl = 29,
 #line 15544
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15546
@@ -40079,7 +40079,7 @@ F_TRAINER_FEMALE |
 #line 15562
             .lvl = 28,
 #line 15564
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15566
@@ -40100,7 +40100,7 @@ F_TRAINER_FEMALE |
 #line 15572
             .lvl = 30,
 #line 15574
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15576
@@ -40121,7 +40121,7 @@ F_TRAINER_FEMALE |
 #line 15582
             .lvl = 30,
 #line 15584
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15586
@@ -40144,7 +40144,7 @@ F_TRAINER_FEMALE |
 #line 15592
             .lvl = 32,
 #line 15594
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15596
@@ -40190,7 +40190,7 @@ F_TRAINER_FEMALE |
 #line 15612
             .lvl = 31,
 #line 15614
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15616
@@ -40211,7 +40211,7 @@ F_TRAINER_FEMALE |
 #line 15622
             .lvl = 33,
 #line 15624
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15626
@@ -40232,7 +40232,7 @@ F_TRAINER_FEMALE |
 #line 15632
             .lvl = 32,
 #line 15634
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15636
@@ -40253,7 +40253,7 @@ F_TRAINER_FEMALE |
 #line 15642
             .lvl = 33,
 #line 15644
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15646
@@ -40276,7 +40276,7 @@ F_TRAINER_FEMALE |
 #line 15652
             .lvl = 35,
 #line 15654
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15656
@@ -40322,7 +40322,7 @@ F_TRAINER_FEMALE |
 #line 15672
             .lvl = 40,
 #line 15674
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15676
@@ -40343,7 +40343,7 @@ F_TRAINER_FEMALE |
 #line 15682
             .lvl = 40,
 #line 15684
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15686
@@ -40364,7 +40364,7 @@ F_TRAINER_FEMALE |
 #line 15692
             .lvl = 40,
 #line 15694
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15696
@@ -40385,7 +40385,7 @@ F_TRAINER_FEMALE |
 #line 15702
             .lvl = 40,
 #line 15704
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15706
@@ -40408,7 +40408,7 @@ F_TRAINER_FEMALE |
 #line 15712
             .lvl = 42,
 #line 15714
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15716
@@ -40454,7 +40454,7 @@ F_TRAINER_FEMALE |
 #line 15732
             .lvl = 43,
 #line 15734
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15736
@@ -40475,7 +40475,7 @@ F_TRAINER_FEMALE |
 #line 15742
             .lvl = 46,
 #line 15744
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15746
@@ -40496,7 +40496,7 @@ F_TRAINER_FEMALE |
 #line 15752
             .lvl = 46,
 #line 15754
-            .nature = NATURE_QUIRKY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15756
@@ -40517,7 +40517,7 @@ F_TRAINER_FEMALE |
 #line 15762
             .lvl = 46,
 #line 15764
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15766
@@ -40540,7 +40540,7 @@ F_TRAINER_FEMALE |
 #line 15772
             .lvl = 48,
 #line 15774
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15776
@@ -40588,7 +40588,7 @@ F_TRAINER_FEMALE |
 #line 15792
             .lvl = 12,
 #line 15794
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15796
@@ -40609,7 +40609,7 @@ F_TRAINER_FEMALE |
 #line 15802
             .lvl = 12,
 #line 15804
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15806
@@ -40632,7 +40632,7 @@ F_TRAINER_FEMALE |
 #line 15812
             .lvl = 15,
 #line 15814
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15816
@@ -40680,13 +40680,13 @@ F_TRAINER_FEMALE |
 #line 15832
             .lvl = 18,
 #line 15834
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15836
                 MOVE_DISARMING_VOICE,
                 MOVE_SING,
-                MOVE_ROUND,
+                MOVE_SWIFT,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -40701,7 +40701,7 @@ F_TRAINER_FEMALE |
 #line 15842
             .lvl = 18,
 #line 15844
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15846
@@ -40724,7 +40724,7 @@ F_TRAINER_FEMALE |
 #line 15852
             .lvl = 19,
 #line 15854
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15856
@@ -40772,13 +40772,13 @@ F_TRAINER_FEMALE |
 #line 15872
             .lvl = 21,
 #line 15874
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15876
                 MOVE_DISARMING_VOICE,
                 MOVE_HYPER_VOICE,
-                MOVE_ROUND,
+                MOVE_SWIFT,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -40793,7 +40793,7 @@ F_TRAINER_FEMALE |
 #line 15882
             .lvl = 23,
 #line 15884
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15886
@@ -40814,7 +40814,7 @@ F_TRAINER_FEMALE |
 #line 15892
             .lvl = 23,
 #line 15894
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15896
@@ -40837,7 +40837,7 @@ F_TRAINER_FEMALE |
 #line 15902
             .lvl = 24,
 #line 15904
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15906
@@ -40885,13 +40885,13 @@ F_TRAINER_FEMALE |
 #line 15922
             .lvl = 24,
 #line 15924
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15926
                 MOVE_DISARMING_VOICE,
                 MOVE_HYPER_VOICE,
-                MOVE_ROUND,
+                MOVE_SWIFT,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -40906,7 +40906,7 @@ F_TRAINER_FEMALE |
 #line 15932
             .lvl = 26,
 #line 15934
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15936
@@ -40929,7 +40929,7 @@ F_TRAINER_FEMALE |
 #line 15942
             .lvl = 28,
 #line 15944
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15946
@@ -40952,7 +40952,7 @@ F_TRAINER_FEMALE |
 #line 15952
             .lvl = 29,
 #line 15954
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15956
@@ -41000,7 +41000,7 @@ F_TRAINER_FEMALE |
 #line 15972
             .lvl = 28,
 #line 15974
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15976
@@ -41021,7 +41021,7 @@ F_TRAINER_FEMALE |
 #line 15982
             .lvl = 30,
 #line 15984
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15986
@@ -41044,7 +41044,7 @@ F_TRAINER_FEMALE |
 #line 15992
             .lvl = 31,
 #line 15994
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 15996
@@ -41065,7 +41065,7 @@ F_TRAINER_FEMALE |
 #line 16002
             .lvl = 32,
 #line 16004
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16006
@@ -41113,7 +41113,7 @@ F_TRAINER_FEMALE |
 #line 16022
             .lvl = 31,
 #line 16024
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16026
@@ -41134,7 +41134,7 @@ F_TRAINER_FEMALE |
 #line 16032
             .lvl = 33,
 #line 16034
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16036
@@ -41157,7 +41157,7 @@ F_TRAINER_FEMALE |
 #line 16042
             .lvl = 32,
 #line 16044
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16046
@@ -41178,7 +41178,7 @@ F_TRAINER_FEMALE |
 #line 16052
             .lvl = 33,
 #line 16054
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16056
@@ -41201,7 +41201,7 @@ F_TRAINER_FEMALE |
 #line 16062
             .lvl = 35,
 #line 16064
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16066
@@ -41249,7 +41249,7 @@ F_TRAINER_FEMALE |
 #line 16082
             .lvl = 40,
 #line 16084
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16086
@@ -41270,7 +41270,7 @@ F_TRAINER_FEMALE |
 #line 16092
             .lvl = 40,
 #line 16094
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16096
@@ -41293,7 +41293,7 @@ F_TRAINER_FEMALE |
 #line 16102
             .lvl = 41,
 #line 16104
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16106
@@ -41314,7 +41314,7 @@ F_TRAINER_FEMALE |
 #line 16112
             .lvl = 41,
 #line 16114
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16116
@@ -41337,7 +41337,7 @@ F_TRAINER_FEMALE |
 #line 16122
             .lvl = 42,
 #line 16124
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16126
@@ -41385,7 +41385,7 @@ F_TRAINER_FEMALE |
 #line 16142
             .lvl = 44,
 #line 16144
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16146
@@ -41406,7 +41406,7 @@ F_TRAINER_FEMALE |
 #line 16152
             .lvl = 45,
 #line 16154
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16156
@@ -41429,7 +41429,7 @@ F_TRAINER_FEMALE |
 #line 16162
             .lvl = 46,
 #line 16164
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16166
@@ -41450,7 +41450,7 @@ F_TRAINER_FEMALE |
 #line 16172
             .lvl = 44,
 #line 16174
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16176
@@ -41473,7 +41473,7 @@ F_TRAINER_FEMALE |
 #line 16182
             .lvl = 48,
 #line 16184
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16186
@@ -41521,7 +41521,7 @@ F_TRAINER_FEMALE |
 #line 16202
             .lvl = 15,
 #line 16204
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16206
@@ -41544,7 +41544,7 @@ F_TRAINER_FEMALE |
 #line 16212
             .lvl = 15,
 #line 16214
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16216
@@ -41592,7 +41592,7 @@ F_TRAINER_FEMALE |
 #line 16232
             .lvl = 19,
 #line 16234
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16236
@@ -41615,7 +41615,7 @@ F_TRAINER_FEMALE |
 #line 16242
             .lvl = 19,
 #line 16244
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16246
@@ -41661,7 +41661,7 @@ F_TRAINER_FEMALE |
 #line 16262
             .lvl = 21,
 #line 16264
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16266
@@ -41682,7 +41682,7 @@ F_TRAINER_FEMALE |
 #line 16272
             .lvl = 21,
 #line 16274
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16276
@@ -41705,7 +41705,7 @@ F_TRAINER_FEMALE |
 #line 16282
             .lvl = 24,
 #line 16284
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16286
@@ -41728,7 +41728,7 @@ F_TRAINER_FEMALE |
 #line 16292
             .lvl = 24,
 #line 16294
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16296
@@ -41774,7 +41774,7 @@ F_TRAINER_FEMALE |
 #line 16312
             .lvl = 25,
 #line 16314
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16316
@@ -41795,7 +41795,7 @@ F_TRAINER_FEMALE |
 #line 16322
             .lvl = 25,
 #line 16324
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16326
@@ -41818,7 +41818,7 @@ F_TRAINER_FEMALE |
 #line 16332
             .lvl = 29,
 #line 16334
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16336
@@ -41841,7 +41841,7 @@ F_TRAINER_FEMALE |
 #line 16342
             .lvl = 29,
 #line 16344
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16346
@@ -41887,7 +41887,7 @@ F_TRAINER_FEMALE |
 #line 16362
             .lvl = 29,
 #line 16364
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16366
@@ -41908,7 +41908,7 @@ F_TRAINER_FEMALE |
 #line 16372
             .lvl = 29,
 #line 16374
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16376
@@ -41931,7 +41931,7 @@ F_TRAINER_FEMALE |
 #line 16382
             .lvl = 32,
 #line 16384
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16386
@@ -41954,7 +41954,7 @@ F_TRAINER_FEMALE |
 #line 16392
             .lvl = 32,
 #line 16394
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16396
@@ -42000,7 +42000,7 @@ F_TRAINER_FEMALE |
 #line 16412
             .lvl = 31,
 #line 16414
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16416
@@ -42021,7 +42021,7 @@ F_TRAINER_FEMALE |
 #line 16422
             .lvl = 31,
 #line 16424
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16426
@@ -42044,7 +42044,7 @@ F_TRAINER_FEMALE |
 #line 16432
             .lvl = 35,
 #line 16434
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16436
@@ -42067,7 +42067,7 @@ F_TRAINER_FEMALE |
 #line 16442
             .lvl = 35,
 #line 16444
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16446
@@ -42113,7 +42113,7 @@ F_TRAINER_FEMALE |
 #line 16462
             .lvl = 41,
 #line 16464
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16466
@@ -42134,7 +42134,7 @@ F_TRAINER_FEMALE |
 #line 16472
             .lvl = 41,
 #line 16474
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16476
@@ -42155,7 +42155,7 @@ F_TRAINER_FEMALE |
 #line 16482
             .lvl = 38,
 #line 16484
-            .nature = NATURE_BOLD,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16486
@@ -42176,7 +42176,7 @@ F_TRAINER_FEMALE |
 #line 16492
             .lvl = 38,
 #line 16494
-            .nature = NATURE_BOLD,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16496
@@ -42199,7 +42199,7 @@ F_TRAINER_FEMALE |
 #line 16502
             .lvl = 42,
 #line 16504
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16506
@@ -42222,7 +42222,7 @@ F_TRAINER_FEMALE |
 #line 16512
             .lvl = 42,
 #line 16514
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16516
@@ -42268,7 +42268,7 @@ F_TRAINER_FEMALE |
 #line 16532
             .lvl = 44,
 #line 16534
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16536
@@ -42289,7 +42289,7 @@ F_TRAINER_FEMALE |
 #line 16542
             .lvl = 44,
 #line 16544
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16546
@@ -42310,7 +42310,7 @@ F_TRAINER_FEMALE |
 #line 16552
             .lvl = 45,
 #line 16554
-            .nature = NATURE_BOLD,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16556
@@ -42331,7 +42331,7 @@ F_TRAINER_FEMALE |
 #line 16562
             .lvl = 45,
 #line 16564
-            .nature = NATURE_BOLD,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16566
@@ -42354,7 +42354,7 @@ F_TRAINER_FEMALE |
 #line 16572
             .lvl = 48,
 #line 16574
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16576
@@ -42377,7 +42377,7 @@ F_TRAINER_FEMALE |
 #line 16582
             .lvl = 46,
 #line 16584
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16586
@@ -42423,7 +42423,7 @@ F_TRAINER_FEMALE |
 #line 16602
             .lvl = 11,
 #line 16604
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16606
@@ -42444,7 +42444,7 @@ F_TRAINER_FEMALE |
 #line 16612
             .lvl = 11,
 #line 16614
-            .nature = NATURE_CALM,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16616
@@ -42466,7 +42466,7 @@ F_TRAINER_FEMALE |
 #line 16621
             .lvl = 15,
 #line 16623
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16625
@@ -42489,7 +42489,7 @@ F_TRAINER_FEMALE |
 #line 16631
             .lvl = 15,
 #line 16633
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16635
@@ -42535,7 +42535,7 @@ F_TRAINER_FEMALE |
 #line 16651
             .lvl = 16,
 #line 16653
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16655
@@ -42556,7 +42556,7 @@ F_TRAINER_FEMALE |
 #line 16661
             .lvl = 15,
 #line 16663
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16665
@@ -42579,7 +42579,7 @@ F_TRAINER_FEMALE |
 #line 16671
             .lvl = 19,
 #line 16673
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16675
@@ -42602,7 +42602,7 @@ F_TRAINER_FEMALE |
 #line 16681
             .lvl = 19,
 #line 16683
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16685
@@ -42648,7 +42648,7 @@ F_TRAINER_FEMALE |
 #line 16701
             .lvl = 22,
 #line 16703
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16705
@@ -42671,7 +42671,7 @@ F_TRAINER_FEMALE |
 #line 16711
             .lvl = 23,
 #line 16713
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16715
@@ -42692,7 +42692,7 @@ F_TRAINER_FEMALE |
 #line 16721
             .lvl = 20,
 #line 16723
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16725
@@ -42715,7 +42715,7 @@ F_TRAINER_FEMALE |
 #line 16731
             .lvl = 24,
 #line 16733
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16735
@@ -42761,7 +42761,7 @@ F_TRAINER_FEMALE |
 #line 16751
             .lvl = 24,
 #line 16753
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16755
@@ -42784,7 +42784,7 @@ F_TRAINER_FEMALE |
 #line 16761
             .lvl = 25,
 #line 16763
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16765
@@ -42805,7 +42805,7 @@ F_TRAINER_FEMALE |
 #line 16771
             .lvl = 26,
 #line 16773
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16775
@@ -42828,7 +42828,7 @@ F_TRAINER_FEMALE |
 #line 16781
             .lvl = 29,
 #line 16783
-            .nature = NATURE_CALM,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16785
@@ -42874,7 +42874,7 @@ F_TRAINER_FEMALE |
 #line 16801
             .lvl = 29,
 #line 16803
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16805
@@ -42895,7 +42895,7 @@ F_TRAINER_FEMALE |
 #line 16811
             .lvl = 30,
 #line 16813
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16815
@@ -42918,7 +42918,7 @@ F_TRAINER_FEMALE |
 #line 16821
             .lvl = 31,
 #line 16823
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16825
@@ -42941,7 +42941,7 @@ F_TRAINER_FEMALE |
 #line 16831
             .lvl = 32,
 #line 16833
-            .nature = NATURE_CALM,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16835
@@ -42987,7 +42987,7 @@ F_TRAINER_FEMALE |
 #line 16851
             .lvl = 32,
 #line 16853
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16855
@@ -43008,7 +43008,7 @@ F_TRAINER_FEMALE |
 #line 16861
             .lvl = 30,
 #line 16863
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16865
@@ -43029,7 +43029,7 @@ F_TRAINER_FEMALE |
 #line 16871
             .lvl = 31,
 #line 16873
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16875
@@ -43052,7 +43052,7 @@ F_TRAINER_FEMALE |
 #line 16881
             .lvl = 35,
 #line 16883
-            .nature = NATURE_CALM,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16885
@@ -43075,7 +43075,7 @@ F_TRAINER_FEMALE |
 #line 16891
             .lvl = 34,
 #line 16893
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16895
@@ -43121,7 +43121,7 @@ F_TRAINER_FEMALE |
 #line 16911
             .lvl = 41,
 #line 16913
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16915
@@ -43142,7 +43142,7 @@ F_TRAINER_FEMALE |
 #line 16921
             .lvl = 39,
 #line 16923
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16925
@@ -43163,7 +43163,7 @@ F_TRAINER_FEMALE |
 #line 16931
             .lvl = 38,
 #line 16933
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16935
@@ -43184,7 +43184,7 @@ F_TRAINER_FEMALE |
 #line 16941
             .lvl = 41,
 #line 16943
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16945
@@ -43207,7 +43207,7 @@ F_TRAINER_FEMALE |
 #line 16951
             .lvl = 42,
 #line 16953
-            .nature = NATURE_CALM,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16955
@@ -43230,7 +43230,7 @@ F_TRAINER_FEMALE |
 #line 16961
             .lvl = 42,
 #line 16963
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16965
@@ -43276,7 +43276,7 @@ F_TRAINER_FEMALE |
 #line 16981
             .lvl = 45,
 #line 16983
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16985
@@ -43297,7 +43297,7 @@ F_TRAINER_FEMALE |
 #line 16991
             .lvl = 46,
 #line 16993
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16995
@@ -43318,7 +43318,7 @@ F_TRAINER_FEMALE |
 #line 17001
             .lvl = 44,
 #line 17003
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17005
@@ -43339,7 +43339,7 @@ F_TRAINER_FEMALE |
 #line 17011
             .lvl = 46,
 #line 17013
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17015
@@ -43362,7 +43362,7 @@ F_TRAINER_FEMALE |
 #line 17021
             .lvl = 48,
 #line 17023
-            .nature = NATURE_CALM,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17025
@@ -43385,7 +43385,7 @@ F_TRAINER_FEMALE |
 #line 17031
             .lvl = 48,
 #line 17033
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17035
@@ -43433,7 +43433,7 @@ F_TRAINER_FEMALE |
 #line 17052
             .lvl = 46,
 #line 17054
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17056
@@ -43454,7 +43454,7 @@ F_TRAINER_FEMALE |
 #line 17062
             .lvl = 48,
 #line 17064
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17066
@@ -43475,7 +43475,7 @@ F_TRAINER_FEMALE |
 #line 17072
             .lvl = 46,
 #line 17074
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17076
@@ -43496,7 +43496,7 @@ F_TRAINER_FEMALE |
 #line 17082
             .lvl = 48,
 #line 17084
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17086
@@ -43519,7 +43519,7 @@ F_TRAINER_FEMALE |
 #line 17092
             .lvl = 49,
 #line 17094
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17096
@@ -43567,7 +43567,7 @@ F_TRAINER_FEMALE |
 #line 17113
             .lvl = 46,
 #line 17115
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17117
@@ -43588,7 +43588,7 @@ F_TRAINER_FEMALE |
 #line 17123
             .lvl = 48,
 #line 17125
-            .nature = NATURE_RELAXED,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17127
@@ -43609,7 +43609,7 @@ F_TRAINER_FEMALE |
 #line 17133
             .lvl = 46,
 #line 17135
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17137
@@ -43630,7 +43630,7 @@ F_TRAINER_FEMALE |
 #line 17143
             .lvl = 48,
 #line 17145
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17147
@@ -43653,7 +43653,7 @@ F_TRAINER_FEMALE |
 #line 17153
             .lvl = 49,
 #line 17155
-            .nature = NATURE_CAREFUL,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17157
@@ -43703,7 +43703,7 @@ F_TRAINER_FEMALE |
 #line 17174
             .lvl = 48,
 #line 17176
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17178
@@ -43724,7 +43724,7 @@ F_TRAINER_FEMALE |
 #line 17184
             .lvl = 49,
 #line 17186
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17188
@@ -43745,7 +43745,7 @@ F_TRAINER_FEMALE |
 #line 17194
             .lvl = 50,
 #line 17196
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17198
@@ -43766,7 +43766,7 @@ F_TRAINER_FEMALE |
 #line 17204
             .lvl = 49,
 #line 17206
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17208
@@ -43789,7 +43789,7 @@ F_TRAINER_FEMALE |
 #line 17214
             .lvl = 51,
 #line 17216
-            .nature = NATURE_BRAVE,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17218
@@ -43862,7 +43862,7 @@ F_TRAINER_FEMALE |
 #line 17245
             .lvl = 50,
 #line 17247
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17249
@@ -43883,7 +43883,7 @@ F_TRAINER_FEMALE |
 #line 17255
             .lvl = 49,
 #line 17257
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17259
@@ -43904,7 +43904,7 @@ F_TRAINER_FEMALE |
 #line 17265
             .lvl = 49,
 #line 17267
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17269
@@ -43927,7 +43927,7 @@ F_TRAINER_FEMALE |
 #line 17275
             .lvl = 51,
 #line 17277
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17279
@@ -43977,7 +43977,7 @@ F_TRAINER_FEMALE |
 #line 17296
             .lvl = 50,
 #line 17298
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17300
@@ -43998,7 +43998,7 @@ F_TRAINER_FEMALE |
 #line 17306
             .lvl = 50,
 #line 17308
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17310
@@ -44019,7 +44019,7 @@ F_TRAINER_FEMALE |
 #line 17316
             .lvl = 52,
 #line 17318
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17320
@@ -44040,7 +44040,7 @@ F_TRAINER_FEMALE |
 #line 17326
             .lvl = 52,
 #line 17328
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17330
@@ -44063,7 +44063,7 @@ F_TRAINER_FEMALE |
 #line 17336
             .lvl = 53,
 #line 17338
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17340
@@ -44111,7 +44111,7 @@ F_TRAINER_FEMALE |
 #line 17357
             .lvl = 50,
 #line 17359
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17361
@@ -44132,7 +44132,7 @@ F_TRAINER_FEMALE |
 #line 17367
             .lvl = 52,
 #line 17369
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17371
@@ -44153,7 +44153,7 @@ F_TRAINER_FEMALE |
 #line 17377
             .lvl = 52,
 #line 17379
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17381
@@ -44174,7 +44174,7 @@ F_TRAINER_FEMALE |
 #line 17387
             .lvl = 50,
 #line 17389
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17391
@@ -44197,7 +44197,7 @@ F_TRAINER_FEMALE |
 #line 17397
             .lvl = 53,
 #line 17399
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17401
@@ -44247,7 +44247,7 @@ F_TRAINER_FEMALE |
 #line 17418
             .lvl = 52,
 #line 17420
-            .nature = NATURE_RELAXED,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17422
@@ -44268,7 +44268,7 @@ F_TRAINER_FEMALE |
 #line 17428
             .lvl = 54,
 #line 17430
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17432
@@ -44289,7 +44289,7 @@ F_TRAINER_FEMALE |
 #line 17438
             .lvl = 53,
 #line 17440
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17442
@@ -44310,7 +44310,7 @@ F_TRAINER_FEMALE |
 #line 17448
             .lvl = 53,
 #line 17450
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17452
@@ -44333,7 +44333,7 @@ F_TRAINER_FEMALE |
 #line 17458
             .lvl = 55,
 #line 17460
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17462
@@ -44381,7 +44381,7 @@ F_TRAINER_FEMALE |
 #line 17479
             .lvl = 52,
 #line 17481
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17483
@@ -44402,7 +44402,7 @@ F_TRAINER_FEMALE |
 #line 17489
             .lvl = 54,
 #line 17491
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17493
@@ -44423,7 +44423,7 @@ F_TRAINER_FEMALE |
 #line 17499
             .lvl = 53,
 #line 17501
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17503
@@ -44444,7 +44444,7 @@ F_TRAINER_FEMALE |
 #line 17509
             .lvl = 53,
 #line 17511
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17513
@@ -44467,7 +44467,7 @@ F_TRAINER_FEMALE |
 #line 17519
             .lvl = 55,
 #line 17521
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17523
@@ -44515,7 +44515,7 @@ F_TRAINER_FEMALE |
 #line 17540
             .lvl = 58,
 #line 17542
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17544
@@ -44536,7 +44536,7 @@ F_TRAINER_FEMALE |
 #line 17550
             .lvl = 57,
 #line 17552
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17554
@@ -44557,7 +44557,7 @@ F_TRAINER_FEMALE |
 #line 17560
             .lvl = 56,
 #line 17562
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17564
@@ -44578,7 +44578,7 @@ F_TRAINER_FEMALE |
 #line 17570
             .lvl = 57,
 #line 17572
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17574
@@ -44599,7 +44599,7 @@ F_TRAINER_FEMALE |
 #line 17580
             .lvl = 57,
 #line 17582
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17584
@@ -44622,7 +44622,7 @@ F_TRAINER_FEMALE |
 #line 17590
             .lvl = 59,
 #line 17592
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17594
@@ -44668,7 +44668,7 @@ F_TRAINER_FEMALE |
 #line 17610
             .lvl = 47,
 #line 17612
-            .nature = NATURE_SASSY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17614
@@ -44689,7 +44689,7 @@ F_TRAINER_FEMALE |
 #line 17620
             .lvl = 46,
 #line 17622
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17624
@@ -44710,7 +44710,7 @@ F_TRAINER_FEMALE |
 #line 17630
             .lvl = 47,
 #line 17632
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17634
@@ -44731,7 +44731,7 @@ F_TRAINER_FEMALE |
 #line 17640
             .lvl = 44,
 #line 17642
-            .nature = NATURE_MODEST,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17644
@@ -44754,7 +44754,7 @@ F_TRAINER_FEMALE |
 #line 17650
             .lvl = 48,
 #line 17652
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17654
@@ -45156,7 +45156,7 @@ F_TRAINER_FEMALE |
 #line 17804
             .lvl = 16,
 #line 17806
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17808
@@ -45177,7 +45177,7 @@ F_TRAINER_FEMALE |
 #line 17814
             .lvl = 16,
 #line 17816
-            .nature = NATURE_HARDY,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17818
@@ -45198,7 +45198,7 @@ F_TRAINER_FEMALE |
 #line 17824
             .lvl = 17,
 #line 17826
-            .nature = NATURE_ADAMANT,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17828
@@ -45220,7 +45220,7 @@ F_TRAINER_FEMALE |
 #line 17833
             .lvl = 19,
 #line 17835
-            .nature = NATURE_IMPISH,
+            .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17837

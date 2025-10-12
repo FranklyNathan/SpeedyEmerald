@@ -697,6 +697,7 @@ extern const u8 EventScript_WarpHomeFortree[];
 extern const u8 EventScript_WarpHomeMossdeep[];
 extern const u8 EventScript_WarpHomeSootopolis[];
 extern const u8 EventScript_Statue[];
+extern const u8 EventScript_FlygonLearnedFly[];
 
 
 #endif // GUARD_EVENT_SCRIPTS_H

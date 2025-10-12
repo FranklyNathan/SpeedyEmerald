@@ -237,6 +237,7 @@ static const u16 sNewGamePCItems[][2] =
     { ITEM_ABILITY_CAPSULE, 50 },
     { ITEM_ABILITY_PATCH, 50 },
     { ITEM_MAX_REVIVE, 50 },
+    { ITEM_FULL_HEAL, 50 },
     { ITEM_NONE, 0 }
 };
 
