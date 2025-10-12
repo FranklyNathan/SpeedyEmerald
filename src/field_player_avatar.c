@@ -1171,11 +1171,7 @@ static void DoPlayerAvatarTransition(void)
 
 static void DestroyAcroBikeSurfBlob(struct ObjectEvent *objEvent)
 {
-    if ((gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_ACRO_BIKE) && objEvent->fieldEffectSpriteId != 0xFF)
-    {
-        DestroySprite(&gSprites[objEvent->fieldEffectSpriteId]);
-        objEvent->fieldEffectSpriteId = 0xFF;
-    }
+    // No longer needed, Acro Bike handles its own bobbing.
 }
 
 static void SpriteCB_AcroBike(struct Sprite *sprite)
