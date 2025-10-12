@@ -103,6 +103,7 @@ enum {
     MENU_TRADE2,
     MENU_TOSS,
     MENU_EVOLUTION,
+    MENU_HEAL,
     MENU_CATALOG_BULB,
     MENU_CATALOG_OVEN,
     MENU_CATALOG_WASHING,
@@ -475,6 +476,7 @@ static void CursorCb_Trade1(u8);
 static void CursorCb_Trade2(u8);
 static void CursorCb_Toss(u8);
 static void CursorCb_FieldMove(u8);
+static void Task_HealPokemon(u8);
 static void CursorCb_CatalogBulb(u8);
 static void CursorCb_CatalogOven(u8);
 static void CursorCb_CatalogWashing(u8);
@@ -488,6 +490,7 @@ bool32 SetUpFieldMove_Fly(void);
 bool32 SetUpFieldMove_Waterfall(void);
 bool32 SetUpFieldMove_Dive(void);
 static void CursorCb_Evolution(u8 taskId);
+static void CursorCb_Heal(u8 taskId);
 void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId);
 static void ShowMoveSelectWindow(u8 slot);
 static void Task_HandleWhichMoveInput(u8 taskId);
@@ -2900,6 +2903,29 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
     }
 }
 
+static bool8 MonNeedsHealing(struct Pokemon *mon)
+{
+    u32 i;
+
+    if (GetMonData(mon, MON_DATA_IS_EGG))
+        return FALSE;
+
+    if (GetMonData(mon, MON_DATA_HP) < GetMonData(mon, MON_DATA_MAX_HP))
+        return TRUE;
+
+    if (GetMonData(mon, MON_DATA_STATUS) != STATUS1_NONE)
+        return TRUE;
+
+    for (i = 0; i < MAX_MON_MOVES; i++)
+    {
+        if (GetMonData(mon, MON_DATA_MOVE1 + i) != MOVE_NONE
+            && GetMonData(mon, MON_DATA_PP1 + i) < GetMovePP(GetMonData(mon, MON_DATA_MOVE1 + i)))
+            return TRUE;
+    }
+
+    return FALSE;
+}
+
 static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 {
     u8 i, j;
@@ -2935,6 +2961,8 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_MAIL);
         else
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_ITEM);
+        if (MonNeedsHealing(&mons[slotId]))
+            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_HEAL);
     }
         if (targetSpecies != SPECIES_NONE)
             AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_EVOLUTION);
@@ -7990,6 +8018,44 @@ static void CursorCb_Evolution(u8 taskId)
         DisplayPartyMenuMessage(gText_WontHaveEffect, FALSE);
         ScheduleBgCopyTilemapToVram(2);
         gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+    }
+}
+
+static void Task_HealPokemon(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u32 status = GetMonData(mon, MON_DATA_STATUS);
+    u32 statusNone = STATUS1_NONE;
+
+    // Heal status and PP after HP animation
+    if (status != STATUS1_NONE)
+    {
+        SetMonData(mon, MON_DATA_STATUS, &statusNone);
+        SetPartyMonAilmentGfx(mon, &sPartyMenuBoxes[gPartyMenu.slotId]);
+    }
+    MonRestorePP(mon);
+
+    gTasks[taskId].func = Task_ReturnToChooseMonAfterText;
+}
+
+static void CursorCb_Heal(u8 taskId)
+{
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 hp = GetMonData(mon, MON_DATA_HP);
+    u16 maxHp = GetMonData(mon, MON_DATA_MAX_HP);
+
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[0]);
+    PartyMenuRemoveWindow(&sPartyMenuInternal->windowId[1]);
+    PlaySE(SE_USE_ITEM);
+
+    if (hp < maxHp)
+    {
+        PartyMenuModifyHP(taskId, gPartyMenu.slotId, 1, maxHp - hp, Task_HealPokemon);
+    }
+    else
+    {
+        // Mon is at full HP, but has status or needs PP. Skip HP animation.
+        Task_HealPokemon(taskId);
     }
 }
 
