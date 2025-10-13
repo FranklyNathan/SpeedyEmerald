@@ -15460,7 +15460,83 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
         )
         .levelUpLearnset = sStarmieLevelUpLearnset,
         .teachableLearnset = sStarmieTeachableLearnset,
+        .formChangeTable = sStarmieFormChangeTable,
+        .formSpeciesIdTable = sStarmieFormSpeciesIdTable,
     },
+#if P_MEGA_EVOLUTIONS
+    [SPECIES_STARMIE_MEGA] =
+    {
+        .baseHP        = 60,
+        .baseAttack    = 140,
+        .baseDefense   = 105,
+        .baseSpeed     = 120,
+        .baseSpAttack  = 130,
+        .baseSpDefense = 105,
+        .types = MON_TYPES(TYPE_WATER, TYPE_PSYCHIC),
+        .catchRate = 60,
+        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 182 : 207,
+        .evYield_Speed = 2,
+        .itemCommon = ITEM_STARDUST,
+        .itemRare = ITEM_STAR_PIECE,
+        .genderRatio = MON_GENDERLESS,
+        .eggCycles = 20,
+        .friendship = STANDARD_FRIENDSHIP,
+        .growthRate = GROWTH_SLOW,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_WATER_3),
+        .abilities = { ABILITY_ILLUMINATE, ABILITY_NATURAL_CURE, ABILITY_ANALYTIC },
+        .bodyColor = BODY_COLOR_PURPLE,
+        .speciesName = _("Starmie"),
+        .cryId = CRY_STARMIE,
+        .natDexNum = NATIONAL_DEX_STARMIE,
+        .categoryName = _("Mysterious"),
+        .height = 11,
+        .weight = 800,
+        .description = COMPOUND_STRING(
+            "People in ancient times imagined that\n"
+            "Starmie were transformed from the\n"
+            "reflections of stars that twinkled on\n"
+            "gentle waves at night."),
+        .pokemonScale = 301,
+        .pokemonOffset = 3,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+        .frontPic = gMonFrontPic_Starmie,
+        .frontPicSize = MON_COORDS_SIZE(56, 56),
+        .frontPicYOffset = 6,
+        .frontAnimFrames = ANIM_FRAMES(
+            ANIMCMD_FRAME(0, 11),
+            ANIMCMD_FRAME(1, 10),
+            ANIMCMD_FRAME(0, 10),
+            ANIMCMD_FRAME(1, 20),
+            ANIMCMD_FRAME(0, 10),
+        ),
+        .frontAnimId = ANIM_TWIST,
+        .backPic = gMonBackPic_Starmie,
+        .backPicSize = P_GBA_STYLE_SPECIES_GFX ? MON_COORDS_SIZE(64, 40) : MON_COORDS_SIZE(64, 64),
+        .backPicYOffset = P_GBA_STYLE_SPECIES_GFX ? 14 : 4,
+        .backAnimId = BACK_ANIM_SHAKE_GLOW_BLUE,
+        .palette = gMonPalette_Starmie,
+        .shinyPalette = gMonShinyPalette_Starmie,
+        .iconSprite = gMonIcon_Starmie,
+        .iconPalIndex = 2,
+        .pokemonJumpType = PKMN_JUMP_TYPE_NONE,
+        SHADOW(0, 7, SHADOW_SIZE_L)
+        FOOTPRINT(Starmie)
+        OVERWORLD(
+            sPicTable_Starmie,
+            SIZE_32x32,
+            SHADOW_SIZE_M,
+            TRACKS_FOOT,
+            sAnimTable_Following,
+            gOverworldPalette_Starmie,
+            gShinyOverworldPalette_Starmie
+        )
+        .levelUpLearnset = sStarmieLevelUpLearnset,
+        .teachableLearnset = sStarmieTeachableLearnset,
+        .formChangeTable = sStarmieFormChangeTable,
+        .formSpeciesIdTable = sStarmieFormSpeciesIdTable,
+    },
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_STARYU
 
 #if P_FAMILY_MR_MIME

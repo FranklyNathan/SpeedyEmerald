@@ -44118,7 +44118,7 @@ F_TRAINER_FEMALE |
                 MOVE_SING,
                 MOVE_HYPER_VOICE,
                 MOVE_DAZZLING_GLEAM,
-                MOVE_ATTRACT,
+                MOVE_LIGHT_SCREEN,
             },
             },
             {

@@ -237,6 +237,23 @@ static const u16 sNewGamePCItems[][2] =
     { ITEM_ABILITY_CAPSULE, 50 },
     { ITEM_ABILITY_PATCH, 50 },
     { ITEM_MAX_REVIVE, 50 },
+    { ITEM_TM_HONE_CLAWS, 20 },
+    { ITEM_TM_DARK_PULSE, 20 },
+    { ITEM_TM_DRAGON_CLAW, 20 },
+    { ITEM_TM_ICE_BEAM, 20 },
+    { ITEM_TM_GIGA_DRAIN, 20 },
+    { ITEM_TM_DAZZLING_GLEAM, 20 },
+    { ITEM_TM_THUNDERBOLT, 20 },
+    { ITEM_TM_THUNDER, 20 },
+    { ITEM_TM_EARTHQUAKE, 20 },
+    { ITEM_TM_PSYCHIC, 20 },
+    { ITEM_TM_SHADOW_BALL, 20 },
+    { ITEM_TM_BRICK_BREAK, 20 },
+    { ITEM_TM_FLAMETHROWER, 20 },
+    { ITEM_TM_SLUDGE_BOMB, 20 },
+    { ITEM_TM_X_SCISSOR, 20 },
+    { ITEM_TM_IRON_TAIL, 20 },
+    { ITEM_AGGRONITE, 10 },
     { ITEM_NONE, 0 }
 };
 

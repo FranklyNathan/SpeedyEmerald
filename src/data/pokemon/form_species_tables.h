@@ -859,6 +859,86 @@ static const u16 sCameruptFormSpeciesIdTable[] = {
 };
 #endif //P_FAMILY_NUMEL
 
+#if P_FAMILY_CHESPIN
+static const u16 sChesnaughtFormSpeciesIdTable[] = {
+    SPECIES_CHESNAUGHT,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_CHESNAUGHT_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_CHESPIN
+
+#if P_FAMILY_FENNEKIN
+static const u16 sDelphoxFormSpeciesIdTable[] = {
+    SPECIES_DELPHOX,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_DELPHOX_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_FENNEKIN
+
+#if P_FAMILY_SKRELP
+static const u16 sDragalgeFormSpeciesIdTable[] = {
+    SPECIES_DRAGALGE,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_DRAGALGE_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_SKRELP
+
+#if P_FAMILY_TOTODILE
+static const u16 sFeraligatrFormSpeciesIdTable[] = {
+    SPECIES_FERALIGATR,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_FERALIGATR_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_TOTODILE
+
+#if P_FAMILY_DRILBUR
+static const u16 sExcadrillFormSpeciesIdTable[] = {
+    SPECIES_EXCADRILL,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_EXCADRILL_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_DRILBUR
+
+#if P_FAMILY_STARYU
+static const u16 sStarmieFormSpeciesIdTable[] = {
+    SPECIES_STARMIE,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_STARMIE_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_STARYU
+
+#if P_FAMILY_VENIPEDE
+static const u16 sScolipedeFormSpeciesIdTable[] = {
+    SPECIES_SCOLIPEDE,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_SCOLIOPEDE_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_VENIPEDE
+
+#if P_FAMILY_LITWICK
+static const u16 sChandelureFormSpeciesIdTable[] = {
+    SPECIES_CHANDELURE,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_CHANDELURE_MEGA,
+#endif
+    FORM_SPECIES_END,
+};
+#endif //P_FAMILY_LITWICK
+
 #if P_FAMILY_SWABLU
 static const u16 sAltariaFormSpeciesIdTable[] = {
     SPECIES_ALTARIA,
@@ -1347,6 +1427,9 @@ static const u16 sGenesectFormSpeciesIdTable[] = {
 static const u16 sGreninjaFormSpeciesIdTable[] = {
     SPECIES_GRENINJA,
     SPECIES_GRENINJA_BATTLE_BOND,
+#if P_MEGA_EVOLUTIONS
+    SPECIES_GRENINJA_MEGA,
+#endif
     SPECIES_GRENINJA_ASH,
     FORM_SPECIES_END,
 };
