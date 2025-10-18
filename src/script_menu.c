@@ -285,12 +285,27 @@ static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y)
         }
     }
 
-    if (sGiftMonIsTaken[i])
-        colors = sGiftMenuTextColors[1];
-    else
-        colors = sGiftMenuTextColors[0];
-    AddTextPrinterParameterized3(windowId, FONT_NORMAL, 8, y, colors, TEXT_SKIP_DRAW, name);
+    const u8 *stringToDraw;
+    u8 newName[POKEMON_NAME_LENGTH * 2 + 2]; // Buffer for two names and a space
 
+    if (sGiftMonIsTaken[speciesId])
+    {
+        colors = sGiftMenuTextColors[1];
+        // Create a new string with the name repeated, for debugging.
+        StringCopy(newName, name);
+        StringAppend(newName, gText_Space);
+        StringAppend(newName, name);
+        stringToDraw = newName;
+    }
+    else
+    {
+        colors = sGiftMenuTextColors[0];
+        stringToDraw = name;
+    }
+
+    // Clear the area before drawing to prevent overwriting issues.
+    FillWindowPixelRect(windowId, PIXEL_FILL(1), 8, y, GetStringWidth(FONT_NORMAL, stringToDraw, 0), 16);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL, 8, y, 0, 0, colors, TEXT_SKIP_DRAW, stringToDraw);
 }
 
 void MultichoiceDynamic_MoveCursor(s32 itemIndex, bool8 onInit, struct ListMenu *list)
