@@ -1647,7 +1647,7 @@
 #define SPECIES_STARMIE_MEGA                            1530
 #define SPECIES_SCOLIOPEDE_MEGA                         1531
 #define SPECIES_CHANDELURE_MEGA                         1532
-#define SPECIES_FROSLASS_MEGA                         1532
+#define SPECIES_FROSLASS_MEGA                           1533
 
 
 #define SPECIES_EGG                                     (1534)

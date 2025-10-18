@@ -10685,6 +10685,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .formSpeciesIdTable = sFroslassFormSpeciesIdTable,
         .formChangeTable = sFroslassFormChangeTable,
     },
+#if P_MEGA_EVOLUTIONS
     [SPECIES_FROSLASS_MEGA] =
     {
         .baseHP        = 70,
@@ -10754,8 +10755,8 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
         .formSpeciesIdTable = sFroslassFormSpeciesIdTable,
         .formChangeTable = sFroslassFormChangeTable,
     },
-#if P_MEGA_EVOLUTIONS
 #endif //P_GEN_4_CROSS_EVOS
+#endif //P_MEGA_EVOLUTIONS
 #endif //P_FAMILY_SNORUNT
 
 #if P_FAMILY_SPHEAL

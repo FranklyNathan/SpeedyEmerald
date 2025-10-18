@@ -44407,7 +44407,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 17493
                 MOVE_LEAF_BLADE,
-                MOVE_PLUCK,
+                MOVE_AERIAL_ACE,
                 MOVE_FEATHER_DANCE,
                 MOVE_TRIPLE_ARROWS,
             },
@@ -44563,7 +44563,7 @@ F_TRAINER_FEMALE |
 #line 17564
                 MOVE_THUNDER,
                 MOVE_EARTHQUAKE,
-                MOVE_STONE_EDGE,
+                MOVE_DRAGON_CLAW,
                 MOVE_IRON_TAIL,
             },
             },

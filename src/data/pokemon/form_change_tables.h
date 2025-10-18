@@ -479,7 +479,7 @@ static const struct FormChange sGlalieFormChangeTable[] = {
     {FORM_CHANGE_TERMINATOR},
 };
 
-static const struct FormChange sFrosslassFormChangeTable[] = {
+static const struct FormChange sFroslassFormChangeTable[] = {
 #if P_MEGA_EVOLUTIONS
     {FORM_CHANGE_BATTLE_MEGA_EVOLUTION_ITEM,    SPECIES_FROSLASS_MEGA, ITEM_AGGRONITE},
 #endif

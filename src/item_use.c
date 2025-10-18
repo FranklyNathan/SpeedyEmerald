@@ -1563,14 +1563,18 @@ void ItemUseOutOfBattle_MedKit(u8 taskId)
 
 void ItemUseOutOfBattle_PortablePC(u8 taskId)
 {
-    u8 mapSec = gMapHeader.regionMapSectionId;
     u16 mapNum = gSaveBlock1Ptr->location.mapNum;
     
-    if (mapSec == MAPSEC_EVER_GRANDE_CITY
-     && mapNum != MAP_NUM(MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F)
-     && mapNum != MAP_NUM(MAP_EVER_GRANDE_CITY_POKEMON_CENTER_1F)
-     && mapNum != MAP_NUM(MAP_EVER_GRANDE_CITY_POKEMON_CENTER_2F)
-     && mapNum != MAP_NUM(MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_2F))
+    if (mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_PHOEBES_ROOM)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_GLACIAS_ROOM)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_DRAKES_ROOM)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL1)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL2)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL3)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL4)
+     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL5)
+    )
     {
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }

@@ -821,13 +821,13 @@ SlateportCity_Pokemart_PowerTMs_Badge7TMsItems:
 	.2byte ITEM_TM_X_SCISSOR
 	.2byte ITEM_TM_FLAMETHROWER
 	.2byte ITEM_TM_ICE_BEAM
+	.2byte ITEM_TM_RAIN_DANCE
 	.2byte ITEM_TM_SLUDGE_BOMB
 	.2byte ITEM_TM_THUNDERBOLT
 	.2byte ITEM_TM_PROTECT
 	.2byte ITEM_TM_PSYCHIC
 	.2byte ITEM_TM_EARTHQUAKE
 	.2byte ITEM_TM_HONE_CLAWS
-	.2byte ITEM_TM_RAIN_DANCE
 	pokemartlistend
 
 SlateportCity_EventScript_MegaSalesman::
@@ -835,7 +835,7 @@ SlateportCity_EventScript_MegaSalesman::
 	faceplayer
 	msgbox SlateportCity_Text_MegaSalesmanIntro, MSGBOX_DEFAULT
 	compare VAR_BADGE_COUNT, 6
-	goto_if_lt SlateportCity_EventScript_SellStageOneStones
+	goto_if_lt SlateportCity_EventScript_NotSellingYet
 	compare VAR_BADGE_COUNT, 8
 	goto_if_lt SlateportCity_EventScript_SellStageTwoStones
 	pokemart SlateportCity_Pokemart_StageThreeMegas
@@ -843,9 +843,8 @@ SlateportCity_EventScript_MegaSalesman::
 	release
 	end
 
-SlateportCity_EventScript_SellStageOneStones::
-	pokemart SlateportCity_Pokemart_StageOneMegas
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
+SlateportCity_EventScript_NotSellingYet::
+	msgbox SlateportCity_Text_NotSellingYet, MSGBOX_DEFAULT
 	release
 	end
 
@@ -856,13 +855,8 @@ SlateportCity_EventScript_SellStageTwoStones::
 	end
 
 	.align 2
-SlateportCity_Pokemart_StageOneMegas:
-	.2byte ITEM_MAWILITE
-	.2byte ITEM_SABLENITE
-	pokemartlistend
-
-	.align 2
 SlateportCity_Pokemart_StageTwoMegas:
+	.2byte ITEM_AGGRONITE
 	.2byte ITEM_BANETTITE
 	.2byte ITEM_CAMERUPTITE
 	.2byte ITEM_GLALITITE
@@ -1731,4 +1725,7 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "Give it your best effort!$"
 
 SlateportCity_Text_MegaSalesmanIntro:
-	.string "Psst... Kid. Looking for a good deal?$"
+	.string "Psst… Kid. Looking for a good deal?$"
+
+SlateportCity_Text_NotSellingYet:
+	.string "Eh, nevermind… You don't look ready yet.$"

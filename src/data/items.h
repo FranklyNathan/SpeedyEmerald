@@ -1596,7 +1596,7 @@ const struct Item gItemsInfo[] =
     {
         .name = ITEM_NAME("Ability Patch"),
         .pluralName = ITEM_PLURAL_NAME("Ability Patches"),
-        .price = 5000,
+        .price = 10000,
         .holdEffectParam = 0,
         .description = COMPOUND_STRING(
             "Turns the ability\n"
@@ -10940,7 +10940,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_HONE_CLAWS] =
     {
         .name = ITEM_NAME("Hone Claws"),
-        .price = 7500,
+        .price = 10000,
         .description = COMPOUND_STRING(
             "The user sharpens\n"
             "its claws in\n"
@@ -11195,7 +11195,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_RAIN_DANCE] =
     {
         .name = ITEM_NAME("Rain Dance"),
-        .price = 7500,
+        .price = 5000,
         .description = COMPOUND_STRING(
             "Raises the power of\n"
             "Water-type moves\n"
@@ -11308,7 +11308,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_EARTHQUAKE] =
     {
         .name = ITEM_NAME("Earthquake"),
-        .price = 7500,
+        .price = 10000,
         .description = COMPOUND_STRING(
             "Causes a quake\n"
             "that has no effect\n"
