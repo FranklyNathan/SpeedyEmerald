@@ -270,7 +270,6 @@ static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y)
     const u8 *name = gSpeciesInfo[speciesId].speciesName;
 
     const u8 *stringToDraw;
-    u8 newName[POKEMON_NAME_LENGTH * 2 + 2]; // Buffer for two names and a space
 
     if (speciesId == SPECIES_EGG)
         name = gText_EggNickname;
@@ -308,6 +307,7 @@ void MultichoiceDynamic_MoveCursor(s32 itemIndex, bool8 onInit, struct ListMenu 
         if (sIsGiftMonMenu) // This is a custom callback for the gift mon menu
         {
             CreateGiftMonSpritesAtPos(gScrollableMultichoice_ScrollOffset + itemIndex);
+            PlaySE(SE_PIN);
         }
         else if (sDynamicMenuEventId != DYN_MULTICHOICE_CB_NONE && sDynamicListMenuEventCollections[sDynamicMenuEventId].OnSelectionChanged && !onInit) // Otherwise, use the generic dynamic list menu callbacks
         {

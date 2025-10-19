@@ -1563,18 +1563,18 @@ void ItemUseOutOfBattle_MedKit(u8 taskId)
 
 void ItemUseOutOfBattle_PortablePC(u8 taskId)
 {
-    u16 mapNum = gSaveBlock1Ptr->location.mapNum;
-    
-    if (mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_PHOEBES_ROOM)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_GLACIAS_ROOM)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_DRAKES_ROOM)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL1)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL2)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL3)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL4)
-     || mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL5)
-    )
+    if ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_SIDNEYS_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_PHOEBES_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_PHOEBES_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_GLACIAS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_GLACIAS_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_DRAKES_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_DRAKES_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_CHAMPIONS_ROOM))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL_OF_FAME) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL_OF_FAME))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL1) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL1))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL2) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL2))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL3) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL3))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL4) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL4))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_EVER_GRANDE_CITY_HALL5) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_EVER_GRANDE_CITY_HALL5))
+     )
     {
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
     }
