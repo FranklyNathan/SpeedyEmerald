@@ -266,36 +266,23 @@ static u8 CountTakenGiftMons(void)
 
 static void GiftMonMenu_ItemPrintFunc(u8 windowId, u32 speciesId, u8 y)
 {
-    struct ListMenuItem *items;
-    u16 *data = (u16 *)&gTasks[FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput)].data[3];
-    u32 i;
-    u32 count = gTasks[FindTaskIdByFunc(Task_HandleScrollingMultichoiceInput)].data[5];
-    const u8 *name = NULL;
     const u8 *colors;
-
-    LoadWordFromTwoHalfwords(data, (u32 *)&items);
-
-    // Find the item in the list to get its name
-    for (i = 0; i < count; i++)
-    {
-        if ((u16)items[i].id == speciesId)
-        {
-            name = items[i].name;
-            break;
-        }
-    }
+    const u8 *name = gSpeciesInfo[speciesId].speciesName;
 
     const u8 *stringToDraw;
     u8 newName[POKEMON_NAME_LENGTH * 2 + 2]; // Buffer for two names and a space
 
+    if (speciesId == SPECIES_EGG)
+        name = gText_EggNickname;
+    else if (speciesId == 999)
+        name = gText_Finished;
+    else
+        name = gSpeciesInfo[speciesId].speciesName;
+
     if (sGiftMonIsTaken[speciesId])
     {
         colors = sGiftMenuTextColors[1];
-        // Create a new string with the name repeated, for debugging.
-        StringCopy(newName, name);
-        StringAppend(newName, gText_Space);
-        StringAppend(newName, name);
-        stringToDraw = newName;
+        stringToDraw = name;
     }
     else
     {
@@ -585,12 +572,24 @@ static void DrawMultichoiceMenuDynamic(u8 left, u8 top, u8 argc, struct ListMenu
     u8 taskId;
     u32 windowHeight;
     u8 windowId;
-
-for (i = 0; i < argc; ++i)
+    
+    for (i = 0; i < argc; ++i)
     {
-        width = DisplayTextAndGetWidth(items[i].name, width);
+        if (sIsGiftMonMenu)
+        {
+            if (items[i].id != 999 && items[i].id != SPECIES_EGG)
+            items[i].name = gText_EmptyString7;
+        }
+     }  
+    for (i = 0; i < argc; ++i) 
+    {
+    width = DisplayTextAndGetWidth(items[i].name, width);
+         } 
+    if (sIsGiftMonMenu)
+    {
+        // Manually set width for gift mon menu to fit Pokémon names
+        width = 60;
     }
-
     if (sIsGiftMonMenu)
     {
         sGiftMonMenuData.monSpriteId = MAX_SPRITES;
