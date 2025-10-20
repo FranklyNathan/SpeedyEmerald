@@ -11195,7 +11195,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_RAIN_DANCE] =
     {
         .name = ITEM_NAME("Rain Dance"),
-        .price = 5000,
+        .price = 3000,
         .description = COMPOUND_STRING(
             "Raises the power of\n"
             "Water-type moves\n"
@@ -11392,7 +11392,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_DOUBLE_TEAM] =
     {
         .name = ITEM_NAME("Double Team"),
-        .price = 1000,
+        .price = 2000,
         .description = COMPOUND_STRING(
             "Creates illusory\n"
             "copies to enhance\n"
@@ -11603,7 +11603,7 @@ const struct Item gItemsInfo[] =
     [ITEM_TM_STEEL_WING] =
     {
         .name = ITEM_NAME("Steel Wing"),
-        .price = 2000,
+        .price = 1000,
         .description = COMPOUND_STRING(
             "Spreads hard-\n"
             "edged wings and\n"
