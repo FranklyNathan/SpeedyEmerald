@@ -75,6 +75,8 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 
 MauvilleCity_Gym_EventScript_Wattson::
 	setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_Wattson_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, MauvilleCity_Gym_EventScript_Wattson_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, MauvilleCity_Gym_EventScript_Wattson_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, MauvilleCity_Gym_EventScript_Wattson_Trainer3
@@ -116,6 +118,11 @@ MauvilleCity_Gym_EventScript_Wattson_Trainer7::
 MauvilleCity_Gym_EventScript_Wattson_Trainer8::
 	trainerbattle_single TRAINER_WATTSON_8, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	goto MauvilleCity_Gym_EventScript_PostBattle
+
+MauvilleCity_Gym_EventScript_Wattson_NotReady::
+	msgbox MauvilleCity_Gym_Text_WattsonNotReady, MSGBOX_DEFAULT
+	release
+	end
 
 MauvilleCity_Gym_EventScript_PostBattle::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -425,6 +432,13 @@ MauvilleCity_Gym_Text_WattsonPostBattle:
 MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor:
 	.string "Wahahahah!\n"
 	.string "Go forth and endeavor, youngster!$"
+
+MauvilleCity_Gym_Text_WattsonNotReady:
+	.string "I look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"
 
 MauvilleCity_Gym_Text_GymStatue:
 	.string "MAUVILLE CITY POKéMON GYM$"

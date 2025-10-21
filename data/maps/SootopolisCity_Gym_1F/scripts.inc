@@ -81,6 +81,8 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 
 SootopolisCity_Gym_1F_EventScript_Juan::
 	setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_Juan_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, SootopolisCity_Gym_EventScript_Juan_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, SootopolisCity_Gym_EventScript_Juan_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, SootopolisCity_Gym_EventScript_Juan_Trainer3
@@ -89,6 +91,11 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	call_if_eq VAR_BADGE_COUNT, 5, SootopolisCity_Gym_EventScript_Juan_Trainer6
 	call_if_eq VAR_BADGE_COUNT, 6, SootopolisCity_Gym_EventScript_Juan_Trainer7
 	call_if_eq VAR_BADGE_COUNT, 7, SootopolisCity_Gym_EventScript_Juan_Trainer8
+
+SootopolisCity_Gym_1F_EventScript_Juan_NotReady::
+	msgbox SootopolisCity_Gym_1F_Text_JuanNotReady, MSGBOX_DEFAULT
+	release
+	end
 
 SootopolisCity_Gym_EventScript_Juan_Trainer1::
 	trainerbattle_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
@@ -332,6 +339,13 @@ SootopolisCity_Gym_1F_Text_JuanPreRematch:
 	.string "Well, my friend, most certainly!\p"
 	.string "We shall be delighted to dance with\n"
 	.string "you as often as you wish!$"
+
+SootopolisCity_Gym_1F_Text_JuanNotReady:
+	.string "We look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"
 
 SootopolisCity_Gym_1F_Text_JuanRematchDefeat:
 	.string "Ahahaha, you are the winner!\n"

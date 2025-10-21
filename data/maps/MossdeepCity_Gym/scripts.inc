@@ -55,6 +55,8 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
 	setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLiza_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, MossdeepCity_Gym_EventScript_TateAndLiza_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, MossdeepCity_Gym_EventScript_TateAndLiza_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, MossdeepCity_Gym_EventScript_TateAndLiza_Trainer3
@@ -102,6 +104,11 @@ MossdeepCity_Gym_EventScript_PostBattle::
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLizaRematch
 	goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2
 	msgbox MossdeepCity_Gym_Text_TateAndLizaPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+MossdeepCity_Gym_EventScript_TateAndLiza_NotReady::
+	msgbox MossdeepCity_Gym_Text_TateAndLizaNotReady, MSGBOX_DEFAULT
 	release
 	end
 
@@ -696,3 +703,10 @@ MossdeepCity_Gym_Text_TateAndLizaRematchNeedTwoMons:
 	.string "LIZA: You brought just one POKéMON!\p"
 	.string "TATE: We need you to bring at least…\n"
 	.string "LIZA: Two POKéMON when you come back.$"
+
+MossdeepCity_Gym_Text_TateAndLizaNotReady:
+	.string "We look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"

@@ -45,6 +45,8 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckBuryTrainers::
 
 LavaridgeTown_Gym_1F_EventScript_Flannery::
     setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, LavaridgeTown_Gym_1F_EventScript_Flannery_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer3
@@ -85,6 +87,11 @@ LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer7::
 LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer8::
 	trainerbattle_single TRAINER_FLANNERY_8, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
 	goto LavaridgeTown_Gym_1F_EventScript_PostBattle
+
+LavaridgeTown_Gym_1F_EventScript_Flannery_NotReady::
+	msgbox LavaridgeTown_Gym_1F_Text_FlanneryNotReady, MSGBOX_DEFAULT
+	release
+	end
 
 
 LavaridgeTown_Gym_1F_EventScript_PostBattle::
@@ -426,6 +433,13 @@ LavaridgeTown_Gym_1F_Text_FlanneryPostRematch:
 	.string "this heated.\p"
 	.string "Let's have another one like this\n"
 	.string "again sometime!$"
+
+LavaridgeTown_Gym_1F_Text_FlanneryNotReady:
+	.string "I look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"
 
 LavaridgeTown_Gym_1F_Text_FlanneryRematchNeedTwoMons:
 	.string "FLANNERY: Losing a battle isn't going\n"

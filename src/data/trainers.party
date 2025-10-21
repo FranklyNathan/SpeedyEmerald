@@ -15888,14 +15888,14 @@ Ability: Keen Eye
 - Steel Wing
 - Aerial Ace
 
-Pelipper
+Wingull
 Level: 23
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Serious
 Ability: Keen Eye
 - Water Pulse
 - Supersonic
-- Brine
+- Quick Attack
 - Aerial Ace
 
 Swellow @ Sitrus Berry
@@ -16308,7 +16308,7 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
 
-Xatu
+Natu
 Level: 25
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Serious
@@ -17106,7 +17106,7 @@ Gender: Male
 Music: Male
 Items: Full Restore / Full Restore
 Double Battle: No
-AI: Basic Trainer
+AI: Basic Trainer / Risky
 Mugshot: Yellow
 
 Dugtrio-Alola
@@ -17475,15 +17475,15 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Green
 
-Toedscruel
+Roserade
 Level: 52
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Nature: Serious
-Ability: Mycelium Might
-- Spore
+Ability: Poison Point
+- Toxic Spikes
 - Giga Drain
-- Earth Power
-- Wrap
+- Leech Seed
+- Sludge Bomb
 
 Decidueye-Hisui
 Level: 54

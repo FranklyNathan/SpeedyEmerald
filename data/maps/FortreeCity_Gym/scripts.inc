@@ -19,6 +19,8 @@ FortreeCity_Gym_EventScript_InitRotatingGates::
 
 FortreeCity_Gym_EventScript_Winona::
     setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, FortreeCity_Gym_EventScript_Winona_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, FortreeCity_Gym_EventScript_Winona_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, FortreeCity_Gym_EventScript_Winona_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, FortreeCity_Gym_EventScript_Winona_Trainer3
@@ -59,6 +61,11 @@ FortreeCity_Gym_EventScript_Winona_Trainer7::
 FortreeCity_Gym_EventScript_Winona_Trainer8::
 	trainerbattle_single TRAINER_WINONA_8, FortreeCity_Gym_Text_WinonaIntro, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	goto FortreeCity_Gym_EventScript_PostBattle
+
+FortreeCity_Gym_EventScript_Winona_NotReady::
+	msgbox FortreeCity_Gym_Text_WinonaNotReady, MSGBOX_DEFAULT
+	release
+	end
 
 FortreeCity_Gym_EventScript_PostBattle::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -338,6 +345,13 @@ FortreeCity_Gym_Text_WinonaPreRematch:
 	.string "the reigning CHAMPION.\p"
 	.string "Please, allow me to see your power\n"
 	.string "at full flight!$"
+
+FortreeCity_Gym_Text_WinonaNotReady:
+	.string "I look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"
 
 FortreeCity_Gym_Text_WinonaRematchDefeat:
 	.string "I failed to reach your height again…$"

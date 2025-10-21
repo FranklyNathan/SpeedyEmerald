@@ -368,6 +368,8 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry::
 
 PetalburgCity_Gym_EventScript_NormanBattle::
 	setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_Norman_NotReady
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT
 	call_if_eq VAR_BADGE_COUNT, 0, PetalburgCity_Gym_EventScript_Norman_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, PetalburgCity_Gym_EventScript_Norman_Trainer2
@@ -447,12 +449,24 @@ PetalburgCity_Gym_EventScript_PostBattle::
 	release
 	end
 
+PetalburgCity_Gym_EventScript_Norman_NotReady::
+	msgbox PetalburgCity_Gym_Text_NormanNotReady, MSGBOX_DEFAULT
+	release
+	end
+
 PetalburgCity_Gym_EventScript_GiveFacade::
 	giveitem ITEM_TM_FACADE
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	setflag FLAG_RECEIVED_TM_FACADE
 	msgbox PetalburgCity_Gym_Text_ExplainFacade, MSGBOX_DEFAULT
 	return
+
+PetalburgCity_Gym_Text_NormanNotReady:
+	.string "I look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"
 
 PetalburgCity_Gym_EventScript_WallysDadArrivesNorth::
 	setvar VAR_0x8008, 1

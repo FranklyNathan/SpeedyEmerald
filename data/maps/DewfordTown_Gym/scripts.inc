@@ -133,7 +133,9 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 	return
 
 DewfordTown_Gym_EventScript_Brawly::
-    setvar VAR_FORCEANIM, 1
+	setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_Brawly_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, DewfordTown_Gym_EventScript_Brawly_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, DewfordTown_Gym_EventScript_Brawly_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, DewfordTown_Gym_EventScript_Brawly_Trainer3
@@ -174,6 +176,11 @@ DewfordTown_Gym_EventScript_Brawly::
     DewfordTown_Gym_EventScript_Brawly_Trainer8::
         trainerbattle_single TRAINER_BRAWLY_8, DewfordTown_Gym_Text_BrawlyIntro, DewfordTown_Gym_Text_BrawlyDefeat, DewfordTown_Gym_EventScript_BrawlyDefeated, NO_MUSIC
         goto DewfordTown_Gym_EventScript_PostBattle
+
+	DewfordTown_Gym_EventScript_Brawly_NotReady::
+		msgbox DewfordTown_Gym_Text_BrawlyNotReady, MSGBOX_DEFAULT
+		release
+		end
 
 DewfordTown_Gym_EventScript_PostBattle::
     specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -500,3 +507,10 @@ DewfordTown_Gym_Text_BrawlyRematchNeedTwoMons:
 	.string "that can battle.\p"
 	.string "I'm sorry, but I'd like you to come back\n"
 	.string "with at least two POKéMON.$"
+
+DewfordTown_Gym_Text_BrawlyNotReady:
+	.string "I look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"

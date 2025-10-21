@@ -38,6 +38,7 @@
 #include "rayquaza_scene.h"
 #include "region_map.h"
 #include "script_menu.h"
+#include "caps.h"
 #include "rtc.h"
 #include "script.h"
 #include "script_menu.h"
@@ -4347,6 +4348,23 @@ void UseBlankMessageToCancelPokemonPic(void)
     u8 t = EOS;
     AddTextPrinterParameterized(0, FONT_NORMAL, &t, 0, 1, 0, NULL);
     ScriptMenu_HidePokemonPic();
+}
+
+// Returns TRUE if any party Pokémon's level is below the current level cap.
+u16 Script_CheckPartyBelowLevelCap(void)
+{
+    u32 levelCap = GetCurrentLevelCap();
+    u8 i;
+    u8 partyCount = CalculatePlayerPartyCount();
+
+    for (i = 0; i < partyCount; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) > 0
+         && GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) < levelCap)
+            return TRUE;
+    }
+
+    return FALSE;
 }
 
 void EnterCode(void)

@@ -3,6 +3,8 @@ RustboroCity_Gym_MapScripts::
 
 RustboroCity_Gym_EventScript_Roxanne::
 	setvar VAR_FORCEANIM, 1
+	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
+	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_Roxanne_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, RustboroCity_Gym_EventScript_Roxanne_Trainer1
 	call_if_eq VAR_BADGE_COUNT, 1, RustboroCity_Gym_EventScript_Roxanne_Trainer2
 	call_if_eq VAR_BADGE_COUNT, 2, RustboroCity_Gym_EventScript_Roxanne_Trainer3
@@ -63,6 +65,11 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	call Common_EventScript_SetGymTrainers
 	goto RustboroCity_Gym_EventScript_GiveRockTomb
 	end
+
+	RustboroCity_Gym_EventScript_Roxanne_NotReady::
+		msgbox RustboroCity_Gym_Text_RoxanneNotReady, MSGBOX_DEFAULT
+		release
+		end
 
 RustboroCity_Gym_EventScript_GiveRockTomb::
 	giveitem ITEM_TM_ROCK_TOMB
@@ -316,6 +323,14 @@ RustboroCity_Gym_Text_RoxannePostRematch:
 	.string "all that much more!$"
 
 RustboroCity_Gym_Text_RoxanneRematchNeedTwoMons:
+
+RustboroCity_Gym_Text_RoxanneNotReady:
+	.string "I look forward to our fight,\n"
+	.string "but your POKéMON are not yet\p"
+	.string "strong enough.\p"
+	.string "Level up your POKéMON and return\n"
+	.string "when you're ready.$"
+
 	.string "ROXANNE: I'm so glad to see you again.\n"
 	.string "I'm ROXANNE, the GYM LEADER here.\p"
 	.string "I'm sure we've both experienced many\n"

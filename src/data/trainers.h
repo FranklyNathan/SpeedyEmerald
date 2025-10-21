@@ -40805,7 +40805,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 15891
-            .species = SPECIES_PELIPPER,
+            .species = SPECIES_WINGULL,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 15893
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -40820,7 +40820,7 @@ F_TRAINER_FEMALE |
 #line 15896
                 MOVE_WATER_PULSE,
                 MOVE_SUPERSONIC,
-                MOVE_BRINE,
+                MOVE_QUICK_ATTACK,
                 MOVE_AERIAL_ACE,
             },
             },
@@ -41668,7 +41668,7 @@ F_TRAINER_FEMALE |
                 MOVE_STORED_POWER,
                 MOVE_OMINOUS_WIND,
                 MOVE_CALM_MIND,
-                MOVE_NIGHT_SHADE,
+                MOVE_PECK,
             },
             },
             {
@@ -41765,7 +41765,7 @@ F_TRAINER_FEMALE |
         {
             {
 #line 16311
-            .species = SPECIES_XATU,
+            .species = SPECIES_NATU,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 16313
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
@@ -41781,7 +41781,7 @@ F_TRAINER_FEMALE |
                 MOVE_STORED_POWER,
                 MOVE_OMINOUS_WIND,
                 MOVE_CALM_MIND,
-                MOVE_AIR_SLASH,
+                MOVE_PECK,
             },
             },
             {
@@ -41979,7 +41979,7 @@ F_TRAINER_FEMALE |
 #line 16406
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 16407
-        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
+        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16408
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16409
@@ -42092,7 +42092,7 @@ F_TRAINER_FEMALE |
 #line 16456
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 16457
-        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
+        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16458
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16459
@@ -42247,7 +42247,7 @@ F_TRAINER_FEMALE |
 #line 16526
             TRAINER_ENCOUNTER_MUSIC_FEMALE,
 #line 16527
-        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
+        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16528
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16529
@@ -42375,7 +42375,7 @@ F_TRAINER_FEMALE |
 #line 16585
             .ability = ABILITY_LEVITATE,
 #line 16582
-            .lvl = 46,
+            .lvl = 48,
 #line 16584
             .nature = NATURE_SERIOUS,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42966,7 +42966,7 @@ F_TRAINER_FEMALE |
 #line 16845
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16846
-        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
+        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16847
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16848
@@ -43100,7 +43100,7 @@ F_TRAINER_FEMALE |
 #line 16905
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16906
-        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
+        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16907
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16908
@@ -43255,7 +43255,7 @@ F_TRAINER_FEMALE |
 #line 16975
             TRAINER_ENCOUNTER_MUSIC_MALE,
 #line 16976
-        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION, ITEM_HYPER_POTION },
+        .items = { ITEM_HYPER_POTION, ITEM_HYPER_POTION },
 #line 16977
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16978
@@ -43548,7 +43548,7 @@ F_TRAINER_FEMALE |
 #line 17108
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 17109
-        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_RISKY,
 #line 17110
         .mugshotColor = MUGSHOT_COLOR_YELLOW,
 #line 0
@@ -44158,7 +44158,7 @@ F_TRAINER_FEMALE |
             .moves = {
 #line 17381
                 MOVE_PSYCHO_CUT,
-                MOVE_STOMP,
+                MOVE_BOUNCE,
                 MOVE_MEGAHORN,
                 MOVE_DAZZLING_GLEAM,
             },
@@ -44372,12 +44372,12 @@ F_TRAINER_FEMALE |
         {
             {
 #line 17478
-            .species = SPECIES_TOEDSCRUEL,
+            .species = SPECIES_ROSERADE,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 17480
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 17482
-            .ability = ABILITY_MYCELIUM_MIGHT,
+            .ability = ABILITY_POISON_POINT,
 #line 17479
             .lvl = 52,
 #line 17481
@@ -44385,10 +44385,10 @@ F_TRAINER_FEMALE |
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 17483
-                MOVE_SPORE,
+                MOVE_TOXIC_SPIKES,
                 MOVE_GIGA_DRAIN,
-                MOVE_EARTH_POWER,
-                MOVE_WRAP,
+                MOVE_LEECH_SEED,
+                MOVE_SLUDGE_BOMB,
             },
             },
             {

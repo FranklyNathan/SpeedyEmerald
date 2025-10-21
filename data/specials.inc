@@ -570,3 +570,4 @@ gSpecials::
 	def_special ReleasePlayerBoxes
 	def_special SetIsGiftPokemonMenu
 	def_special SetHiddenNature
+	def_special Script_CheckPartyBelowLevelCap
