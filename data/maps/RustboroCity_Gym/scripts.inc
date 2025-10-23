@@ -3,6 +3,7 @@ RustboroCity_Gym_MapScripts::
 
 RustboroCity_Gym_EventScript_Roxanne::
 	setvar VAR_FORCEANIM, 1
+	faceplayer
 	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
 	goto_if_eq VAR_RESULT, TRUE, RustboroCity_Gym_EventScript_Roxanne_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, RustboroCity_Gym_EventScript_Roxanne_Trainer1

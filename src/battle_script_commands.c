@@ -940,6 +940,14 @@ static bool8 IsGymLeader(u16 trainerId)
     case TRAINER_JUAN_6:
     case TRAINER_JUAN_7:
     case TRAINER_JUAN_8:
+    case TRAINER_VIOLA_1:
+    case TRAINER_VIOLA_2:
+    case TRAINER_VIOLA_3:
+    case TRAINER_VIOLA_4:
+    case TRAINER_VIOLA_5:
+    case TRAINER_VIOLA_6:
+    case TRAINER_VIOLA_7:
+    case TRAINER_VIOLA_8:
         return TRUE;
     default:
         return FALSE;

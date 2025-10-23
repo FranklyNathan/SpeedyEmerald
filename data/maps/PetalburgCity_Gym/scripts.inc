@@ -368,6 +368,7 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry::
 
 PetalburgCity_Gym_EventScript_NormanBattle::
 	setvar VAR_FORCEANIM, 1
+	faceplayer
 	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
 	goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_Norman_NotReady
 	msgbox PetalburgCity_Gym_Text_NormanIntro, MSGBOX_DEFAULT

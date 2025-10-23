@@ -55,6 +55,7 @@ MossdeepCity_Gym_EventScript_SetSwitch4Metatiles::
 
 MossdeepCity_Gym_EventScript_TateAndLiza::
 	setvar VAR_FORCEANIM, 1
+	faceplayer
 	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
 	goto_if_eq VAR_RESULT, TRUE, MossdeepCity_Gym_EventScript_TateAndLiza_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, MossdeepCity_Gym_EventScript_TateAndLiza_Trainer1

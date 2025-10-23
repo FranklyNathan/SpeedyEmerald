@@ -81,6 +81,7 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce:
 
 SootopolisCity_Gym_1F_EventScript_Juan::
 	setvar VAR_FORCEANIM, 1
+	faceplayer
 	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_Juan_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, SootopolisCity_Gym_EventScript_Juan_Trainer1

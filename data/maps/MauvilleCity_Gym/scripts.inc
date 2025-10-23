@@ -75,6 +75,7 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 
 MauvilleCity_Gym_EventScript_Wattson::
 	setvar VAR_FORCEANIM, 1
+	faceplayer
 	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
 	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_Wattson_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, MauvilleCity_Gym_EventScript_Wattson_Trainer1

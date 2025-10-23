@@ -134,6 +134,7 @@ DewfordTown_Gym_EventScript_StopCountingTrainers::
 
 DewfordTown_Gym_EventScript_Brawly::
 	setvar VAR_FORCEANIM, 1
+	faceplayer
 	specialvar VAR_RESULT, Script_CheckPartyBelowLevelCap
 	goto_if_eq VAR_RESULT, TRUE, DewfordTown_Gym_EventScript_Brawly_NotReady
 	call_if_eq VAR_BADGE_COUNT, 0, DewfordTown_Gym_EventScript_Brawly_Trainer1
