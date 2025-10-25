@@ -235,6 +235,7 @@ const u16 gObjectEventPal_EnemyZigzagoon[] = INCBIN_U16("graphics/object_events/
 const u16 gObjectEventPal_Poochyena[] = INCBIN_U16("graphics/object_events/palettes/poochyena.gbapal");
 const u16 gObjectEventPal_FlygonBike[] = INCBIN_U16("graphics/object_events/palettes/flygon_bike.gbapal");
 const u16 gObjectEventPal_FlygonBike_May[] = INCBIN_U16("graphics/object_events/palettes/flygon_bike_may.gbapal");
+const u16 gObjectEventPal_Viola[] = INCBIN_U16("graphics/object_events/palettes/viola.gbapal");
 const u32 gObjectEventPic_CableCar[] = INCBIN_U32("graphics/object_events/pics/misc/cable_car.4bpp");
 const u16 gObjectEventPal_CableCar[] = INCBIN_U16("graphics/object_events/palettes/cable_car.gbapal");
 const u32 gObjectEventPic_SSTidal[] = INCBIN_U32("graphics/object_events/pics/misc/ss_tidal.4bpp");

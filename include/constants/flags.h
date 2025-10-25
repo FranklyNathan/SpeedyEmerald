@@ -169,7 +169,7 @@
 #define FLAG_MR_BRINEY_SAILING_INTRO         0x93
 #define FLAG_DOCK_REJECTED_DEVON_GOODS       0x94
 #define FLAG_DELIVERED_DEVON_GOODS           0x95
-#define FLAG_RECEIVED_CONTEST_PASS           0x96 // Unused, leftover from R/S
+#define FLAG_VIOLA_SPAWNED                   0x96 // Used to stop the player from potentially facing Viola multiple times
 #define FLAG_RECEIVED_CASTFORM               0x97
 #define FLAG_RECEIVED_SUPER_ROD              0x98
 #define FLAG_RUSTBORO_NPC_TRADE_COMPLETED    0x99
@@ -1175,7 +1175,7 @@
 #define FLAG_ITEM_NEW_MAUVILLE_FULL_HEAL                            0x462
 #define FLAG_ITEM_NEW_MAUVILLE_PARALYZE_HEAL                        0x463
 #define FLAG_ITEM_AQUA_HIDEOUT_B1F_MASTER_BALL                      0x464
-#define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
+#define FLAG_HIDE_WALLACE_FOR_ARCHIE                                0x465 // Used for the Archie Gym fight
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_UNUSED_0x468                                           0x468 // Unused Flag

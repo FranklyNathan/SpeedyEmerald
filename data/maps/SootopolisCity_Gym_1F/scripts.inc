@@ -16,7 +16,21 @@ SootopolisCity_Gym_1F_OnResume:
 SootopolisCity_Gym_1F_OnLoad:
 	call SootopolisCity_Gym_1F_EventScript_CheckSetStairMetatiles
 	special SetSootopolisGymCrackedIceMetatiles
+	clearflag FLAG_HIDE_WALLACE_FOR_ARCHIE
+    setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_WALLACE
+	call_if_eq VAR_BADGE_COUNT, 7, SootopolisCity_Gym_EventScript_RollforArchie
 	end
+
+SootopolisCity_Gym_EventScript_RollforArchie:
+	random 2
+	goto_if_eq VAR_RESULT, 1, SootopolisCity_Gym_ArchieAppears
+	end
+
+SootopolisCity_Gym_ArchieAppears:
+    setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_ARCHIE
+	setflag FLAG_HIDE_WALLACE_FOR_ARCHIE
+    setflag FLAG_TEMP_5
+    end
 
 SootopolisCity_Gym_1F_EventScript_CheckSetStairMetatiles::
 	goto_if_lt VAR_ICE_STEP_COUNT, 8, SootopolisCity_Gym_1F_EventScript_StopCheckingStairs  @ All stairs ice
@@ -127,8 +141,13 @@ SootopolisCity_Gym_EventScript_Juan_Trainer7::
 	goto SootopolisCity_Gym_EventScript_PostBattle
 
 SootopolisCity_Gym_EventScript_Juan_Trainer8::
+	goto_if_set FLAG_TEMP_5, SootopolisCity_Gym_EventScript_Archie_Trainer8
 	trainerbattle_double TRAINER_JUAN_8, SootopolisCity_Gym_1F_Text_JuanIntro, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
 	goto SootopolisCity_Gym_EventScript_PostBattle
+
+	SootopolisCity_Gym_EventScript_Archie_Trainer8::
+        trainerbattle_single TRAINER_ARCHIE, SootopolisCity_Gym_Text_ArchieIntro, SootopolisCity_Gym_Text_ArchieDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+        goto SootopolisCity_Gym_EventScript_PostBattle 
 
 SootopolisCity_Gym_EventScript_PostBattle::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -148,6 +167,7 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	setflag FLAG_BADGE08_GET
 	setvar VAR_0x8008, 8
    	setvar VAR_FORCEANIM, 0
+	clearflag FLAG_TEMP_5
 	call Common_EventScript_SetGymTrainers
 	call SootopolisCity_Gym_1F_EventScript_GiveWaterPulse
 	closemessage
@@ -285,9 +305,21 @@ SootopolisCity_Gym_1F_Text_JuanDefeat:
 	.string "Rather than my clothes, we shall reward\n"
 	.string "you with this, the RAIN BADGE!$"
 
+SootopolisCity_Gym_Text_ArchieIntro:
+	.string "Bwahaha! I bet you weren't expecting\n"
+	.string "me! That's right, I, ARCHIE, have\l"
+	.string "dispatched of these two pathetic gym\l"
+	.string "leaders. Now, it's time to show you\l"
+	.string "the true power of the sea!$"
+
+SootopolisCity_Gym_Text_ArchieDefeat:
+	.string "Buh! This can't be! Well… I guess so\n"
+	.string "long as I'm up here, I may as well give\l"
+	.string "you this junk I took from JUAN and\l"
+	.string "WALLACE.$"
+
 SootopolisCity_Gym_1F_Text_ReceivedRainBadge:
-	.string "{PLAYER} received the RAIN BADGE\n"
-	.string "from JUAN.$"
+	.string "{PLAYER} received the RAIN BADGE.$"
 
 SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis:
 	.string "And, so that you never forget the\n"
@@ -369,4 +401,3 @@ SootopolisCity_Gym_1F_Text_JuanRematchNeedTwoMons:
 	.string "You have with you but one POKéMON.\p"
 	.string "I wish that you would return with\n"
 	.string "two, perhaps more, POKéMON, please.$"
-

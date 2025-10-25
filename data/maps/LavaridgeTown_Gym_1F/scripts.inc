@@ -1,6 +1,22 @@
 LavaridgeTown_Gym_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, LavaridgeTown_Gym_1F_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, LavaridgeTown_Gym_1F_OnTransition
 	.byte 0
+
+LavaridgeTown_Gym_1F_OnLoad:
+    setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_FLANNERY
+	call_if_eq VAR_BADGE_COUNT, 7, LavaridgeTown_Gym_1F_EventScript_RollforMaxie
+	end
+
+LavaridgeTown_Gym_1F_EventScript_RollforMaxie:
+	random 2
+	goto_if_eq VAR_RESULT, 1, LavaridgeTown_Gym_1F_MaxieAppears
+	end
+
+LavaridgeTown_Gym_1F_MaxieAppears:
+    setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_MAXIE
+    setflag FLAG_TEMP_5
+    end
 
 LavaridgeTown_Gym_1F_OnTransition:
 	call LavaridgeTown_Gym_1F_EventScript_SetTrainerTempVars
@@ -85,14 +101,18 @@ LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer7::
 	goto LavaridgeTown_Gym_1F_EventScript_PostBattle
 
 LavaridgeTown_Gym_1F_EventScript_Flannery_Trainer8::
+	goto_if_set FLAG_TEMP_5, LavaridgeTown_Gym_1F_EventScript_Maxie_Trainer8
 	trainerbattle_single TRAINER_FLANNERY_8, LavaridgeTown_Gym_1F_Text_FlanneryIntro, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
 	goto LavaridgeTown_Gym_1F_EventScript_PostBattle
+
+LavaridgeTown_Gym_1F_EventScript_Maxie_Trainer8::
+        trainerbattle_single TRAINER_MAXIE_MAGMA_HIDEOUT, LavaridgeTown_Gym_1F_Text_MaxieIntro, LavaridgeTown_Gym_1F_Text_MaxieDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+        goto LavaridgeTown_Gym_1F_EventScript_PostBattle 
 
 LavaridgeTown_Gym_1F_EventScript_Flannery_NotReady::
 	msgbox LavaridgeTown_Gym_1F_Text_FlanneryNotReady, MSGBOX_DEFAULT
 	release
 	end
-
 
 LavaridgeTown_Gym_1F_EventScript_PostBattle::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -111,6 +131,7 @@ LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated::
 	setflag FLAG_BADGE04_GET
 	setvar VAR_0x8008, 4
 	setvar VAR_FORCEANIM, 0
+	clearflag FLAG_TEMP_5
 	call Common_EventScript_SetGymTrainers
 	call LavaridgeTown_Gym_1F_EventScript_GiveOverheat
 	closemessage
@@ -380,9 +401,20 @@ LavaridgeTown_Gym_1F_Text_FlanneryDefeat:
 	.string "Thanks for teaching me that.\n"
 	.string "For that, you deserve this.$"
 
+LavaridgeTown_Gym_1F_Text_MaxieIntro:
+	.string "Bwahaha! I bet you weren't expecting\n"
+	.string "me! That's right, I, MAXIE, have\l"
+	.string "descended from atop MT.CHIMNEY and\l"
+	.string "claimed this gym as my own. Now, it's\l"
+	.string "time to show you the true power of\l"
+	.string "the land!$"
+
+LavaridgeTown_Gym_1F_Text_MaxieDefeat:
+	.string "Fufufufufu…\p"
+	.string "Take this… Take this and begone.$"
+
 LavaridgeTown_Gym_1F_Text_ReceivedHeatBadge:
-	.string "{PLAYER} received the HEAT BADGE\n"
-	.string "from FLANNERY.$"
+	.string "{PLAYER} received the HEAT BADGE.$"
 
 LavaridgeTown_Gym_1F_Text_ExplainHeatBadgeTakeThis:
 	.string "This is a token of my appreciation.\n"

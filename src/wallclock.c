@@ -814,6 +814,13 @@ static void Task_SetClock_HandleInput(u8 taskId)
             if (JOY_HELD(DPAD_RIGHT))
                 gTasks[taskId].tMoveDir = MOVE_FORWARD;
 
+            if (JOY_NEW(DPAD_UP) || JOY_NEW(DPAD_DOWN))
+            {
+                gTasks[taskId].tHours = (gTasks[taskId].tHours + 12) % 24;
+                PlaySE(SE_SELECT);
+                UpdateClockPeriod(taskId, MOVE_FORWARD); // Direction doesn't matter here, just need to update period
+            }
+
             if (gTasks[taskId].tMoveDir != MOVE_NONE)
             {
                 if (gTasks[taskId].tMoveSpeed < 0xFF)
@@ -977,30 +984,14 @@ static bool32 AdvanceClock(u8 taskId, u8 direction)
 static void UpdateClockPeriod(u8 taskId, u8 direction)
 {
     u8 hours = gTasks[taskId].tHours;
-    switch (direction)
+
+    if (hours < 12)
     {
-    case MOVE_BACKWARD:
-        switch (hours)
-        {
-        case 11:
-            gTasks[taskId].tPeriod = PERIOD_AM;
-            break;
-        case 23:
-            gTasks[taskId].tPeriod = PERIOD_PM;
-            break;
-        }
-        break;
-    case MOVE_FORWARD:
-        switch (hours)
-        {
-        case 0:
-            gTasks[taskId].tPeriod = PERIOD_AM;
-            break;
-        case 12:
-            gTasks[taskId].tPeriod = PERIOD_PM;
-            break;
-        }
-        break;
+        gTasks[taskId].tPeriod = PERIOD_AM;
+    }
+    else
+    {
+        gTasks[taskId].tPeriod = PERIOD_PM;
     }
 }
 
